@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	
+	>
+<channel>
+	<title>
+	Comments on: General tips and insights that sales and marketing people can learn from &#8220;Better Call Saul&#8221; series on Netflix	</title>
+	<atom:link href="https://plainswipe.com/general-tips-and-insights-that-sales-and-marketing-people-can-learn-from-better-call-saul-series-on-netflix/feed" rel="self" type="application/rss+xml" />
+	<link>https://plainswipe.com/general-tips-and-insights-that-sales-and-marketing-people-can-learn-from-better-call-saul-series-on-netflix</link>
+	<description>Simple Software for Creating Prescriptions, Creating Videos, Comparing Stocks, Tracking Diet</description>
+	<lastBuildDate>Wed, 15 Mar 2023 07:08:43 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.2</generator>
+</channel>
+</rss>
