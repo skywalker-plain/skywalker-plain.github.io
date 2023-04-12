@@ -1,0 +1,753 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>EC2 &#8211; PlainSwipe</title>
+	<atom:link href="http://localhost/index.php/tag/ec2/feed/" rel="self" type="application/rss+xml" />
+	<link>http://localhost:8000</link>
+	<description></description>
+	<lastBuildDate>Thu, 02 Mar 2023 09:59:58 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.2</generator>
+
+<image>
+	<url>http://localhost:8000/wp-content/uploads/2023/04/cropped-logo-32x32.png</url>
+	<title>EC2 &#8211; PlainSwipe</title>
+	<link>http://localhost:8000</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Cost Saving Strategies on AWS</title>
+		<link>http://localhost:8000/index.php/cost-saving-strategies-on-aws/</link>
+					<comments>http://localhost:8000/index.php/cost-saving-strategies-on-aws/#respond</comments>
+		
+		<dc:creator><![CDATA[rohitkumar1979]]></dc:creator>
+		<pubDate>Thu, 02 Mar 2023 09:59:58 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[AWS]]></category>
+		<category><![CDATA[Cost Saving]]></category>
+		<category><![CDATA[EC2]]></category>
+		<category><![CDATA[ELB]]></category>
+		<guid isPermaLink="false">https://plainswipe.com/?p=1203</guid>
+
+					<description><![CDATA[As more and more businesses migrate to the cloud, optimizing cloud costs has become an essential part of managing their cloud infrastructure. In this article, we will discuss some cost-saving strategies for AWS that can help businesses reduce their cloud costs. Step 1: Use the cost explorer to discover the services that are taking most&#8230;&#160;<a href="http://localhost:8000/index.php/cost-saving-strategies-on-aws/" class="" rel="bookmark">Read More &#187;<span class="screen-reader-text">Cost Saving Strategies on AWS</span></a>]]></description>
+										<content:encoded><![CDATA[
+<p>As more and more businesses migrate to the cloud, optimizing cloud costs has become an essential part of managing their cloud infrastructure. In this article, we will discuss some cost-saving strategies for AWS that can help businesses reduce their cloud costs.</p>
+
+
+
+<h4 class="wp-block-heading">Step 1: Use the cost explorer to discover the services that are taking most of your costs</h4>
+
+
+
+<p>The cost explorer is a tool in AWS that allows users to analyze and visualize their AWS costs and usage. It can help businesses identify which services are consuming the most resources and costing the most money. By analyzing this data, businesses can make informed decisions about which services to optimize or even shut down to reduce their costs.</p>
+
+
+
+<h4 class="wp-block-heading">Step 2: Shut down inactive EC2 instances</h4>
+
+
+
+<p>EC2 instances are a significant cost in AWS, and businesses can save money by shutting down instances that are not being used. This can be achieved by setting up an email alert that informs the user if an instance is idle for greater than x% of the time. The user can then decide to shut down the instance manually or automate the process using AWS Lambda.</p>
+
+
+
+<h4 class="wp-block-heading">Step 3: If you are using ECS, Adjust ECS task definitions based on CPU and Memory utilization</h4>
+
+
+
+<p>ECS is a container orchestration service in AWS that allows businesses to run and scale containerized applications. By analyzing the CPU and memory utilization of the tasks in the service, businesses can adjust the task definitions of the compute to have lesser CPUs or memory, reducing the cost of the service.</p>
+
+
+
+<h4 class="wp-block-heading">Step 4: Move from ELB to Application Load Balancer</h4>
+
+
+
+<p>Elastic Load Balancer (ELB) is a service in AWS that distributes incoming traffic to multiple targets, such as EC2 instances, containers, or IP addresses. However, the cost of ELB can be significant, and businesses can save money by moving to Application Load Balancer (ALB), which offers more advanced features at a lower cost.</p>
+
+
+
+<p>Pros of using ALB include:</p>
+
+
+
+<ul>
+<li>More granular routing options</li>
+
+
+
+<li>Better support for containerized applications</li>
+
+
+
+<li>Native support for HTTP/2 and WebSocket protocols</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">Step 5: Consider using alternatives like NGINX for load balancing</h4>
+
+
+
+<p>Elastic Load Balancer (ELB) and NGINX are both popular load balancing solutions, but they differ in their approach and capabilities. Here is a comparison table that highlights the differences between ELB and NGINX:</p>
+
+
+
+<figure class="wp-block-table"><table><thead><tr><th>Feature</th><th>ELB</th><th>NGINX</th></tr></thead><tbody><tr><td>Cost</td><td>Can be expensive for larger deployments</td><td>Open-source, free, and paid options</td></tr><tr><td>Configuration</td><td>Limited configuration options</td><td>Flexible and customizable</td></tr><tr><td>Scalability</td><td>Can scale up and down automatically</td><td>Can scale up and down manually</td></tr><tr><td>Performance</td><td>Can handle high traffic volumes</td><td>Fast and efficient, high performance</td></tr><tr><td>SSL/TLS Offloading</td><td>Supports SSL/TLS offloading</td><td>Supports SSL/TLS offloading</td></tr><tr><td>Health Checks</td><td>Supports basic health checks</td><td>Supports advanced health checks</td></tr><tr><td>Protocols</td><td>Supports HTTP, HTTPS, and TCP</td><td>Supports HTTP, HTTPS, and TCP</td></tr><tr><td>Customization</td><td>Limited customization options</td><td>Highly customizable</td></tr></tbody></table></figure>
+
+
+
+<p>As you can see, both ELB and NGINX have their own strengths and weaknesses. ELB is a managed service, which means that AWS handles the infrastructure and management of the load balancer. However, this comes at a cost, and ELB can be expensive for larger deployments.</p>
+
+
+
+<h4 class="wp-block-heading">How to setup NGINX for load balancing?</h4>
+
+
+
+<p>To set up NGINX for load balancing and auto scaling with ECS, businesses can follow these steps:</p>
+
+
+
+<ul>
+<li>Launch an ECS cluster and service</li>
+
+
+
+<li>Create a task definition with the NGINX container image</li>
+
+
+
+<li>Configure NGINX to load balance requests to the ECS service</li>
+
+
+
+<li>Set up auto scaling policies for the ECS service based on CPU or memory utilization</li>
+</ul>
+
+
+
+<ol start="7">
+<li>Explore AWS Route 53 DNS-based load balancing</li>
+</ol>
+
+
+
+<p>AWS Route 53 is a DNS service that can be used to route traffic to multiple AWS resources, including EC2 instances, containers, and IP addresses. Businesses with a small number of instances can use Route 53’s DNS-based load balancing to route traffic to their instances, reducing the cost of ELB or ALB.</p>
+
+
+
+<h4 class="wp-block-heading">Step 5: Consider using Route 53 DNS based Load Balancing</h4>
+
+
+
+<p>If you have a small number of instances, you can use AWS Route 53 DNS-based load balancing to route traffic to your instances. This can be a cost-effective option for smaller applications. A tutorial with sample code can help you set up this service and optimize your usage of it.</p>
+
+
+
+<h4 class="wp-block-heading">To set up Route 53 DNS-based load balancing, businesses can follow these steps:</h4>
+
+
+
+<ul>
+<li>Create a Route 53 hosted zone</li>
+
+
+
+<li>Add DNS records for the resources to be load balanced</li>
+
+
+
+<li>Create a health check for the resources</li>
+
+
+
+<li>Configure Route 53 to route traffic to the healthy resources</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">Here&#8217;s a step-by-step tutorial on how to configure NGINX for load balancing and auto scaling if you are using ECS:</h4>
+
+
+
+<ol>
+<li>Launch an Amazon ECS cluster:</li>
+</ol>
+
+
+
+<p>First, launch an Amazon ECS cluster using the ECS optimized Amazon Machine Image (AMI). You can follow the instructions in the Amazon ECS documentation to create an ECS cluster.</p>
+
+
+
+<ol start="2">
+<li>Create an ECS service:</li>
+</ol>
+
+
+
+<p>Next, create an ECS service that will run your application. You can follow the instructions in the Amazon ECS documentation to create an ECS service.</p>
+
+
+
+<ol start="3">
+<li>Install NGINX:</li>
+</ol>
+
+
+
+<p>Once your ECS cluster and service are up and running, you can install NGINX on an EC2 instance that will act as the load balancer. You can follow the instructions in the NGINX documentation to install NGINX on an EC2 instance.</p>
+
+
+
+<ol start="4">
+<li>Configure NGINX:</li>
+</ol>
+
+
+
+<p>Next, you need to configure NGINX to act as the load balancer for your ECS service. You can do this by creating an NGINX configuration file that specifies the IP addresses and ports of your ECS tasks.</p>
+
+
+
+<p>Example of SAMPLE NGINIX configuration file</p>
+
+
+
+<pre class="wp-block-code"><code>http {
+    upstream ecs_cluster {
+        server &lt;ecs_task_ip_address_1&gt;:&lt;ecs_task_port&gt;;
+        server &lt;ecs_task_ip_address_2&gt;:&lt;ecs_task_port&gt;;
+        server &lt;ecs_task_ip_address_3&gt;:&lt;ecs_task_port&gt;;
+    }
+ 
+    server {
+        listen 80;
+ 
+        location / {
+            proxy_pass http://ecs_cluster;
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        }
+    }
+}</code></pre>
+
+
+
+<p>In this configuration file, replace <code>&lt;ecs_task_ip_address&gt;</code> with the IP address of your ECS tasks, and <code>&lt;ecs_task_port&gt;</code> with the port number that your tasks are running on.</p>
+
+
+
+<p></p>
+
+
+
+<ol start="5">
+<li>Configure auto scaling:</li>
+</ol>
+
+
+
+<p>Finally, you can configure auto scaling for your ECS service by creating an Amazon CloudWatch alarm that triggers when your ECS tasks exceed a certain CPU utilization threshold. When the alarm is triggered, it can automatically launch new ECS tasks to handle the increased load.</p>
+
+
+
+<p>You can follow the instructions in the Amazon ECS documentation to create an Amazon CloudWatch alarm and configure auto scaling for your ECS service.</p>
+
+
+
+<p>That&#8217;s it! With NGINX, you can configure load balancing and auto scaling for your ECS service to handle increased traffic and demand.</p>
+
+
+
+<p></p>
+
+
+
+<h4 class="wp-block-heading">A target tracking scaling policy for an ECS service</h4>
+
+
+
+<p>Here&#8217;s an example of how you can create an Application Auto Scaling policy for scaling ECS tasks:</p>
+
+
+
+<ol>
+<li>Define a scalable target:</li>
+</ol>
+
+
+
+<pre class="wp-block-code"><code>resource "aws_appautoscaling_target" "ecs_target" {
+  max_capacity       = 10
+  min_capacity       = 1
+  resource_id        = "service/${aws_ecs_service.my_service.name}"
+  scalable_dimension = "ecs:service:DesiredCount"
+  service_namespace  = "ecs"
+}</code></pre>
+
+
+
+<p>This block of code defines an Application Auto Scaling target for an ECS service. The <code>resource_id</code> attribute specifies the ECS service to scale, while the <code>max_capacity</code> and <code>min_capacity</code> attributes define the maximum and minimum number of tasks to run.</p>
+
+
+
+<ol start="2">
+<li>Define a scaling policy:</li>
+</ol>
+
+
+
+<pre class="wp-block-code"><code>resource "aws_appautoscaling_policy" "ecs_policy" {
+  name               = "ecs-scaling-policy"
+  policy_type        = "TargetTrackingScaling"
+  resource_id        = "${aws_appautoscaling_target.ecs_target.id}"
+  scalable_dimension = "ecs:service:DesiredCount"
+
+  target_tracking_scaling_policy_configuration {
+    predefined_metric_specification {
+      predefined_metric_type = "ECSServiceAverageCPUUtilization"
+    }
+    target_value = 60.0
+  }
+}</code></pre>
+
+
+
+<p>This block of code defines an Application Auto Scaling policy for an ECS service. The <code>policy_type</code> attribute specifies that this is a target tracking scaling policy, which adjusts the number of tasks to maintain a target value for a specified metric. In this case, we are using the <code>ECSServiceAverageCPUUtilization</code> metric and setting a target value of 60%. This means that Application Auto Scaling will automatically adjust the number of tasks to maintain a CPU utilization of around 60%.</p>
+
+
+
+<p>3. Attach the policy to the target:</p>
+
+
+
+<pre class="wp-block-code"><code>resource "aws_appautoscaling_policy_attachment" "ecs_attachment" {
+  policy_arn = "${aws_appautoscaling_policy.ecs_policy.arn}"
+  target_arn = "${aws_appautoscaling_target.ecs_target.arn}"
+}</code></pre>
+
+
+
+<p>This block of code attaches the Application Auto Scaling policy to the ECS service target.</p>
+
+
+
+<p>With this setup, Application Auto Scaling will automatically adjust the number of ECS tasks running in response to changes in the specified metric (in this case, CPU utilization). This allows your application to automatically scale up and down to handle varying workloads without requiring manual intervention.</p>
+
+
+
+<p>Note that you can customize the metrics and target values to suit your specific use case. You can also create multiple Application Auto Scaling policies for the same target, each with different metrics and target values.</p>
+
+
+
+<h4 class="wp-block-heading">Configure NGINX to act as a load balancer</h4>
+
+
+
+<p>To configure NGINX to act as a load balancer, you can follow these steps:</p>
+
+
+
+<ol>
+<li>Install NGINX: You can install NGINX on your server by using your package manager. For example, if you are using Ubuntu, you can use the following command to install NGINX:</li>
+</ol>
+
+
+
+<pre class="wp-block-code"><code>sudo apt-get update
+sudo apt-get install nginx
+</code></pre>
+
+
+
+<p>Configure NGINX as a load balancer: You can configure NGINX to act as a load balancer by editing the <code>/etc/nginx/nginx.conf</code> file. Here is an example configuration for a simple load balancer that balances requests between two backend servers:</p>
+
+
+
+<pre class="wp-block-code"><code>http {
+    upstream backend {
+        server backend1.example.com;
+        server backend2.example.com;
+    }
+
+    server {
+        listen 80;
+        server_name example.com;
+
+        location / {
+            proxy_pass http://backend;
+        }
+    }
+}</code></pre>
+
+
+
+<p>In this configuration, the <code>upstream</code> directive defines a group of backend servers, and the <code>proxy_pass</code> directive in the <code>location</code> block directs requests to the backend servers.</p>
+
+
+
+<p>Restart NGINX: After editing the configuration file, you need to restart NGINX to apply the changes. You can use the following command to restart NGINX:</p>
+
+
+
+<pre class="wp-block-code"><code>sudo systemctl restart nginx</code></pre>
+
+
+
+<p>Test the load balancer: To test the load balancer, you can use a tool like <code>curl</code> to send requests to the server. For example, you can use the following command to send a request to the load balancer:</p>
+
+
+
+<pre class="wp-block-code"><code>curl http://example.com</code></pre>
+
+
+
+<p>You should see a response from one of the backend servers.</p>
+
+
+
+<p>Configure ECS with task definitions and auto scaling</p>
+
+
+
+<p>To configure ECS with task definitions and auto scaling, you can follow these general steps:</p>
+
+
+
+<ol>
+<li>Create a task definition: A task definition is a blueprint for how to run a specific Docker container within a task. It specifies the Docker image to use, how much CPU and memory to allocate to the task, and other configuration details. You can create a task definition using the AWS Management Console or the AWS CLI.</li>
+
+
+
+<li>Create a service: A service is a long-running task that is automatically started and stopped by ECS. A service is associated with a task definition, and it can be configured to run a specific number of tasks (called the desired count). You can create a service using the AWS Management Console or the AWS CLI.</li>
+
+
+
+<li>Configure auto scaling: You can use the AWS Application Auto Scaling service to set up auto scaling for your ECS services. Auto scaling allows you to automatically increase or decrease the number of tasks in your service based on metrics like CPU usage or memory usage. To configure auto scaling, you&#8217;ll need to create an auto scaling target and a scaling policy. You can do this using the AWS Management Console or the AWS CLI.</li>
+</ol>
+
+
+
+<p>Here&#8217;s an example of how to create an ECS service with task definitions and auto scaling using the AWS Management Console:</p>
+
+
+
+<ol>
+<li>Create a task definition:
+<ul>
+<li>Go to the Amazon ECS console and choose &#8220;Task Definitions&#8221; from the left navigation pane.</li>
+
+
+
+<li>Choose &#8220;Create new Task Definition&#8221; and select &#8220;EC2&#8221; or &#8220;Fargate&#8221; depending on your requirements.</li>
+
+
+
+<li>Configure the task definition details like the container image, CPU, memory, port mappings, etc.</li>
+
+
+
+<li>Choose &#8220;Create&#8221; to save the task definition.</li>
+</ul>
+</li>
+
+
+
+<li>Create a service:
+<ul>
+<li>From the ECS console, select &#8220;Clusters&#8221; from the left navigation pane and choose the cluster you want to use.</li>
+
+
+
+<li>Choose &#8220;Create Service&#8221; and configure the service details like the task definition, desired count, and load balancer settings.</li>
+
+
+
+<li>Choose &#8220;Create Service&#8221; to save the service.</li>
+</ul>
+</li>
+
+
+
+<li>Configure auto scaling:
+<ul>
+<li>From the Amazon ECS console, choose &#8220;Clusters&#8221; from the left navigation pane and select the cluster you want to use.</li>
+
+
+
+<li>Choose the &#8220;Services&#8221; tab and select the service you want to set up auto scaling for.</li>
+
+
+
+<li>Choose the &#8220;Auto Scaling&#8221; tab and select &#8220;Configure Auto Scaling.&#8221;</li>
+
+
+
+<li>Choose the metrics to use for scaling, such as CPU utilization or memory usage.</li>
+
+
+
+<li>Configure the scaling policy, such as the minimum and maximum number of tasks to run.</li>
+
+
+
+<li>Choose &#8220;Create&#8221; to save the auto scaling configuration.</li>
+</ul>
+</li>
+</ol>
+
+
+
+<p>With these steps completed, ECS will automatically start and stop tasks as needed based on the scaling policies you&#8217;ve configured.</p>
+
+
+
+<p></p>
+
+
+
+<p>Here is an example Terraform code for configuring an ECS service to use the target group:</p>
+
+
+
+<pre class="wp-block-preformatted">resource "aws_ecs_service" "example" {
+  name            = "example-service"
+  cluster         = aws_ecs_cluster.example.id
+  task_definition = aws_ecs_task_definition.example.arn
+  desired_count   = 2
+  
+  load_balancer {
+    target_group_arn = aws_lb_target_group.example.arn
+    container_name   = "example-container"
+    container_port   = 80
+  }
+}
+</pre>
+
+
+
+<p>here is an example of how to create an <code>aws_lb_target_group</code> resource in Terraform:</p>
+
+
+
+<pre class="wp-block-code"><code>resource "aws_lb_target_group" "example" {
+  name        = "example-target-group"
+  port        = 80
+  protocol    = "HTTP"
+  vpc_id      = aws_vpc.example.id
+
+  health_check {
+    path     = "/"
+    protocol = "HTTP"
+  }
+}</code></pre>
+
+
+
+<p>This creates an <code>aws_lb_target_group</code> resource named &#8220;example-target-group&#8221; listening on port 80 using the HTTP protocol, and performing a health check by sending an HTTP request to the root path of the target. The target group is associated with the VPC identified by the <code>aws_vpc.example.id</code> variable.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>http://localhost:8000/index.php/cost-saving-strategies-on-aws/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>An Intro to VPC, Subnets, ECS, EC2, Docker Images, ELB, CDN, Security Groups, and EBS using Storytelling, StarWars, and Poems.</title>
+		<link>http://localhost:8000/index.php/an-intro-to-vpc-subnets-ecs-ec2-docker-images-elb-cdn-security-groups-and-ebs-using-storytelling-starwars-and-poems/</link>
+					<comments>http://localhost:8000/index.php/an-intro-to-vpc-subnets-ecs-ec2-docker-images-elb-cdn-security-groups-and-ebs-using-storytelling-starwars-and-poems/#respond</comments>
+		
+		<dc:creator><![CDATA[rohitkumar1979]]></dc:creator>
+		<pubDate>Thu, 19 Jan 2023 23:12:28 +0000</pubDate>
+				<category><![CDATA[Cloud Computing]]></category>
+		<category><![CDATA[CDN]]></category>
+		<category><![CDATA[Docker Images]]></category>
+		<category><![CDATA[EBS]]></category>
+		<category><![CDATA[EC2]]></category>
+		<category><![CDATA[ECS]]></category>
+		<category><![CDATA[ELB]]></category>
+		<category><![CDATA[Security Groups]]></category>
+		<category><![CDATA[Subnets]]></category>
+		<category><![CDATA[VPC]]></category>
+		<guid isPermaLink="false">https://plainswipe.com/?p=1122</guid>
+
+					<description><![CDATA[VPC can be thought of as a Death Star, providing a secure and isolated environment for all the resources within it, similar to how a Death Star provides boundaries and protection for the empire. Subnets within the VPC can be thought of as different sections within the Death Star, each with different access controls and&#8230;&#160;<a href="http://localhost:8000/index.php/an-intro-to-vpc-subnets-ecs-ec2-docker-images-elb-cdn-security-groups-and-ebs-using-storytelling-starwars-and-poems/" class="" rel="bookmark">Read More &#187;<span class="screen-reader-text">An Intro to VPC, Subnets, ECS, EC2, Docker Images, ELB, CDN, Security Groups, and EBS using Storytelling, StarWars, and Poems.</span></a>]]></description>
+										<content:encoded><![CDATA[
+<p>VPC can be thought of as a Death Star, providing a secure and isolated environment for all the resources within it, similar to how a Death Star provides boundaries and protection for the empire.</p>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" src="https://live.staticflickr.com/8406/8631388149_ea9dc40785_b.jpg" alt=""/></figure>
+
+
+
+<p>Subnets within the VPC can be thought of as different sections within the Death Star, each with different access controls and security settings. For example, a public subnet can be thought of as the control room, where a load balancer resides, </p>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" src="https://www.oreilly.com/content/wp-content/uploads/sites/2/2020/01/Kozloduy_Nuclear_Power_Plant_-_Control_Room_of_Units_3_and_4-8ee183e6f16e0dc1560731448e249c6c.jpg" alt=""/></figure>
+
+
+
+<p>and a private subnet can be thought of as the power core, where a database resides.</p>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" src="https://i.stack.imgur.com/KQpT4.jpg" alt=""/></figure>
+
+
+
+<p>ECS is like a team of droids, they design and build the infrastructure for your application, similar to how droids design and build the Death Star. ECS allows you to easily launch and manage Docker containers, and can automatically scale your application to handle traffic spikes.</p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-full"><img decoding="async" src="https://plainswipe.com/wp-content/uploads/2023/01/drois.png" alt="" class="wp-image-1123"/></figure></div>
+
+
+<p>EC2 instances can be thought of as the Imperial ships, they host and run your application, similar to how Imperial ships host and provide space for its crew. Each EC2 instance is a virtual server that can run your application, and can be easily scaled up or down as needed.</p>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" src="https://live.staticflickr.com/3456/3902202620_c92845e356_b.jpg" alt=""/></figure>
+
+
+
+<p>Docker images can be thought of as technical plans, they contain all the necessary instructions to run your application, similar to how technical plans contain all the necessary instructions to construct a Death Star. and can be easily transported and run on any EC2 instance.</p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-large"><img decoding="async" src="https://m.media-amazon.com/images/I/51aR6fdy4gL._AC_.jpg" alt=""/></figure></div>
+
+
+<p>An Elastic Load Balancer (ELB) is like Darth Vader, it manages and directs traffic to the appropriate resources, similar to how Darth Vader manages and directs the empire&#8217;s resources. It distributes incoming traffic to multiple instances of your application, and also provides automatic failover and health monitoring.</p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-full"><img decoding="async" src="https://plainswipe.com/wp-content/uploads/2023/01/darthvader.png" alt="" class="wp-image-1124"/></figure></div>
+
+
+<p>A Content Delivery Network (CDN) can be thought of as the force, it delivers content to users from the closest location, similar to how the force allows Jedi to access information from anywhere. It caches and stores your content on servers located</p>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" src="https://live.staticflickr.com/4787/39973052024_dc5b734334_b.jpg" alt=""/></figure>
+
+
+
+<h2 class="wp-block-heading">A Poem</h2>
+
+
+
+<p>In the cloud, a VPC stands tall, </p>
+
+
+
+<p>A fortress for resources, safe from all. </p>
+
+
+
+<p>Subnets within, like chambers in a hall, </p>
+
+
+
+<p>Each with different rules, for one and all.</p>
+
+
+
+<p>ECS, a team of builders, strong and true, </p>
+
+
+
+<p>They launch and manage, your app anew. </p>
+
+
+
+<p>EC2, powerful tools, in every instance, </p>
+
+
+
+<p>To host and run, with high reliance.</p>
+
+
+
+<p>Docker images, like spells in a book, </p>
+
+
+
+<p>Containing all you need, to run your app and cook. </p>
+
+
+
+<p>An ELB, a gatekeeper, distributing the load, </p>
+
+
+
+<p>For performance high, and traffic on the road.</p>
+
+
+
+<p>CDN, a messenger, content to deliver, </p>
+
+
+
+<p>From server nearby, for a smooth river. </p>
+
+
+
+<p>Security Groups, like guards at the gate, </p>
+
+
+
+<p>Protecting all, it&#8217;s never too late.</p>
+
+
+
+<p>EBS, a treasure chest, storing your data, </p>
+
+
+
+<p>Attached and detached, as you wanna. </p>
+
+
+
+<p>All these components, working as one, </p>
+
+
+
+<p>In the cloud, your app, has just begun.</p>
+
+
+
+<h2 class="wp-block-heading">Instead of using VPC, Subnets, ECS, EC2, Docker Images, ELB, CDN, Security Groups, EBS, etc. is there a simplified alternative?</h2>
+
+
+
+<p>Yes, there are simplified alternatives to using VPC, Subnets, ECS, EC2, Docker Images, ELB, CDN, Security Groups, and EBS individually.</p>
+
+
+
+<p>One such alternative is to use a Platform as a Service (PaaS) provider, such as Heroku or AWS Elastic Beanstalk. These services abstract away many of the underlying infrastructure components and provide a more user-friendly interface for deploying and managing web applications.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>http://localhost:8000/index.php/an-intro-to-vpc-subnets-ecs-ec2-docker-images-elb-cdn-security-groups-and-ebs-using-storytelling-starwars-and-poems/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,629 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Cloud Computing &#8211; PlainSwipe</title>
+	<atom:link href="http://localhost/index.php/category/cloud-computing/feed/" rel="self" type="application/rss+xml" />
+	<link>http://localhost:8000</link>
+	<description></description>
+	<lastBuildDate>Sat, 25 Mar 2023 13:57:20 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.2</generator>
+
+<image>
+	<url>http://localhost:8000/wp-content/uploads/2023/04/cropped-logo-32x32.png</url>
+	<title>Cloud Computing &#8211; PlainSwipe</title>
+	<link>http://localhost:8000</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Cost Saving Strategies for Training Large Language Models like ChatGPT / GPT4</title>
+		<link>http://localhost:8000/index.php/cost-saving-strategies-for-training-large-language-models-like-chatgpt-gpt4/</link>
+					<comments>http://localhost:8000/index.php/cost-saving-strategies-for-training-large-language-models-like-chatgpt-gpt4/#respond</comments>
+		
+		<dc:creator><![CDATA[rohitkumar1979]]></dc:creator>
+		<pubDate>Sat, 25 Mar 2023 13:57:20 +0000</pubDate>
+				<category><![CDATA[Cloud Computing]]></category>
+		<category><![CDATA[Deep Learning]]></category>
+		<category><![CDATA[Cost Saving]]></category>
+		<category><![CDATA[GPU]]></category>
+		<category><![CDATA[large size]]></category>
+		<category><![CDATA[LLM]]></category>
+		<category><![CDATA[Spot Instances]]></category>
+		<category><![CDATA[spot requests]]></category>
+		<guid isPermaLink="false">https://plainswipe.com/cost-saving-strategies-for-training-large-language-models-like-chatgpt-gpt4</guid>
+
+					<description><![CDATA[Training large language models like ChatGPT or GPT-4 is an expensive task that requires a lot of computational resources, time, and money. In this blog post, we will discuss some cost-saving strategies that can be used while training these models. Why Training Large Language Models is So Expensive? Large language models are expensive to train&#8230;&#160;<a href="http://localhost:8000/index.php/cost-saving-strategies-for-training-large-language-models-like-chatgpt-gpt4/" class="" rel="bookmark">Read More &#187;<span class="screen-reader-text">Cost Saving Strategies for Training Large Language Models like ChatGPT / GPT4</span></a>]]></description>
+										<content:encoded><![CDATA[
+<p>Training large language models like ChatGPT or GPT-4 is an expensive task that requires a lot of computational resources, time, and money. In this blog post, we will discuss some cost-saving strategies that can be used while training these models.</p>
+
+
+
+<h3 class="wp-block-heading">Why Training Large Language Models is So Expensive?</h3>
+
+
+
+<p>Large language models are expensive to train because they require vast amounts of computational resources, such as GPU/CPU, memory, and storage. Training a language model on a single machine can take days or even weeks, depending on the size of the dataset and the complexity of the model. The cost of renting these resources from cloud service providers like Amazon Web Services (AWS) can be quite high. To put it in perspective, training GPT-3, which has 175 billion parameters, would cost approximately $4.6 million on AWS.</p>
+
+
+
+<h3 class="wp-block-heading">Spot Instances as a Solution</h3>
+
+
+
+<p>AWS offers a cost-effective solution to reduce the cost of training large language models &#8211; Spot instances. Spot instances are unused EC2 instances that are available for purchase at a significantly lower price than on-demand instances. AWS offers these instances at a discount of up to 90% compared to on-demand instances. Spot instances are a great option for training large language models since the training process is not time-sensitive, and the task can be divided into smaller chunks.</p>
+
+
+
+<h3 class="wp-block-heading">How to Use Spot Instances</h3>
+
+
+
+<p>To use Spot instances, you need to request them using the AWS Management Console or the AWS SDK. Spot instances are available until the price exceeds your maximum bid, at which point the instance is terminated. However, using spot instances has its challenges. The instance can be terminated at any time, causing the work to be lost, and the training process to start from scratch.</p>
+
+
+
+<h3 class="wp-block-heading">Creating a Boot Snapshot Volume</h3>
+
+
+
+<p>To prevent losing work when a Spot instance is terminated, you can create a boot snapshot volume. A boot snapshot volume contains the operating system, the application, and any data that was present on the instance. When a new instance is created, this volume can be attached, allowing you to resume work from where you left off. By doing this, you can significantly reduce the time and money spent on training large language models.</p>
+
+
+
+<h3 class="wp-block-heading">Challenges with Spot Instances and GPU Limits</h3>
+
+
+
+<p>While Spot instances are a cost-effective solution for training large language models, AWS and other cloud companies impose limits on the type of spot instances that have GPU, making it challenging to procure the necessary resources to train these models. These limits can significantly impact the training time and, consequently, the overall cost of the project.</p>
+
+
+
+<h3 class="wp-block-heading">Requesting a Limit Increase</h3>
+
+
+
+<p>To overcome this challenge, you can request a limit increase for the GPU instances from AWS or the cloud provider you are using. The process involves submitting a support ticket requesting an increase in the limit for the specific instance type. AWS has a dedicated portal for requesting limit increases, making the process more streamlined.</p>
+
+
+
+<h3 class="wp-block-heading">Tips for Getting Your Limit Increase Approved</h3>
+
+
+
+<p>Getting a limit increase approved can be a daunting task, but there are ways to increase the chances of approval. Here are some tips to follow:</p>
+
+
+
+<ol>
+<li>Justify your request &#8211; provide a detailed explanation of why you need a limit increase, including the nature of your workload, the size of your dataset, and the complexity of the model.</li>
+
+
+
+<li>Demonstrate cost optimization &#8211; show that using Spot instances is a cost-effective solution compared to using on-demand instances, which can help justify the increase in limit.</li>
+
+
+
+<li>Highlight past successes &#8211; showcase past successes in training large language models, using similar or the same resources, to demonstrate your ability to manage the workload effectively.</li>
+
+
+
+<li>Be specific &#8211; provide detailed information on the exact type of instance you need and the number required to complete the task.</li>
+
+
+
+<li>Plan ahead &#8211; request the limit increase well in advance to allow enough time for approval and procurement of the required resources.</li>
+</ol>
+
+
+
+<h3 class="wp-block-heading">The Size of Large Language Models (LLMs)</h3>
+
+
+
+<p>Large Language Models (LLMs) like GPT-3 or ChatGPT can get extremely large, often requiring hundreds of gigabytes or even terabytes of storage space. For example, GPT-3 has 175 billion parameters and requires 800 GB of storage space. The size of these models makes it challenging to move data from one instance to another, increasing the overall cost and time required to train the models.</p>
+
+
+
+<h3 class="wp-block-heading">Challenges of Moving Data between Instances</h3>
+
+
+
+<p>Moving data between instances can be a time-consuming and expensive process. It involves copying large amounts of data over the network, which can take hours or even days, depending on the size of the data and the network speed. Additionally, copying data can also incur additional costs, such as network bandwidth fees, which can add up quickly.</p>
+
+
+
+<h3 class="wp-block-heading">Use object storage</h3>
+
+
+
+<p>Storing data in object storage services like Amazon S3 or Google Cloud Storage can make it easier to move data between instances. Object storage services allow you to store and retrieve large amounts of data quickly and efficiently, reducing the time and cost of moving data between instances.</p>
+
+
+
+<h3 class="wp-block-heading">Connecting to a Spot Instance using SSH: Challenges and Solutions</h3>
+
+
+
+<p>When using Spot instances for training large language models, connecting to the instance using SSH can be a challenge.</p>
+
+
+
+<p>Firewall settings: Firewall settings can prevent you from connecting to your Spot instance using SSH. If your firewall is not set up correctly, you may receive a &#8220;Connection Refused&#8221; error when trying to connect to the instance.</p>
+
+
+
+<p>Solution: To overcome this challenge, ensure that the security group settings for your Spot instance allow incoming SSH traffic. You can do this by adding a rule to the security group to allow incoming traffic on port 22, which is the default port used for SSH.</p>
+
+
+
+<h3 class="wp-block-heading">Max Spot Request Count Exceeded: Causes and Solutions</h3>
+
+
+
+<p>Another challenge that can occur when using Spot instances for training large language models is the &#8220;Max Spot Request Count Exceeded&#8221; error. This error occurs when you have submitted the maximum number of Spot instance requests that you can submit in a specific period.</p>
+
+
+
+<p>Here are some common causes of the &#8220;Max Spot Request Count Exceeded&#8221; error and ways to avoid it:</p>
+
+
+
+<ol>
+<li>AWS account limits: Your AWS account may have a limit on the number of Spot instance requests that you can submit in a specific period.</li>
+</ol>
+
+
+
+<p>Solution: To avoid this error, you can request a limit increase from AWS. You may need to provide information on how you plan to use the additional requests and the expected workload. If your request is approved, you can submit more requests and continue your training.</p>
+
+
+
+<ol start="2">
+<li>Spot instance launch frequency: When using Spot instances, there is a limit on how frequently you can launch new instances. If you exceed this limit, you may receive the &#8220;Max Spot Request Count Exceeded&#8221; error.</li>
+</ol>
+
+
+
+<p>Solution: To avoid this error, you can adjust the frequency of Spot instance launches. This can include launching instances less frequently or using tools like EC2 Auto Scaling to launch new instances based on workload and availability.</p>
+
+
+
+<ol start="3">
+<li>Spot instance termination: Similar to the &#8220;Max Spot Instance Count Exceeded&#8221; error, the risk of Spot instance termination can also cause the &#8220;Max Spot Request Count Exceeded&#8221; error. When a Spot instance is terminated, it counts as a new request.</li>
+</ol>
+
+
+
+<p>Solution: To avoid this error, you can use the same strategies as mentioned before to manage the risk of Spot instance termination. This can include launching a mix of Spot and On-Demand instances or using tools like EC2 Auto Scaling to maintain a minimum number of running instances.</p>
+
+
+
+<h3 class="wp-block-heading">Picking the Right AMI with Drivers Installed: Challenges and Solutions</h3>
+
+
+
+<p>When training large language models using Spot instances, it&#8217;s important to choose the right Amazon Machine Image (AMI) that includes the necessary drivers installed. This can be a challenging task, but there are solutions to help streamline the process.</p>
+
+
+
+<p>Here are some common challenges when picking the right AMI with drivers installed and ways to overcome them:</p>
+
+
+
+<ol>
+<li>Finding the right AMI: With so many different AMIs available on the AWS Marketplace, it can be challenging to find the one that includes the specific drivers required for your workload.</li>
+</ol>
+
+
+
+<p>Solution: One solution is to use AWS Deep Learning AMIs, which include popular deep learning frameworks like TensorFlow, PyTorch, and MXNet. These AMIs also include pre-installed drivers for popular GPUs like NVIDIA, making it easier to get started with training large language models.</p>
+
+
+
+<ol start="2">
+<li>Customizing the AMI: In some cases, you may need to customize the AMI to include additional drivers or software required for your specific workload.</li>
+</ol>
+
+
+
+<p>Solution: To customize an AMI, you can use the AWS Systems Manager to create a custom image that includes the necessary drivers and software. This image can then be used to launch Spot instances for your training workload.</p>
+
+
+
+<ol start="3">
+<li>Keeping drivers up to date: As new versions of drivers are released, it can be challenging to keep your AMI up to date with the latest drivers.</li>
+
+
+
+<li></li>
+</ol>
+
+
+
+<p>Solution: To keep your AMI up to date with the latest drivers, you can use automation tools like AWS Systems Manager Automation to automate the process of updating the drivers. This can help ensure that your AMI is always up to date and optimized for your training workload.</p>
+
+
+
+<h3 class="wp-block-heading">Conclusion</h3>
+
+
+
+<p>In this post, we discussed the cost-saving strategies for training large language models like ChatGPT/GPT-4 using AWS Spot instances. We first explained why training large language models can be expensive and gave examples of how expensive it can get. We then talked about how Spot instances can be an effective solution for cost-saving and how creating a boot snapshot volume can help resume work when a new instance is created.</p>
+
+
+
+<p>We also addressed challenges like AWS imposing limits on the type of spot instances that have GPUs, connecting to the spot instance using SSH, and avoiding the &#8220;Max Spot Instance Count Exceeded&#8221; and &#8220;Max Spot Request Count Exceeded&#8221; errors. Lastly, we talked about the importance of choosing the right AMI with drivers installed and provided solutions to overcome the challenges of finding the right AMI and keeping drivers up to date.</p>
+
+
+
+<p>In conclusion, training large language models can be a costly process, but using AWS Spot instances, creating a boot snapshot volume, and choosing the right AMI with drivers installed can help optimize cost and performance. Additionally, it is important to plan and manage the availability of Spot instances and minimize the risk of errors to ensure a smooth training process.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>http://localhost:8000/index.php/cost-saving-strategies-for-training-large-language-models-like-chatgpt-gpt4/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Creating an IAM profile made simple, an end to end tutorial</title>
+		<link>http://localhost:8000/index.php/creating-an-iam-profile-made-simple-an-end-to-end-tutorial/</link>
+					<comments>http://localhost:8000/index.php/creating-an-iam-profile-made-simple-an-end-to-end-tutorial/#respond</comments>
+		
+		<dc:creator><![CDATA[rohitkumar1979]]></dc:creator>
+		<pubDate>Fri, 17 Mar 2023 19:48:27 +0000</pubDate>
+				<category><![CDATA[Cloud Computing]]></category>
+		<category><![CDATA[IAM]]></category>
+		<category><![CDATA[Permissions]]></category>
+		<guid isPermaLink="false">https://plainswipe.com/?p=1261</guid>
+
+					<description><![CDATA[Creating an IAM profile in AWS can be a complex process, especially for those who are new to AWS or have limited experience with cloud computing. There are many different policies to choose from, and selecting the appropriate policies can be a challenge. Additionally, ensuring that the permissions are set up correctly and that the&#8230;&#160;<a href="http://localhost:8000/index.php/creating-an-iam-profile-made-simple-an-end-to-end-tutorial/" class="" rel="bookmark">Read More &#187;<span class="screen-reader-text">Creating an IAM profile made simple, an end to end tutorial</span></a>]]></description>
+										<content:encoded><![CDATA[
+<p>Creating an IAM profile in AWS can be a complex process, especially for those who are new to AWS or have limited experience with cloud computing. There are many different policies to choose from, and selecting the appropriate policies can be a challenge. Additionally, ensuring that the permissions are set up correctly and that the user has access to the appropriate resources can be time-consuming and require a lot of attention to detail.</p>
+
+
+
+<p>Step 1 : go to IAM service page and click on add users</p>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" src="https://plainswipe.com/wp-content/uploads/2023/03/image-5-1024x228.png" alt="" class="wp-image-1262"/></figure>
+
+
+
+<p>Step 2: Is easy</p>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" src="https://plainswipe.com/wp-content/uploads/2023/03/image-6-1024x362.png" alt="" class="wp-image-1263"/></figure>
+
+
+
+<p>Step 3: Select Permissions, click on Create Group</p>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" src="https://plainswipe.com/wp-content/uploads/2023/03/image-8-1024x461.png" alt="" class="wp-image-1265"/></figure>
+
+
+
+<p>Here are some groups that you might want to create, and the policies you would most likely want to attach</p>
+
+
+
+<figure class="wp-block-table"><table><thead><tr><th>AWS Permission Group</th><th>Policies Attached</th></tr></thead><tbody><tr><td>Developer group</td><td>AmazonEC2FullAccess, AmazonS3FullAccess, AWSLambda_FullAccess, AWSCodeCommitPowerUser, AWSCodeBuildDeveloperAccess, AWSCodeDeployFullAccess, AWSCodePipeline_FullAccess, AWSXRayFullAccess</td></tr><tr><td>Administrator group</td><td>AdministratorAccess, AmazonEC2FullAccess, AmazonS3FullAccess, AmazonRDSFullAccess, AWSLambda_FullAccess, AWSCodeCommitFullAccess, AWSCodeBuildFullAccess, AWSCodeDeployFullAccess, AWSCodePipelineFullAccess, AWSXRayFullAccess</td></tr><tr><td>Billing group</td><td>Billing, CloudWatchReadOnlyAccess</td></tr><tr><td>Security group</td><td>SecurityAudit, AWSConfigRole</td></tr><tr><td>Support group</td><td>AWSHealthFullAccess, AWSSupportAccess</td></tr></tbody></table></figure>
+
+
+
+<p>Step 4: Select the group</p>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" src="https://plainswipe.com/wp-content/uploads/2023/03/image-9-1024x911.png" alt="" class="wp-image-1266"/></figure>
+
+
+
+<p>Step 5: After creating an IAM user and attaching the appropriate group, you can share the access with the developer by providing them with the IAM user credentials and login URL.</p>
+
+
+
+<p>To do this, you can follow these steps:</p>
+
+
+
+<ol>
+<li>Navigate to the IAM dashboard in your AWS console.</li>
+
+
+
+<li>Select the IAM user you just created and click on the &#8220;Security credentials&#8221; tab.</li>
+
+
+
+<li>Click on the &#8220;Create access key&#8221; button to generate an access key and secret access key for the user.</li>
+
+
+
+<li>Share the access key and secret access key with the developer. You can do this by securely emailing them the credentials or sharing them through a secure file sharing service.</li>
+
+
+
+<li>Also, share the URL for the AWS console login page with the developer, which is typically in the format &#8220;https://&lt;your-account-number&gt;.signin.aws.amazon.com/console&#8221;. The developer will need to enter the IAM user credentials to access the AWS console and start using the AWS services that they have been granted access to.</li>
+</ol>
+
+
+
+<p>It is important to emphasize the importance of keeping the IAM user credentials secure and confidential, as these credentials provide access to your AWS resources. Additionally, it is recommended to set up multi-factor authentication (MFA) for IAM users to add an extra layer of security.</p>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" src="https://plainswipe.com/wp-content/uploads/2023/03/image-10-1024x621.png" alt="" class="wp-image-1267"/></figure>
+
+
+
+<p></p>
+
+
+
+<p>Step 6: AWS Access Key has many options. Pick CLI</p>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" src="https://plainswipe.com/wp-content/uploads/2023/03/image-11-970x1024.png" alt="" class="wp-image-1268"/></figure>
+
+
+
+<p></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>http://localhost:8000/index.php/creating-an-iam-profile-made-simple-an-end-to-end-tutorial/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>An Intro to VPC, Subnets, ECS, EC2, Docker Images, ELB, CDN, Security Groups, and EBS using Storytelling, StarWars, and Poems.</title>
+		<link>http://localhost:8000/index.php/an-intro-to-vpc-subnets-ecs-ec2-docker-images-elb-cdn-security-groups-and-ebs-using-storytelling-starwars-and-poems/</link>
+					<comments>http://localhost:8000/index.php/an-intro-to-vpc-subnets-ecs-ec2-docker-images-elb-cdn-security-groups-and-ebs-using-storytelling-starwars-and-poems/#respond</comments>
+		
+		<dc:creator><![CDATA[rohitkumar1979]]></dc:creator>
+		<pubDate>Thu, 19 Jan 2023 23:12:28 +0000</pubDate>
+				<category><![CDATA[Cloud Computing]]></category>
+		<category><![CDATA[CDN]]></category>
+		<category><![CDATA[Docker Images]]></category>
+		<category><![CDATA[EBS]]></category>
+		<category><![CDATA[EC2]]></category>
+		<category><![CDATA[ECS]]></category>
+		<category><![CDATA[ELB]]></category>
+		<category><![CDATA[Security Groups]]></category>
+		<category><![CDATA[Subnets]]></category>
+		<category><![CDATA[VPC]]></category>
+		<guid isPermaLink="false">https://plainswipe.com/?p=1122</guid>
+
+					<description><![CDATA[VPC can be thought of as a Death Star, providing a secure and isolated environment for all the resources within it, similar to how a Death Star provides boundaries and protection for the empire. Subnets within the VPC can be thought of as different sections within the Death Star, each with different access controls and&#8230;&#160;<a href="http://localhost:8000/index.php/an-intro-to-vpc-subnets-ecs-ec2-docker-images-elb-cdn-security-groups-and-ebs-using-storytelling-starwars-and-poems/" class="" rel="bookmark">Read More &#187;<span class="screen-reader-text">An Intro to VPC, Subnets, ECS, EC2, Docker Images, ELB, CDN, Security Groups, and EBS using Storytelling, StarWars, and Poems.</span></a>]]></description>
+										<content:encoded><![CDATA[
+<p>VPC can be thought of as a Death Star, providing a secure and isolated environment for all the resources within it, similar to how a Death Star provides boundaries and protection for the empire.</p>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" src="https://live.staticflickr.com/8406/8631388149_ea9dc40785_b.jpg" alt=""/></figure>
+
+
+
+<p>Subnets within the VPC can be thought of as different sections within the Death Star, each with different access controls and security settings. For example, a public subnet can be thought of as the control room, where a load balancer resides, </p>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" src="https://www.oreilly.com/content/wp-content/uploads/sites/2/2020/01/Kozloduy_Nuclear_Power_Plant_-_Control_Room_of_Units_3_and_4-8ee183e6f16e0dc1560731448e249c6c.jpg" alt=""/></figure>
+
+
+
+<p>and a private subnet can be thought of as the power core, where a database resides.</p>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" src="https://i.stack.imgur.com/KQpT4.jpg" alt=""/></figure>
+
+
+
+<p>ECS is like a team of droids, they design and build the infrastructure for your application, similar to how droids design and build the Death Star. ECS allows you to easily launch and manage Docker containers, and can automatically scale your application to handle traffic spikes.</p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-full"><img decoding="async" src="https://plainswipe.com/wp-content/uploads/2023/01/drois.png" alt="" class="wp-image-1123"/></figure></div>
+
+
+<p>EC2 instances can be thought of as the Imperial ships, they host and run your application, similar to how Imperial ships host and provide space for its crew. Each EC2 instance is a virtual server that can run your application, and can be easily scaled up or down as needed.</p>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" src="https://live.staticflickr.com/3456/3902202620_c92845e356_b.jpg" alt=""/></figure>
+
+
+
+<p>Docker images can be thought of as technical plans, they contain all the necessary instructions to run your application, similar to how technical plans contain all the necessary instructions to construct a Death Star. and can be easily transported and run on any EC2 instance.</p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-large"><img decoding="async" src="https://m.media-amazon.com/images/I/51aR6fdy4gL._AC_.jpg" alt=""/></figure></div>
+
+
+<p>An Elastic Load Balancer (ELB) is like Darth Vader, it manages and directs traffic to the appropriate resources, similar to how Darth Vader manages and directs the empire&#8217;s resources. It distributes incoming traffic to multiple instances of your application, and also provides automatic failover and health monitoring.</p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-full"><img decoding="async" src="https://plainswipe.com/wp-content/uploads/2023/01/darthvader.png" alt="" class="wp-image-1124"/></figure></div>
+
+
+<p>A Content Delivery Network (CDN) can be thought of as the force, it delivers content to users from the closest location, similar to how the force allows Jedi to access information from anywhere. It caches and stores your content on servers located</p>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" src="https://live.staticflickr.com/4787/39973052024_dc5b734334_b.jpg" alt=""/></figure>
+
+
+
+<h2 class="wp-block-heading">A Poem</h2>
+
+
+
+<p>In the cloud, a VPC stands tall, </p>
+
+
+
+<p>A fortress for resources, safe from all. </p>
+
+
+
+<p>Subnets within, like chambers in a hall, </p>
+
+
+
+<p>Each with different rules, for one and all.</p>
+
+
+
+<p>ECS, a team of builders, strong and true, </p>
+
+
+
+<p>They launch and manage, your app anew. </p>
+
+
+
+<p>EC2, powerful tools, in every instance, </p>
+
+
+
+<p>To host and run, with high reliance.</p>
+
+
+
+<p>Docker images, like spells in a book, </p>
+
+
+
+<p>Containing all you need, to run your app and cook. </p>
+
+
+
+<p>An ELB, a gatekeeper, distributing the load, </p>
+
+
+
+<p>For performance high, and traffic on the road.</p>
+
+
+
+<p>CDN, a messenger, content to deliver, </p>
+
+
+
+<p>From server nearby, for a smooth river. </p>
+
+
+
+<p>Security Groups, like guards at the gate, </p>
+
+
+
+<p>Protecting all, it&#8217;s never too late.</p>
+
+
+
+<p>EBS, a treasure chest, storing your data, </p>
+
+
+
+<p>Attached and detached, as you wanna. </p>
+
+
+
+<p>All these components, working as one, </p>
+
+
+
+<p>In the cloud, your app, has just begun.</p>
+
+
+
+<h2 class="wp-block-heading">Instead of using VPC, Subnets, ECS, EC2, Docker Images, ELB, CDN, Security Groups, EBS, etc. is there a simplified alternative?</h2>
+
+
+
+<p>Yes, there are simplified alternatives to using VPC, Subnets, ECS, EC2, Docker Images, ELB, CDN, Security Groups, and EBS individually.</p>
+
+
+
+<p>One such alternative is to use a Platform as a Service (PaaS) provider, such as Heroku or AWS Elastic Beanstalk. These services abstract away many of the underlying infrastructure components and provide a more user-friendly interface for deploying and managing web applications.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>http://localhost:8000/index.php/an-intro-to-vpc-subnets-ecs-ec2-docker-images-elb-cdn-security-groups-and-ebs-using-storytelling-starwars-and-poems/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>How to visualize features in a fine tuned LLM using PyTorch</title>
+		<link>http://localhost:8000/index.php/how-to-visualize-features-in-a-fine-tuned-llm-using-pytorch/</link>
+					<comments>http://localhost:8000/index.php/how-to-visualize-features-in-a-fine-tuned-llm-using-pytorch/#respond</comments>
+		
+		<dc:creator><![CDATA[rohitkumar1979]]></dc:creator>
+		<pubDate>Sat, 07 Jan 2023 09:42:51 +0000</pubDate>
+				<category><![CDATA[Cloud Computing]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[Kubernetes]]></category>
+		<category><![CDATA[Kubernetes networking algorithm]]></category>
+		<guid isPermaLink="false">https://plainswipe.com/?p=1084</guid>
+
+					<description><![CDATA[To visualize the features of a fine-tuned language model in PyTorch, you can use a technique called &#8220;gradient-weighted class activation mapping&#8221; (Grad-CAM). This technique allows you to visualize which parts of the input text are most important for the model&#8217;s prediction. Here&#8217;s an example of how you can implement Grad-CAM in PyTorch: 1. First, you&#8217;ll&#8230;&#160;<a href="http://localhost:8000/index.php/how-to-visualize-features-in-a-fine-tuned-llm-using-pytorch/" class="" rel="bookmark">Read More &#187;<span class="screen-reader-text">How to visualize features in a fine tuned LLM using PyTorch</span></a>]]></description>
+										<content:encoded><![CDATA[
+<p>To visualize the features of a fine-tuned language model in PyTorch, you can use a technique called &#8220;gradient-weighted class activation mapping&#8221; (Grad-CAM). This technique allows you to visualize which parts of the input text are most important for the model&#8217;s prediction.</p>
+
+
+
+<p>Here&#8217;s an example of how you can implement Grad-CAM in PyTorch:</p>
+
+
+
+<p>1. First, you&#8217;ll need to choose a layer of the model whose activations you want to visualize. It&#8217;s often a good idea to choose a layer near the end of the model, since these layers tend to capture higher-level features of the input.</p>
+
+
+
+<p>2. Next, you&#8217;ll need to compute the gradient of the output of the model with respect to the activations of the chosen layer. You can do this using PyTorch&#8217;s backward function.</p>
+
+
+
+<p>3. Once you have the gradients, you can average them across the different channels of the activations to obtain a &#8220;gradient weight&#8221; for each position in the input text.</p>
+
+
+
+<p>4. Finally, you can apply a heatmap visualization to the input text, using the gradient weights as the intensity values for the heatmap. This will show you which parts of the input text are most important for the model&#8217;s prediction.</p>
+
+
+
+<h2 class="wp-block-heading">Code</h2>
+
+
+
+<pre class="wp-block-preformatted">import torch<br>import torch.nn as nn<br><br># Assume that we have a fine-tuned language model called "model"<br># and a batch of input text called "inputs"<br><br># Choose a layer of the model to visualize<br>layer = model.bert.encoder.layer[11]<br><br># Set the model to evaluation mode<br>model.eval()<br><br># Forward pass<br>with torch.no_grad():<br>    outputs = model(inputs)<br><br># Choose a class to visualize<br>class_idx = 0<br><br># Compute the gradient of the output with respect to the activations of the chosen layer<br>outputs[0, class_idx].backward()<br><br># Obtain the gradients of the activations<br>gradients = layer.weight.grad<br><br># Average the gradients across the different channels<br>gradients = gradients.mean(dim=1).mean(dim=1)<br><br># Apply a heatmap visualization to the input text<br>heatmap = (gradients * inputs).sum(dim=1).squeeze()<br><br># The heatmap will have the same size as the input text, and the intensity values<br># will show which parts of the input text are most important for the model's prediction<br></pre>
+]]></content:encoded>
+					
+					<wfw:commentRss>http://localhost:8000/index.php/how-to-visualize-features-in-a-fine-tuned-llm-using-pytorch/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

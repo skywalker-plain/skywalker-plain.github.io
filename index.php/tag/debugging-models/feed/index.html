@@ -1,0 +1,639 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>debugging models &#8211; PlainSwipe</title>
+	<atom:link href="http://localhost/index.php/tag/debugging-models/feed/" rel="self" type="application/rss+xml" />
+	<link>http://localhost:8000</link>
+	<description></description>
+	<lastBuildDate>Sun, 01 Jan 2023 08:41:35 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.2</generator>
+
+<image>
+	<url>http://localhost:8000/wp-content/uploads/2023/04/cropped-logo-32x32.png</url>
+	<title>debugging models &#8211; PlainSwipe</title>
+	<link>http://localhost:8000</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>How to understand model loss and model accuracy</title>
+		<link>http://localhost:8000/index.php/how-to-understand-model-loss-and-model-accuracy/</link>
+					<comments>http://localhost:8000/index.php/how-to-understand-model-loss-and-model-accuracy/#respond</comments>
+		
+		<dc:creator><![CDATA[rohitkumar1979]]></dc:creator>
+		<pubDate>Sun, 01 Jan 2023 08:41:35 +0000</pubDate>
+				<category><![CDATA[Deep Learning]]></category>
+		<category><![CDATA[debugging models]]></category>
+		<category><![CDATA[model accuracy]]></category>
+		<category><![CDATA[model loss]]></category>
+		<category><![CDATA[training data]]></category>
+		<guid isPermaLink="false">https://plainswipe.com/?p=972</guid>
+
+					<description><![CDATA[Model loss is a measure of how well the model is able to make correct predictions on a given dataset. It is calculated as the average of the loss values across all samples in the dataset. Lower loss values indicate that the model is making more accurate predictions. Model accuracy is a measure of the&#8230;&#160;<a href="http://localhost:8000/index.php/how-to-understand-model-loss-and-model-accuracy/" class="" rel="bookmark">Read More &#187;<span class="screen-reader-text">How to understand model loss and model accuracy</span></a>]]></description>
+										<content:encoded><![CDATA[
+<p>Model loss is a measure of how well the model is able to make correct predictions on a given dataset. It is calculated as the average of the loss values across all samples in the dataset. Lower loss values indicate that the model is making more accurate predictions.</p>
+
+
+
+<p>Model accuracy is a measure of the percentage of correct predictions made by the model on a given dataset. It is calculated as the number of correct predictions divided by the total number of predictions. Higher accuracy values indicate that the model is making more accurate predictions.</p>
+
+
+
+<p>In general, you want to minimize the model loss and maximize the accuracy. However, it is important to note that minimizing the loss does not necessarily lead to maximal accuracy, and vice versa. It is possible to have a low loss and low accuracy, or a high loss and high accuracy. Finding the right balance between loss and accuracy is important for training effective models.</p>
+
+
+
+<p>Here are some sample command line outputs of training a deep learning model using PyTorch:</p>
+
+
+
+<pre class="wp-block-preformatted">Epoch 1/10<br />----------<br />Train Loss: 0.6821 Acc: 0.5740<br />Val Loss: 0.6565 Acc: 0.6200<br /><br />Epoch 2/10<br />----------<br />Train Loss: 0.6184 Acc: 0.6820<br />Val Loss: 0.6129 Acc: 0.6700<br /><br />Epoch 3/10<br />----------<br />Train Loss: 0.5582 Acc: 0.7300<br />Val Loss: 0.5545 Acc: 0.7400<br /><br />Epoch 4/10<br />----------<br />Train Loss: 0.5044 Acc: 0.7760<br />Val Loss: 0.5077 Acc: 0.7600<br /><br />Epoch 5/10<br />----------<br />Train Loss: 0.4566 Acc: 0.8080<br />Val Loss: 0.4741 Acc: 0.7800<br /><br />Epoch 6/10<br />----------<br />Train Loss: 0.4148 Acc: 0.8340<br />Val Loss: 0.4534 Acc: 0.7900<br /><br />Epoch 7/10<br />----------<br />Train Loss: 0.3784 Acc: 0.8540<br />Val Loss: 0.4342 Acc: 0.8000<br /><br />Epoch 8/10<br />----------<br />Train Loss: 0.3471 Acc: 0.8720<br />Val Loss: 0.4170 Acc: 0.8100<br /><br />Epoch 9/10<br />----------<br />Train Loss: 0.3195 Acc: 0.8860<br />Val Loss: 0.4013 Acc: 0.8200<br /><br />Epoch 10/10<br />----------<br />Train Loss: 0.2958 Acc: 0.8980<br />Val Loss: 0.3873 Acc: 0.8300<br /></pre>
+
+
+
+<p>Model loss can be thought of as a measure of how far off the mark the model&#8217;s predictions are. Imagine a scenario where you are trying to hit a bullseye on a target with a bow and arrow. Each time you shoot the arrow, the distance between the arrow and the bullseye is measured. The closer the arrow is to the bullseye, the lower the score. In this scenario, the distance between the arrow and the bullseye can be thought of as the model loss.</p>
+
+
+
+<p>Model accuracy can be thought of as a measure of how many bullseyes the model hits. Continuing with the above example, if you are able to hit the bullseye on a majority of your shots, you can be said to have high accuracy. On the other hand, if you are only able to hit the bullseye on a small percentage of your shots, you can be said to have low accuracy.</p>
+
+
+
+<h4 class="wp-block-heading">Model loss is not changing but accuracy is, post epoch</h4>
+
+
+
+<p>Imagine a scenario where you are trying to solve a puzzle. Each time you make a move, the number of correctly placed pieces is measured. The more correctly placed pieces, the higher the score.</p>
+
+
+
+<p>At the beginning of the puzzle, the number of correctly placed pieces is low and the score is low. As you make more moves, the number of correctly placed pieces increases and the score increases. However, there may come a point where the score plateaus, even though you are still making progress on the puzzle. This might occur if you are able to place a large number of pieces correctly in a short period of time, but then hit a difficult section of the puzzle that requires more time and effort to solve.</p>
+
+
+
+<p>In this scenario, the number of correctly placed pieces can be thought of as the model accuracy, and the score can be thought of as the model loss. The model loss may not change significantly after an epoch because the model is making progress on the puzzle, but the progress is slower than before. The model accuracy may still be increasing because the model is still making correct moves and placing more pieces correctly. By continuing to work on the puzzle, the model may eventually make more progress and the loss will decrease further.</p>
+
+
+
+<h4 class="wp-block-heading">High model loss, and high accuracy</h4>
+
+
+
+<p>High model loss and high accuracy might seem counterintuitive at first, but it is possible for these values to occur in some cases. This might happen if the model is able to make a large number of correct predictions, but the incorrect predictions are far from the correct answers.</p>
+
+
+
+<p>For example, consider a scenario where you are training a language model to predict the next word in a sentence. The model is able to correctly predict the majority of the words, but the incorrect predictions are far from the correct words. As a result, the model&#8217;s loss will be high because the incorrect predictions are far from the correct answers, but the accuracy will be high because the model is making a large number of correct predictions.</p>
+
+
+
+<p>In this scenario, it might be beneficial to try to reduce the model&#8217;s loss by training the model for more epochs or using a different loss function. However, it is important to note that it may not always be possible to significantly reduce the model loss while maintaining high accuracy. In some cases, it may be necessary to trade off some accuracy in order to achieve a lower loss.</p>
+
+
+
+<h4 class="wp-block-heading">Low Model loss and low model accuracy</h4>
+
+
+
+<p>consider a scenario where you are training a language model to predict the next word in a sentence. The model is making a small number of incorrect predictions, but the incorrect predictions are only slightly different from the correct words. As a result, the model&#8217;s loss will be low because the incorrect predictions are only slightly different from the correct answers, but the accuracy will be low because the model is making a small number of correct predictions.</p>
+
+
+
+<p>In this scenario, it might be necessary to try a different model architecture or to add more data to the training set to improve the model&#8217;s performance.</p>
+
+
+
+<h4 class="wp-block-heading">How to deal when this happens</h4>
+
+
+
+<ol>
+<li><strong>Increase the size of the training dataset:</strong> Adding more data to the training set can give the model more examples to learn from, which can improve its performance.</li>
+
+
+
+<li><strong>Fine-tune the model&#8217;s hyperparameters:</strong> Adjusting the model&#8217;s hyperparameters, such as the learning rate or the number of hidden units, can affect the model&#8217;s performance. Tuning the hyperparameters can help the model learn more effectively.</li>
+
+
+
+<li><strong>Try a different model architecture:</strong> Different model architectures may be better suited to different tasks. If the current model architecture is not working well, it might be worth trying a different one to see if it performs better.</li>
+
+
+
+<li><strong>Add regularization to the model:</strong> Regularization techniques, such as dropout or weight decay, can help prevent the model from overfitting to the training data. This can improve the model&#8217;s generalization performance and lead to better results on the validation or test set.</li>
+
+
+
+<li><strong>Try a different optimization algorithm:</strong> Different optimization algorithms can have different behaviors and may work better for different types of models. If the current optimization algorithm is not working well, it might be worth trying a different one to see if it performs better.</li>
+</ol>
+
+
+
+<p>Here are some ways to increase the size of the training dataset specifically for training language models:</p>
+
+
+
+<ol>
+<li><strong>Augment the data with synonyms:</strong> One way to augment the data is to replace certain words with synonyms to create new examples. For example, the word &#8220;large&#8221; might be replaced with &#8220;big&#8221; or &#8220;huge&#8221; to create new training examples.</li>
+
+
+
+<li><strong>Augment the data with paraphrases:</strong> Another way to augment the data is to create new examples by paraphrasing the original sentences. For example, the sentence &#8220;The cat sat on the mat&#8221; might be paraphrased as &#8220;The feline was resting on the floor covering&#8221; to create a new training example.</li>
+
+
+
+<li><strong>Use unsupervised methods to generate additional data:</strong> Unsupervised learning methods, such as language models trained on large corpora, can be used to generate additional training data. For example, you can train a language model on a large dataset of text and then use it to generate new, synthetic examples that can be used for training.</li>
+</ol>
+
+
+
+<h4 class="wp-block-heading">Data Augmentation Sample Code for Text Datasets</h4>
+
+
+
+<pre class="wp-block-preformatted">import random<br />import torch<br /><br />def augment_text(text):<br />    """<br />    Augments the text by randomly replacing words with synonyms or paraphrasing sentences.<br />    """<br />    # Split the text into sentences<br />    sentences = text.split('.')<br />    <br />    # Select a random sentence to paraphrase<br />    idx = random.randint(0, len(sentences)-1)<br />    sentence = sentences[idx]<br />    <br />    # Replace a random word in the selected sentence with a synonym<br />    words = sentence.split(' ')<br />    idx = random.randint(0, len(words)-1)<br />    synonym = get_synonym(words[idx])<br />    words[idx] = synonym<br />    sentence = ' '.join(words)<br />    <br />    # Replace the original sentence with the modified one<br />    sentences[idx] = sentence<br />    <br />    # Concatenate the sentences back into a single string<br />    augmented_text = '.'.join(sentences)<br />    <br />    return augmented_text<br /><br />def get_synonym(word):<br />    """<br />    Returns a synonym for the given word.<br />    """<br />    # Placeholder function - replace with a real synonym generation method<br />    return word + '_synonym'<br /><br /># Example usage<br />text = "The cat sat on the mat."<br />augmented_text = augment_text(text)<br />print(augmented_text)<br /></pre>
+
+
+
+<p></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>http://localhost:8000/index.php/how-to-understand-model-loss-and-model-accuracy/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Anatomy of a PPO loss function</title>
+		<link>http://localhost:8000/index.php/anatomy-of-a-ppo-loss-function/</link>
+					<comments>http://localhost:8000/index.php/anatomy-of-a-ppo-loss-function/#respond</comments>
+		
+		<dc:creator><![CDATA[rohitkumar1979]]></dc:creator>
+		<pubDate>Fri, 16 Dec 2022 10:41:43 +0000</pubDate>
+				<category><![CDATA[Deep Learning]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[debugging models]]></category>
+		<category><![CDATA[PPO]]></category>
+		<category><![CDATA[Reinforcement Learning with Human Feedback]]></category>
+		<category><![CDATA[RLHF]]></category>
+		<guid isPermaLink="false">https://plainswipe.com/?p=953</guid>
+
+					<description><![CDATA[PPO loss function is mainly comprised of two losses Story of the two losses What PPO does is make the language model generate responses that are highly rated (value loss), while forcing it not change the generated responses too much (policy loss) So what PPO does is make the least amount of modifications to the&#8230;&#160;<a href="http://localhost:8000/index.php/anatomy-of-a-ppo-loss-function/" class="" rel="bookmark">Read More &#187;<span class="screen-reader-text">Anatomy of a PPO loss function</span></a>]]></description>
+										<content:encoded><![CDATA[
+<p>PPO loss function is mainly comprised of two losses</p>
+
+
+
+<ul>
+<li>Policy Loss</li>
+
+
+
+<li>Value Loss</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">Story of the two losses</h4>
+
+
+
+<p>What PPO does is make the language model generate responses that are highly rated (value loss), while forcing it not change the generated responses too much (policy loss)</p>
+
+
+
+<figure class="wp-block-pullquote"><blockquote><p>So what PPO does is make the least amount of modifications to the generated response with a low rating, to a response that has a high rating.</p></blockquote></figure>
+
+
+
+<p>For e.g. If the non-PPO model generated the response to the query, &#8220;What is the capital of france?&#8221;, as &#8220;The capital of France is Paris&#8221; which has a high rating from a human then it will leave it as is, but it would not pick the response &#8220;The capital of Spain is Madrid&#8221;, even though it has a high human rating, because the two responses are very different, and we are forcing the model to stay close to its original response.</p>
+
+
+
+<h4 class="wp-block-heading">Policy Loss</h4>
+
+
+
+<p>Policy loss is comparing the probabilities from the old policy and the new policy. Policy loss would measure how well the current policy (i.e., the model&#8217;s strategy for choosing words in a review) aligns with the old policy. For example, if the old policy was to always use positive words (such as &#8220;amazing&#8221; and &#8220;excellent&#8221;) in the reviews, and the new policy is to sometimes use positive words and sometimes use neutral or negative words, the policy loss would be high because the two policies are not very similar.</p>
+
+
+
+<pre class="wp-block-code"><code>policy_loss = torch.exp(logprob - old_logprobs)</code></pre>
+
+
+
+<h4 class="wp-block-heading">Value Loss</h4>
+
+
+
+<p>It measures how well the model predicts the expected reward (i.e., the rating) of each response generated. For example, if the model predicts that a particular review will receive a high rating, but in reality it receives a low rating, the value loss would be high because the model&#8217;s prediction was incorrect.</p>
+
+
+
+<p><strong>Value loss</strong> is calculated as the squared difference between the predicted rewards and the actual rewards. </p>
+
+
+
+<p><strong>Actual reward</strong> are the scores coming directly from the training set. These are scores given to the query, response sample from the training set.  Here is an example of a training sample. </p>
+
+
+
+<pre class="wp-block-code"><code>query: "What is the capital of France?"
+response: "The capital of France is Paris."
+score: 1.0</code></pre>
+
+
+
+<pre class="wp-block-verse">Note 1: The actual reward in this case would be 1.0, These scores can come from a variety of sources, such as a reward function, a value function, or a human evaluator. In practice a reward model is trained to generate the scores, given a query, response pair.<br><br>Note 2: A value is subtracted from the actual reward. This value is high if the tokens generated from the PPO trained model are very different from the original reference model, and low if they are the same. This is known as KL divergence.<br><br><br></pre>
+
+
+
+<p><strong>Predicted reward</strong> is simply the values coming from the value head added to the GPT-2 model being trained. This value head contain an estimation of the rewards that the model is predicting at this training step.</p>
+
+
+
+<p>The predicted reward is calculated as follows:</p>
+
+
+
+<p>Predicted reward = expected reward + advantage</p>
+
+
+
+<p>where:</p>
+
+
+
+<ul>
+<li>expected reward is the expected value of the reward that the agent will receive for a particular action, based on the current policy</li>
+
+
+
+<li>advantage is the difference between the expected reward for the action and the expected reward for the current policy</li>
+</ul>
+
+
+
+<p>In mathematical notation, the predicted reward can be written as:</p>
+
+
+
+<pre class="wp-block-code"><code>R̂(s, a) = ∑r p(r|s, a) + A(s, a)</code></pre>
+
+
+
+<p>where:</p>
+
+
+
+<pre class="wp-block-code"><code>R̂(s, a) is the predicted reward for action a in state s
+p(r|s, a) is the probability of receiving reward r for action a in state s
+A(s, a) is the advantage of action a in state s</code></pre>
+
+
+
+<h4 class="wp-block-heading">Advantages</h4>
+
+
+
+<p><strong>Advantages</strong> are a measure of how good an action is compared to the average action taken by the current policy. To understand the role of advantages in PPO, it is helpful to consider a simple example. Imagine that you are trying to decide which of two paths to take through a maze to reach a treasure chest. One path is longer and more winding, but has a higher probability of leading to the treasure. The other path is shorter and more direct, but has a lower probability of leading to the treasure.</p>
+
+
+
+<p>If you were using the PPO algorithm to make this decision, you would calculate the predicted reward for each path, which is the expected value of the treasure that you would find at the end of each path. You could then calculate the advantage of each path by subtracting the predicted reward for the other path from the predicted reward for the path you are considering. The other path over here is simply the average of all the paths that can be taken.</p>
+
+
+
+<p>The advantage function is calculated as follows:</p>
+
+
+
+<pre class="wp-block-code"><code>A(s, a) = Q(s, a) - V(s)</code></pre>
+
+
+
+<p>where:</p>
+
+
+
+<p>Q(s, a) is the action-value function, which estimates the expected reward for action a in state s</p>
+
+
+
+<pre class="wp-block-code"><code>Q(s, a) is the action-value function, which estimates the expected reward for action a in state s
+V(s) is the state-value function, which estimates the expected reward for being in state s</code></pre>
+
+
+
+<p></p>
+
+
+
+<p><strong>State-value function</strong></p>
+
+
+
+<p>There are several ways to calculate the state-value function, depending on the specific problem and the available information. Some common approaches include:</p>
+
+
+
+<ol>
+<li>Monte Carlo evaluation: In this approach, the state-value function is calculated by averaging the rewards that are received over a number of episodes or interactions with the environment. For example, if the agent is in state s and takes a number of actions, the state-value function can be calculated as the average of the rewards that are received for those actions.</li>
+
+
+
+<li>Temporal Difference (TD) learning: In this approach, the state-value function is updated based on the difference between the expected reward and the actual reward that is received. For example, if the agent is in state s and takes an action that leads to a reward of r and a new state s&#8217;, the state-value function can be updated using the following equation:</li>
+</ol>
+
+
+
+<pre class="wp-block-code"><code>V(s) = V(s) + α(r + γV(s') - V(s)) 
+
+where α is the learning rate and γ is the discount factor.</code></pre>
+
+
+
+<ol start="3">
+<li>Neural networks: The state-value function can also be approximated using a neural network, which is trained to predict the expected reward for a given state. The neural network can be trained using supervised learning, by providing it with a dataset of states and corresponding rewards, or using reinforcement learning, by providing it with a reward signal as it interacts with the environment.</li>
+</ol>
+
+
+
+<p><strong>Action-value function</strong></p>
+
+
+
+<p></p>
+
+
+
+<p>Because then we can subtract the old and new policy logits and then take the exponent to get back the raw unnormalised probabilities. Raw unnormalised probabilities can be large numbers, using log we scale them down so they can be subtracted, and using exp we get back to the raw unnormalized difference between the old and the new policy.</p>
+
+
+
+<p>What is a value head?</p>
+
+
+
+<p>the value head predicts the future rewards of a review based on the current sequence of words in the review. It is an additional output head.</p>
+
+
+
+<p>What is GPT2HeadWithValueModel?</p>
+
+
+
+<pre class="wp-block-code"><code>advantages = rewards&#91;:, t]
+returns = advantages + values # rewards from the training set 
+vf_losses1 = (vpred - returns)**2
+</code></pre>
+
+
+
+<p></p>
+
+
+
+<p></p>
+
+
+
+<p></p>
+
+
+
+<h4 class="wp-block-heading"></h4>
+
+
+
+<h4 class="wp-block-heading"></h4>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<h4 class="wp-block-heading">KL Controllers</h4>
+
+
+
+<p>In the context of a Proximal Policy Optimization (PPO) algorithm, a KL controller is a mechanism for controlling the trade-off between exploration and exploitation in the algorithm. The KL controller determines the amount of change that is allowed in the policy between successive optimization steps.</p>
+
+
+
+<pre class="wp-block-code"><code>kl = logprob - ref_logprob
+non_score_reward = -self.kl_ctl.value * kl
+non_score_rewards.append(non_score_reward)
+reward = non_score_reward.clone()
+reward&#91;-1] += score
+rewards.append(reward)</code></pre>
+
+
+
+<p>An Adaptive KL Controller adjusts the amount of allowed change in the policy based on the performance of the algorithm. For example, if the algorithm is making good progress, the Adaptive KL Controller may allow more change in the policy in order to explore new areas of the solution space. If the algorithm is not making good progress, the Adaptive KL Controller may restrict the amount of change in the policy in order to focus on exploitation and make better use of the existing solution space.</p>
+
+
+
+<p>A Fixed KL Controller, on the other hand, uses a fixed amount of allowed change in the policy for every optimization step. This means that the algorithm will always explore or exploit the solution space in the same way, regardless of its performance. This can make the algorithm less efficient, because it may not be able to adapt to changing circumstances. However, it can also make the algorithm more stable, because the policy will not change too quickly and the algorithm will not overfit to a specific part of the solution space.</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p>actual reward is simply the reward for the current training step (along with the bound that the PPO trained model is not very different from the original reference model).</p>
+
+
+
+<p>The actual reward is calculated by a function that takes three arguments: <code>scores</code>, <code>logprobs</code>, and <code>ref_logprobs</code>. These are likely the scores for each token (action), the log probabilities of the tokens given the current policy, and the log probabilities of the tokens given the reference policy, respectively. This is done to ensure that the model does not start generating responses that are very different from the responses it was generating earlier before training. Scores are updated in each training step. Scores come directly from the additional output head we added to GPT-2. This additional value head represents the reward for the corresponding tokens. So actual reward is simply the reward for the current training step (along with the bound that the PPO trained model is not very different from the original reference model).</p>
+
+
+
+<p>The function then iterates over each of these values and calculates the reward for each action. The reward is composed of two parts: the KL-penalty and the score. The KL-penalty is a measure of the difference between the current policy and the reference policy, and is calculated by subtracting the reference log probability from the current log probability. This difference is then multiplied by a factor <code>kl_ctl.value</code> to calculate the KL-penalty reward.</p>
+
+
+
+<p>The final reward for each action is the sum of the KL-penalty reward and the score. The function returns a list of rewards and a list of KL-penalty rewards.</p>
+
+
+
+<p>Policy loss is difference between words predicted by the current policy and the words predicted by the older policy. This loss exists because we don&#8217;t want the policy to change so drastically with each step.</p>
+
+
+
+<pre class="wp-block-code"><code>vf_losses1 = (vpred - returns)**2</code></pre>
+
+
+
+<p>How is the predicted value calculated?</p>
+
+
+
+<p><code>vpred</code> is the predicted value of the current state, which is the expected future reward if the agent were to act optimally from that state. model_input is combined query and response tokens. Logits is <strong>the unnormalized final scores of your model</strong>. You apply softmax to it to get a probability distribution over your classes.</p>
+
+
+
+<p>To calculate the value loss of a state in a language model trained with PPO, we would first need to calculate the returns of the state. The returns of the state are the actual value of the state, since they represent the expected future rewards of the state. Then, we would need to predict the value of the state using the model. The predicted value is the output of the model&#8217;s &#8220;value function&#8221;, which estimates the expected future rewards of the state. Finally, we would calculate the </p>
+
+
+
+<p>What is the value function?</p>
+
+
+
+<p>The value function of the agent would be a function that estimates the expected value of the rewards the agent will receive if it follows its current policy from a given state.</p>
+
+
+
+<p>What is meant by actual value of the state?</p>
+
+
+
+<p>&#8220;Actual value&#8221; of a state refers to the expected future rewards of the state. The actual value of a state is the &#8220;ground truth&#8221; value that the model is trying to predict. For instance, if the agent&#8217;s current policy is to always move the rook to the left, and this leads to a win with high probability, the actual value of the current state would be high. On the other hand, if the current policy leads to a loss with high probability, the actual value of the state would be low.</p>
+
+
+
+<pre class="wp-block-code"><code>   logits, _, vpred = self.model(model_input)</code></pre>
+
+
+
+<p>In the code above, vpred, is the rewards that the response got. vpred, stands for values predicted. Values stands for the lawyer before softmax is applied, so values are nothing but the predicted rewards</p>
+
+
+
+<pre class="wp-block-code"><code> vf_losses1 = (vpred - returns)**2</code></pre>
+
+
+
+<p>Value loss is the difference between the predicted rewards and the actual rewards. Returns is calculated as follows</p>
+
+
+
+<p>What is state?</p>
+
+
+
+<p>The state of the model at a given time would be the sequence of words that have been generated so far in the review. For instance, if the first few words of the review are &#8220;The movie was&#8221;, the state of the model at this point would be &#8220;The movie was&#8221;.</p>
+
+
+
+<p>What is expected rewards of a given state?</p>
+
+
+
+<p>The expected future rewards of a state would be the expected value of the ratings that the review will receive if the model follows its current policy (i.e., its strategy for choosing words) from that state. Expected future rewards is the expected value of the ratings (i.e., the rewards) that the review will receive from viewers. For instance, if the model&#8217;s current policy is to always use positive words (such as &#8220;amazing&#8221; and &#8220;excellent&#8221;) in the reviews, and this leads to high ratings with high probability, the expected future rewards of the current state would be high. On the other hand, if the current policy leads to low ratings with high probability, the expected future rewards would be low.</p>
+
+
+
+<p>In this line of code, <code>delta</code> is being calculated as the sum of the rewards at time <code>t</code> and the product of the <code>gamma</code> parameter and the <code>nextvalues</code> variable, minus the <code>values</code> at time <code>t</code>.</p>
+
+
+
+<p>The <code>gamma</code> parameter is a value that determines the importance of future rewards. It is typically a value between 0 and 1, where 0 indicates that future rewards are not important and 1 indicates that future rewards are equally as important as current rewards.</p>
+
+
+
+<pre class="wp-block-code"><code> delta = rewards&#91;:, t] + self.ppo_params&#91;'gamma'] * nextvalues - values&#91;:, t]</code></pre>
+
+
+
+<p>The <code>nextvalues</code> variable is likely a tensor of values that represent the predicted future rewards at each time step. The <code>rewards</code> and <code>values</code> tensors likely contain the observed rewards and predicted values at each time step, respectively.</p>
+
+
+
+<p>By subtracting the <code>values</code> at time <code>t</code> from the sum of the rewards at time <code>t</code> and the product of <code>gamma</code> and <code>nextvalues</code>, the <code>delta</code> variable calculates the difference between the predicted future rewards and the observed rewards at each time step. This difference, or error, is used in the calculation of the policy gradient loss.</p>
+
+
+
+<p>&#8216;lam&#8217; is a parameter in the PPO algorithm that stands for lambda. It is used to compute the &#8216;advantages&#8217; of each action taken in the environment. The advantage of an action is a measure of how good the action is compared to the average action in the current state. The value of &#8216;lam&#8217; determines how much the advantage of an action depends on the advantage of future actions. A high value of &#8216;lam&#8217; means that the advantages of future actions will have a large impact on the current action&#8217;s advantage, while a low value of &#8216;lam&#8217; means that the advantages of future actions will have a small impact on the current action&#8217;s advantage.</p>
+
+
+
+<p>In the context of training a language model using the Proximal Policy Optimization (PPO) algorithm, &#8220;future actions&#8221; refer to the words that the model predicts to follow the current query and response. &#8220;Current actions&#8221; refer to the words in the current query and response. &#8220;Future rewards&#8221; refer to the rewards that the model receives for correctly predicting the future actions. &#8220;Current rewards&#8221; refer to the rewards that the model receives for correctly predicting the current actions.</p>
+
+
+
+<p>For example, suppose we have the following query and response:</p>
+
+
+
+<p>Query: &#8220;How are you feeling today?&#8221;</p>
+
+
+
+<p>Response: &#8220;I&#8217;m feeling great!&#8221;</p>
+
+
+
+<p>If the model is trained to predict the next word in the response given the query and previous words in the response, then the &#8220;current actions&#8221; would be the words &#8220;I&#8217;m&#8221;, &#8220;feeling&#8221;, and &#8220;great!&#8221;, and the &#8220;future actions&#8221; would be the word &#8220;!&#8221;. The &#8220;current rewards&#8221; would be the rewards that the model receives for correctly predicting each of these words, and the &#8220;future rewards&#8221; would be the reward that the model receives for correctly predicting the word &#8220;!&#8221;.</p>
+
+
+
+<p>Policy loss is a measure of how good the model&#8217;s predictions are at maximizing the rewards. It is calculated by comparing the model&#8217;s predicted actions with the actual actions taken and adjusting the model&#8217;s parameters to better align the two.</p>
+
+
+
+<p>Value loss is a measure of how well the model predicts the future rewards for each action. It is calculated by comparing the model&#8217;s predicted values with the actual rewards received for each action and adjusting the model&#8217;s parameters to better align the two.</p>
+
+
+
+<p>For example, if we have a language model that is being trained using PPO to generate responses to a query, we can calculate the policy loss by comparing the model&#8217;s predicted response to the actual response given by a human. If the model&#8217;s predicted response is very different from the human&#8217;s response, then the policy loss will be high, indicating that the model&#8217;s predictions are not very good at maximizing the rewards.</p>
+
+
+
+<p>Similarly, we can calculate the value loss by comparing the model&#8217;s predicted rewards for each response with the actual rewards received. If the model&#8217;s predicted rewards are very different from the actual rewards, then the value loss will be high, indicating that the model is not very good at predicting the future rewards for each action.</p>
+
+
+
+<p>Policy loss is calculated by multiplying the advantages (which represent the expected rewards) by the ratio of the new and old probabilities of the actions taken by the model. This reflects how well the model&#8217;s actions match the actions that would maximize the expected rewards under the old policy.</p>
+
+
+
+<p>We iterate through each action (or word) in the generated response and calculate the advantage of adding that word. The advantage of adding that word is calculated by rewards observed and the rewards predicted. the rewards predicted is a difference between the predicted rewards by the adding the next word, and the predicted rewards by adding the current word. </p>
+
+
+
+<p>If we ignore for a moment the predicted rewards by adding the word after the current word, then we are iterating through each word in the generated response and calculating the advantage simply by subtracting the predicted rewards with the observed rewards. </p>
+
+
+
+<pre class="wp-block-code"><code> delta = rewards&#91;:, t] - values&#91;:, t]</code></pre>
+
+
+
+<p>So loss is lower if predicted rewards are close to observed rewards and vice-versa. We are adding to this loss the reward gained by adding the word after the current word. How much we add the loss of the this future word depends on the gamma variable.</p>
+
+
+
+<pre class="wp-block-code"><code>delta += self.ppo_params&#91;'gamma'] * values&#91;:, t + 1]</code></pre>
+
+
+
+<p>Ratio is the change between the new words and the old words. Higher the change bigger the ratio. Bigger the ratio than the loss is amplified. Advantage is the difference between human response and the predicted response. </p>
+
+
+
+<p>forward pass on query, responses &#8211;  and in return get log probabilities, and scores. Scores are the values before softmax is applied and log probabilities are after softmax is applied. </p>
+]]></content:encoded>
+					
+					<wfw:commentRss>http://localhost:8000/index.php/anatomy-of-a-ppo-loss-function/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

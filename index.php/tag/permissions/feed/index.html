@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Permissions &#8211; PlainSwipe</title>
+	<atom:link href="http://localhost/index.php/tag/permissions/feed/" rel="self" type="application/rss+xml" />
+	<link>http://localhost:8000</link>
+	<description></description>
+	<lastBuildDate>Fri, 17 Mar 2023 19:48:27 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.2</generator>
+
+<image>
+	<url>http://localhost:8000/wp-content/uploads/2023/04/cropped-logo-32x32.png</url>
+	<title>Permissions &#8211; PlainSwipe</title>
+	<link>http://localhost:8000</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Creating an IAM profile made simple, an end to end tutorial</title>
+		<link>http://localhost:8000/index.php/creating-an-iam-profile-made-simple-an-end-to-end-tutorial/</link>
+					<comments>http://localhost:8000/index.php/creating-an-iam-profile-made-simple-an-end-to-end-tutorial/#respond</comments>
+		
+		<dc:creator><![CDATA[rohitkumar1979]]></dc:creator>
+		<pubDate>Fri, 17 Mar 2023 19:48:27 +0000</pubDate>
+				<category><![CDATA[Cloud Computing]]></category>
+		<category><![CDATA[IAM]]></category>
+		<category><![CDATA[Permissions]]></category>
+		<guid isPermaLink="false">https://plainswipe.com/?p=1261</guid>
+
+					<description><![CDATA[Creating an IAM profile in AWS can be a complex process, especially for those who are new to AWS or have limited experience with cloud computing. There are many different policies to choose from, and selecting the appropriate policies can be a challenge. Additionally, ensuring that the permissions are set up correctly and that the&#8230;&#160;<a href="http://localhost:8000/index.php/creating-an-iam-profile-made-simple-an-end-to-end-tutorial/" class="" rel="bookmark">Read More &#187;<span class="screen-reader-text">Creating an IAM profile made simple, an end to end tutorial</span></a>]]></description>
+										<content:encoded><![CDATA[
+<p>Creating an IAM profile in AWS can be a complex process, especially for those who are new to AWS or have limited experience with cloud computing. There are many different policies to choose from, and selecting the appropriate policies can be a challenge. Additionally, ensuring that the permissions are set up correctly and that the user has access to the appropriate resources can be time-consuming and require a lot of attention to detail.</p>
+
+
+
+<p>Step 1 : go to IAM service page and click on add users</p>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" src="https://plainswipe.com/wp-content/uploads/2023/03/image-5-1024x228.png" alt="" class="wp-image-1262"/></figure>
+
+
+
+<p>Step 2: Is easy</p>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" src="https://plainswipe.com/wp-content/uploads/2023/03/image-6-1024x362.png" alt="" class="wp-image-1263"/></figure>
+
+
+
+<p>Step 3: Select Permissions, click on Create Group</p>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" src="https://plainswipe.com/wp-content/uploads/2023/03/image-8-1024x461.png" alt="" class="wp-image-1265"/></figure>
+
+
+
+<p>Here are some groups that you might want to create, and the policies you would most likely want to attach</p>
+
+
+
+<figure class="wp-block-table"><table><thead><tr><th>AWS Permission Group</th><th>Policies Attached</th></tr></thead><tbody><tr><td>Developer group</td><td>AmazonEC2FullAccess, AmazonS3FullAccess, AWSLambda_FullAccess, AWSCodeCommitPowerUser, AWSCodeBuildDeveloperAccess, AWSCodeDeployFullAccess, AWSCodePipeline_FullAccess, AWSXRayFullAccess</td></tr><tr><td>Administrator group</td><td>AdministratorAccess, AmazonEC2FullAccess, AmazonS3FullAccess, AmazonRDSFullAccess, AWSLambda_FullAccess, AWSCodeCommitFullAccess, AWSCodeBuildFullAccess, AWSCodeDeployFullAccess, AWSCodePipelineFullAccess, AWSXRayFullAccess</td></tr><tr><td>Billing group</td><td>Billing, CloudWatchReadOnlyAccess</td></tr><tr><td>Security group</td><td>SecurityAudit, AWSConfigRole</td></tr><tr><td>Support group</td><td>AWSHealthFullAccess, AWSSupportAccess</td></tr></tbody></table></figure>
+
+
+
+<p>Step 4: Select the group</p>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" src="https://plainswipe.com/wp-content/uploads/2023/03/image-9-1024x911.png" alt="" class="wp-image-1266"/></figure>
+
+
+
+<p>Step 5: After creating an IAM user and attaching the appropriate group, you can share the access with the developer by providing them with the IAM user credentials and login URL.</p>
+
+
+
+<p>To do this, you can follow these steps:</p>
+
+
+
+<ol>
+<li>Navigate to the IAM dashboard in your AWS console.</li>
+
+
+
+<li>Select the IAM user you just created and click on the &#8220;Security credentials&#8221; tab.</li>
+
+
+
+<li>Click on the &#8220;Create access key&#8221; button to generate an access key and secret access key for the user.</li>
+
+
+
+<li>Share the access key and secret access key with the developer. You can do this by securely emailing them the credentials or sharing them through a secure file sharing service.</li>
+
+
+
+<li>Also, share the URL for the AWS console login page with the developer, which is typically in the format &#8220;https://&lt;your-account-number&gt;.signin.aws.amazon.com/console&#8221;. The developer will need to enter the IAM user credentials to access the AWS console and start using the AWS services that they have been granted access to.</li>
+</ol>
+
+
+
+<p>It is important to emphasize the importance of keeping the IAM user credentials secure and confidential, as these credentials provide access to your AWS resources. Additionally, it is recommended to set up multi-factor authentication (MFA) for IAM users to add an extra layer of security.</p>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" src="https://plainswipe.com/wp-content/uploads/2023/03/image-10-1024x621.png" alt="" class="wp-image-1267"/></figure>
+
+
+
+<p></p>
+
+
+
+<p>Step 6: AWS Access Key has many options. Pick CLI</p>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" src="https://plainswipe.com/wp-content/uploads/2023/03/image-11-970x1024.png" alt="" class="wp-image-1268"/></figure>
+
+
+
+<p></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>http://localhost:8000/index.php/creating-an-iam-profile-made-simple-an-end-to-end-tutorial/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

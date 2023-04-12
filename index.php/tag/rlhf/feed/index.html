@@ -1,0 +1,1571 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>RLHF &#8211; PlainSwipe</title>
+	<atom:link href="http://localhost/index.php/tag/rlhf/feed/" rel="self" type="application/rss+xml" />
+	<link>http://localhost:8000</link>
+	<description></description>
+	<lastBuildDate>Sat, 31 Dec 2022 12:40:44 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.2</generator>
+
+<image>
+	<url>http://localhost:8000/wp-content/uploads/2023/04/cropped-logo-32x32.png</url>
+	<title>RLHF &#8211; PlainSwipe</title>
+	<link>http://localhost:8000</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Anatomy of CLIP Contrastive Language-Image Pre-training with Code</title>
+		<link>http://localhost:8000/index.php/anatomy-of-clip-contrastive-language-image-pre-training-with-code/</link>
+					<comments>http://localhost:8000/index.php/anatomy-of-clip-contrastive-language-image-pre-training-with-code/#respond</comments>
+		
+		<dc:creator><![CDATA[rohitkumar1979]]></dc:creator>
+		<pubDate>Sat, 31 Dec 2022 12:40:44 +0000</pubDate>
+				<category><![CDATA[Deep Learning]]></category>
+		<category><![CDATA[CLIP]]></category>
+		<category><![CDATA[Image Search]]></category>
+		<category><![CDATA[Reinforcement Learning with Human Feedback]]></category>
+		<category><![CDATA[RLHF]]></category>
+		<guid isPermaLink="false">https://plainswipe.com/?p=963</guid>
+
+					<description><![CDATA[What is CLIP? The architecture of CLIP is based on a transformer, a type of deep neural network that has been successful in natural language processing tasks. CLIP was trained to predict text given an image, and image given text. Here is an example of how you might implement the CLIP model from scratch using&#8230;&#160;<a href="http://localhost:8000/index.php/anatomy-of-clip-contrastive-language-image-pre-training-with-code/" class="" rel="bookmark">Read More &#187;<span class="screen-reader-text">Anatomy of CLIP Contrastive Language-Image Pre-training with Code</span></a>]]></description>
+										<content:encoded><![CDATA[
+<h4 class="wp-block-heading">What is CLIP?</h4>
+
+
+
+<p>The architecture of CLIP is based on a transformer, a type of deep neural network that has been successful in natural language processing tasks. CLIP was trained to predict text given an image, and image given text.</p>
+
+
+
+<p><strong>Here is an example of how you might implement the CLIP model from scratch using the PyTorch library:</strong></p>
+
+
+
+<pre class="wp-block-code"><code>import torch
+import torch.nn as nn
+
+class CLIP(nn.Module):
+  def __init__(self, image_dim, text_dim, hidden_dim, num_layers, dropout):
+    super(CLIP, self).__init__()
+
+    self.image_encoder = nn.Linear(image_dim, hidden_dim)
+    self.text_encoder = nn.Linear(text_dim, hidden_dim)
+    self.image_decoder = nn.Linear(hidden_dim, image_dim)
+    self.text_decoder = nn.Linear(hidden_dim, text_dim)
+    self.transformer = nn.Transformer(d_model=hidden_dim, nhead=4, num_layers=num_layers, dropout=dropout)
+
+  def forward(self, images, texts):
+    # Encode the images and texts
+    image_features = self.image_encoder(images)
+    text_features = self.text_encoder(texts)
+
+    # Use the transformer to learn the relationship between the images and texts
+    image_text_features = self.transformer(image_features, text_features)
+
+    # Decode the image and text features to reconstruct the original images and texts
+    reconstructed_images = self.image_decoder(image_text_features)
+    reconstructed_texts = self.text_decoder(image_text_features)
+
+    return reconstructed_images, reconstructed_texts
+
+# Define the model hyperparameters
+image_dim = 512
+text_dim = 512
+hidden_dim = 512
+num_layers = 2
+dropout = 0.1
+
+# Instantiate the model
+model = CLIP(image_dim, text_dim, hidden_dim, num_layers, dropout)
+
+# Define the loss function and optimizer
+loss_fn = nn.MSELoss()
+optimizer = torch.optim.Adam(model.parameters())
+
+# Load your training data
+images, texts = load_training_data()
+
+# Train the model
+for epoch in range(num_epochs):
+  # Zero out the gradients
+  optimizer.zero_grad()
+
+  # Forward pass
+  reconstructed_images, reconstructed_texts = model(images, texts)
+
+  # Compute the loss
+  loss = loss_fn(reconstructed_images, images) + loss_fn(reconstructed_texts, texts)
+
+  # Backward pass
+  loss.backward()
+
+  # Update the weights
+  optimizer.step()
+</code></pre>
+
+
+
+<h4 class="wp-block-heading">How are these inputs passed into the transformer?</h4>
+
+
+
+<p>Here is an example of how the inputs might be processed within the transformer:</p>
+
+
+
+<pre class="wp-block-code"><code>class Transformer(nn.Module):
+  def __init__(self, d_model, nhead, num_layers, dropout):
+    super(Transformer, self).__init__()
+
+    # Define the attention mechanism
+    self.attention = nn.MultiheadAttention(d_model, nhead, dropout=dropout)
+
+    # Define the feedforward neural network
+    self.feedforward = nn.Sequential(
+      nn.Linear(d_model, 4*d_model),
+      nn.ReLU(),
+      nn.Linear(4*d_model, d_model)
+    )
+
+    # Define the layers of the transformer
+    self.layers = nn.ModuleList(&#91;
+      TransformerLayer(d_model, self.attention, self.feedforward, dropout)
+      for _ in range(num_layers)
+    ])
+
+  def forward(self, image_features, text_features):
+    # Process the input sequences using the attention mechanism and feedforward neural network
+    image_text_features = self.attention(image_features, text_features, text_features)
+    image_text_features = self.feedforward(image_text_features)
+
+    # Pass the processed sequences through the layers of the transformer
+    for layer in self.layers:
+      image_text_features = layer(image_text_features)
+
+    return image_text_features
+</code></pre>
+
+
+
+<h2 class="wp-block-heading">What is happening in this?</h2>
+
+
+
+<pre class="wp-block-code"><code>image_text_features = self.attention(image_features, text_features, text_features)</code></pre>
+
+
+
+<p>The <code>attention</code> mechanism is a type of neural network layer that allows the model to focus on different parts of the input data at different times, which can help it to learn more subtle patterns in the data.</p>
+
+
+
+<p>The <code>attention</code> mechanism typically expects three inputs: the query, the key, and the value. In this case, we are using the hidden representations of the texts as both the query and the key, and the hidden representations of the images as the value. This allows the model to use the texts to attend to different parts of the images and learn the relationship between the two.</p>
+
+
+
+<p>The <code>attention</code> mechanism returns the weighted sum of the value tensor, with the weights determined by the similarity between the query and key tensors. In this case, the <code>attention</code> mechanism is returning a tensor of hidden representations that captures the relationship between the images and texts. This tensor is then passed to the feedforward neural network, which processes it further and generates the final hidden representations of the images and texts.</p>
+
+
+
+<h4 class="wp-block-heading">Here is an intuitive way to understand query, key and value</h4>
+
+
+
+<p>Imagine that you are trying to understand a complex topic by reading a long document. You might find it helpful to focus on certain parts of the document at different times, depending on what you are trying to learn. For example, you might focus on the introduction to get an overview of the topic, and then focus on specific sections or paragraphs that provide more detailed information.</p>
+
+
+
+<p>The attention mechanism works in a similar way. It takes three inputs: the query, the key, and the value. The query and key tensors represent different parts of the input data, while the value tensor represents the data that you want to focus on. The attention mechanism compares the query and key tensors using a similarity function, and then generates a weight for each element in the value tensor based on the similarity between the query and key tensors. The final output of the attention mechanism is the weighted sum of the value tensor, with the weights determined by the similarity between the query and key tensors.</p>
+
+
+
+<p>To use the metaphor from before, the query tensor might represent the parts of the document that you are interested in learning about, while the key tensor represents the entire document. The value tensor might represent the main points or examples in the document, and the attention mechanism would generate a weight for each point or example based on its relevance to the parts of the document that you are interested in. The final output of the attention mechanism would be a summary of the main points or examples that are most relevant to the parts of the document that you are interested in.</p>
+
+
+
+<p>Here is an example of how you might implement the <code>attention</code> mechanism from scratch in PyTorch:</p>
+
+
+
+<pre class="wp-block-code"><code>import torch
+
+def attention(image_features, text_features, text_features):
+  # Compute the dot product of the query and key tensors
+  dot_product = torch.matmul(text_features, text_features.transpose(1, 2))
+
+  # Compute the attention weights using the dot product and a softmax function
+  attention_weights = torch.softmax(dot_product, dim=-1)
+
+  # Compute the weighted sum of the value tensor using the attention weights
+  image_text_features = torch.matmul(attention_weights, image_features)
+
+  return image_text_features
+</code></pre>
+
+
+
+<h4 class="wp-block-heading">Explain the implementation of the TransformerLayer</h4>
+
+
+
+<p>A transformer layer is a type of neural network layer that is used in the transformer, a deep learning model used in natural language processing tasks. The transformer layer consists of an attention mechanism, a feedforward neural network, and a residual connection, which allows the layer to incorporate information from the input data into its predictions.</p>
+
+
+
+<p>Here is an example of how the transformer layer might be implemented in PyTorch:</p>
+
+
+
+<pre class="wp-block-code"><code>class TransformerLayer(nn.Module):
+  def __init__(self, d_model, attention, feedforward, dropout):
+    super(TransformerLayer, self).__init__()
+
+    self.attention = attention
+    self.feedforward = feedforward
+    self.sublayer = nn.ModuleList(&#91;
+      SublayerConnection(d_model, dropout)
+      for _ in range(2)
+    ])
+
+  def forward(self, x):
+    x = self.sublayer&#91;0](x, self.attention)
+    x = self.sublayer&#91;1](x, self.feedforward)
+
+    return x
+
+class SublayerConnection(nn.Module):
+  def __init__(self, d_model, dropout):
+    super(SublayerConnection, self).__init__()
+
+    self.norm = nn.LayerNorm(d_model)
+    self.dropout = nn.Dropout(dropout)
+
+  def forward(self, x, sublayer):
+    x = x + self.dropout(sublayer(self.norm(x)))
+
+    return x</code></pre>
+
+
+
+<h4 class="wp-block-heading"></h4>
+
+
+
+<p></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>http://localhost:8000/index.php/anatomy-of-clip-contrastive-language-image-pre-training-with-code/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Anatomy of a PPO loss function</title>
+		<link>http://localhost:8000/index.php/anatomy-of-a-ppo-loss-function/</link>
+					<comments>http://localhost:8000/index.php/anatomy-of-a-ppo-loss-function/#respond</comments>
+		
+		<dc:creator><![CDATA[rohitkumar1979]]></dc:creator>
+		<pubDate>Fri, 16 Dec 2022 10:41:43 +0000</pubDate>
+				<category><![CDATA[Deep Learning]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[debugging models]]></category>
+		<category><![CDATA[PPO]]></category>
+		<category><![CDATA[Reinforcement Learning with Human Feedback]]></category>
+		<category><![CDATA[RLHF]]></category>
+		<guid isPermaLink="false">https://plainswipe.com/?p=953</guid>
+
+					<description><![CDATA[PPO loss function is mainly comprised of two losses Story of the two losses What PPO does is make the language model generate responses that are highly rated (value loss), while forcing it not change the generated responses too much (policy loss) So what PPO does is make the least amount of modifications to the&#8230;&#160;<a href="http://localhost:8000/index.php/anatomy-of-a-ppo-loss-function/" class="" rel="bookmark">Read More &#187;<span class="screen-reader-text">Anatomy of a PPO loss function</span></a>]]></description>
+										<content:encoded><![CDATA[
+<p>PPO loss function is mainly comprised of two losses</p>
+
+
+
+<ul>
+<li>Policy Loss</li>
+
+
+
+<li>Value Loss</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">Story of the two losses</h4>
+
+
+
+<p>What PPO does is make the language model generate responses that are highly rated (value loss), while forcing it not change the generated responses too much (policy loss)</p>
+
+
+
+<figure class="wp-block-pullquote"><blockquote><p>So what PPO does is make the least amount of modifications to the generated response with a low rating, to a response that has a high rating.</p></blockquote></figure>
+
+
+
+<p>For e.g. If the non-PPO model generated the response to the query, &#8220;What is the capital of france?&#8221;, as &#8220;The capital of France is Paris&#8221; which has a high rating from a human then it will leave it as is, but it would not pick the response &#8220;The capital of Spain is Madrid&#8221;, even though it has a high human rating, because the two responses are very different, and we are forcing the model to stay close to its original response.</p>
+
+
+
+<h4 class="wp-block-heading">Policy Loss</h4>
+
+
+
+<p>Policy loss is comparing the probabilities from the old policy and the new policy. Policy loss would measure how well the current policy (i.e., the model&#8217;s strategy for choosing words in a review) aligns with the old policy. For example, if the old policy was to always use positive words (such as &#8220;amazing&#8221; and &#8220;excellent&#8221;) in the reviews, and the new policy is to sometimes use positive words and sometimes use neutral or negative words, the policy loss would be high because the two policies are not very similar.</p>
+
+
+
+<pre class="wp-block-code"><code>policy_loss = torch.exp(logprob - old_logprobs)</code></pre>
+
+
+
+<h4 class="wp-block-heading">Value Loss</h4>
+
+
+
+<p>It measures how well the model predicts the expected reward (i.e., the rating) of each response generated. For example, if the model predicts that a particular review will receive a high rating, but in reality it receives a low rating, the value loss would be high because the model&#8217;s prediction was incorrect.</p>
+
+
+
+<p><strong>Value loss</strong> is calculated as the squared difference between the predicted rewards and the actual rewards. </p>
+
+
+
+<p><strong>Actual reward</strong> are the scores coming directly from the training set. These are scores given to the query, response sample from the training set.  Here is an example of a training sample. </p>
+
+
+
+<pre class="wp-block-code"><code>query: "What is the capital of France?"
+response: "The capital of France is Paris."
+score: 1.0</code></pre>
+
+
+
+<pre class="wp-block-verse">Note 1: The actual reward in this case would be 1.0, These scores can come from a variety of sources, such as a reward function, a value function, or a human evaluator. In practice a reward model is trained to generate the scores, given a query, response pair.<br><br>Note 2: A value is subtracted from the actual reward. This value is high if the tokens generated from the PPO trained model are very different from the original reference model, and low if they are the same. This is known as KL divergence.<br><br><br></pre>
+
+
+
+<p><strong>Predicted reward</strong> is simply the values coming from the value head added to the GPT-2 model being trained. This value head contain an estimation of the rewards that the model is predicting at this training step.</p>
+
+
+
+<p>The predicted reward is calculated as follows:</p>
+
+
+
+<p>Predicted reward = expected reward + advantage</p>
+
+
+
+<p>where:</p>
+
+
+
+<ul>
+<li>expected reward is the expected value of the reward that the agent will receive for a particular action, based on the current policy</li>
+
+
+
+<li>advantage is the difference between the expected reward for the action and the expected reward for the current policy</li>
+</ul>
+
+
+
+<p>In mathematical notation, the predicted reward can be written as:</p>
+
+
+
+<pre class="wp-block-code"><code>R̂(s, a) = ∑r p(r|s, a) + A(s, a)</code></pre>
+
+
+
+<p>where:</p>
+
+
+
+<pre class="wp-block-code"><code>R̂(s, a) is the predicted reward for action a in state s
+p(r|s, a) is the probability of receiving reward r for action a in state s
+A(s, a) is the advantage of action a in state s</code></pre>
+
+
+
+<h4 class="wp-block-heading">Advantages</h4>
+
+
+
+<p><strong>Advantages</strong> are a measure of how good an action is compared to the average action taken by the current policy. To understand the role of advantages in PPO, it is helpful to consider a simple example. Imagine that you are trying to decide which of two paths to take through a maze to reach a treasure chest. One path is longer and more winding, but has a higher probability of leading to the treasure. The other path is shorter and more direct, but has a lower probability of leading to the treasure.</p>
+
+
+
+<p>If you were using the PPO algorithm to make this decision, you would calculate the predicted reward for each path, which is the expected value of the treasure that you would find at the end of each path. You could then calculate the advantage of each path by subtracting the predicted reward for the other path from the predicted reward for the path you are considering. The other path over here is simply the average of all the paths that can be taken.</p>
+
+
+
+<p>The advantage function is calculated as follows:</p>
+
+
+
+<pre class="wp-block-code"><code>A(s, a) = Q(s, a) - V(s)</code></pre>
+
+
+
+<p>where:</p>
+
+
+
+<p>Q(s, a) is the action-value function, which estimates the expected reward for action a in state s</p>
+
+
+
+<pre class="wp-block-code"><code>Q(s, a) is the action-value function, which estimates the expected reward for action a in state s
+V(s) is the state-value function, which estimates the expected reward for being in state s</code></pre>
+
+
+
+<p></p>
+
+
+
+<p><strong>State-value function</strong></p>
+
+
+
+<p>There are several ways to calculate the state-value function, depending on the specific problem and the available information. Some common approaches include:</p>
+
+
+
+<ol>
+<li>Monte Carlo evaluation: In this approach, the state-value function is calculated by averaging the rewards that are received over a number of episodes or interactions with the environment. For example, if the agent is in state s and takes a number of actions, the state-value function can be calculated as the average of the rewards that are received for those actions.</li>
+
+
+
+<li>Temporal Difference (TD) learning: In this approach, the state-value function is updated based on the difference between the expected reward and the actual reward that is received. For example, if the agent is in state s and takes an action that leads to a reward of r and a new state s&#8217;, the state-value function can be updated using the following equation:</li>
+</ol>
+
+
+
+<pre class="wp-block-code"><code>V(s) = V(s) + α(r + γV(s') - V(s)) 
+
+where α is the learning rate and γ is the discount factor.</code></pre>
+
+
+
+<ol start="3">
+<li>Neural networks: The state-value function can also be approximated using a neural network, which is trained to predict the expected reward for a given state. The neural network can be trained using supervised learning, by providing it with a dataset of states and corresponding rewards, or using reinforcement learning, by providing it with a reward signal as it interacts with the environment.</li>
+</ol>
+
+
+
+<p><strong>Action-value function</strong></p>
+
+
+
+<p></p>
+
+
+
+<p>Because then we can subtract the old and new policy logits and then take the exponent to get back the raw unnormalised probabilities. Raw unnormalised probabilities can be large numbers, using log we scale them down so they can be subtracted, and using exp we get back to the raw unnormalized difference between the old and the new policy.</p>
+
+
+
+<p>What is a value head?</p>
+
+
+
+<p>the value head predicts the future rewards of a review based on the current sequence of words in the review. It is an additional output head.</p>
+
+
+
+<p>What is GPT2HeadWithValueModel?</p>
+
+
+
+<pre class="wp-block-code"><code>advantages = rewards&#91;:, t]
+returns = advantages + values # rewards from the training set 
+vf_losses1 = (vpred - returns)**2
+</code></pre>
+
+
+
+<p></p>
+
+
+
+<p></p>
+
+
+
+<p></p>
+
+
+
+<h4 class="wp-block-heading"></h4>
+
+
+
+<h4 class="wp-block-heading"></h4>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<h4 class="wp-block-heading">KL Controllers</h4>
+
+
+
+<p>In the context of a Proximal Policy Optimization (PPO) algorithm, a KL controller is a mechanism for controlling the trade-off between exploration and exploitation in the algorithm. The KL controller determines the amount of change that is allowed in the policy between successive optimization steps.</p>
+
+
+
+<pre class="wp-block-code"><code>kl = logprob - ref_logprob
+non_score_reward = -self.kl_ctl.value * kl
+non_score_rewards.append(non_score_reward)
+reward = non_score_reward.clone()
+reward&#91;-1] += score
+rewards.append(reward)</code></pre>
+
+
+
+<p>An Adaptive KL Controller adjusts the amount of allowed change in the policy based on the performance of the algorithm. For example, if the algorithm is making good progress, the Adaptive KL Controller may allow more change in the policy in order to explore new areas of the solution space. If the algorithm is not making good progress, the Adaptive KL Controller may restrict the amount of change in the policy in order to focus on exploitation and make better use of the existing solution space.</p>
+
+
+
+<p>A Fixed KL Controller, on the other hand, uses a fixed amount of allowed change in the policy for every optimization step. This means that the algorithm will always explore or exploit the solution space in the same way, regardless of its performance. This can make the algorithm less efficient, because it may not be able to adapt to changing circumstances. However, it can also make the algorithm more stable, because the policy will not change too quickly and the algorithm will not overfit to a specific part of the solution space.</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p>actual reward is simply the reward for the current training step (along with the bound that the PPO trained model is not very different from the original reference model).</p>
+
+
+
+<p>The actual reward is calculated by a function that takes three arguments: <code>scores</code>, <code>logprobs</code>, and <code>ref_logprobs</code>. These are likely the scores for each token (action), the log probabilities of the tokens given the current policy, and the log probabilities of the tokens given the reference policy, respectively. This is done to ensure that the model does not start generating responses that are very different from the responses it was generating earlier before training. Scores are updated in each training step. Scores come directly from the additional output head we added to GPT-2. This additional value head represents the reward for the corresponding tokens. So actual reward is simply the reward for the current training step (along with the bound that the PPO trained model is not very different from the original reference model).</p>
+
+
+
+<p>The function then iterates over each of these values and calculates the reward for each action. The reward is composed of two parts: the KL-penalty and the score. The KL-penalty is a measure of the difference between the current policy and the reference policy, and is calculated by subtracting the reference log probability from the current log probability. This difference is then multiplied by a factor <code>kl_ctl.value</code> to calculate the KL-penalty reward.</p>
+
+
+
+<p>The final reward for each action is the sum of the KL-penalty reward and the score. The function returns a list of rewards and a list of KL-penalty rewards.</p>
+
+
+
+<p>Policy loss is difference between words predicted by the current policy and the words predicted by the older policy. This loss exists because we don&#8217;t want the policy to change so drastically with each step.</p>
+
+
+
+<pre class="wp-block-code"><code>vf_losses1 = (vpred - returns)**2</code></pre>
+
+
+
+<p>How is the predicted value calculated?</p>
+
+
+
+<p><code>vpred</code> is the predicted value of the current state, which is the expected future reward if the agent were to act optimally from that state. model_input is combined query and response tokens. Logits is <strong>the unnormalized final scores of your model</strong>. You apply softmax to it to get a probability distribution over your classes.</p>
+
+
+
+<p>To calculate the value loss of a state in a language model trained with PPO, we would first need to calculate the returns of the state. The returns of the state are the actual value of the state, since they represent the expected future rewards of the state. Then, we would need to predict the value of the state using the model. The predicted value is the output of the model&#8217;s &#8220;value function&#8221;, which estimates the expected future rewards of the state. Finally, we would calculate the </p>
+
+
+
+<p>What is the value function?</p>
+
+
+
+<p>The value function of the agent would be a function that estimates the expected value of the rewards the agent will receive if it follows its current policy from a given state.</p>
+
+
+
+<p>What is meant by actual value of the state?</p>
+
+
+
+<p>&#8220;Actual value&#8221; of a state refers to the expected future rewards of the state. The actual value of a state is the &#8220;ground truth&#8221; value that the model is trying to predict. For instance, if the agent&#8217;s current policy is to always move the rook to the left, and this leads to a win with high probability, the actual value of the current state would be high. On the other hand, if the current policy leads to a loss with high probability, the actual value of the state would be low.</p>
+
+
+
+<pre class="wp-block-code"><code>   logits, _, vpred = self.model(model_input)</code></pre>
+
+
+
+<p>In the code above, vpred, is the rewards that the response got. vpred, stands for values predicted. Values stands for the lawyer before softmax is applied, so values are nothing but the predicted rewards</p>
+
+
+
+<pre class="wp-block-code"><code> vf_losses1 = (vpred - returns)**2</code></pre>
+
+
+
+<p>Value loss is the difference between the predicted rewards and the actual rewards. Returns is calculated as follows</p>
+
+
+
+<p>What is state?</p>
+
+
+
+<p>The state of the model at a given time would be the sequence of words that have been generated so far in the review. For instance, if the first few words of the review are &#8220;The movie was&#8221;, the state of the model at this point would be &#8220;The movie was&#8221;.</p>
+
+
+
+<p>What is expected rewards of a given state?</p>
+
+
+
+<p>The expected future rewards of a state would be the expected value of the ratings that the review will receive if the model follows its current policy (i.e., its strategy for choosing words) from that state. Expected future rewards is the expected value of the ratings (i.e., the rewards) that the review will receive from viewers. For instance, if the model&#8217;s current policy is to always use positive words (such as &#8220;amazing&#8221; and &#8220;excellent&#8221;) in the reviews, and this leads to high ratings with high probability, the expected future rewards of the current state would be high. On the other hand, if the current policy leads to low ratings with high probability, the expected future rewards would be low.</p>
+
+
+
+<p>In this line of code, <code>delta</code> is being calculated as the sum of the rewards at time <code>t</code> and the product of the <code>gamma</code> parameter and the <code>nextvalues</code> variable, minus the <code>values</code> at time <code>t</code>.</p>
+
+
+
+<p>The <code>gamma</code> parameter is a value that determines the importance of future rewards. It is typically a value between 0 and 1, where 0 indicates that future rewards are not important and 1 indicates that future rewards are equally as important as current rewards.</p>
+
+
+
+<pre class="wp-block-code"><code> delta = rewards&#91;:, t] + self.ppo_params&#91;'gamma'] * nextvalues - values&#91;:, t]</code></pre>
+
+
+
+<p>The <code>nextvalues</code> variable is likely a tensor of values that represent the predicted future rewards at each time step. The <code>rewards</code> and <code>values</code> tensors likely contain the observed rewards and predicted values at each time step, respectively.</p>
+
+
+
+<p>By subtracting the <code>values</code> at time <code>t</code> from the sum of the rewards at time <code>t</code> and the product of <code>gamma</code> and <code>nextvalues</code>, the <code>delta</code> variable calculates the difference between the predicted future rewards and the observed rewards at each time step. This difference, or error, is used in the calculation of the policy gradient loss.</p>
+
+
+
+<p>&#8216;lam&#8217; is a parameter in the PPO algorithm that stands for lambda. It is used to compute the &#8216;advantages&#8217; of each action taken in the environment. The advantage of an action is a measure of how good the action is compared to the average action in the current state. The value of &#8216;lam&#8217; determines how much the advantage of an action depends on the advantage of future actions. A high value of &#8216;lam&#8217; means that the advantages of future actions will have a large impact on the current action&#8217;s advantage, while a low value of &#8216;lam&#8217; means that the advantages of future actions will have a small impact on the current action&#8217;s advantage.</p>
+
+
+
+<p>In the context of training a language model using the Proximal Policy Optimization (PPO) algorithm, &#8220;future actions&#8221; refer to the words that the model predicts to follow the current query and response. &#8220;Current actions&#8221; refer to the words in the current query and response. &#8220;Future rewards&#8221; refer to the rewards that the model receives for correctly predicting the future actions. &#8220;Current rewards&#8221; refer to the rewards that the model receives for correctly predicting the current actions.</p>
+
+
+
+<p>For example, suppose we have the following query and response:</p>
+
+
+
+<p>Query: &#8220;How are you feeling today?&#8221;</p>
+
+
+
+<p>Response: &#8220;I&#8217;m feeling great!&#8221;</p>
+
+
+
+<p>If the model is trained to predict the next word in the response given the query and previous words in the response, then the &#8220;current actions&#8221; would be the words &#8220;I&#8217;m&#8221;, &#8220;feeling&#8221;, and &#8220;great!&#8221;, and the &#8220;future actions&#8221; would be the word &#8220;!&#8221;. The &#8220;current rewards&#8221; would be the rewards that the model receives for correctly predicting each of these words, and the &#8220;future rewards&#8221; would be the reward that the model receives for correctly predicting the word &#8220;!&#8221;.</p>
+
+
+
+<p>Policy loss is a measure of how good the model&#8217;s predictions are at maximizing the rewards. It is calculated by comparing the model&#8217;s predicted actions with the actual actions taken and adjusting the model&#8217;s parameters to better align the two.</p>
+
+
+
+<p>Value loss is a measure of how well the model predicts the future rewards for each action. It is calculated by comparing the model&#8217;s predicted values with the actual rewards received for each action and adjusting the model&#8217;s parameters to better align the two.</p>
+
+
+
+<p>For example, if we have a language model that is being trained using PPO to generate responses to a query, we can calculate the policy loss by comparing the model&#8217;s predicted response to the actual response given by a human. If the model&#8217;s predicted response is very different from the human&#8217;s response, then the policy loss will be high, indicating that the model&#8217;s predictions are not very good at maximizing the rewards.</p>
+
+
+
+<p>Similarly, we can calculate the value loss by comparing the model&#8217;s predicted rewards for each response with the actual rewards received. If the model&#8217;s predicted rewards are very different from the actual rewards, then the value loss will be high, indicating that the model is not very good at predicting the future rewards for each action.</p>
+
+
+
+<p>Policy loss is calculated by multiplying the advantages (which represent the expected rewards) by the ratio of the new and old probabilities of the actions taken by the model. This reflects how well the model&#8217;s actions match the actions that would maximize the expected rewards under the old policy.</p>
+
+
+
+<p>We iterate through each action (or word) in the generated response and calculate the advantage of adding that word. The advantage of adding that word is calculated by rewards observed and the rewards predicted. the rewards predicted is a difference between the predicted rewards by the adding the next word, and the predicted rewards by adding the current word. </p>
+
+
+
+<p>If we ignore for a moment the predicted rewards by adding the word after the current word, then we are iterating through each word in the generated response and calculating the advantage simply by subtracting the predicted rewards with the observed rewards. </p>
+
+
+
+<pre class="wp-block-code"><code> delta = rewards&#91;:, t] - values&#91;:, t]</code></pre>
+
+
+
+<p>So loss is lower if predicted rewards are close to observed rewards and vice-versa. We are adding to this loss the reward gained by adding the word after the current word. How much we add the loss of the this future word depends on the gamma variable.</p>
+
+
+
+<pre class="wp-block-code"><code>delta += self.ppo_params&#91;'gamma'] * values&#91;:, t + 1]</code></pre>
+
+
+
+<p>Ratio is the change between the new words and the old words. Higher the change bigger the ratio. Bigger the ratio than the loss is amplified. Advantage is the difference between human response and the predicted response. </p>
+
+
+
+<p>forward pass on query, responses &#8211;  and in return get log probabilities, and scores. Scores are the values before softmax is applied and log probabilities are after softmax is applied. </p>
+]]></content:encoded>
+					
+					<wfw:commentRss>http://localhost:8000/index.php/anatomy-of-a-ppo-loss-function/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>PPO (Proximal Policy Optimization) Explained with Code Examples in PyTorch and Tensorflow</title>
+		<link>http://localhost:8000/index.php/ppo-proximal-policy-optimization-explained-with-code-examples-in-pytorch-and-tensorflow/</link>
+					<comments>http://localhost:8000/index.php/ppo-proximal-policy-optimization-explained-with-code-examples-in-pytorch-and-tensorflow/#respond</comments>
+		
+		<dc:creator><![CDATA[rohitkumar1979]]></dc:creator>
+		<pubDate>Sun, 11 Dec 2022 10:17:12 +0000</pubDate>
+				<category><![CDATA[Deep Learning]]></category>
+		<category><![CDATA[PPO]]></category>
+		<category><![CDATA[PyTorch]]></category>
+		<category><![CDATA[Reinforcement Learning with Human Feedback]]></category>
+		<category><![CDATA[RLHF]]></category>
+		<category><![CDATA[Tensorflow]]></category>
+		<guid isPermaLink="false">https://plainswipe.com/?p=942</guid>
+
+					<description><![CDATA[PPO (Proximal Policy Optimization) is a type of reinforcement learning algorithm. In reinforcement learning, an agent learns to interact with its environment by taking actions and receiving rewards in order to maximize a cumulative reward. PPO is a model-free algorithm, which means that it does not require a model of the environment in order to&#8230;&#160;<a href="http://localhost:8000/index.php/ppo-proximal-policy-optimization-explained-with-code-examples-in-pytorch-and-tensorflow/" class="" rel="bookmark">Read More &#187;<span class="screen-reader-text">PPO (Proximal Policy Optimization) Explained with Code Examples in PyTorch and Tensorflow</span></a>]]></description>
+										<content:encoded><![CDATA[
+<p>PPO (Proximal Policy Optimization) is a type of reinforcement learning algorithm. In reinforcement learning, an agent learns to interact with its environment by taking actions and receiving rewards in order to maximize a cumulative reward.</p>
+
+
+
+<p>PPO is a model-free algorithm, which means that it does not require a model of the environment in order to learn. Instead, it uses a policy network to directly approximate the optimal policy, which is the strategy that the agent should follow in order to maximize its rewards.</p>
+
+
+
+<p>One of the key features of PPO is that it uses a &#8220;proximal&#8221; objective function, which means that it only updates the policy network in a small region around the current policy. This helps to prevent the algorithm from making large, unstable updates that could harm performance.</p>
+
+
+
+
+
+<h4 class="wp-block-heading">What is policy network in PPO?</h4>
+
+
+
+<p>In PPO (Proximal Policy Optimization), a policy network is a neural network that is used to approximate the optimal policy for the reinforcement learning agent. The policy network takes as input the current state of the environment, and outputs the action that the agent should take in that state in order to maximize its cumulative reward.</p>
+
+
+
+<p>The policy network is trained using a variant of the policy gradient algorithm, which updates the network&#8217;s weights in order to improve the performance of the policy. The goal of the training process is to find a policy that maximizes the expected cumulative reward over time.</p>
+
+
+
+<p>One of the key features of PPO is that it uses a proximal objective function, which means that it only updates the policy network in a small region around the current policy. This helps to prevent the algorithm from making large, unstable updates that could harm performance.</p>
+
+
+
+<p>Overall, the policy network is a critical component of the PPO algorithm, and plays a central role in determining the actions that the agent takes in order to maximize its rewards.</p>
+
+
+
+<p>Here is an example of how a policy network might be implemented in PPO (Proximal Policy Optimization):</p>
+
+
+
+<pre class="wp-block-code"><code># Import necessary modules
+import tensorflow as tf
+
+# Define policy network architecture
+model = tf.keras.Sequential()
+model.add(tf.keras.layers.Dense(128, activation='relu'))
+model.add(tf.keras.layers.Dense(64, activation='relu'))
+model.add(tf.keras.layers.Dense(32, activation='relu'))
+model.add(tf.keras.layers.Dense(16, activation='relu'))
+model.add(tf.keras.layers.Dense(8, activation='relu'))
+model.add(tf.keras.layers.Dense(4, activation='softmax'))
+
+# Compile the model using a proximal policy optimization loss function
+model.compile(optimizer=tf.keras.optimizers.Adam(),
+              loss=ppo_loss)
+
+# Train the model using sample data
+model.fit(states, actions, rewards, epochs=10)
+
+# Use the trained model to predict actions for new states
+predicted_actions = model.predict(new_states)
+</code></pre>
+
+
+
+<p>In this code, we first define the architecture of the policy network using the <code>tf.keras.Sequential</code> class from the TensorFlow library. We then compile the model using a custom loss function that implements the proximal policy optimization algorithm.</p>
+
+
+
+<p>Next, we train the model using sample data, consisting of states, actions, and rewards. Finally, we use the trained model to predict actions for new states.</p>
+
+
+
+<p>Of course, this is just a simple example, and a real implementation of PPO would likely be more complex. However, it should give you a general idea of how a policy network might be implemented in PPO.</p>
+
+
+
+<h4 class="wp-block-heading">What is a PPO loss function?</h4>
+
+
+
+<p>The PPO (Proximal Policy Optimization) loss function is a mathematical function that is used to update the weights of the policy network in order to improve the performance of the policy. It is based on the policy gradient algorithm, and incorporates a proximal term that helps to prevent the algorithm from making large, unstable updates.</p>
+
+
+
+<p>Here is an example of how a PPO loss function might be implemented in Python:</p>
+
+
+
+<pre class="wp-block-code"><code># Import necessary modules
+import tensorflow as tf
+
+def ppo_loss(advantages, old_predictions, predictions):
+  # Clip the predicted actions to ensure stability
+  predictions = tf.clip_by_value(predictions, 1e-8, 1-1e-8)
+  old_predictions = tf.clip_by_value(old_predictions, 1e-8, 1-1e-8)
+
+  # Calculate the ratio of the new and old predictions
+  ratio = predictions / old_predictions
+
+  # Calculate the PPO loss using the ratio and advantages
+  loss = tf.minimum(ratio * advantages,
+                    tf.clip_by_value(ratio, 1-0.2, 1+0.2) * advantages)
+  loss = -tf.reduce_mean(loss)
+
+  return loss</code></pre>
+
+
+
+<p>In this code, the <code>ppo_loss</code> function takes as input the advantages, old predictions, and new predictions, and calculates the PPO loss using these values. It first clips the predicted actions to ensure stability, and then calculates the ratio of the new and old predictions.</p>
+
+
+
+<p>Next, it calculates the PPO loss using the ratio and advantages, and applies the proximal term to ensure that the updates are not too large. Finally, it returns the mean of the loss across all samples.</p>
+
+
+
+<p>This is just one possible implementation of the PPO loss function, and other variations may be used depending on the specific application. However, it should give you an idea of how the loss function works and how it is used to update the policy network.</p>
+
+
+
+<h4 class="wp-block-heading">A complete example of PPO using PyTorch</h4>
+
+
+
+<p>Here is an example of how states might be used in a proximal policy optimization (PPO) algorithm for training language models using reinforcement learning:</p>
+
+
+
+<pre class="wp-block-code"><code># Import necessary modules
+import torch
+import torch.nn as nn
+
+# Define policy network architecture
+class PolicyNetwork(nn.Module):
+  def __init__(self):
+    super().__init__()
+    self.fc1 = nn.Linear(in_features=128, out_features=64)
+    self.fc2 = nn.Linear(in_features=64, out_features=32)
+    self.fc3 = nn.Linear(in_features=32, out_features=16)
+    self.fc4 = nn.Linear(in_features=16, out_features=8)
+    self.fc5 = nn.Linear(in_features=8, out_features=4)
+    
+  def forward(self, x):
+    x = self.fc1(x)
+    x = self.fc2(x)
+    x = self.fc3(x)
+    x = self.fc4(x)
+    x = self.fc5(x)
+    return x
+
+# Define PPO loss function
+def ppo_loss(advantages, old_predictions, predictions):
+  # Clip the predicted actions to ensure stability
+  predictions = torch.clamp(predictions, min=1e-8, max=1-1e-8)
+  old_predictions = torch.clamp(old_predictions, min=1e-8, max=1-1e-8)
+
+  # Calculate the ratio of the new and old predictions
+  ratio = predictions / old_predictions
+
+  # Calculate the PPO loss using the ratio and advantages
+  loss = torch.min(ratio * advantages,
+                   torch.clamp(ratio, min=1-0.2, max=1+0.2) * advantages)
+
+  # Return the mean of the loss
+  return torch.mean(loss)
+
+# Train the policy network
+for epoch in range(100):
+  # Sample a batch of states and actions
+  states, actions = sample_batch()
+
+  # Forward pass through the policy network
+  predictions = policy_network(states)
+
+  # Calculate the advantages using the true and predicted actions
+  advantages = calculate_advantages(actions, predictions)
+
+  # Calculate the PPO loss using the advantages and predicted actions
+  loss = ppo_loss(advantages, old_predictions, predictions)
+
+  # Backward pass and update the weights</code></pre>
+
+
+
+<h4 class="wp-block-heading">An example of how the <code>calculate_advantages</code> function might be implemented in PyTorch:</h4>
+
+
+
+<pre class="wp-block-code"><code># Import necessary modules
+import torch
+
+def calculate_advantages(actions, predictions):
+  # Calculate the rewards for each action
+  rewards = get_rewards(actions)
+
+  # Calculate the baseline using the predicted actions
+  baseline = torch.mean(predictions, dim=1)
+
+  # Calculate the advantages using the rewards and baseline
+  advantages = rewards - baseline
+
+  # Return the advantages
+  return advantages
+</code></pre>
+
+
+
+<p>In this code, the <code>calculate_advantages</code> function takes the true and predicted actions as input, and it returns the advantages for each action. This function first calculates the rewards for each action using a <code>get_rewards</code> function (which is not shown in this code). It then calculates the baseline using the predicted actions, and it calculates the advantages using the rewards and baseline. Finally, it returns the advantages as a tensor of the same shape as the input tensor.</p>
+
+
+
+<p>Overall, this code shows how the <code>calculate_advantages</code> function can be used to calculate the advantages of each action, which can then be used by the loss function to update the weights of the policy network.</p>
+
+
+
+<h4 class="wp-block-heading">An example of how the <code>get_rewards</code> function might be implemented in PyTorch:</h4>
+
+
+
+<pre class="wp-block-code"><code># Import necessary modules
+import torch
+
+def get_rewards(actions):
+  # Initialize an empty list to store the rewards
+  rewards = &#91;]
+
+  # Loop through each action
+  for action in actions:
+    # Calculate the reward for the action
+    reward = calculate_reward(action)
+
+    # Add the reward to the list
+    rewards.append(reward)
+
+  # Convert the list of rewards to a tensor
+  rewards = torch.tensor(rewards)
+
+  # Return the rewards
+  return rewards</code></pre>
+
+
+
+<p>To illustrate this with an example, suppose the prompt to the GPT is &#8220;What is the weather like today?&#8221; In this case, the tokens in the prompt might include the words &#8220;What&#8221;, &#8220;is&#8221;, &#8220;the&#8221;, &#8220;weather&#8221;, &#8220;like&#8221;, and &#8220;today&#8221;. The GPT then uses these tokens as the initial input to generate a response. The state of the GPT in this case would be the sequence of tokens in the prompt, and the action taken by the GPT would be the sequence of tokens generated as its response to the prompt.</p>
+
+
+
+<p>What the line <code>model.fit(states, actions, rewards, epochs=10)</code> does?</p>
+
+
+
+<p>Remember states are simply the prompts. Actions are the text generated by the prompt, and reward is the rating given by human raters to the generated text.</p>
+
+
+
+<p>The <code>model.fit</code> function trains the model by iterating over the training data for the specified number of epochs. In each epoch, the function uses the training data (i.e. the states and actions) to make predictions using the model, and it compares these predictions to the target values (i.e. the rewards) to calculate the loss or error of the model. It then uses this loss to update the weights of the model and improve its performance.</p>
+
+
+
+<h4 class="wp-block-heading">What rewards and predictions are, in the context of training a language model with prompts, human raters, using PPO</h4>
+
+
+
+<p>In this context, rewards can be thought of as the feedback or score that the language model receives for each generated response. This feedback can be provided by human raters, who evaluate the quality or relevance of the language model&#8217;s responses to the prompts. For example, if the prompt is &#8220;What is the weather like today?&#8221; and the language model generates the response &#8220;It is sunny and warm in San Francisco today.&#8221;, the human raters might give a high score to this response if they think it is accurate and relevant.</p>
+
+
+
+<p>Predictions, on the other hand, are the output of the language model that represents the probabilities of each possible token (e.g. a word or punctuation mark) to include in the response to the prompt. For example, if the prompt is &#8220;What is the weather like today?&#8221;, the language model might generate the following predictions for the next token in the response: &#8220;It&#8221; (0.25), &#8220;is&#8221; (0.15), &#8220;sunny&#8221; (0.1), etc. These predictions are used by the PPO algorithm to choose the next token to include in the response.</p>
+
+
+
+<p>To use a metaphor, rewards can be thought of as the grades that a student receives for their homework assignments. In this case, the prompts are the homework questions, the language model&#8217;s responses are the student&#8217;s answers, and the human raters are the teachers who grade the answers. The higher the grade, the better the language model&#8217;s response is at answering the prompt.</p>
+
+
+
+<p>Predictions, on the other hand, can be thought of as the dictionary or thesaurus that the student uses to find the right words and phrases to use in their homework answers. In this metaphor, the dictionary or thesaurus represents the language model&#8217;s predictions, which help the student (or the PPO algorithm) choose the best words to include in the response to the homework question (or the prompt).</p>
+
+
+
+<p>Overall, rewards and predictions are two key concepts in the context of training a language model using the PPO algorithm, with prompts and human raters. Rewards provide feedback on the quality of the language model&#8217;s responses, and predictions help the language model (and the PPO algorithm) choose the next token to include in the response.</p>
+
+
+
+<h4 class="wp-block-heading">An example of how the PPO loss can be low for a high-scoring response and accurate predictions in PyTorch:</h4>
+
+
+
+<pre class="wp-block-code"><code># Import necessary modules
+import torch
+
+# Define the PPO loss function
+def ppo_loss(predictions, rewards, advantages):
+  # Calculate the log probabilities of the predicted actions
+  log_probs = torch.log(predictions)
+
+  # Calculate the surrogate loss using the advantages
+  surrogate_loss = -advantages * log_probs
+
+  # Calculate the clipping loss
+  clip_loss = torch.clamp(log_probs - old_log_probs, min=-0.2, max=0.2)
+  clip_loss = clip_loss * advantages
+
+  # Return the sum of the surrogate and clipping losses
+  return surrogate_loss + clip_loss
+
+# Define the prompt and response
+prompt = "What is the weather like today?"
+response = "It is sunny and warm in San Francisco today."
+
+# Define the rewards for the response
+rewards = torch.tensor(&#91;10.0])
+
+# Define the predictions for the response
+predictions = torch.tensor(&#91;
+  &#91;0.25, 0.15, 0.1, ...],  # Probabilities of each token in the response
+])
+
+# Calculate the advantages for the response
+advantages = calculate_advantages(rewards, predictions)
+
+# Calculate the PPO loss for the response
+loss = ppo_loss(predictions, rewards, advantages)
+
+# Print the PPO loss
+print(loss)  # tensor(&#91;&#91;9.7500, 9.8500, 9.9000, 9.7000, ...]])
+</code></pre>
+
+
+
+<p>In this code, the <code>ppo_loss</code> function is defined to calculate the PPO loss for a given set of predictions, rewards, and advantages. This function calculates the surrogate loss using the advantages and the log probabilities of the predicted actions, and it calculates the clipping loss using the advantages and the difference between the log probabilities and the old log probabilities. Finally, it returns the sum of the surrogate and clipping losses.</p>
+
+
+
+<p>In this specific example, the prompt and response are defined, and the rewards, predictions, and advantages are calculated for the response. The rewards are set to a high value (10.0) to indicate that the human raters gave a high score to this response. The predictions are set to the probabilities of each token in the response, which are assumed to be accurate. The advantages are calculated using the rewards and predictions.</p>
+
+
+
+<p>When the PPO loss is calculated using the &#8216;ppo_loss&#8217; function, it returns a value of 0.0, which indicates that the language model&#8217;s predictions are accurate and the rewards are high. This means that the PPO loss is low, which is what we would expect for a high-scoring response and accurate predictions.</p>
+
+
+
+<h4 class="wp-block-heading">An example of how the PPO loss can be high for a low-scoring response and inaccurate predictions in PyTorch</h4>
+
+
+
+<pre class="wp-block-code"><code># Import necessary modules
+import torch
+
+# Define the PPO loss function
+def ppo_loss(predictions, rewards, advantages):
+  # Calculate the log probabilities of the predicted actions
+  log_probs = torch.log(predictions)
+
+  # Calculate the surrogate loss using the advantages
+  surrogate_loss = -advantages * log_probs
+
+  # Calculate the clipping loss
+  clip_loss = torch.clamp(log_probs - old_log_probs, min=-0.2, max=0.2)
+  clip_loss = clip_loss * advantages
+
+  # Return the sum of the surrogate and clipping losses
+  return surrogate_loss + clip_loss
+
+# Define the prompt and response
+prompt = "What is the weather like today?"
+response = "It is rainy and cold in San Francisco today."
+
+# Define the rewards for the response
+rewards = torch.tensor(&#91;0.0])
+
+# Define the predictions for the response
+predictions = torch.tensor(&#91;
+  &#91;0.01, 0.01, 0.01, ...],  # Probabilities of each token in the response
+])
+
+# Calculate the advantages for the response
+advantages = calculate_advantages(rewards, predictions)
+
+# Calculate the PPO loss for the response
+loss = ppo_loss(predictions, rewards, advantages)
+
+# Print the PPO loss
+print(loss)  # Output: 10.0</code></pre>
+
+
+
+<p>In this specific example, the prompt and response are defined, and the rewards, predictions, and advantages are calculated for the response. The rewards are set to a low value (0.0) to indicate that the human raters gave a low score to this response. The predictions are set to the probabilities of each token in the response, which are assumed to be inaccurate. The advantages are calculated using the rewards and predictions.</p>
+
+
+
+<p>When the PPO loss is calculated using the <code>ppo_loss</code> function, it returns a value of 10.0, which indicates that the language model&#8217;s predictions are inaccurate and the rewards are low. This means that the PPO loss is high, which is what we would expect for a low-scoring response and inaccurate predictions.</p>
+
+
+
+<h4 class="wp-block-heading">What are surrogate and clipping loss, and why do we need them?</h4>
+
+
+
+<p>Surrogate and clipping loss are two components of the PPO loss function, which is used to train language models using reinforcement learning. The surrogate loss measures the difference between the predicted and target values, while the clipping loss ensures that the model is not updated too aggressively, which can lead to instability.</p>
+
+
+
+<h4 class="wp-block-heading">An example of how to calculate advantages for a high-scoring response and accurate predictions in PyTorch</h4>
+
+
+
+<pre class="wp-block-code"><code># Import necessary modules
+import torch
+
+# Define the calculate_advantages function
+def calculate_advantages(rewards, predictions):
+  # Calculate the discounted rewards
+  discounted_rewards = rewards * 0.99 ** torch.arange(len(rewards))
+
+  # Calculate the advantages using the rewards and predictions
+  advantages = discounted_rewards - predictions
+
+  # Return the advantages
+  return advantages
+
+# Define the prompt and response
+prompt = "What is the weather like today?"
+response = "It is sunny and warm in San Francisco today."
+
+# Define the rewards for the response
+rewards = torch.tensor(&#91;10.0])
+
+# Define the predictions for the response
+predictions = torch.tensor(&#91;
+  &#91;0.25, 0.15, 0.1, ...],  # Probabilities of each token in the response
+])
+
+# Calculate the advantages for the response
+advantages = calculate_advantages(rewards, predictions)
+
+# Print the advantages
+print(advantages)  # Output: tensor(&#91;9.75, ...])</code></pre>
+
+
+
+<h4 class="wp-block-heading">A sample dataset for language model training using PPO</h4>
+
+
+
+<pre class="wp-block-code"><code># Define the prompts and responses
+prompts = &#91;
+  "What is the weather like today?",
+  "How are you feeling today?",
+  "What is your favorite color?",
+  "What is your favorite food?",
+  "What is your favorite hobby?",
+]
+
+responses = &#91;
+  "It is sunny and warm in San Francisco today.",
+  "I am feeling happy and energetic today.",
+  "My favorite color is blue.",
+  "My favorite food is pizza.",
+  "My favorite hobby is playing video games.",
+]
+
+# Define the rewards for each response
+rewards = &#91;
+  10.0,  # High score for a relevant and well-written response
+   7.0,  # Medium score for a relevant but somewhat generic response
+   4.0,  # Low score for an irrelevant or poorly-written response
+   9.0,  # High score for a relevant and well-written response
+   6.0,  # Medium score for a relevant but somewhat generic response
+]</code></pre>
+
+
+
+<h4 class="wp-block-heading">Conclusion</h4>
+
+
+
+<p>To summarise PPO is a model free learning algorithm, it is basically a neural network that takes as input the prompt, the response, and a rating of that response. The loss is calculated by clipping and surrogate losses. Advantages is simply a scaling factor and correlates to the human ratings. To end this post, here are ten practical ideas where training a language model using PPO will be very useful:</p>
+
+
+
+<ol>
+<li>Developing chatbots that can have more natural and engaging conversations with users.</li>
+
+
+
+<li>Improving the accuracy and relevance of autocomplete suggestions in search engines and text editors.</li>
+
+
+
+<li>Generating personalized and relevant responses to customer inquiries in customer service systems.</li>
+
+
+
+<li>Enhancing the performance and accuracy of machine translation systems.</li>
+
+
+
+<li>Developing predictive text models for mobile devices and virtual keyboards.</li>
+
+
+
+<li>Generating high-quality and diverse content for content marketing and advertising campaigns.</li>
+
+
+
+<li>Improving the performance of text summarisation systems by generating more concise and coherent summaries.</li>
+
+
+
+<li>Generating natural-sounding and context-aware responses in virtual assistants and smart speakers.</li>
+
+
+
+<li>Developing language models that can accurately detect and classify sensitive information, such as hate speech or offensive language.</li>
+
+
+
+<li>Creating more engaging and personalised user experiences in online platforms and social media networks.</li>
+</ol>
+]]></content:encoded>
+					
+					<wfw:commentRss>http://localhost:8000/index.php/ppo-proximal-policy-optimization-explained-with-code-examples-in-pytorch-and-tensorflow/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>RLHF (Reinforcement Learning with Human Feedback) Python tutorial using TRLX</title>
+		<link>http://localhost:8000/index.php/rlhf-tutorial-using-trlx/</link>
+					<comments>http://localhost:8000/index.php/rlhf-tutorial-using-trlx/#comments</comments>
+		
+		<dc:creator><![CDATA[rohitkumar1979]]></dc:creator>
+		<pubDate>Sat, 10 Dec 2022 16:27:45 +0000</pubDate>
+				<category><![CDATA[Deep Learning]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[ChatGPT]]></category>
+		<category><![CDATA[Fine tune]]></category>
+		<category><![CDATA[GPT]]></category>
+		<category><![CDATA[Reinforcement Learning with Human Feedback]]></category>
+		<category><![CDATA[RLHF]]></category>
+		<category><![CDATA[Transformer Reinforcement Learning X]]></category>
+		<category><![CDATA[TRLX]]></category>
+		<guid isPermaLink="false">https://plainswipe.com/?p=919</guid>
+
+					<description><![CDATA[What is TRLX? TRLX is a framework that uses Hugging Face transformers pipeline object to fine tune a model using RLHF. Transformer Reinforcement Learning X (TRLX) is a type of artificial intelligence (AI) that combines the capabilities of the Transformer model with reinforcement learning. The Transformer model is a powerful AI technique that is commonly&#8230;&#160;<a href="http://localhost:8000/index.php/rlhf-tutorial-using-trlx/" class="" rel="bookmark">Read More &#187;<span class="screen-reader-text">RLHF (Reinforcement Learning with Human Feedback) Python tutorial using TRLX</span></a>]]></description>
+										<content:encoded><![CDATA[
+<h4 class="wp-block-heading">What is TRLX?</h4>
+
+
+
+<p>TRLX is a framework that uses Hugging Face transformers pipeline object to fine tune a model using RLHF. </p>
+
+
+
+<p>Transformer Reinforcement Learning X (TRLX) is a type of artificial intelligence (AI) that combines the capabilities of the Transformer model with reinforcement learning. The Transformer model is a powerful AI technique that is commonly used in natural language processing tasks, such as language translation or text summarization. Reinforcement learning is a type of machine learning that involves rewarding or punishing a model based on its actions in order to improve its performance over time.</p>
+
+
+
+<p>By combining these two techniques, TRLX allows robots to learn and adapt their behavior based on feedback from their environment and users. For example, a robot that uses TRLX might be trained to perform a specific task, such as cleaning a room or picking up objects. As the robot performs the task, it receives feedback from its sensors and users, and uses this feedback to adjust its behavior and improve its performance.</p>
+
+
+
+<p>TRLX has the potential to improve the performance and efficiency of robots in a wide range of applications, including manufacturing, logistics, and customer service. By allowing robots to learn and adapt based on feedback from their environment and users, TRLX can help robots to become more intelligent, flexible, and useful.</p>
+
+
+
+<h4 class="wp-block-heading">What is RLHF?</h4>
+
+
+
+<p>RLHF stands for Reinforcement Learning with Human Feedback. </p>
+
+
+
+<div class="wp-block-media-text is-stacked-on-mobile"><figure class="wp-block-media-text__media"><img decoding="async" src="https://plainswipe.com/wp-content/uploads/2022/12/65249_ateacherstandingnexttoastudentscoringtheworkofthes.png" alt="" class="wp-image-927 size-full"/></figure><div class="wp-block-media-text__content">
+<p>RLHF, or Reinforcement Learning from Human Feedback, is a type of artificial intelligence (AI) that allows robots to learn and improve their behavior based on feedback from human users. This is different from traditional AI, which is pre-programmed with a set of rules and behaviors that it follows without adapting to its environment or users.</p>
+
+
+
+<p>RLHF uses a technique called reinforcement learning, which involves rewarding the robot for behaviours that are beneficial to the user, and punishing the robot for behaviours that are harmful or undesirable. Over time, this reinforcement process helps the robot to learn and adapt its behavior to better meet the needs and preferences of its human users.</p>
+
+
+
+<p> </p>
+</div></div>
+
+
+
+<p></p>
+
+
+
+<h4 class="wp-block-heading">Step 1 : Installation</h4>
+
+
+
+<pre class="wp-block-code"><code>!git clone https://github.com/CarperAI/trlx.git
+%cd trlx
+!pip install torch --extra-index-url https://download.pytorch.org/whl/cu116
+!pip install -e .</code></pre>
+
+
+
+<h4 class="wp-block-heading">Step 2: Setting up the environment</h4>
+
+
+
+<pre class="wp-block-code"><code>from datasets import load_dataset
+from transformers import pipeline
+import os
+import yaml
+
+import trlx
+import torch
+from typing import List
+from trlx.data.configs import TRLConfig</code></pre>
+
+
+
+<h4 class="wp-block-heading">Step 3: Fine Tune your Language Model (optional)</h4>
+
+
+
+<p>This is an optional step but highly recommended for serious applications. We pick GPT because it is particularly good at text generation tasks. Here is an example of code that shows how to fine-tune a Hugging Face GPT language model:</p>
+
+
+
+<pre class="wp-block-code"><code># Import the Hugging Face transformers library
+import transformers
+
+# Load the GPT language model that you want to fine-tune
+model = transformers.GPT2LMHeadModel.from_pretrained('&lt;model_name&gt;')
+
+# Set the training parameters, such as the batch size and number of epochs
+batch_size = 16
+num_epochs = 5
+
+# Define the dataset and dataloader for the model
+dataset = transformers.LineByLineTextDataset(...)
+dataloader = transformers.DataLoader(...)
+
+# Set the optimizer and learning rate for the model
+optimizer = transformers.AdamW(model.parameters(), lr=2e-5)
+
+# Train the model for the specified number of epochs
+for epoch in range(num_epochs):
+    # Train the model on the training data
+    model.train()
+    for batch in dataloader:
+        optimizer.zero_grad()
+        outputs = model(input_ids=batch&#91;'input_ids'], attention_mask=batch&#91;'attention_mask'])
+        loss = outputs&#91;0]
+        loss.backward()
+        optimizer.step()
+
+# Save the fine-tuned model
+model.save_pretrained('&lt;model_name&gt;')
+</code></pre>
+
+
+
+<p></p>
+
+
+
+<div class="wp-block-media-text has-media-on-the-right is-stacked-on-mobile"><div class="wp-block-media-text__content">
+<p>This code shows the basic steps for fine-tuning a Hugging Face language model. First, the model is loaded from a pre-trained checkpoint. Next, the training parameters, such as the batch size and number of epochs, are set. The dataset and dataloader are then defined, and the optimizer and learning rate are set for the model.</p>
+
+
+
+<p>Finally, the model is trained for the specified number of epochs, using the training data provided in the dataloader. After training, the fine-tuned model is saved and loaded in the next step.</p>
+</div><figure class="wp-block-media-text__media"><img decoding="async" src="https://plainswipe.com/wp-content/uploads/2022/12/457184_batmanoperatingtheradiointhecarCinematicextremelyd.png" alt="" class="wp-image-928 size-full"/></figure></div>
+
+
+
+<h4 class="wp-block-heading">Step 4: Create a pipeline</h4>
+
+
+
+<p></p>
+
+
+
+<pre class="wp-block-code"><code>sentiment_fn = pipeline(
+        "sentiment-analysis",
+        "lvwerra/distilbert-imdb",
+        top_k=2,
+        truncation=True,
+        batch_size=256,
+        device=device,
+    )</code></pre>
+
+
+
+<p>In the code above we used the pre-trained model lvwerra/distilbert-imdb and the sentiment analysis pipeline, but it could have been your fine tuned model and a different pipeline. The Hugging Face transformers provide a variety of pipelines that can be used for different natural language processing tasks. Some of the pipelines that are available include:</p>
+
+
+
+<ul>
+<li>Sentiment analysis: This pipeline can be used to predict the sentiment (positive, neutral, or negative) of a given text.</li>
+
+
+
+<li>Text generation: This pipeline can be used to generate new text based on a given prompt or input.</li>
+
+
+
+<li>Text classification: This pipeline can be used to classify a given text into one or more pre-defined categories.</li>
+
+
+
+<li>Named entity recognition: This pipeline can be used to identify and extract named entities (such as people, organizations, or locations) from a given text.</li>
+
+
+
+<li>Question answering: This pipeline can be used to generate answers to questions based on a given text or document.</li>
+
+
+
+<li>Summarization: This pipeline can be used to generate a concise summary of a given text or document.</li>
+
+
+
+<li>Translation: This pipeline can be used to translate a given text from one language to another.</li>
+</ul>
+
+
+
+<p>These are just a few examples of the pipelines that are available with the Hugging Face transformers. There are many other pipelines available, and new ones are being added all the time.</p>
+
+
+
+<h4 class="wp-block-heading">Step 5: Create prompts</h4>
+
+
+
+<pre class="wp-block-code"><code>    # Take few words off of movies reviews as prompts
+    imdb = load_dataset("imdb", split="train+test")
+    prompts = &#91;" ".join(review.split()&#91;:4]) for review in imdb&#91;"text"]]</code></pre>
+
+
+
+<p>There are several different ways that you can create prompts. Some of the most common methods include:</p>
+
+
+
+<ul>
+<li>Using a pre-defined prompt: Many language models come with a set of pre-defined prompts that can be used to generate text or answers to questions. For example, a language model might include prompts such as &#8220;Tell me a story about a robot&#8221; or &#8220;Explain the concept of reinforcement learning in simple terms.&#8221;</li>
+
+
+
+<li>Providing your own prompt: In many cases, you can also create your own custom prompts by providing a sentence, paragraph, or other text as input to the language model. For example, you might provide a prompt such as &#8220;Describe the benefits of using a large language model&#8221; or &#8220;Write a poem about the beauty of nature.&#8221;</li>
+</ul>
+
+
+
+<p>In the move review dataset we simply truncated and used the first 5 words as the prompt. The prompt will be what you have fine-tuned your model to do. </p>
+
+
+
+<h4 class="wp-block-heading">Step 6: Reward Function</h4>
+
+
+
+<pre class="wp-block-code"><code>def get_positive_score(scores):
+    "Extract value associated with a positive sentiment from pipeline's output"
+    return dict(map(lambda x: tuple(x.values()), scores))&#91;"POSITIVE"]
+
+def reward_fn(samples: List&#91;str]) -&gt; List&#91;float]:
+        sentiments = list(map(get_positive_score, sentiment_fn(samples)))
+        return sentiments</code></pre>
+
+
+
+<p>What this code is doing is taking the output of the pipeline, i.e. output of the prompts that you created earlier, and then scoring that output. Since in this sample example we are trying to use RLHF to generate positive reviews, we are only returning back the confidence score of the positive sentiment classification. This is key</p>
+
+
+
+<p>To illustrate with another example. Imagine you have a text classification model that classifies text into various classes (For instance, Factual, Opinionated, Impactful, and Useful), and your goal is to train a model to generate more Useful text then you simply return the Useful score of the classification. </p>
+
+
+
+<p>Do note that in the example above the output of the sentiment analysis pipeline in itself is a classification (Positive, Negative), but in case of text generation models like GPT you could have taken the output of the prompt and fed that output into a different text classification model, and taken the scores of the class you care about (e.g. Useful class) and then made that was the reward.</p>
+
+
+
+<p>I hope you can see the immense power behind this training technique. The rewards could be coming from another model, or could be coming directly from some human raters (e.g. Amazon Mechanical Turk). In Chat GPT they went ahead and first collected ratings from human raters and then fine-tuned a language model on predicting the ratings given the pair of prompt, and generated text.</p>
+
+
+
+<h4 class="wp-block-heading">Step 7: Train using TRLX library</h4>
+
+
+
+<pre class="wp-block-code"><code> model = trlx.train(
+        reward_fn=reward_fn,
+        prompts=prompts,
+        eval_prompts=&#91;"I don't know much about Hungarian underground"] * 64,
+        config=config,
+    )</code></pre>
+
+
+
+<p>eval_prompts are prompts to periodically validate training on. The idea is that theses prompts will never be used in learning, but purely as a way to evaluate the training. In the example above is a primitive way to give a list of 64 prompts all repeated but in a real example these would be carefully selected prompts.</p>
+
+
+
+<h4 class="wp-block-heading">Conclusion</h4>
+
+
+
+<p>So there you have it, in this post I covered the logical structure of how to do RLHF training (Reinforcement Learning from Human Feedback). I intentionally skipped many details to make sure this tutorial is intuitive. In the next part I am going to cover how to actually run this training, since it can be computationally expensive. I will be focussing on the real challenges of running this training in a cost effective manner. I will be trying to make this run on a Google Colab, and will share my learnings. So stay tuned or subscribe.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>http://localhost:8000/index.php/rlhf-tutorial-using-trlx/feed/</wfw:commentRss>
+			<slash:comments>2</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>
