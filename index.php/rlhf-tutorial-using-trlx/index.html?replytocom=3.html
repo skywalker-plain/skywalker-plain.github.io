@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+	
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+			<link rel="pingback" href="http://localhost:8000/xmlrpc.php">
+		<title>RLHF (Reinforcement Learning with Human Feedback) Python tutorial using TRLX &#8211; PlainSwipe</title>
+<meta name='robots' content='max-image-preview:large, noindex, follow' />
+<link rel="alternate" type="application/rss+xml" title="PlainSwipe &raquo; Feed" href="../feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="PlainSwipe &raquo; Comments Feed" href="../comments/feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="PlainSwipe &raquo; RLHF (Reinforcement Learning with Human Feedback) Python tutorial using TRLX Comments Feed" href="feed/index.html" />
+<script type="text/javascript">
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/localhost:8000\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.2"}};
+/*! This file is auto-generated */
+!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){p.clearRect(0,0,i.width,i.height),p.fillText(e,0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(t,0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(p&&p.fillText)switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s("\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!s("\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!s("\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!s("\ud83e\udef1\ud83c\udffb\u200d\ud83e\udef2\ud83c\udfff","\ud83e\udef1\ud83c\udffb\u200b\ud83e\udef2\ud83c\udfff")}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(e=t.source||{}).concatemoji?c(e.concatemoji):e.wpemoji&&e.twemoji&&(c(e.twemoji),c(e.wpemoji)))}(window,document,window._wpemojiSettings);
+</script>
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css' href='../../wp-includes/css/dist/block-library/style.min.css%3Fver=6.2.css' type='text/css' media='all' />
+<link rel='stylesheet' id='classic-theme-styles-css' href='../../wp-includes/css/classic-themes.min.css%3Fver=6.2.css' type='text/css' media='all' />
+<style id='global-styles-inline-css' type='text/css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--neve-link-color: var(--nv-primary-accent);--wp--preset--color--neve-link-hover-color: var(--nv-secondary-accent);--wp--preset--color--nv-site-bg: var(--nv-site-bg);--wp--preset--color--nv-light-bg: var(--nv-light-bg);--wp--preset--color--nv-dark-bg: var(--nv-dark-bg);--wp--preset--color--neve-text-color: var(--nv-text-color);--wp--preset--color--nv-text-dark-bg: var(--nv-text-dark-bg);--wp--preset--color--nv-c-1: var(--nv-c-1);--wp--preset--color--nv-c-2: var(--nv-c-2);--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('index.html%3Freplytocom=3.html');--wp--preset--duotone--grayscale: url('index.html%3Freplytocom=3.html');--wp--preset--duotone--purple-yellow: url('index.html%3Freplytocom=3.html');--wp--preset--duotone--blue-red: url('index.html%3Freplytocom=3.html');--wp--preset--duotone--midnight: url('index.html%3Freplytocom=3.html');--wp--preset--duotone--magenta-yellow: url('index.html%3Freplytocom=3.html');--wp--preset--duotone--purple-green: url('index.html%3Freplytocom=3.html');--wp--preset--duotone--blue-orange: url('index.html%3Freplytocom=3.html');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='neve-style-css' href='../../wp-content/themes/neve/style-main-new.min.css%3Fver=3.4.4.css' type='text/css' media='all' />
+<style id='neve-style-inline-css' type='text/css'>
+.nv-meta-list li.meta:not(:last-child):after { content:"/" }.nv-meta-list .no-mobile{
+			display:none;
+		}.nv-meta-list li.last::after{
+			content: ""!important;
+		}@media (min-width: 769px) {
+			.nv-meta-list .no-mobile {
+				display: inline-block;
+			}
+			.nv-meta-list li.last:not(:last-child)::after {
+		 		content: "/" !important;
+			}
+		}
+ :root{ --container: 748px;--postwidth:100%; --primarybtnbg: var(--nv-primary-accent); --secondarybtnbg: rgba(0, 0, 0, 0); --primarybtnhoverbg: var(--nv-secondary-accent); --secondarybtnhoverbg: var(--nv-dark-bg); --primarybtncolor: #010101; --secondarybtncolor: var(--nv-dark-bg); --primarybtnhovercolor: #ffffff; --secondarybtnhovercolor: var(--nv-text-dark-bg);--primarybtnborderradius:0;--secondarybtnborderradius:0;--secondarybtnborderwidth:2px;--btnpadding:12px 24px;--primarybtnpadding:12px 24px;--secondarybtnpadding:10px 22px; --btnfs: 14px; --btnlineheight: 1.6em; --bodyfontfamily: Arial,Helvetica,sans-serif; --bodyfontsize: 16px; --bodylineheight: 1.7em; --bodyletterspacing: 0px; --bodyfontweight: 400; --bodytexttransform: none; --h1fontsize: 39px; --h1fontweight: 600; --h1lineheight: 1.2em; --h1letterspacing: 0px; --h1texttransform: none; --h2fontsize: 28px; --h2fontweight: 600; --h2lineheight: 1.3em; --h2letterspacing: 0px; --h2texttransform: none; --h3fontsize: 20px; --h3fontweight: 600; --h3lineheight: 1.3em; --h3letterspacing: 0px; --h3texttransform: none; --h4fontsize: 16px; --h4fontweight: 600; --h4lineheight: 1.3em; --h4letterspacing: 0px; --h4texttransform: none; --h5fontsize: 14px; --h5fontweight: 600; --h5lineheight: 1.3em; --h5letterspacing: 0px; --h5texttransform: none; --h6fontsize: 14px; --h6fontweight: 600; --h6lineheight: 1.3em; --h6letterspacing: 0px; --h6texttransform: none;--formfieldborderwidth:2px;--formfieldborderradius:0; --formfieldbgcolor: var(--nv-site-bg); --formfieldbordercolor: var(--nv-light-bg); --formfieldcolor: var(--nv-text-color);--formfieldpadding:10px 12px 10px 12px;; } .has-neve-button-color-color{ color: var(--nv-primary-accent)!important; } .has-neve-button-color-background-color{ background-color: var(--nv-primary-accent)!important; } .single-post-container .alignfull > [class*="__inner-container"], .single-post-container .alignwide > [class*="__inner-container"]{ max-width:718px } .nv-meta-list{ --avatarsize: 20px; } .single .nv-meta-list{ --avatarsize: 20px; } .blog .blog-entry-title, .archive .blog-entry-title{ --fontsize: 28px; } .single h1.entry-title{ --fontsize: 28px; } .nv-post-thumbnail-wrap{ --boxshadow:0 3px 6px -5px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.1); } .nv-post-cover{ --height: 250px;--padding:40px 15px;--justify: flex-start; --textalign: left; --valign: center; } .nv-post-cover .nv-title-meta-wrap, .nv-page-title-wrap, .entry-header{ --color: var(--nv-text-dark-bg); --textalign: left; } .nv-is-boxed.nv-title-meta-wrap{ --padding:40px 15px; --bgcolor: var(--nv-dark-bg); } .nv-overlay{ --bgcolor: var(--nv-dark-bg); --opacity: 50; --blendmode: normal; } .nv-is-boxed.nv-comments-wrap{ --padding:20px; } .nv-is-boxed.comment-respond{ --padding:20px; } .global-styled{ --bgcolor: var(--nv-site-bg); } .header-top{ --rowbcolor: var(--nv-light-bg); --color: var(--nv-text-color); --bgcolor: #f0f0f0; } .header-main{ --rowbcolor: var(--nv-light-bg); --color: var(--nv-text-color); --bgcolor: var(--nv-site-bg); } .header-bottom{ --rowbcolor: var(--nv-light-bg); --color: var(--nv-text-color); --bgcolor: #ffffff; } .header-menu-sidebar-bg{ --justify: flex-start; --textalign: left;--flexg: 1;--wrapdropdownwidth: auto; --color: var(--nv-text-color); --bgcolor: var(--nv-site-bg); } .header-menu-sidebar{ width: 360px; } .builder-item--logo{ --maxwidth: 32px;--padding:10px 0;--margin:0; --textalign: left;--justify: flex-start; } .builder-item--nav-icon,.header-menu-sidebar .close-sidebar-panel .navbar-toggle{ --borderradius:0;--borderwidth:1px; } .builder-item--nav-icon{ --label-margin:0 5px 0 0;;--padding:10px 15px;--margin:0; } .builder-item--primary-menu{ --color: var(--nv-text-color); --hovercolor: var(--nv-secondary-accent); --activecolor: var(--nv-text-color); --spacing: 20px; --height: 25px;--padding:0;--margin:0; --fontsize: 1em; --lineheight: 1.6; --letterspacing: 0px; --fontweight: 600; --texttransform: uppercase; --iconsize: 1em; } .hfg-is-group.has-primary-menu .inherit-ff{ --inheritedfw: 600; } .footer-top-inner .row{ grid-template-columns:1fr 1fr 1fr; --valign: flex-start; } .footer-top{ --rowbcolor: var(--nv-light-bg); --color: var(--nv-text-color); --bgcolor: #ffffff; } .footer-main-inner .row{ grid-template-columns:1fr 1fr 1fr; --valign: flex-start; } .footer-main{ --rowbcolor: var(--nv-light-bg); --color: var(--nv-text-color); --bgcolor: var(--nv-site-bg); } .footer-bottom-inner .row{ grid-template-columns:1fr 1fr 1fr; --valign: flex-start; } .footer-bottom{ --rowbcolor: var(--nv-light-bg); --color: var(--nv-text-dark-bg); --bgcolor: #000000; } @media(min-width: 576px){ :root{ --container: 992px;--postwidth:50%;--btnpadding:12px 24px;--primarybtnpadding:12px 24px;--secondarybtnpadding:10px 22px; --btnfs: 14px; --btnlineheight: 1.6em; --bodyfontsize: 16px; --bodylineheight: 1.7em; --bodyletterspacing: 0px; --h1fontsize: 55px; --h1lineheight: 1.3em; --h1letterspacing: 0px; --h2fontsize: 34px; --h2lineheight: 1.3em; --h2letterspacing: 0px; --h3fontsize: 20px; --h3lineheight: 1.3em; --h3letterspacing: 0px; --h4fontsize: 16px; --h4lineheight: 1.3em; --h4letterspacing: 0px; --h5fontsize: 14px; --h5lineheight: 1.3em; --h5letterspacing: 0px; --h6fontsize: 14px; --h6lineheight: 1.3em; --h6letterspacing: 0px; } .single-post-container .alignfull > [class*="__inner-container"], .single-post-container .alignwide > [class*="__inner-container"]{ max-width:962px } .nv-meta-list{ --avatarsize: 20px; } .single .nv-meta-list{ --avatarsize: 20px; } .blog .blog-entry-title, .archive .blog-entry-title{ --fontsize: 32px; } .single h1.entry-title{ --fontsize: 40px; } .nv-post-cover{ --height: 30vh;--padding:60px 30px;--justify: flex-start; --textalign: left; --valign: center; } .nv-post-cover .nv-title-meta-wrap, .nv-page-title-wrap, .entry-header{ --textalign: left; } .nv-is-boxed.nv-title-meta-wrap{ --padding:60px 30px; } .nv-is-boxed.nv-comments-wrap{ --padding:30px; } .nv-is-boxed.comment-respond{ --padding:30px; } .header-menu-sidebar-bg{ --justify: flex-start; --textalign: left;--flexg: 1;--wrapdropdownwidth: auto; } .header-menu-sidebar{ width: 360px; } .builder-item--logo{ --maxwidth: 32px;--padding:10px 0;--margin:0; --textalign: left;--justify: flex-start; } .builder-item--nav-icon{ --label-margin:0 5px 0 0;;--padding:10px 15px;--margin:0; } .builder-item--primary-menu{ --spacing: 20px; --height: 25px;--padding:0;--margin:0; --fontsize: 1em; --lineheight: 1.6; --letterspacing: 0px; --iconsize: 1em; } }@media(min-width: 960px){ :root{ --container: 1170px;--postwidth:50%;--btnpadding:12px 24px;--primarybtnpadding:12px 24px;--secondarybtnpadding:10px 22px; --btnfs: 16px; --btnlineheight: 1.6em; --bodyfontsize: 17px; --bodylineheight: 1.7em; --bodyletterspacing: 0px; --h1fontsize: 70px; --h1lineheight: 1.3em; --h1letterspacing: 0px; --h2fontsize: 46px; --h2lineheight: 1.3em; --h2letterspacing: 0px; --h3fontsize: 24px; --h3lineheight: 1.3em; --h3letterspacing: 0px; --h4fontsize: 20px; --h4lineheight: 1.3em; --h4letterspacing: 0px; --h5fontsize: 16px; --h5lineheight: 1.3em; --h5letterspacing: 0px; --h6fontsize: 16px; --h6lineheight: 1.3em; --h6letterspacing: 0px; } body:not(.single):not(.archive):not(.blog):not(.search):not(.error404) .neve-main > .container .col, body.post-type-archive-course .neve-main > .container .col, body.post-type-archive-llms_membership .neve-main > .container .col{ max-width: 100%; } body:not(.single):not(.archive):not(.blog):not(.search):not(.error404) .nv-sidebar-wrap, body.post-type-archive-course .nv-sidebar-wrap, body.post-type-archive-llms_membership .nv-sidebar-wrap{ max-width: 0%; } .neve-main > .archive-container .nv-index-posts.col{ max-width: 100%; } .neve-main > .archive-container .nv-sidebar-wrap{ max-width: 0%; } .neve-main > .single-post-container .nv-single-post-wrap.col{ max-width: 70%; } .single-post-container .alignfull > [class*="__inner-container"], .single-post-container .alignwide > [class*="__inner-container"]{ max-width:789px } .container-fluid.single-post-container .alignfull > [class*="__inner-container"], .container-fluid.single-post-container .alignwide > [class*="__inner-container"]{ max-width:calc(70% + 15px) } .neve-main > .single-post-container .nv-sidebar-wrap{ max-width: 30%; } .nv-meta-list{ --avatarsize: 20px; } .single .nv-meta-list{ --avatarsize: 20px; } .blog .blog-entry-title, .archive .blog-entry-title{ --fontsize: 32px; } .single h1.entry-title{ --fontsize: 65px; } .nv-post-cover{ --height: 50vh;--padding:60px 40px 60px 40px;;--justify: flex-start; --textalign: left; --valign: flex-end; } .nv-post-cover .nv-title-meta-wrap, .nv-page-title-wrap, .entry-header{ --textalign: left; } .nv-is-boxed.nv-title-meta-wrap{ --padding:60px 40px 60px 40px;; } .nv-is-boxed.nv-comments-wrap{ --padding:40px; } .nv-is-boxed.comment-respond{ --padding:40px; } .header-menu-sidebar-bg{ --justify: flex-start; --textalign: left;--flexg: 1;--wrapdropdownwidth: auto; } .header-menu-sidebar{ width: 360px; } .builder-item--logo{ --maxwidth: 32px;--padding:10px 0;--margin:0; --textalign: left;--justify: flex-start; } .builder-item--nav-icon{ --label-margin:0 5px 0 0;;--padding:10px 15px;--margin:0; } .builder-item--primary-menu{ --spacing: 20px; --height: 25px;--padding:0;--margin:0; --fontsize: 0.8em; --lineheight: 1.6; --letterspacing: 0px; --iconsize: 0.8em; } }:root{--nv-primary-accent:#fcaf3b;--nv-secondary-accent:#ab641d;--nv-site-bg:#ffffff;--nv-light-bg:#ededed;--nv-dark-bg:#14171c;--nv-text-color:#2b2b2b;--nv-text-dark-bg:#ffffff;--nv-c-1:#77b978;--nv-c-2:#f37262;--nv-fallback-ff:Arial, Helvetica, sans-serif;}
+</style>
+<style id='kadence-blocks-global-variables-inline-css' type='text/css'>
+:root {--global-kb-font-size-sm:clamp(0.8rem, 0.73rem + 0.217vw, 0.9rem);--global-kb-font-size-md:clamp(1.1rem, 0.995rem + 0.326vw, 1.25rem);--global-kb-font-size-lg:clamp(1.75rem, 1.576rem + 0.543vw, 2rem);--global-kb-font-size-xl:clamp(2.25rem, 1.728rem + 1.63vw, 3rem);--global-kb-font-size-xxl:clamp(2.5rem, 1.456rem + 3.26vw, 4rem);--global-kb-font-size-xxxl:clamp(2.75rem, 0.489rem + 7.065vw, 6rem);}
+</style>
+        <script>
+            /* <![CDATA[ */
+            var rcewpp = {
+                "ajax_url":"http://localhost:8000/wp-admin/admin-ajax.php",
+                "nonce": "97e959895d",
+                "home_url": "http://localhost:8000/",
+                "settings_icon": 'http://localhost:8000/wp-content/plugins/export-wp-page-to-static-html/admin/images/settings.png',
+                "settings_hover_icon": 'http://localhost:8000/wp-content/plugins/export-wp-page-to-static-html/admin/images/settings_hover.png'
+            };
+            /* ]]\> */
+        </script>
+        <link rel="https://api.w.org/" href="../wp-json/index.html" /><link rel="alternate" type="application/json" href="../wp-json/wp/v2/posts/919" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc.php%3Frsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../wp-includes/wlwmanifest.xml" />
+<meta name="generator" content="WordPress 6.2" />
+<link rel="canonical" href="../../index.html%3Fp=919.html" />
+<link rel='shortlink' href='../../index.html%3Fp=919.html' />
+<link rel="alternate" type="application/json+oembed" href="../wp-json/oembed/1.0/embed%3Furl=http:%252F%252Flocalhost:8000%252Findex.php%252Frlhf-tutorial-using-trlx%252F" />
+<link rel="alternate" type="text/xml+oembed" href="../wp-json/oembed/1.0/embed%3Furl=http:%252F%252Flocalhost:8000%252Findex.php%252Frlhf-tutorial-using-trlx%252F&amp;format=xml" />
+<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><link rel="icon" href="../../wp-content/uploads/2023/04/cropped-logo-32x32.png" sizes="32x32" />
+<link rel="icon" href="../../wp-content/uploads/2023/04/cropped-logo-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="../../wp-content/uploads/2023/04/cropped-logo-180x180.png" />
+<meta name="msapplication-TileImage" content="http://localhost:8000/wp-content/uploads/2023/04/cropped-logo-270x270.png" />
+
+	</head>
+
+<body  class="post-template-default single single-post postid-919 single-format-standard wp-custom-logo  nv-blog-grid nv-sidebar-right menu_sidebar_slide_left" id="neve_body"  >
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-dark-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 0.49803921568627" /><feFuncG type="table" tableValues="0 0.49803921568627" /><feFuncB type="table" tableValues="0 0.49803921568627" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 1" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0 1" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-purple-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.54901960784314 0.98823529411765" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0.71764705882353 0.25490196078431" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-blue-red"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 1" /><feFuncG type="table" tableValues="0 0.27843137254902" /><feFuncB type="table" tableValues="0.5921568627451 0.27843137254902" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-midnight"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 0" /><feFuncG type="table" tableValues="0 0.64705882352941" /><feFuncB type="table" tableValues="0 1" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-magenta-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.78039215686275 1" /><feFuncG type="table" tableValues="0 0.94901960784314" /><feFuncB type="table" tableValues="0.35294117647059 0.47058823529412" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-purple-green"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.65098039215686 0.40392156862745" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0.44705882352941 0.4" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-blue-orange"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.098039215686275 1" /><feFuncG type="table" tableValues="0 0.66274509803922" /><feFuncB type="table" tableValues="0.84705882352941 0.41960784313725" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><div class="wrapper">
+	
+	<header class="header"  >
+		<a class="neve-skip-link show-on-focus" href="index.html%3Freplytocom=3.html#content" >
+			Skip to content		</a>
+		<div id="header-grid"  class="hfg_header site-header">
+	
+<nav class="header--row header-main hide-on-mobile hide-on-tablet layout-full-contained nv-navbar header--row"
+	data-row-id="main" data-show-on="desktop">
+
+	<div
+		class="header--row-inner header-main-inner">
+		<div class="container">
+			<div
+				class="row row--wrapper"
+				data-section="hfg_header_layout_main" >
+				<div class="hfg-slot left"><div class="builder-item desktop-left"><div class="item--inner builder-item--logo"
+		data-section="title_tagline"
+		data-item-id="logo">
+	
+<div class="site-logo">
+	<a class="brand" href="../../index.html" title="PlainSwipe"
+			aria-label="PlainSwipe"><div class="title-with-logo"><img width="200" height="209" src="../../wp-content/uploads/2023/04/cropped-logo-1.png" class="neve-site-logo skip-lazy" alt="" decoding="async" data-variant="logo" /><div class="nv-title-tagline-wrap"><p class="site-title">PlainSwipe</p></div></div></a></div>
+
+	</div>
+
+</div></div><div class="hfg-slot right"><div class="builder-item has-nav"><div class="item--inner builder-item--primary-menu has_menu"
+		data-section="header_menu_primary"
+		data-item-id="primary-menu">
+	<div class="nv-nav-wrap">
+	<div role="navigation" class="nav-menu-primary style-border-bottom m-style"
+			aria-label="Primary Menu">
+
+		<ul id="nv-primary-navigation-main" class="primary-menu-ul nav-ul menu-desktop"><li id="menu-item-1298" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-1298"><a href="../../index.html">Home</a></li>
+<li id="menu-item-1300" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1300"><a href="../../index.html%3Fp=61.html">About Us</a></li>
+<li id="menu-item-1302" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1302"><a href="../../index.html%3Fp=69.html"><span class="menu-item-title-wrap dd-title">Products</span><div role="none"tabindex="-1" class="caret-wrap 3" style="margin-left:5px;"><span class="caret"><svg aria-label="Dropdown" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"/></svg></span></div></a>
+<ul class="sub-menu">
+	<li id="menu-item-1325" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1325"><a href="../../index.html%3Fp=1066.html">StockDuel for Stock Investors</a></li>
+	<li id="menu-item-1326" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1326"><a href="../../index.html%3Fp=994.html">TrainingBazaar for AI Engineers</a></li>
+	<li id="menu-item-1327" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1327"><a href="../../index.html%3Fp=1088.html">QualityWatch for Software Testing</a></li>
+	<li id="menu-item-1371" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1371"><a href="../../index.html%3Fp=819.html">Digital Prescriptions App for Doctors</a></li>
+</ul>
+</li>
+<li id="menu-item-1299" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-1299"><a href="../15c42-web-agency-gb-news/index.html">News</a></li>
+<li id="menu-item-1303" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1303"><a href="../../index.html%3Fp=75.html">Contact Us</a></li>
+</ul>	</div>
+</div>
+
+	</div>
+
+</div></div>							</div>
+		</div>
+	</div>
+</nav>
+
+
+<nav class="header--row header-main hide-on-desktop layout-full-contained nv-navbar header--row"
+	data-row-id="main" data-show-on="mobile">
+
+	<div
+		class="header--row-inner header-main-inner">
+		<div class="container">
+			<div
+				class="row row--wrapper"
+				data-section="hfg_header_layout_main" >
+				<div class="hfg-slot left"><div class="builder-item tablet-left mobile-left"><div class="item--inner builder-item--logo"
+		data-section="title_tagline"
+		data-item-id="logo">
+	
+<div class="site-logo">
+	<a class="brand" href="../../index.html" title="PlainSwipe"
+			aria-label="PlainSwipe"><div class="title-with-logo"><img width="200" height="209" src="../../wp-content/uploads/2023/04/cropped-logo-1.png" class="neve-site-logo skip-lazy" alt="" decoding="async" data-variant="logo" /><div class="nv-title-tagline-wrap"><p class="site-title">PlainSwipe</p></div></div></a></div>
+
+	</div>
+
+</div></div><div class="hfg-slot right"><div class="builder-item tablet-left mobile-left"><div class="item--inner builder-item--nav-icon"
+		data-section="header_menu_icon"
+		data-item-id="nav-icon">
+	<div class="menu-mobile-toggle item-button navbar-toggle-wrapper">
+	<button type="button" class=" navbar-toggle"
+			value="Navigation Menu"
+					aria-label="Navigation Menu ">
+					<span class="bars">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</span>
+					<span class="screen-reader-text">Navigation Menu</span>
+	</button>
+</div> <!--.navbar-toggle-wrapper-->
+
+
+	</div>
+
+</div></div>							</div>
+		</div>
+	</div>
+</nav>
+
+<div
+		id="header-menu-sidebar" class="header-menu-sidebar menu-sidebar-panel slide_left"
+		data-row-id="sidebar">
+	<div id="header-menu-sidebar-bg" class="header-menu-sidebar-bg">
+		<div class="close-sidebar-panel navbar-toggle-wrapper">
+			<button type="button" class="hamburger is-active  navbar-toggle active" 					value="Navigation Menu"
+					aria-label="Navigation Menu ">
+									<span class="bars">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</span>
+									<span class="screen-reader-text">
+				Navigation Menu					</span>
+			</button>
+		</div>
+		<div id="header-menu-sidebar-inner" class="header-menu-sidebar-inner ">
+						<div class="builder-item has-nav"><div class="item--inner builder-item--primary-menu has_menu"
+		data-section="header_menu_primary"
+		data-item-id="primary-menu">
+	<div class="nv-nav-wrap">
+	<div role="navigation" class="nav-menu-primary style-border-bottom m-style"
+			aria-label="Primary Menu">
+
+		<ul id="nv-primary-navigation-sidebar" class="primary-menu-ul nav-ul menu-mobile"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-1298"><a href="../../index.html">Home</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1300"><a href="../../index.html%3Fp=61.html">About Us</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1302"><div class="wrap"><a href="../../index.html%3Fp=69.html"><span class="menu-item-title-wrap dd-title">Products</span></a><button tabindex="0" type="button" class="caret-wrap navbar-toggle 3 " style="margin-left:5px;"><span class="caret"><svg aria-label="Dropdown" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"/></svg></span></button></div>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1325"><a href="../../index.html%3Fp=1066.html">StockDuel for Stock Investors</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1326"><a href="../../index.html%3Fp=994.html">TrainingBazaar for AI Engineers</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1327"><a href="../../index.html%3Fp=1088.html">QualityWatch for Software Testing</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1371"><a href="../../index.html%3Fp=819.html">Digital Prescriptions App for Doctors</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-1299"><a href="../15c42-web-agency-gb-news/index.html">News</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1303"><a href="../../index.html%3Fp=75.html">Contact Us</a></li>
+</ul>	</div>
+</div>
+
+	</div>
+
+</div>					</div>
+	</div>
+</div>
+<div class="header-menu-sidebar-overlay hfg-ov"></div>
+</div>
+	</header>
+
+	<style>.header-menu-sidebar .nav-ul li .wrap { position:relative; padding: 15px 0; display: flex; align-items: center; }.header-menu-sidebar .nav-ul li .wrap a { flex-grow: 1; }.header-menu-sidebar .nav-ul li .wrap a .dd-title { width: var(--wrapdropdownwidth); }.header-menu-sidebar .nav-ul li .wrap button { border: 0; z-index: 1; background: 0; }</style><div class="nv-post-cover" ><div class="nv-overlay"></div><div class="container"><div class="nv-title-meta-wrap "><h1 class="title entry-title">RLHF (Reinforcement Learning with Human Feedback) Python tutorial using TRLX</h1><ul class="nv-meta-list"><li  class="meta author vcard "><span class="author-name fn">by <a href="../author/rohitkumar1979/index.html" title="Posts by rohitkumar1979" rel="author">rohitkumar1979</a></span></li><li class="meta comments last"><a href="../../index.html%3Fp=919.html#comments">2 Comments</a></li></ul></div></div></div>
+
+	
+	<main id="content" class="neve-main">
+
+	<div class="container single-post-container">
+		<div class="row">
+						<article id="post-919"
+					class="nv-single-post-wrap col post-919 post type-post status-publish format-standard has-post-thumbnail hentry category-deep-learning tag-artificial-intelligence tag-chatgpt tag-fine-tune tag-gpt tag-reinforcement-learning-with-human-feedback tag-rlhf tag-transformer-reinforcement-learning-x tag-trlx">
+				<div class="nv-content-wrap entry-content">
+<h4 class="wp-block-heading">What is TRLX?</h4>
+
+
+
+<p>TRLX is a framework that uses Hugging Face transformers pipeline object to fine tune a model using RLHF. </p>
+
+
+
+<p>Transformer Reinforcement Learning X (TRLX) is a type of artificial intelligence (AI) that combines the capabilities of the Transformer model with reinforcement learning. The Transformer model is a powerful AI technique that is commonly used in natural language processing tasks, such as language translation or text summarization. Reinforcement learning is a type of machine learning that involves rewarding or punishing a model based on its actions in order to improve its performance over time.</p>
+
+
+
+<p>By combining these two techniques, TRLX allows robots to learn and adapt their behavior based on feedback from their environment and users. For example, a robot that uses TRLX might be trained to perform a specific task, such as cleaning a room or picking up objects. As the robot performs the task, it receives feedback from its sensors and users, and uses this feedback to adjust its behavior and improve its performance.</p>
+
+
+
+<p>TRLX has the potential to improve the performance and efficiency of robots in a wide range of applications, including manufacturing, logistics, and customer service. By allowing robots to learn and adapt based on feedback from their environment and users, TRLX can help robots to become more intelligent, flexible, and useful.</p>
+
+
+
+<h4 class="wp-block-heading">What is RLHF?</h4>
+
+
+
+<p>RLHF stands for Reinforcement Learning with Human Feedback. </p>
+
+
+
+<div class="wp-block-media-text is-stacked-on-mobile"><figure class="wp-block-media-text__media"><img decoding="async" src="https://plainswipe.com/wp-content/uploads/2022/12/65249_ateacherstandingnexttoastudentscoringtheworkofthes.png" alt="" class="wp-image-927 size-full"/></figure><div class="wp-block-media-text__content">
+<p>RLHF, or Reinforcement Learning from Human Feedback, is a type of artificial intelligence (AI) that allows robots to learn and improve their behavior based on feedback from human users. This is different from traditional AI, which is pre-programmed with a set of rules and behaviors that it follows without adapting to its environment or users.</p>
+
+
+
+<p>RLHF uses a technique called reinforcement learning, which involves rewarding the robot for behaviours that are beneficial to the user, and punishing the robot for behaviours that are harmful or undesirable. Over time, this reinforcement process helps the robot to learn and adapt its behavior to better meet the needs and preferences of its human users.</p>
+
+
+
+<p> </p>
+</div></div>
+
+
+
+<p></p>
+
+
+
+<h4 class="wp-block-heading">Step 1 : Installation</h4>
+
+
+
+<pre class="wp-block-code"><code>!git clone https://github.com/CarperAI/trlx.git
+%cd trlx
+!pip install torch --extra-index-url https://download.pytorch.org/whl/cu116
+!pip install -e .</code></pre>
+
+
+
+<h4 class="wp-block-heading">Step 2: Setting up the environment</h4>
+
+
+
+<pre class="wp-block-code"><code>from datasets import load_dataset
+from transformers import pipeline
+import os
+import yaml
+
+import trlx
+import torch
+from typing import List
+from trlx.data.configs import TRLConfig</code></pre>
+
+
+
+<h4 class="wp-block-heading">Step 3: Fine Tune your Language Model (optional)</h4>
+
+
+
+<p>This is an optional step but highly recommended for serious applications. We pick GPT because it is particularly good at text generation tasks. Here is an example of code that shows how to fine-tune a Hugging Face GPT language model:</p>
+
+
+
+<pre class="wp-block-code"><code># Import the Hugging Face transformers library
+import transformers
+
+# Load the GPT language model that you want to fine-tune
+model = transformers.GPT2LMHeadModel.from_pretrained('&lt;model_name&gt;')
+
+# Set the training parameters, such as the batch size and number of epochs
+batch_size = 16
+num_epochs = 5
+
+# Define the dataset and dataloader for the model
+dataset = transformers.LineByLineTextDataset(...)
+dataloader = transformers.DataLoader(...)
+
+# Set the optimizer and learning rate for the model
+optimizer = transformers.AdamW(model.parameters(), lr=2e-5)
+
+# Train the model for the specified number of epochs
+for epoch in range(num_epochs):
+    # Train the model on the training data
+    model.train()
+    for batch in dataloader:
+        optimizer.zero_grad()
+        outputs = model(input_ids=batch&#91;'input_ids'], attention_mask=batch&#91;'attention_mask'])
+        loss = outputs&#91;0]
+        loss.backward()
+        optimizer.step()
+
+# Save the fine-tuned model
+model.save_pretrained('&lt;model_name&gt;')
+</code></pre>
+
+
+
+<p></p>
+
+
+
+<div class="wp-block-media-text has-media-on-the-right is-stacked-on-mobile"><div class="wp-block-media-text__content">
+<p>This code shows the basic steps for fine-tuning a Hugging Face language model. First, the model is loaded from a pre-trained checkpoint. Next, the training parameters, such as the batch size and number of epochs, are set. The dataset and dataloader are then defined, and the optimizer and learning rate are set for the model.</p>
+
+
+
+<p>Finally, the model is trained for the specified number of epochs, using the training data provided in the dataloader. After training, the fine-tuned model is saved and loaded in the next step.</p>
+</div><figure class="wp-block-media-text__media"><img decoding="async" src="https://plainswipe.com/wp-content/uploads/2022/12/457184_batmanoperatingtheradiointhecarCinematicextremelyd.png" alt="" class="wp-image-928 size-full"/></figure></div>
+
+
+
+<h4 class="wp-block-heading">Step 4: Create a pipeline</h4>
+
+
+
+<p></p>
+
+
+
+<pre class="wp-block-code"><code>sentiment_fn = pipeline(
+        "sentiment-analysis",
+        "lvwerra/distilbert-imdb",
+        top_k=2,
+        truncation=True,
+        batch_size=256,
+        device=device,
+    )</code></pre>
+
+
+
+<p>In the code above we used the pre-trained model lvwerra/distilbert-imdb and the sentiment analysis pipeline, but it could have been your fine tuned model and a different pipeline. The Hugging Face transformers provide a variety of pipelines that can be used for different natural language processing tasks. Some of the pipelines that are available include:</p>
+
+
+
+<ul>
+<li>Sentiment analysis: This pipeline can be used to predict the sentiment (positive, neutral, or negative) of a given text.</li>
+
+
+
+<li>Text generation: This pipeline can be used to generate new text based on a given prompt or input.</li>
+
+
+
+<li>Text classification: This pipeline can be used to classify a given text into one or more pre-defined categories.</li>
+
+
+
+<li>Named entity recognition: This pipeline can be used to identify and extract named entities (such as people, organizations, or locations) from a given text.</li>
+
+
+
+<li>Question answering: This pipeline can be used to generate answers to questions based on a given text or document.</li>
+
+
+
+<li>Summarization: This pipeline can be used to generate a concise summary of a given text or document.</li>
+
+
+
+<li>Translation: This pipeline can be used to translate a given text from one language to another.</li>
+</ul>
+
+
+
+<p>These are just a few examples of the pipelines that are available with the Hugging Face transformers. There are many other pipelines available, and new ones are being added all the time.</p>
+
+
+
+<h4 class="wp-block-heading">Step 5: Create prompts</h4>
+
+
+
+<pre class="wp-block-code"><code>    # Take few words off of movies reviews as prompts
+    imdb = load_dataset("imdb", split="train+test")
+    prompts = &#91;" ".join(review.split()&#91;:4]) for review in imdb&#91;"text"]]</code></pre>
+
+
+
+<p>There are several different ways that you can create prompts. Some of the most common methods include:</p>
+
+
+
+<ul>
+<li>Using a pre-defined prompt: Many language models come with a set of pre-defined prompts that can be used to generate text or answers to questions. For example, a language model might include prompts such as &#8220;Tell me a story about a robot&#8221; or &#8220;Explain the concept of reinforcement learning in simple terms.&#8221;</li>
+
+
+
+<li>Providing your own prompt: In many cases, you can also create your own custom prompts by providing a sentence, paragraph, or other text as input to the language model. For example, you might provide a prompt such as &#8220;Describe the benefits of using a large language model&#8221; or &#8220;Write a poem about the beauty of nature.&#8221;</li>
+</ul>
+
+
+
+<p>In the move review dataset we simply truncated and used the first 5 words as the prompt. The prompt will be what you have fine-tuned your model to do. </p>
+
+
+
+<h4 class="wp-block-heading">Step 6: Reward Function</h4>
+
+
+
+<pre class="wp-block-code"><code>def get_positive_score(scores):
+    "Extract value associated with a positive sentiment from pipeline's output"
+    return dict(map(lambda x: tuple(x.values()), scores))&#91;"POSITIVE"]
+
+def reward_fn(samples: List&#91;str]) -&gt; List&#91;float]:
+        sentiments = list(map(get_positive_score, sentiment_fn(samples)))
+        return sentiments</code></pre>
+
+
+
+<p>What this code is doing is taking the output of the pipeline, i.e. output of the prompts that you created earlier, and then scoring that output. Since in this sample example we are trying to use RLHF to generate positive reviews, we are only returning back the confidence score of the positive sentiment classification. This is key</p>
+
+
+
+<p>To illustrate with another example. Imagine you have a text classification model that classifies text into various classes (For instance, Factual, Opinionated, Impactful, and Useful), and your goal is to train a model to generate more Useful text then you simply return the Useful score of the classification. </p>
+
+
+
+<p>Do note that in the example above the output of the sentiment analysis pipeline in itself is a classification (Positive, Negative), but in case of text generation models like GPT you could have taken the output of the prompt and fed that output into a different text classification model, and taken the scores of the class you care about (e.g. Useful class) and then made that was the reward.</p>
+
+
+
+<p>I hope you can see the immense power behind this training technique. The rewards could be coming from another model, or could be coming directly from some human raters (e.g. Amazon Mechanical Turk). In Chat GPT they went ahead and first collected ratings from human raters and then fine-tuned a language model on predicting the ratings given the pair of prompt, and generated text.</p>
+
+
+
+<h4 class="wp-block-heading">Step 7: Train using TRLX library</h4>
+
+
+
+<pre class="wp-block-code"><code> model = trlx.train(
+        reward_fn=reward_fn,
+        prompts=prompts,
+        eval_prompts=&#91;"I don't know much about Hungarian underground"] * 64,
+        config=config,
+    )</code></pre>
+
+
+
+<p>eval_prompts are prompts to periodically validate training on. The idea is that theses prompts will never be used in learning, but purely as a way to evaluate the training. In the example above is a primitive way to give a list of 64 prompts all repeated but in a real example these would be carefully selected prompts.</p>
+
+
+
+<h4 class="wp-block-heading">Conclusion</h4>
+
+
+
+<p>So there you have it, in this post I covered the logical structure of how to do RLHF training (Reinforcement Learning from Human Feedback). I intentionally skipped many details to make sure this tutorial is intuitive. In the next part I am going to cover how to actually run this training, since it can be computationally expensive. I will be focussing on the real challenges of running this training in a cost effective manner. I will be trying to make this run on a Google Colab, and will share my learnings. So stay tuned or subscribe.</p>
+</div><div class="nv-tags-list"><span>Tags:</span><a href="../tag/artificial-intelligence/index.html" title="Artificial Intelligence" class=artificial-intelligence rel="tag">Artificial Intelligence</a><a href="../tag/chatgpt/index.html" title="ChatGPT" class=chatgpt rel="tag">ChatGPT</a><a href="../tag/fine-tune/index.html" title="Fine tune" class=fine-tune rel="tag">Fine tune</a><a href="../tag/gpt/index.html" title="GPT" class=gpt rel="tag">GPT</a><a href="../tag/reinforcement-learning-with-human-feedback/index.html" title="Reinforcement Learning with Human Feedback" class=reinforcement-learning-with-human-feedback rel="tag">Reinforcement Learning with Human Feedback</a><a href="../tag/rlhf/index.html" title="RLHF" class=rlhf rel="tag">RLHF</a><a href="../tag/transformer-reinforcement-learning-x/index.html" title="Transformer Reinforcement Learning X" class=transformer-reinforcement-learning-x rel="tag">Transformer Reinforcement Learning X</a><a href="../tag/trlx/index.html" title="TRLX" class=trlx rel="tag">TRLX</a> </div> 
+<div id="comments" class="comments-area">
+				<div class="nv-comments-wrap">
+
+				<div class="nv-comments-title-wrap">
+					<h2 class="comments-title">2 thoughts on &ldquo;RLHF (Reinforcement Learning with Human Feedback) Python tutorial using TRLX&rdquo;</h2>				</div>
+
+				<ol class="nv-comments-list">
+									<li class="pingback even thread-even depth-1" id="comment-2">
+					<p>
+						Pingback:&nbsp;<a href="https://plainswipe.com/how-to-use-rlhf-to-train-a-model-to-generate-code-that-compiles-tutorial" class="url" rel="ugc external nofollow">How to use RLHF to train a model to generate code that compiles (Tutorial) &#8211; PlainSwipe</a>					</p>
+				</li>
+								<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-item-3">
+					<article id="comment-3" class="nv-comment-article">
+						<div class="nv-comment-avatar"><img alt='' src='http://0.gravatar.com/avatar/6274adda5b381cb0b912a106bfde3c72?s=50&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/6274adda5b381cb0b912a106bfde3c72?s=100&#038;d=mm&#038;r=g 2x' class='avatar avatar-50 photo' height='50' width='50' decoding='async'/></div><div class="comment-content">						<div class="nv-comment-header">
+														<div class="comment-author vcard">
+								<span class="fn author">Jose Manuel</span>
+								<a href="../../index.html%3Fp=919.html#comment-3">
+									<time class="entry-date published"
+											datetime="2022-12-29T20:37:32+00:00"
+											content="2022-12-29">
+										December 29, 2022 at 8:37 pm									</time>
+								</a>
+							</div>
+									<div class="edit-reply">
+						<span class="nv-reply-link"><a rel='nofollow' class='comment-reply-link' href='index.html%3Freplytocom=3.html#respond' data-commentid="3" data-postid="919" data-belowelement="comment-3" data-respondelement="respond" data-replyto="Reply to Jose Manuel" aria-label='Reply to Jose Manuel'>Reply</a></span>		</div>
+								</div>
+						<div class="nv-comment-content comment nv-content-wrap">
+							<p>Awesome tutorial!!!</p>
+<p>Waiting for the Google Colab 🙂</p>
+																				</div>
+						</div>					</article>
+				</li>
+								</ol>
+
+			</div>
+
+				<div id="respond" class="comment-respond nv-is-boxed">
+		<h2 id="reply-title" class="comment-reply-title">Leave a Reply to <a href="index.html%3Freplytocom=3.html#comment-3">Jose Manuel</a> <small><a rel="nofollow" id="cancel-comment-reply-link" href="../../index.html%3Fp=919.html#respond">Cancel reply</a></small></h2><form action="http://localhost:8000/wp-comments-post.php" method="post" id="commentform" class="comment-form"><p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> <span class="required-field-message">Required fields are marked <span class="required">*</span></span></p><p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" autocomplete="name" required="required" /></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="text" value="" size="30" maxlength="100" aria-describedby="email-notes" autocomplete="email" required="required" /></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="text" value="" size="30" maxlength="200" autocomplete="url" /></p>
+<p class="comment-form-comment"><label for="comment">Comment <span class="required">*</span></label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required"></textarea></p><p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes" /> <label for="wp-comment-cookies-consent">Save my name, email, and website in this browser for the next time I comment.</label></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="button button-primary" value="Post Comment" /> <input type='hidden' name='comment_post_ID' value='919' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='3' />
+</p></form>	</div><!-- #respond -->
+	</div>
+			</article>
+			<div class="nv-sidebar-wrap col-sm-12 nv-right blog-sidebar " >
+		<aside id="secondary" role="complementary">
+		
+		<style type="text/css">.widget_search .search-form .search-submit, .widget_search .search-form .search-field { height: auto; }</style><div id="search-1" class="widget widget_search">
+<form role="search"
+	method="get"
+	class="search-form"
+	action="../../index.html">
+	<label>
+		<span class="screen-reader-text">Search for...</span>
+	</label>
+	<input type="search"
+		class="search-field"
+		aria-label="Search"
+		placeholder="Search for..."
+		value=""
+		name="s"/>
+	<button type="submit"
+			class="search-submit nv-submit"
+			aria-label="Search">
+		<span class="nv-search-icon-wrap">
+			<span class="nv-icon nv-search" >
+				<svg width="15" height="15" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1216 832q0-185-131.5-316.5t-316.5-131.5-316.5 131.5-131.5 316.5 131.5 316.5 316.5 131.5 316.5-131.5 131.5-316.5zm512 832q0 52-38 90t-90 38q-54 0-90-38l-343-342q-179 124-399 124-143 0-273.5-55.5t-225-150-150-225-55.5-273.5 55.5-273.5 150-225 225-150 273.5-55.5 273.5 55.5 225 150 150 225 55.5 273.5q0 220-124 399l343 343q37 37 37 90z"/></svg>
+			</span></span>
+	</button>
+	</form>
+</div>
+		<div id="recent-posts-1" class="widget widget_recent_entries">
+		<p class="widget-title">Recent Posts</p>
+		<ul>
+											<li>
+					<a href="../../index.html%3Fp=1283.html">Cost Saving Strategies for Training Large Language Models like ChatGPT / GPT4</a>
+									</li>
+											<li>
+					<a href="../../index.html%3Fp=1277.html">Complete Guide to SAAS Software Compliance</a>
+									</li>
+											<li>
+					<a href="../../index.html%3Fp=1272.html">How to qualify a difficult Lead / Prospect in a cold call</a>
+									</li>
+											<li>
+					<a href="../../index.html%3Fp=1261.html">Creating an IAM profile made simple, an end to end tutorial</a>
+									</li>
+											<li>
+					<a href="../../index.html%3Fp=1256.html">Picking a testing framework For your React, Node JS web application (eBook)</a>
+									</li>
+					</ul>
+
+		</div><div id="recent-comments-1" class="widget widget_recent_comments"><p class="widget-title">Recent Comments</p><ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link">Jose Manuel</span> on <a href="../../index.html%3Fp=919.html#comment-3">RLHF (Reinforcement Learning with Human Feedback) Python tutorial using TRLX</a></li><li class="recentcomments"><span class="comment-author-link"><a href="https://plainswipe.com/how-to-use-rlhf-to-train-a-model-to-generate-code-that-compiles-tutorial" class="url" rel="ugc external nofollow">How to use RLHF to train a model to generate code that compiles (Tutorial) &#8211; PlainSwipe</a></span> on <a href="../../index.html%3Fp=919.html#comment-2">RLHF (Reinforcement Learning with Human Feedback) Python tutorial using TRLX</a></li></ul></div>
+			</aside>
+</div>
+		</div>
+	</div>
+
+</main><!--/.neve-main-->
+
+<footer class="site-footer" id="site-footer"  >
+	<div class="hfg_footer">
+		<div class="footer--row footer-bottom layout-full-contained"
+	id="cb-row--footer-bottom"
+	data-row-id="bottom" data-show-on="desktop">
+	<div
+		class="footer--row-inner footer-bottom-inner footer-content-wrap">
+		<div class="container">
+			<div
+				class="hfg-grid nv-footer-content hfg-grid-bottom row--wrapper row "
+				data-section="hfg_footer_layout_bottom" >
+				<div class="hfg-slot left"><div class="builder-item"><div class="item--inner"><div class="component-wrap"><div><p><a href="https://themeisle.com/themes/neve/" rel="nofollow">Neve</a> | Powered by <a href="http://wordpress.org" rel="nofollow">WordPress</a></p></div></div></div></div></div><div class="hfg-slot c-left"></div><div class="hfg-slot center"></div>							</div>
+		</div>
+	</div>
+</div>
+
+	</div>
+</footer>
+
+</div><!--/.wrapper-->
+<script type='text/javascript' id='neve-script-js-extra'>
+/* <![CDATA[ */
+var NeveProperties = {"ajaxurl":"http:\/\/localhost:8000\/wp-admin\/admin-ajax.php","nonce":"8f449a9222","isRTL":"","isCustomize":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='../../wp-content/themes/neve/assets/js/build/modern/frontend.js%3Fver=3.4.4' id='neve-script-js' async></script>
+<script type='text/javascript' id='neve-script-js-after'>
+	var html = document.documentElement;
+	var theme = html.getAttribute('data-neve-theme') || 'light';
+	var variants = {"logo":{"light":{"src":"http:\/\/localhost:8000\/wp-content\/uploads\/2023\/04\/cropped-logo-1.png","srcset":false,"sizes":"(max-width: 200px) 100vw, 200px"},"dark":{"src":"http:\/\/localhost:8000\/wp-content\/uploads\/2023\/04\/cropped-logo-1.png","srcset":false,"sizes":"(max-width: 200px) 100vw, 200px"},"same":true}};
+
+	function setCurrentTheme( theme ) {
+		var pictures = document.getElementsByClassName( 'neve-site-logo' );
+		for(var i = 0; i<pictures.length; i++) {
+			var picture = pictures.item(i);
+			if( ! picture ) {
+				continue;
+			};
+			var fileExt = picture.src.slice((Math.max(0, picture.src.lastIndexOf(".")) || Infinity) + 1);
+			if ( fileExt === 'svg' ) {
+				picture.removeAttribute('width');
+				picture.removeAttribute('height');
+				picture.style = 'width: var(--maxwidth)';
+			}
+			var compId = picture.getAttribute('data-variant');
+			if ( compId && variants[compId] ) {
+				var isConditional = variants[compId]['same'];
+				if ( theme === 'light' || isConditional || variants[compId]['dark']['src'] === false ) {
+					picture.src = variants[compId]['light']['src'];
+					picture.srcset = variants[compId]['light']['srcset'] || '';
+					picture.sizes = variants[compId]['light']['sizes'];
+					continue;
+				};
+				picture.src = variants[compId]['dark']['src'];
+				picture.srcset = variants[compId]['dark']['srcset'] || '';
+				picture.sizes = variants[compId]['dark']['sizes'];
+			};
+		};
+	};
+
+	var observer = new MutationObserver(function(mutations) {
+		mutations.forEach(function(mutation) {
+			if (mutation.type == 'attributes') {
+				theme = html.getAttribute('data-neve-theme');
+				setCurrentTheme(theme);
+			};
+		});
+	});
+
+	observer.observe(html, {
+		attributes: true
+	});
+</script>
+<script type='text/javascript' src='../../wp-includes/js/comment-reply.min.js%3Fver=6.2' id='comment-reply-js'></script>
+</body>
+
+</html>
