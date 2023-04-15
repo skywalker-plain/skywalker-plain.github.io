@@ -12,7 +12,7 @@
 	<atom:link href="http://localhost/index.php/category/deep-learning/feed/" rel="self" type="application/rss+xml" />
 	<link>http://localhost:8000</link>
 	<description></description>
-	<lastBuildDate>Sat, 25 Mar 2023 13:57:20 +0000</lastBuildDate>
+	<lastBuildDate>Sat, 15 Apr 2023 04:55:34 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -28,6 +28,176 @@
 	<height>32</height>
 </image> 
 	<item>
+		<title>GPT Demystified: How Perplexity and Entropy Measure Its Ability to Guess the Next Word&#8221;</title>
+		<link>http://localhost:8000/index.php/gpt-demystified-how-perplexity-and-entropy-measure-its-ability-to-guess-the-next-word/</link>
+					<comments>http://localhost:8000/index.php/gpt-demystified-how-perplexity-and-entropy-measure-its-ability-to-guess-the-next-word/#respond</comments>
+		
+		<dc:creator><![CDATA[rohitkumar1979]]></dc:creator>
+		<pubDate>Sat, 15 Apr 2023 04:32:24 +0000</pubDate>
+				<category><![CDATA[Deep Learning]]></category>
+		<category><![CDATA[Cross-entropy]]></category>
+		<category><![CDATA[entropy]]></category>
+		<category><![CDATA[GPT-3]]></category>
+		<category><![CDATA[GPT-4]]></category>
+		<category><![CDATA[language models]]></category>
+		<category><![CDATA[Perplexity]]></category>
+		<guid isPermaLink="false">http://localhost:8000/?p=1430</guid>
+
+					<description><![CDATA[Introduction As language models continue to gain popularity, it is important to have a reliable method of measuring their performance. Perplexity and entropy are commonly used metrics to evaluate the performance of language models, including GPT-3 and GPT-4. Perplexity: A Measure of Good Guessing Perplexity is calculated as the inverse probability of the next word,&#8230;&#160;<a href="http://localhost:8000/index.php/gpt-demystified-how-perplexity-and-entropy-measure-its-ability-to-guess-the-next-word/" class="" rel="bookmark">Read More &#187;<span class="screen-reader-text">GPT Demystified: How Perplexity and Entropy Measure Its Ability to Guess the Next Word&#8221;</span></a>]]></description>
+										<content:encoded><![CDATA[
+
+
+<h3 class="wp-block-heading">Introduction</h3>
+
+
+
+<p>As language models continue to gain popularity, it is important to have a reliable method of measuring their performance.</p>
+
+
+
+<p>Perplexity and entropy are commonly used metrics to evaluate the performance of language models, including GPT-3 and GPT-4.</p>
+
+
+
+<h3 class="wp-block-heading">Perplexity: A Measure of Good Guessing</h3>
+
+
+
+<p>Perplexity is calculated as the inverse probability of the next word, normalized by the length of the sequence.</p>
+
+
+
+<p>Imagine you have a really good friend who loves to play guessing games with you. You close your eyes, and your friend says a word, and you have to guess what word they said. Sometimes, your friend says words that are easy to guess, like &#8220;cat&#8221; or &#8220;dog&#8221;. Other times, they say words that are harder to guess, like &#8220;rhinoceros&#8221; or &#8220;platypus&#8221;.</p>
+
+
+
+<p>The game is more fun when you can make better guesses, right? If your friend always says easy words, the game is too easy and not as fun. But if your friend always says hard words, the game is too hard and not as fun either.</p>
+
+
+
+<p>Now, imagine that we have a computer program that can play this game too. We give it a bunch of words, and it has to guess the next word in the sequence. Just like you, sometimes the program will guess right, and sometimes it will guess wrong.</p>
+
+
+
+<p>Perplexity is a way to measure how good the program is at guessing the next word. It&#8217;s like a score that tells us how often the program makes good guesses. A low perplexity means the program is very good at guessing, and a high perplexity means the program isn&#8217;t very good.</p>
+
+
+
+<h3 class="wp-block-heading">Entropy: A Measure of Difficulty</h3>
+
+
+
+<p>Entropy is another way to measure how hard the game is. It&#8217;s like a measure of how hard it is to guess the right answer. If your friend says easy words, the game has low entropy, but if your friend says hard words, the game has high entropy.</p>
+
+
+
+<p>So, perplexity and entropy are two different ways of measuring the same thing: how good a program is at guessing the next word, and how hard the guessing game is. When the game is easy, the program has low entropy and low perplexity. But when the game is hard, the program has high entropy and high perplexity.</p>
+
+
+
+<h3 class="wp-block-heading">How to Calculate Entropy</h3>
+
+
+
+<p>Once we have a language model that assigns probabilities to each word, we can compute the entropy of the sequence as follows:</p>
+
+
+
+<p>Iterate over each word in the sequence W.<br>For each word, calculate the probability of that word given the previous words in the sequence, using the language model.<br>Use the probability to compute the entropy of that word as follows:</p>
+
+
+
+<figure class="wp-block-pullquote"><blockquote><p>H(w_i) = -log2(P(w_i | w_1, …, w_{i-1}))</p></blockquote></figure>
+
+
+
+<p><br>where w_i is the ith word in the sequence, P(w_i | w_1, …, w_{i-1}) is the probability of the ith word given the preceding words, and log2 is the base-2 logarithm.<br>Sum up the entropies for all words in the sequence to get the total entropy of the sequence:</p>
+
+
+
+<figure class="wp-block-pullquote"><blockquote><p>H(W) = sum(H(w_i)) for all i</p></blockquote></figure>
+
+
+
+<p><br>The entropy of the sequence gives us a measure of how unpredictable the sequence is according to the language model. A sequence with low entropy is more predictable and has a lower level of uncertainty, while a sequence with high entropy is less predictable and has a higher level of uncertainty.</p>
+
+
+
+<p>We calculate the entropy using the formula above, and then calculate the perplexity using the formula </p>
+
+
+
+<figure class="wp-block-pullquote"><blockquote><p>Perplexity = 2^H.</p></blockquote></figure>
+
+
+
+<h3 class="wp-block-heading">Cross Entropy: A Measure of Difference</h3>
+
+
+
+<p>Cross entropy is a type of entropy that&#8217;s used to compare two probability distributions. To understand the difference between cross entropy and entropy, let&#8217;s go back to the candy jar example. In the example I gave earlier, we were trying to count the number of different colors of candy in the jar. This is like calculating the entropy of the candy jar &#8211; we&#8217;re trying to figure out how much uncertainty there is in the distribution of colors.</p>
+
+
+
+<p>Now, let&#8217;s say we have another jar of candy that&#8217;s very similar to the first jar, but we&#8217;re not sure if it&#8217;s exactly the same. We want to compare the distribution of colors in the two jars to see if they&#8217;re similar or different. This is where cross entropy comes in &#8211; we can use cross entropy to compare the distribution of colors in one jar to the distribution of colors in the other jar. The cross entropy will be lower if the two distributions are similar, and higher if they&#8217;re different.</p>
+
+
+
+<p>The equation for cross entropy looks like this:</p>
+
+
+
+<figure class="wp-block-pullquote"><blockquote><p>Cross entropy = -Σ (p(x) * log(q(x)))</p></blockquote></figure>
+
+
+
+<h3 class="wp-block-heading">The Candy Jar Game: An Analogy for Cross Entropy</h3>
+
+
+
+<p>Cross entropy is like a game where you have to guess which candy your friend likes, but your friend keeps changing their mind about which candy they like the most. You keep guessing different candies, and your friend tells you if you&#8217;re getting closer or further away from their current favorite.</p>
+
+
+
+<p>The equation for cross entropy is like a way to keep score in this game. The &#8220;p(x)&#8221; part of the equation represents the true probability that your friend will like a certain candy. The &#8220;q(x)&#8221; part of the equation represents the probability that you guessed for that candy.</p>
+
+
+
+<h3 class="wp-block-heading"><br>Conclusion</h3>
+
+
+
+<p><br>As language models like GPT-3 and GPT-4 become more prevalent, it is essential to have reliable methods to measure their performance. Perplexity and entropy are two common metrics used to evaluate language models.</p>
+
+
+
+<h3 class="wp-block-heading">Key takeaways:</h3>
+
+
+
+<ul>
+<li>Perplexity and entropy are two ways to measure the performance of language models.</li>
+
+
+
+<li>Perplexity measures how often a language model makes good guesses while entropy measures how hard it is to guess the right answer.</li>
+
+
+
+<li>Cross-entropy is used to compare two probability distributions and is a measure of how different they are from each other.</li>
+
+
+
+<li>Perplexity and entropy can be used together to provide a more complete picture of a language model&#8217;s performance.</li>
+</ul>
+]]></content:encoded>
+					
+					<wfw:commentRss>http://localhost:8000/index.php/gpt-demystified-how-perplexity-and-entropy-measure-its-ability-to-guess-the-next-word/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
 		<title>Cost Saving Strategies for Training Large Language Models like ChatGPT / GPT4</title>
 		<link>http://localhost:8000/index.php/cost-saving-strategies-for-training-large-language-models-like-chatgpt-gpt4/</link>
 					<comments>http://localhost:8000/index.php/cost-saving-strategies-for-training-large-language-models-like-chatgpt-gpt4/#respond</comments>
@@ -2290,337 +2460,6 @@ def reward_fn(samples: List&#91;str]) -&gt; List&#91;float]:
 					
 					<wfw:commentRss>http://localhost:8000/index.php/rlhf-tutorial-using-trlx/feed/</wfw:commentRss>
 			<slash:comments>2</slash:comments>
-		
-		
-			</item>
-		<item>
-		<title>Practical guide for training or fine tuning large language models</title>
-		<link>http://localhost:8000/index.php/practical-guide-for-training-or-fine-tuning-large-language-models/</link>
-					<comments>http://localhost:8000/index.php/practical-guide-for-training-or-fine-tuning-large-language-models/#respond</comments>
-		
-		<dc:creator><![CDATA[rohitkumar1979]]></dc:creator>
-		<pubDate>Thu, 08 Dec 2022 19:34:00 +0000</pubDate>
-				<category><![CDATA[Deep Learning]]></category>
-		<category><![CDATA[distributed training]]></category>
-		<category><![CDATA[fast training]]></category>
-		<category><![CDATA[peer to peer]]></category>
-		<guid isPermaLink="false">https://plainswipe.com/?p=1068</guid>
-
-					<description><![CDATA[Imagine if you can connect to a friends computer and use that to speed up training of your model. Training ML models is very expensive, and ML techniques require many iterations hence they require speed. The Solution: Distributed Computing Distributed training is a technique that allows you to train machine learning models using multiple computers.&#8230;&#160;<a href="http://localhost:8000/index.php/practical-guide-for-training-or-fine-tuning-large-language-models/" class="" rel="bookmark">Read More &#187;<span class="screen-reader-text">Practical guide for training or fine tuning large language models</span></a>]]></description>
-										<content:encoded><![CDATA[
-<p>Imagine if you can connect to a friends computer and use that to speed up training of your model.</p>
-
-
-
-<p>Training ML models is very expensive, and ML techniques require many iterations hence they require speed.</p>
-
-
-
-<h4 class="wp-block-heading">The Solution: Distributed Computing </h4>
-
-
-
-<p>Distributed training is a technique that allows you to train machine learning models using multiple computers. This can be useful when you have large datasets or models that are too computationally intensive to train on a single computer.</p>
-
-
-
-<p>Changing is setting up the infrastructure to enable multiple computers to work together. One way to do this is to use a Common Internet File System (CIFS) to share data and resources between the computers.</p>
-
-
-
-<p>To set up a CIFS, you can use a single script that is capable of running on multiple operating systems (OS). This script can be used to install the necessary software and configure the CIFS on each computer. For example, on a Linux computer, the script can install the CIFS utilities and configure the Samba server, while on a MacOS or Windows computer, the script can install the SMBFS or SAMBA command-line utilities and mount the shared directory.</p>
-
-
-
-<p>Once the CIFS is set up, you can start the model training process on each computer. By starting the same training process on different computers, you can connect the various training processes and allow them to communicate with each other.</p>
-
-
-
-<p>The various training processes communicate with each other using a process called message passing. This involves sending messages between the computers to exchange information about the model training, such as the gradients of the model parameters. The computers also discover each other using a process called process discovery. This involves identifying the other computers that are part of the distributed training process and determining how to communicate with them.</p>
-
-
-
-<p>In summary, distributed training allows you to train machine learning models using multiple computers. By setting up a CIFS and starting the same training process on different computers, you can connect the various training processes and enable them to communicate and discover each other. This can be useful when you have large datasets or models that are too computationally intensive to train on a single computer.</p>
-
-
-
-<h4 class="wp-block-heading">How to start, stop training on the various computers?</h4>
-
-
-
-<p>To start and stop model training on the computers connected to a Common Internet File System (CIFS) using PyTorch, you can use the following techniques:</p>
-
-
-
-<ol>
-<li>Start training on all computers simultaneously: You can start training on all computers simultaneously by running the training script on each computer at the same time. This can be done manually by starting the script on each computer, or automatically using a tool like <code>fabric</code> or <code>ansible</code>.</li>
-
-
-
-<li>Start training on one computer and then add more computers: You can start training on one computer and then add more computers to the training process as needed. To do this, you can use the <code>torch.nn.DataParallel</code> wrapper to parallelize the model training across the computers. You can then add more computers to the training process by adding them to the <code>DataParallel</code> wrapper. For example:</li>
-</ol>
-
-
-
-<p></p>
-
-
-
-<pre class="wp-block-preformatted">import torch<br /><br /># Set the data directory to the mount point<br />data_dir = "/path/to/mount/point"<br /><br /># Load the dataset<br />dataset = torch.utils.data.DatasetFolder(data_dir, ...)<br /><br /># Set up the model and DataParallel wrapper with one computer<br />model = MyModel()<br />model = torch.nn.DataParallel(model, device_ids=[0])<br /><br /># Use DataParallel to parallelize the model training<br />for input, target in dataset:<br />    output = model(input)<br />    loss = loss_fn(output, target)<br />    loss.backward()<br />    optimizer.step()<br /><br /># Add more computers to the DataParallel wrapper<br />model = torch.nn.DataParallel(model, device_ids=[0, 1, 2])<br /></pre>
-
-
-
-<p>This will allow you to start training on one computer and then add more computers to the training process as needed.</p>
-
-
-
-<ol start="3">
-<li>Stop training on one or more computers: To stop training on one or more computers, you can simply stop the training script on those computers.</li>
-</ol>
-
-
-
-<h2 class="wp-block-heading">Code that demonstrates and tests the CLIFS set up</h2>
-
-
-
-<p>To demonstrate and test the Common Internet File System (CIFS) set up, you can write a Python script that performs the following tasks:</p>
-
-
-
-<ol>
-<li>Create a test file on one of the computers.</li>
-
-
-
-<li>Check if the test file is accessible from the other computers.</li>
-
-
-
-<li>Modify the test file on one of the computers.</li>
-
-
-
-<li>Check if the modifications are reflected on the other computers.</li>
-</ol>
-
-
-
-<p>Here is an example of a Python script that demonstrates and tests the CIFS set up:</p>
-
-
-
-<pre class="wp-block-preformatted">import os<br /><br /># Create a test file on one of the computers<br />with open("Z:/test.txt", "w") as f:<br />    f.write("This is a test file.")<br /><br /># Check if the test file is accessible from the other computers<br />if os.path.exists("/path/to/mount/point/test.txt"):<br />    print("Test file is accessible from the other computers.")<br />else:<br />    print("Test file is not accessible from the other computers.")<br /><br /># Modify the test file on one of the computers<br />with open("Z:/test.txt", "a") as f:<br />    f.write("\nThis line was added later.")<br /><br /># Check if the modifications are reflected on the other computers<br />with open("/path/to/mount/point/test.txt", "r") as f:<br />    content = f.read()<br />    if "This line was added later." in content:<br />        print("Modifications are reflected on the other computers.")<br />    else:<br />        print("Modifications are not reflected on the other computers<br /></pre>
-
-
-
-<h4 class="wp-block-heading">Setting up CIFS</h4>
-
-
-
-<p>Here is a Python script that you can use to detect the operating system, IP address, and set up a Common Internet File System (CIFS) on each computer:</p>
-
-
-
-<pre class="wp-block-preformatted">import platform<br />import os<br /><br /># Detect the operating system<br />os_name = platform.system()<br /><br /># Get the IP address<br />ip_address = os.popen('hostname -I').read()<br />ip_address = ip_address.strip()<br /><br /># Set up the CIFS file system<br />if os_name == "Linux":<br />    # Install the CIFS utilities<br />    os.system("sudo apt-get install cifs-utils")<br /><br />    # Create a shared directory<br />    os.system("mkdir /path/to/shared/directory")<br /><br />    # Edit the Samba configuration file<br />    with open("/etc/samba/smb.conf", "a") as f:<br />        f.write("\n[shared]\n")<br />        f.write("path = /path/to/shared/directory\n")<br />        f.write("writable = yes\n")<br />        f.write("guest ok = yes\n")<br /><br />    # Restart the Samba server<br />    os.system("sudo systemctl restart smbd")<br /><br />elif os_name == "Darwin":<br />    # Install the SMBFS or SAMBA command-line utilities<br />    os.system("brew install smbfs")<br />    # or<br />    os.system("brew install samba")<br /><br />    # Create a mount point<br />    os.system("mkdir /path/to/mount/point")<br /><br />    # Mount the shared directory<br />    os.system("sudo mount_smbfs //guest@{}/shared /path/to/mount/point".format(ip_address))<br /><br />elif os_name == "Windows":<br />    # Mount the shared directory using the "net use" command<br />    os.system("net use Z: \\\\{}\\shared".format(ip_address))<br /><br />else:<br />    print("Unsupported operating system.")<br /><br />print("CIFS file system set up complete.")<br /></pre>
-
-
-
-<h2 class="wp-block-heading">Tying it up all together</h2>
-
-
-
-<p>To set up a distributed training environment on multiple computers using a main computer and the username and password provided by the computer owners, you can use a tool that automates the installation and configuration of software on remote servers. One such tool is <code>ansible</code>, which is a configuration management tool that allows you to define the desired state of your infrastructure and then automatically enforce that state.</p>
-
-
-
-<p>Here is an example of how you can use <code>ansible</code> to set up a distributed training environment on multiple computers, including the Common Internet File System (CIFS), PyTorch, training script, dataset, etc., and then execute the training:</p>
-
-
-
-<ol>
-<li>Write an <code>ansible</code> playbook that specifies the required steps to set up the training environment. For example:</li>
-</ol>
-
-
-
-<pre class="wp-block-preformatted">---<br />- name: Set up distributed training environment<br />  hosts: all<br />  tasks:<br />    - name: Install Python<br />      package:<br />        name: python3<br />      become: yes<br /><br />    - name: Install PyTorch<br />      pip:<br />        name: torch<br />      become: yes<br /><br />    - name: Install CIFS utilities<br />      package:<br />        name: cifs-utils<br />      become: yes<br /><br />    - name: Mount shared directory<br />      mount:<br />        path: /path/to/mount/point<br />        src: //10.0.0.1/shared<br />        fstype: cifs<br />        opts: username=guest,password=password<br />      become: yes<br /><br />    - name: Install training code<br />      copy:<br />        src: training.py<br />        dest: /opt/training/training.py<br />      become: yes<br /><br />    - name: Install dataset<br />      copy:<br />        src: dataset.zip<br />        dest: /opt/training/dataset.zip<br />      become: yes<br />      unarchive:<br />        src: /opt/training/dataset.zip<br />        dest: /opt/training/<br />        remote_src: true<br /><br />    - name: Execute training<br />      command: python3 /opt/training/training.py<br />      become:<br />---<br />- name: Set up distributed training environment<br />  hosts: all<br />  tasks:<br />    - name: Install Python<br />      package:<br />        name: python3<br />      become: yes<br /><br />    - name: Install PyTorch<br />      pip:<br />        name: torch<br />      become: yes<br /><br />    - name: Install CIFS utilities<br />      package:<br />        name: cifs-utils<br />      become: yes<br /><br />    - name: Mount shared directory<br />      mount:<br />        path: /path/to/mount/point<br />        src: //10.0.0.1/shared<br />        fstype: cifs<br />        opts: username=guest,password=password<br />      become: yes<br /><br />    - name: Install training code<br />      copy:<br />        src: training.py<br />        dest: /opt/training/training.py<br />      become: yes<br /><br />    - name: Install dataset<br />      copy:<br />        src: dataset.zip<br />        dest: /opt/training/dataset.zip<br />      become: yes<br />      unarchive:<br />        src: /opt/training/dataset.zip<br />        dest: /opt/training/<br />        remote_src: true<br /><br />    - name: Execute training<br />      command: python3 /opt/training/training.py<br />      become: yes<br /></pre>
-
-
-
-<p>Create an <code>ansible</code> inventory file that specifies the connection information for the computers. For example:</p>
-
-
-
-<pre class="wp-block-preformatted">[windows]<br />windows_computer ansible_user=username ansible_password=password<br /><br />[linux]<br />linux_computer ansible_user=username ansible_password=password<br /><br />[mac]<br />mac_computer ansible_user=username ansible_ssh_private_key_file=/path/to/keyfile<br /></pre>
-
-
-
-<p>Use <code>ansible</code> to apply the playbook to the computers. For example:</p>
-
-
-
-<pre class="wp-block-preformatted">ansible-playbook -i inventory.ini playbook.yml</pre>
-
-
-
-<p>To allow a non-technical person to provide the information that <code>ansible</code> requires to connect to their computer, you can follow these steps:</p>
-
-
-
-<ol>
-<li>Explain to the person what <code>ansible</code> is and why you need access to their computer.</li>
-
-
-
-<li>Provide the person with the <code>ansible</code> inventory file template that you will use to connect to their computer. This should include the hostname or IP address, username, and password or private key for the computer.</li>
-
-
-
-<li>Ask the person to fill in the <code>ansible</code> inventory file template with the appropriate information for their computer.</li>
-
-
-
-<li>To find the hostname or IP address of the computer, the person can do the following:</li>
-</ol>
-
-
-
-<ul>
-<li>On Windows:
-<ol>
-<li>Press the <code>Windows</code> + <code>R</code> keys to open the <code>Run</code> dialog.</li>
-
-
-
-<li>Type <code>cmd</code> and press <code>Enter</code> to open the command prompt.</li>
-
-
-
-<li>Type <code>ipconfig</code> and press <code>Enter</code>.</li>
-
-
-
-<li>Look for the <code>IPv4 Address</code> field. This is the IP address of the computer.</li>
-</ol>
-</li>
-
-
-
-<li>On MacOS:
-<ol>
-<li>Click the <code>Apple</code> menu and select <code>System Preferences</code>.</li>
-
-
-
-<li>Click the <code>Network</code> icon.</li>
-
-
-
-<li>Select the active network connection (e.g., Wi-Fi) from the list on the left.</li>
-
-
-
-<li>Click the <code>Advanced</code> button.</li>
-
-
-
-<li>Click the <code>TCP/IP</code> tab.</li>
-
-
-
-<li>The <code>IP address</code> field displays the IP address of the computer.</li>
-</ol>
-</li>
-
-
-
-<li>On Linux:
-<ol>
-<li>Open a terminal.</li>
-
-
-
-<li>Type <code>ifconfig</code> and press <code>Enter</code>.</li>
-
-
-
-<li>Look for the <code>inet</code> field. This is the IP address of the computer.</li>
-</ol>
-</li>
-</ul>
-
-
-
-<ol start="5">
-<li>To find the username and password of the computer, the person can do the following:</li>
-</ol>
-
-
-
-<ul>
-<li>On Windows:
-<ol>
-<li>Press the <code>Windows</code> + <code>R</code> keys to open the <code>Run</code> dialog.</li>
-
-
-
-<li>Type <code>control userpasswords2</code> and press <code>Enter</code> to open the <code>User Accounts</code> dialog.</li>
-
-
-
-<li>Click the <code>Manage another account</code> link.</li>
-
-
-
-<li>Click the account that you want to use to connect to the computer.</li>
-
-
-
-<li>Click the <code>Change the account name</code> or <code>Change the password</code> button to view or change the username or password for the account.</li>
-</ol>
-</li>
-
-
-
-<li>On MacOS:
-<ol>
-<li>Click the <code>Apple</code> menu and select <code>System Preferences</code>.</li>
-
-
-
-<li>Click the <code>Users &amp; Groups</code> icon.</li>
-
-
-
-<li>Click the <code>Lock</code> icon and enter the administrator password to make changes.</li>
-
-
-
-<li>Click the user account that you want to use to connect to the computer.</li>
-
-
-
-<li>Click the <code>Change Password</code> button to view or change the password for the account.</li>
-</ol>
-</li>
-
-
-
-<li>On Linux:
-<ol>
-<li>Open a terminal.</li>
-
-
-
-<li>Type <code>id</code> and press <code>Enter</code> to view the current user and</li>
-</ol>
-</li>
-</ul>
-]]></content:encoded>
-					
-					<wfw:commentRss>http://localhost:8000/index.php/practical-guide-for-training-or-fine-tuning-large-language-models/feed/</wfw:commentRss>
-			<slash:comments>0</slash:comments>
 		
 		
 			</item>

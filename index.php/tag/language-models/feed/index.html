@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>language models &#8211; PlainSwipe</title>
+	<atom:link href="http://localhost/index.php/tag/language-models/feed/" rel="self" type="application/rss+xml" />
+	<link>http://localhost:8000</link>
+	<description></description>
+	<lastBuildDate>Sat, 15 Apr 2023 04:55:34 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.2</generator>
+
+<image>
+	<url>http://localhost:8000/wp-content/uploads/2023/04/cropped-logo-32x32.png</url>
+	<title>language models &#8211; PlainSwipe</title>
+	<link>http://localhost:8000</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>GPT Demystified: How Perplexity and Entropy Measure Its Ability to Guess the Next Word&#8221;</title>
+		<link>http://localhost:8000/index.php/gpt-demystified-how-perplexity-and-entropy-measure-its-ability-to-guess-the-next-word/</link>
+					<comments>http://localhost:8000/index.php/gpt-demystified-how-perplexity-and-entropy-measure-its-ability-to-guess-the-next-word/#respond</comments>
+		
+		<dc:creator><![CDATA[rohitkumar1979]]></dc:creator>
+		<pubDate>Sat, 15 Apr 2023 04:32:24 +0000</pubDate>
+				<category><![CDATA[Deep Learning]]></category>
+		<category><![CDATA[Cross-entropy]]></category>
+		<category><![CDATA[entropy]]></category>
+		<category><![CDATA[GPT-3]]></category>
+		<category><![CDATA[GPT-4]]></category>
+		<category><![CDATA[language models]]></category>
+		<category><![CDATA[Perplexity]]></category>
+		<guid isPermaLink="false">http://localhost:8000/?p=1430</guid>
+
+					<description><![CDATA[Introduction As language models continue to gain popularity, it is important to have a reliable method of measuring their performance. Perplexity and entropy are commonly used metrics to evaluate the performance of language models, including GPT-3 and GPT-4. Perplexity: A Measure of Good Guessing Perplexity is calculated as the inverse probability of the next word,&#8230;&#160;<a href="http://localhost:8000/index.php/gpt-demystified-how-perplexity-and-entropy-measure-its-ability-to-guess-the-next-word/" class="" rel="bookmark">Read More &#187;<span class="screen-reader-text">GPT Demystified: How Perplexity and Entropy Measure Its Ability to Guess the Next Word&#8221;</span></a>]]></description>
+										<content:encoded><![CDATA[
+
+
+<h3 class="wp-block-heading">Introduction</h3>
+
+
+
+<p>As language models continue to gain popularity, it is important to have a reliable method of measuring their performance.</p>
+
+
+
+<p>Perplexity and entropy are commonly used metrics to evaluate the performance of language models, including GPT-3 and GPT-4.</p>
+
+
+
+<h3 class="wp-block-heading">Perplexity: A Measure of Good Guessing</h3>
+
+
+
+<p>Perplexity is calculated as the inverse probability of the next word, normalized by the length of the sequence.</p>
+
+
+
+<p>Imagine you have a really good friend who loves to play guessing games with you. You close your eyes, and your friend says a word, and you have to guess what word they said. Sometimes, your friend says words that are easy to guess, like &#8220;cat&#8221; or &#8220;dog&#8221;. Other times, they say words that are harder to guess, like &#8220;rhinoceros&#8221; or &#8220;platypus&#8221;.</p>
+
+
+
+<p>The game is more fun when you can make better guesses, right? If your friend always says easy words, the game is too easy and not as fun. But if your friend always says hard words, the game is too hard and not as fun either.</p>
+
+
+
+<p>Now, imagine that we have a computer program that can play this game too. We give it a bunch of words, and it has to guess the next word in the sequence. Just like you, sometimes the program will guess right, and sometimes it will guess wrong.</p>
+
+
+
+<p>Perplexity is a way to measure how good the program is at guessing the next word. It&#8217;s like a score that tells us how often the program makes good guesses. A low perplexity means the program is very good at guessing, and a high perplexity means the program isn&#8217;t very good.</p>
+
+
+
+<h3 class="wp-block-heading">Entropy: A Measure of Difficulty</h3>
+
+
+
+<p>Entropy is another way to measure how hard the game is. It&#8217;s like a measure of how hard it is to guess the right answer. If your friend says easy words, the game has low entropy, but if your friend says hard words, the game has high entropy.</p>
+
+
+
+<p>So, perplexity and entropy are two different ways of measuring the same thing: how good a program is at guessing the next word, and how hard the guessing game is. When the game is easy, the program has low entropy and low perplexity. But when the game is hard, the program has high entropy and high perplexity.</p>
+
+
+
+<h3 class="wp-block-heading">How to Calculate Entropy</h3>
+
+
+
+<p>Once we have a language model that assigns probabilities to each word, we can compute the entropy of the sequence as follows:</p>
+
+
+
+<p>Iterate over each word in the sequence W.<br>For each word, calculate the probability of that word given the previous words in the sequence, using the language model.<br>Use the probability to compute the entropy of that word as follows:</p>
+
+
+
+<figure class="wp-block-pullquote"><blockquote><p>H(w_i) = -log2(P(w_i | w_1, …, w_{i-1}))</p></blockquote></figure>
+
+
+
+<p><br>where w_i is the ith word in the sequence, P(w_i | w_1, …, w_{i-1}) is the probability of the ith word given the preceding words, and log2 is the base-2 logarithm.<br>Sum up the entropies for all words in the sequence to get the total entropy of the sequence:</p>
+
+
+
+<figure class="wp-block-pullquote"><blockquote><p>H(W) = sum(H(w_i)) for all i</p></blockquote></figure>
+
+
+
+<p><br>The entropy of the sequence gives us a measure of how unpredictable the sequence is according to the language model. A sequence with low entropy is more predictable and has a lower level of uncertainty, while a sequence with high entropy is less predictable and has a higher level of uncertainty.</p>
+
+
+
+<p>We calculate the entropy using the formula above, and then calculate the perplexity using the formula </p>
+
+
+
+<figure class="wp-block-pullquote"><blockquote><p>Perplexity = 2^H.</p></blockquote></figure>
+
+
+
+<h3 class="wp-block-heading">Cross Entropy: A Measure of Difference</h3>
+
+
+
+<p>Cross entropy is a type of entropy that&#8217;s used to compare two probability distributions. To understand the difference between cross entropy and entropy, let&#8217;s go back to the candy jar example. In the example I gave earlier, we were trying to count the number of different colors of candy in the jar. This is like calculating the entropy of the candy jar &#8211; we&#8217;re trying to figure out how much uncertainty there is in the distribution of colors.</p>
+
+
+
+<p>Now, let&#8217;s say we have another jar of candy that&#8217;s very similar to the first jar, but we&#8217;re not sure if it&#8217;s exactly the same. We want to compare the distribution of colors in the two jars to see if they&#8217;re similar or different. This is where cross entropy comes in &#8211; we can use cross entropy to compare the distribution of colors in one jar to the distribution of colors in the other jar. The cross entropy will be lower if the two distributions are similar, and higher if they&#8217;re different.</p>
+
+
+
+<p>The equation for cross entropy looks like this:</p>
+
+
+
+<figure class="wp-block-pullquote"><blockquote><p>Cross entropy = -Σ (p(x) * log(q(x)))</p></blockquote></figure>
+
+
+
+<h3 class="wp-block-heading">The Candy Jar Game: An Analogy for Cross Entropy</h3>
+
+
+
+<p>Cross entropy is like a game where you have to guess which candy your friend likes, but your friend keeps changing their mind about which candy they like the most. You keep guessing different candies, and your friend tells you if you&#8217;re getting closer or further away from their current favorite.</p>
+
+
+
+<p>The equation for cross entropy is like a way to keep score in this game. The &#8220;p(x)&#8221; part of the equation represents the true probability that your friend will like a certain candy. The &#8220;q(x)&#8221; part of the equation represents the probability that you guessed for that candy.</p>
+
+
+
+<h3 class="wp-block-heading"><br>Conclusion</h3>
+
+
+
+<p><br>As language models like GPT-3 and GPT-4 become more prevalent, it is essential to have reliable methods to measure their performance. Perplexity and entropy are two common metrics used to evaluate language models.</p>
+
+
+
+<h3 class="wp-block-heading">Key takeaways:</h3>
+
+
+
+<ul>
+<li>Perplexity and entropy are two ways to measure the performance of language models.</li>
+
+
+
+<li>Perplexity measures how often a language model makes good guesses while entropy measures how hard it is to guess the right answer.</li>
+
+
+
+<li>Cross-entropy is used to compare two probability distributions and is a measure of how different they are from each other.</li>
+
+
+
+<li>Perplexity and entropy can be used together to provide a more complete picture of a language model&#8217;s performance.</li>
+</ul>
+]]></content:encoded>
+					
+					<wfw:commentRss>http://localhost:8000/index.php/gpt-demystified-how-perplexity-and-entropy-measure-its-ability-to-guess-the-next-word/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>
