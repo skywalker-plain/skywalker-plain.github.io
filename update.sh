@@ -2,6 +2,9 @@
 
 # Default directory
 DEFAULT_DIR="/Users/rohitkumar/code/github_pages"
+DEFAULT_URL="localhost:8000/"
+# Default commit message
+DEFAULT_MSG="New posts - $(date "+%A %d %B %Y %r")"
 
 # Prompt user to change directory
 read -p "Enter directory path [$DEFAULT_DIR]: " DIR
@@ -9,8 +12,11 @@ if [ -z "$DIR" ]; then
     DIR="$DEFAULT_DIR"
 fi
 
-# Default commit message
-DEFAULT_MSG="new posts"
+# Prompt user to change URL
+read -p "Enter URL [$DEFAULT_URL]: " URL
+if [ -z "$URL" ]; then
+    URL="$DEFAULT_URL"
+fi
 
 # Prompt user to change commit message
 read -p "Enter commit message [$DEFAULT_MSG]: " MSG
