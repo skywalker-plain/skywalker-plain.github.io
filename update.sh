@@ -18,6 +18,14 @@ if [ -z "$URL" ]; then
     URL="$DEFAULT_URL"
 fi
 
+# Check if site is active
+if curl --output /dev/null --silent --head --fail "$URL"; then
+    echo "Site is active. Downloading files..."
+else
+    echo "Site is not active. Exiting script."
+    exit 1
+fi
+
 # Prompt user to change commit message
 read -p "Enter commit message [$DEFAULT_MSG]: " MSG
 if [ -z "$MSG" ]; then
