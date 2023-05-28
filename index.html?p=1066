@@ -143,7 +143,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 <ul class="sub-menu">
 	<li id="menu-item-1325" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-1066 current_page_item menu-item-1325"><a href="http://localhost:8000/index.php/stockduel/" aria-current="page">StockDuel for Stock Investors</a></li>
 	<li id="menu-item-1326" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1326"><a href="http://localhost:8000/index.php/coming-soon/">TrainingBazaar for AI Engineers</a></li>
-	<li id="menu-item-1327" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1327"><a href="http://localhost:8000/index.php/testsafeguard/">QualityWatch for Software Testing</a></li>
+	
 	<li id="menu-item-1371" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1371"><a href="http://localhost:8000/index.php/819-2/">Digital Prescriptions App for Doctors</a></li>
 </ul>
 </li>
@@ -233,7 +233,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 <ul class="sub-menu">
 	<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-1066 current_page_item menu-item-1325"><a href="http://localhost:8000/index.php/stockduel/" aria-current="page">StockDuel for Stock Investors</a></li>
 	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1326"><a href="http://localhost:8000/index.php/coming-soon/">TrainingBazaar for AI Engineers</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1327"><a href="http://localhost:8000/index.php/testsafeguard/">QualityWatch for Software Testing</a></li>
+	
 	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1371"><a href="http://localhost:8000/index.php/819-2/">Digital Prescriptions App for Doctors</a></li>
 </ul>
 </li>

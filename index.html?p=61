@@ -6,12 +6,10 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
-			<link rel="pingback" href="http://localhost:8000/xmlrpc.php">
-		<title>Complete Guide to SAAS Software Compliance &#8211; PlainSwipe</title>
+		<title>About Us &#8211; PlainSwipe</title>
 <meta name='robots' content='max-image-preview:large' />
 <link rel="alternate" type="application/rss+xml" title="PlainSwipe &raquo; Feed" href="http://localhost:8000/index.php/feed/" />
 <link rel="alternate" type="application/rss+xml" title="PlainSwipe &raquo; Comments Feed" href="http://localhost:8000/index.php/comments/feed/" />
-<link rel="alternate" type="application/rss+xml" title="PlainSwipe &raquo; Complete Guide to SAAS Software Compliance Comments Feed" href="http://localhost:8000/index.php/complete-guide-to-saas-software-compliance-part/feed/" />
 <script type="text/javascript">
 window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/localhost:8000\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.2"}};
 /*! This file is auto-generated */
@@ -53,18 +51,11 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 		 		content: "/" !important;
 			}
 		}
- :root{ --container: 748px;--postwidth:100%; --primarybtnbg: var(--nv-primary-accent); --secondarybtnbg: rgba(0, 0, 0, 0); --primarybtnhoverbg: var(--nv-secondary-accent); --secondarybtnhoverbg: var(--nv-dark-bg); --primarybtncolor: #010101; --secondarybtncolor: var(--nv-dark-bg); --primarybtnhovercolor: #ffffff; --secondarybtnhovercolor: var(--nv-text-dark-bg);--primarybtnborderradius:0;--secondarybtnborderradius:0;--secondarybtnborderwidth:2px;--btnpadding:12px 24px;--primarybtnpadding:12px 24px;--secondarybtnpadding:10px 22px; --btnfs: 14px; --btnlineheight: 1.6em; --bodyfontfamily: Arial,Helvetica,sans-serif; --bodyfontsize: 16px; --bodylineheight: 1.7em; --bodyletterspacing: 0px; --bodyfontweight: 400; --bodytexttransform: none; --h1fontsize: 39px; --h1fontweight: 600; --h1lineheight: 1.2em; --h1letterspacing: 0px; --h1texttransform: none; --h2fontsize: 28px; --h2fontweight: 600; --h2lineheight: 1.3em; --h2letterspacing: 0px; --h2texttransform: none; --h3fontsize: 20px; --h3fontweight: 600; --h3lineheight: 1.3em; --h3letterspacing: 0px; --h3texttransform: none; --h4fontsize: 16px; --h4fontweight: 600; --h4lineheight: 1.3em; --h4letterspacing: 0px; --h4texttransform: none; --h5fontsize: 14px; --h5fontweight: 600; --h5lineheight: 1.3em; --h5letterspacing: 0px; --h5texttransform: none; --h6fontsize: 14px; --h6fontweight: 600; --h6lineheight: 1.3em; --h6letterspacing: 0px; --h6texttransform: none;--formfieldborderwidth:2px;--formfieldborderradius:0; --formfieldbgcolor: var(--nv-site-bg); --formfieldbordercolor: var(--nv-light-bg); --formfieldcolor: var(--nv-text-color);--formfieldpadding:10px 12px 10px 12px;; } .has-neve-button-color-color{ color: var(--nv-primary-accent)!important; } .has-neve-button-color-background-color{ background-color: var(--nv-primary-accent)!important; } .single-post-container .alignfull > [class*="__inner-container"], .single-post-container .alignwide > [class*="__inner-container"]{ max-width:718px } .nv-meta-list{ --avatarsize: 20px; } .single .nv-meta-list{ --avatarsize: 20px; } .blog .blog-entry-title, .archive .blog-entry-title{ --fontsize: 28px; } .single h1.entry-title{ --fontsize: 28px; } .nv-post-thumbnail-wrap{ --boxshadow:0 3px 6px -5px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.1); } .nv-post-cover{ --height: 250px;--padding:40px 15px;--justify: flex-start; --textalign: left; --valign: center; } .nv-post-cover .nv-title-meta-wrap, .nv-page-title-wrap, .entry-header{ --color: var(--nv-text-dark-bg); --textalign: left; } .nv-is-boxed.nv-title-meta-wrap{ --padding:40px 15px; --bgcolor: var(--nv-dark-bg); } .nv-overlay{ --bgcolor: var(--nv-dark-bg); --opacity: 50; --blendmode: normal; } .nv-is-boxed.nv-comments-wrap{ --padding:20px; } .nv-is-boxed.comment-respond{ --padding:20px; } .global-styled{ --bgcolor: var(--nv-site-bg); } .header-top{ --rowbcolor: var(--nv-light-bg); --color: var(--nv-text-color); --bgcolor: #f0f0f0; } .header-main{ --rowbcolor: var(--nv-light-bg); --color: var(--nv-text-color); --bgcolor: var(--nv-site-bg); } .header-bottom{ --rowbcolor: var(--nv-light-bg); --color: var(--nv-text-color); --bgcolor: #ffffff; } .header-menu-sidebar-bg{ --justify: flex-start; --textalign: left;--flexg: 1;--wrapdropdownwidth: auto; --color: var(--nv-text-color); --bgcolor: var(--nv-site-bg); } .header-menu-sidebar{ width: 360px; } .builder-item--logo{ --maxwidth: 32px;--padding:10px 0;--margin:0; --textalign: left;--justify: flex-start; } .builder-item--nav-icon,.header-menu-sidebar .close-sidebar-panel .navbar-toggle{ --borderradius:0;--borderwidth:1px; } .builder-item--nav-icon{ --label-margin:0 5px 0 0;;--padding:10px 15px;--margin:0; } .builder-item--primary-menu{ --color: var(--nv-text-color); --hovercolor: var(--nv-secondary-accent); --activecolor: var(--nv-text-color); --spacing: 20px; --height: 25px;--padding:0;--margin:0; --fontsize: 1em; --lineheight: 1.6; --letterspacing: 0px; --fontweight: 600; --texttransform: uppercase; --iconsize: 1em; } .hfg-is-group.has-primary-menu .inherit-ff{ --inheritedfw: 600; } .footer-top-inner .row{ grid-template-columns:1fr 1fr 1fr; --valign: flex-start; } .footer-top{ --rowbcolor: var(--nv-light-bg); --color: var(--nv-text-color); --bgcolor: #ffffff; } .footer-main-inner .row{ grid-template-columns:1fr 1fr 1fr; --valign: flex-start; } .footer-main{ --rowbcolor: var(--nv-light-bg); --color: var(--nv-text-color); --bgcolor: var(--nv-site-bg); } .footer-bottom-inner .row{ grid-template-columns:1fr 1fr 1fr; --valign: flex-start; } .footer-bottom{ --rowbcolor: var(--nv-light-bg); --color: var(--nv-text-dark-bg); --bgcolor: #000000; } @media(min-width: 576px){ :root{ --container: 992px;--postwidth:50%;--btnpadding:12px 24px;--primarybtnpadding:12px 24px;--secondarybtnpadding:10px 22px; --btnfs: 14px; --btnlineheight: 1.6em; --bodyfontsize: 16px; --bodylineheight: 1.7em; --bodyletterspacing: 0px; --h1fontsize: 55px; --h1lineheight: 1.3em; --h1letterspacing: 0px; --h2fontsize: 34px; --h2lineheight: 1.3em; --h2letterspacing: 0px; --h3fontsize: 20px; --h3lineheight: 1.3em; --h3letterspacing: 0px; --h4fontsize: 16px; --h4lineheight: 1.3em; --h4letterspacing: 0px; --h5fontsize: 14px; --h5lineheight: 1.3em; --h5letterspacing: 0px; --h6fontsize: 14px; --h6lineheight: 1.3em; --h6letterspacing: 0px; } .single-post-container .alignfull > [class*="__inner-container"], .single-post-container .alignwide > [class*="__inner-container"]{ max-width:962px } .nv-meta-list{ --avatarsize: 20px; } .single .nv-meta-list{ --avatarsize: 20px; } .blog .blog-entry-title, .archive .blog-entry-title{ --fontsize: 32px; } .single h1.entry-title{ --fontsize: 40px; } .nv-post-cover{ --height: 30vh;--padding:60px 30px;--justify: flex-start; --textalign: left; --valign: center; } .nv-post-cover .nv-title-meta-wrap, .nv-page-title-wrap, .entry-header{ --textalign: left; } .nv-is-boxed.nv-title-meta-wrap{ --padding:60px 30px; } .nv-is-boxed.nv-comments-wrap{ --padding:30px; } .nv-is-boxed.comment-respond{ --padding:30px; } .header-menu-sidebar-bg{ --justify: flex-start; --textalign: left;--flexg: 1;--wrapdropdownwidth: auto; } .header-menu-sidebar{ width: 360px; } .builder-item--logo{ --maxwidth: 32px;--padding:10px 0;--margin:0; --textalign: left;--justify: flex-start; } .builder-item--nav-icon{ --label-margin:0 5px 0 0;;--padding:10px 15px;--margin:0; } .builder-item--primary-menu{ --spacing: 20px; --height: 25px;--padding:0;--margin:0; --fontsize: 1em; --lineheight: 1.6; --letterspacing: 0px; --iconsize: 1em; } }@media(min-width: 960px){ :root{ --container: 1170px;--postwidth:50%;--btnpadding:12px 24px;--primarybtnpadding:12px 24px;--secondarybtnpadding:10px 22px; --btnfs: 16px; --btnlineheight: 1.6em; --bodyfontsize: 17px; --bodylineheight: 1.7em; --bodyletterspacing: 0px; --h1fontsize: 70px; --h1lineheight: 1.3em; --h1letterspacing: 0px; --h2fontsize: 46px; --h2lineheight: 1.3em; --h2letterspacing: 0px; --h3fontsize: 24px; --h3lineheight: 1.3em; --h3letterspacing: 0px; --h4fontsize: 20px; --h4lineheight: 1.3em; --h4letterspacing: 0px; --h5fontsize: 16px; --h5lineheight: 1.3em; --h5letterspacing: 0px; --h6fontsize: 16px; --h6lineheight: 1.3em; --h6letterspacing: 0px; } body:not(.single):not(.archive):not(.blog):not(.search):not(.error404) .neve-main > .container .col, body.post-type-archive-course .neve-main > .container .col, body.post-type-archive-llms_membership .neve-main > .container .col{ max-width: 100%; } body:not(.single):not(.archive):not(.blog):not(.search):not(.error404) .nv-sidebar-wrap, body.post-type-archive-course .nv-sidebar-wrap, body.post-type-archive-llms_membership .nv-sidebar-wrap{ max-width: 0%; } .neve-main > .archive-container .nv-index-posts.col{ max-width: 100%; } .neve-main > .archive-container .nv-sidebar-wrap{ max-width: 0%; } .neve-main > .single-post-container .nv-single-post-wrap.col{ max-width: 70%; } .single-post-container .alignfull > [class*="__inner-container"], .single-post-container .alignwide > [class*="__inner-container"]{ max-width:789px } .container-fluid.single-post-container .alignfull > [class*="__inner-container"], .container-fluid.single-post-container .alignwide > [class*="__inner-container"]{ max-width:calc(70% + 15px) } .neve-main > .single-post-container .nv-sidebar-wrap{ max-width: 30%; } .nv-meta-list{ --avatarsize: 20px; } .single .nv-meta-list{ --avatarsize: 20px; } .blog .blog-entry-title, .archive .blog-entry-title{ --fontsize: 32px; } .single h1.entry-title{ --fontsize: 65px; } .nv-post-cover{ --height: 50vh;--padding:60px 40px 60px 40px;;--justify: flex-start; --textalign: left; --valign: flex-end; } .nv-post-cover .nv-title-meta-wrap, .nv-page-title-wrap, .entry-header{ --textalign: left; } .nv-is-boxed.nv-title-meta-wrap{ --padding:60px 40px 60px 40px;; } .nv-is-boxed.nv-comments-wrap{ --padding:40px; } .nv-is-boxed.comment-respond{ --padding:40px; } .header-menu-sidebar-bg{ --justify: flex-start; --textalign: left;--flexg: 1;--wrapdropdownwidth: auto; } .header-menu-sidebar{ width: 360px; } .builder-item--logo{ --maxwidth: 32px;--padding:10px 0;--margin:0; --textalign: left;--justify: flex-start; } .builder-item--nav-icon{ --label-margin:0 5px 0 0;;--padding:10px 15px;--margin:0; } .builder-item--primary-menu{ --spacing: 20px; --height: 25px;--padding:0;--margin:0; --fontsize: 0.8em; --lineheight: 1.6; --letterspacing: 0px; --iconsize: 0.8em; } }:root{--nv-primary-accent:#fcaf3b;--nv-secondary-accent:#ab641d;--nv-site-bg:#ffffff;--nv-light-bg:#ededed;--nv-dark-bg:#14171c;--nv-text-color:#2b2b2b;--nv-text-dark-bg:#ffffff;--nv-c-1:#77b978;--nv-c-2:#f37262;--nv-fallback-ff:Arial, Helvetica, sans-serif;}
-</style>
-<link rel='stylesheet' id='kadence-blocks-rowlayout-css' href='http://localhost:8000/wp-content/plugins/kadence-blocks/dist/style-blocks-rowlayout.css?ver=3.0.27' type='text/css' media='all' />
-<link rel='stylesheet' id='kadence-blocks-column-css' href='http://localhost:8000/wp-content/plugins/kadence-blocks/dist/style-blocks-column.css?ver=3.0.27' type='text/css' media='all' />
-<style id='kadence-blocks-advancedheading-inline-css' type='text/css'>
-.wp-block-kadence-advancedheading mark{color:#f76a0c;background:transparent;border-style:solid;border-width:0}.kb-adv-heading-icon{display: inline-flex;justify-content: center;align-items: center;}
+ :root{ --container: 748px;--postwidth:100%; --primarybtnbg: var(--nv-primary-accent); --secondarybtnbg: rgba(0, 0, 0, 0); --primarybtnhoverbg: var(--nv-secondary-accent); --secondarybtnhoverbg: var(--nv-dark-bg); --primarybtncolor: #010101; --secondarybtncolor: var(--nv-dark-bg); --primarybtnhovercolor: #ffffff; --secondarybtnhovercolor: var(--nv-text-dark-bg);--primarybtnborderradius:0;--secondarybtnborderradius:0;--secondarybtnborderwidth:2px;--btnpadding:12px 24px;--primarybtnpadding:12px 24px;--secondarybtnpadding:10px 22px; --btnfs: 14px; --btnlineheight: 1.6em; --bodyfontfamily: Arial,Helvetica,sans-serif; --bodyfontsize: 16px; --bodylineheight: 1.7em; --bodyletterspacing: 0px; --bodyfontweight: 400; --bodytexttransform: none; --h1fontsize: 39px; --h1fontweight: 600; --h1lineheight: 1.2em; --h1letterspacing: 0px; --h1texttransform: none; --h2fontsize: 28px; --h2fontweight: 600; --h2lineheight: 1.3em; --h2letterspacing: 0px; --h2texttransform: none; --h3fontsize: 20px; --h3fontweight: 600; --h3lineheight: 1.3em; --h3letterspacing: 0px; --h3texttransform: none; --h4fontsize: 16px; --h4fontweight: 600; --h4lineheight: 1.3em; --h4letterspacing: 0px; --h4texttransform: none; --h5fontsize: 14px; --h5fontweight: 600; --h5lineheight: 1.3em; --h5letterspacing: 0px; --h5texttransform: none; --h6fontsize: 14px; --h6fontweight: 600; --h6lineheight: 1.3em; --h6letterspacing: 0px; --h6texttransform: none;--formfieldborderwidth:2px;--formfieldborderradius:0; --formfieldbgcolor: var(--nv-site-bg); --formfieldbordercolor: var(--nv-light-bg); --formfieldcolor: var(--nv-text-color);--formfieldpadding:10px 12px 10px 12px;; } .has-neve-button-color-color{ color: var(--nv-primary-accent)!important; } .has-neve-button-color-background-color{ background-color: var(--nv-primary-accent)!important; } .single-post-container .alignfull > [class*="__inner-container"], .single-post-container .alignwide > [class*="__inner-container"]{ max-width:718px } .nv-meta-list{ --avatarsize: 20px; } .single .nv-meta-list{ --avatarsize: 20px; } .blog .blog-entry-title, .archive .blog-entry-title{ --fontsize: 28px; } .single h1.entry-title{ --fontsize: 28px; } .nv-post-thumbnail-wrap{ --boxshadow:0 3px 6px -5px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.1); } .nv-post-cover{ --height: 250px;--padding:40px 15px;--justify: flex-start; --textalign: left; --valign: center; } .nv-post-cover .nv-title-meta-wrap, .nv-page-title-wrap, .entry-header{ --textalign: left; } .nv-is-boxed.nv-title-meta-wrap{ --padding:40px 15px; --bgcolor: var(--nv-dark-bg); } .nv-overlay{ --opacity: 50; --blendmode: normal; } .nv-is-boxed.nv-comments-wrap{ --padding:20px; } .nv-is-boxed.comment-respond{ --padding:20px; } .global-styled{ --bgcolor: var(--nv-site-bg); } .header-top{ --rowbcolor: var(--nv-light-bg); --color: var(--nv-text-color); --bgcolor: #f0f0f0; } .header-main{ --rowbcolor: var(--nv-light-bg); --color: var(--nv-text-color); --bgcolor: var(--nv-site-bg); } .header-bottom{ --rowbcolor: var(--nv-light-bg); --color: var(--nv-text-color); --bgcolor: #ffffff; } .header-menu-sidebar-bg{ --justify: flex-start; --textalign: left;--flexg: 1;--wrapdropdownwidth: auto; --color: var(--nv-text-color); --bgcolor: var(--nv-site-bg); } .header-menu-sidebar{ width: 360px; } .builder-item--logo{ --maxwidth: 32px;--padding:10px 0;--margin:0; --textalign: left;--justify: flex-start; } .builder-item--nav-icon,.header-menu-sidebar .close-sidebar-panel .navbar-toggle{ --borderradius:0;--borderwidth:1px; } .builder-item--nav-icon{ --label-margin:0 5px 0 0;;--padding:10px 15px;--margin:0; } .builder-item--primary-menu{ --color: var(--nv-text-color); --hovercolor: var(--nv-secondary-accent); --activecolor: var(--nv-text-color); --spacing: 20px; --height: 25px;--padding:0;--margin:0; --fontsize: 1em; --lineheight: 1.6; --letterspacing: 0px; --fontweight: 600; --texttransform: uppercase; --iconsize: 1em; } .hfg-is-group.has-primary-menu .inherit-ff{ --inheritedfw: 600; } .footer-top-inner .row{ grid-template-columns:1fr 1fr 1fr; --valign: flex-start; } .footer-top{ --rowbcolor: var(--nv-light-bg); --color: var(--nv-text-color); --bgcolor: #ffffff; } .footer-main-inner .row{ grid-template-columns:1fr 1fr 1fr; --valign: flex-start; } .footer-main{ --rowbcolor: var(--nv-light-bg); --color: var(--nv-text-color); --bgcolor: var(--nv-site-bg); } .footer-bottom-inner .row{ grid-template-columns:1fr 1fr 1fr; --valign: flex-start; } .footer-bottom{ --rowbcolor: var(--nv-light-bg); --color: var(--nv-text-dark-bg); --bgcolor: #000000; } @media(min-width: 576px){ :root{ --container: 992px;--postwidth:50%;--btnpadding:12px 24px;--primarybtnpadding:12px 24px;--secondarybtnpadding:10px 22px; --btnfs: 14px; --btnlineheight: 1.6em; --bodyfontsize: 16px; --bodylineheight: 1.7em; --bodyletterspacing: 0px; --h1fontsize: 55px; --h1lineheight: 1.3em; --h1letterspacing: 0px; --h2fontsize: 34px; --h2lineheight: 1.3em; --h2letterspacing: 0px; --h3fontsize: 20px; --h3lineheight: 1.3em; --h3letterspacing: 0px; --h4fontsize: 16px; --h4lineheight: 1.3em; --h4letterspacing: 0px; --h5fontsize: 14px; --h5lineheight: 1.3em; --h5letterspacing: 0px; --h6fontsize: 14px; --h6lineheight: 1.3em; --h6letterspacing: 0px; } .single-post-container .alignfull > [class*="__inner-container"], .single-post-container .alignwide > [class*="__inner-container"]{ max-width:962px } .nv-meta-list{ --avatarsize: 20px; } .single .nv-meta-list{ --avatarsize: 20px; } .blog .blog-entry-title, .archive .blog-entry-title{ --fontsize: 32px; } .single h1.entry-title{ --fontsize: 40px; } .nv-post-cover{ --height: 320px;--padding:60px 30px;--justify: flex-start; --textalign: left; --valign: center; } .nv-post-cover .nv-title-meta-wrap, .nv-page-title-wrap, .entry-header{ --textalign: left; } .nv-is-boxed.nv-title-meta-wrap{ --padding:60px 30px; } .nv-is-boxed.nv-comments-wrap{ --padding:30px; } .nv-is-boxed.comment-respond{ --padding:30px; } .header-menu-sidebar-bg{ --justify: flex-start; --textalign: left;--flexg: 1;--wrapdropdownwidth: auto; } .header-menu-sidebar{ width: 360px; } .builder-item--logo{ --maxwidth: 32px;--padding:10px 0;--margin:0; --textalign: left;--justify: flex-start; } .builder-item--nav-icon{ --label-margin:0 5px 0 0;;--padding:10px 15px;--margin:0; } .builder-item--primary-menu{ --spacing: 20px; --height: 25px;--padding:0;--margin:0; --fontsize: 1em; --lineheight: 1.6; --letterspacing: 0px; --iconsize: 1em; } }@media(min-width: 960px){ :root{ --container: 1170px;--postwidth:50%;--btnpadding:12px 24px;--primarybtnpadding:12px 24px;--secondarybtnpadding:10px 22px; --btnfs: 16px; --btnlineheight: 1.6em; --bodyfontsize: 17px; --bodylineheight: 1.7em; --bodyletterspacing: 0px; --h1fontsize: 70px; --h1lineheight: 1.3em; --h1letterspacing: 0px; --h2fontsize: 46px; --h2lineheight: 1.3em; --h2letterspacing: 0px; --h3fontsize: 24px; --h3lineheight: 1.3em; --h3letterspacing: 0px; --h4fontsize: 20px; --h4lineheight: 1.3em; --h4letterspacing: 0px; --h5fontsize: 16px; --h5lineheight: 1.3em; --h5letterspacing: 0px; --h6fontsize: 16px; --h6lineheight: 1.3em; --h6letterspacing: 0px; } body:not(.single):not(.archive):not(.blog):not(.search):not(.error404) .neve-main > .container .col, body.post-type-archive-course .neve-main > .container .col, body.post-type-archive-llms_membership .neve-main > .container .col{ max-width: 100%; } body:not(.single):not(.archive):not(.blog):not(.search):not(.error404) .nv-sidebar-wrap, body.post-type-archive-course .nv-sidebar-wrap, body.post-type-archive-llms_membership .nv-sidebar-wrap{ max-width: 0%; } .neve-main > .archive-container .nv-index-posts.col{ max-width: 100%; } .neve-main > .archive-container .nv-sidebar-wrap{ max-width: 0%; } .neve-main > .single-post-container .nv-single-post-wrap.col{ max-width: 70%; } .single-post-container .alignfull > [class*="__inner-container"], .single-post-container .alignwide > [class*="__inner-container"]{ max-width:789px } .container-fluid.single-post-container .alignfull > [class*="__inner-container"], .container-fluid.single-post-container .alignwide > [class*="__inner-container"]{ max-width:calc(70% + 15px) } .neve-main > .single-post-container .nv-sidebar-wrap{ max-width: 30%; } .nv-meta-list{ --avatarsize: 20px; } .single .nv-meta-list{ --avatarsize: 20px; } .blog .blog-entry-title, .archive .blog-entry-title{ --fontsize: 32px; } .single h1.entry-title{ --fontsize: 65px; } .nv-post-cover{ --height: 400px;--padding:60px 40px;--justify: flex-start; --textalign: left; --valign: center; } .nv-post-cover .nv-title-meta-wrap, .nv-page-title-wrap, .entry-header{ --textalign: left; } .nv-is-boxed.nv-title-meta-wrap{ --padding:60px 40px; } .nv-is-boxed.nv-comments-wrap{ --padding:40px; } .nv-is-boxed.comment-respond{ --padding:40px; } .header-menu-sidebar-bg{ --justify: flex-start; --textalign: left;--flexg: 1;--wrapdropdownwidth: auto; } .header-menu-sidebar{ width: 360px; } .builder-item--logo{ --maxwidth: 32px;--padding:10px 0;--margin:0; --textalign: left;--justify: flex-start; } .builder-item--nav-icon{ --label-margin:0 5px 0 0;;--padding:10px 15px;--margin:0; } .builder-item--primary-menu{ --spacing: 20px; --height: 25px;--padding:0;--margin:0; --fontsize: 0.8em; --lineheight: 1.6; --letterspacing: 0px; --iconsize: 0.8em; } }:root{--nv-primary-accent:#fcaf3b;--nv-secondary-accent:#ab641d;--nv-site-bg:#ffffff;--nv-light-bg:#ededed;--nv-dark-bg:#14171c;--nv-text-color:#2b2b2b;--nv-text-dark-bg:#ffffff;--nv-c-1:#77b978;--nv-c-2:#f37262;--nv-fallback-ff:Arial, Helvetica, sans-serif;}
+ #content.neve-main .container .alignfull > [class*="__inner-container"],#content.neve-main .alignwide > [class*="__inner-container"]{ max-width: 718px; } @media(min-width: 576px){ #content.neve-main .container .alignfull > [class*="__inner-container"],#content.neve-main .alignwide > [class*="__inner-container"]{ max-width: 962px; } } @media(min-width: 960px) { #content.neve-main .container .alignfull > [class*="__inner-container"],#content.neve-main .container .alignwide > [class*="__inner-container"]{ max-width: 1140px; } #content.neve-main > .container > .row > .col{ max-width: 100%; } body:not(.neve-off-canvas) #content.neve-main > .container > .row > .nv-sidebar-wrap, body:not(.neve-off-canvas) #content.neve-main > .container > .row > .nv-sidebar-wrap.shop-sidebar { max-width: 0%; } } 
 </style>
 <style id='kadence-blocks-global-variables-inline-css' type='text/css'>
 :root {--global-kb-font-size-sm:clamp(0.8rem, 0.73rem + 0.217vw, 0.9rem);--global-kb-font-size-md:clamp(1.1rem, 0.995rem + 0.326vw, 1.25rem);--global-kb-font-size-lg:clamp(1.75rem, 1.576rem + 0.543vw, 2rem);--global-kb-font-size-xl:clamp(2.25rem, 1.728rem + 1.63vw, 3rem);--global-kb-font-size-xxl:clamp(2.5rem, 1.456rem + 3.26vw, 4rem);--global-kb-font-size-xxxl:clamp(2.75rem, 0.489rem + 7.065vw, 6rem);}
-</style>
-<style id='kadence_blocks_css-inline-css' type='text/css'>
-.kb-row-layout-id_baa171-dd > .kt-row-column-wrap{column-gap:80px;max-width:1200px;padding-top:80px;padding-bottom:80px;grid-template-columns:minmax(0, 2fr) minmax(0, 1fr);}@media all and (max-width: 767px){.kb-row-layout-id_baa171-dd > .kt-row-column-wrap{grid-template-columns:minmax(0, 1fr);}}.kadence-column_293802-e2 > .kt-inside-inner-col{padding-top:40px;padding-right:40px;padding-bottom:40px;padding-left:40px;}.kadence-column_293802-e2 > .kt-inside-inner-col{background-color:#f4f4f5;}.wp-block-kadence-advancedheading.kt-adv-heading_9836d8-a0, .wp-block-kadence-advancedheading.kt-adv-heading_9836d8-a0[data-kb-block="kb-adv-heading_9836d8-a0"]{margin-bottom:30px;text-align:left;font-size:38px;line-height:1.3em;}.wp-block-kadence-advancedheading.kt-adv-heading_9836d8-a0 mark, .wp-block-kadence-advancedheading.kt-adv-heading_9836d8-a0[data-kb-block="kb-adv-heading_9836d8-a0"] mark{padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;}@media all and (max-width: 767px){.wp-block-kadence-advancedheading.kt-adv-heading_9836d8-a0, .wp-block-kadence-advancedheading.kt-adv-heading_9836d8-a0[data-kb-block="kb-adv-heading_9836d8-a0"]{font-size:30px;}}
 </style>
         <script>
             /* <![CDATA[ */
@@ -77,13 +68,13 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
             };
             /* ]]\> */
         </script>
-        <link rel="https://api.w.org/" href="http://localhost:8000/index.php/wp-json/" /><link rel="alternate" type="application/json" href="http://localhost:8000/index.php/wp-json/wp/v2/posts/1277" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://localhost:8000/xmlrpc.php?rsd" />
+        <link rel="https://api.w.org/" href="http://localhost:8000/index.php/wp-json/" /><link rel="alternate" type="application/json" href="http://localhost:8000/index.php/wp-json/wp/v2/pages/61" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://localhost:8000/xmlrpc.php?rsd" />
 <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://localhost:8000/wp-includes/wlwmanifest.xml" />
 <meta name="generator" content="WordPress 6.2" />
-<link rel="canonical" href="http://localhost:8000/index.php/complete-guide-to-saas-software-compliance-part/" />
-<link rel='shortlink' href='http://localhost:8000/?p=1277' />
-<link rel="alternate" type="application/json+oembed" href="http://localhost:8000/index.php/wp-json/oembed/1.0/embed?url=http%3A%2F%2Flocalhost%3A8000%2Findex.php%2Fcomplete-guide-to-saas-software-compliance-part%2F" />
-<link rel="alternate" type="text/xml+oembed" href="http://localhost:8000/index.php/wp-json/oembed/1.0/embed?url=http%3A%2F%2Flocalhost%3A8000%2Findex.php%2Fcomplete-guide-to-saas-software-compliance-part%2F&#038;format=xml" />
+<link rel="canonical" href="http://localhost:8000/index.php/15c42-web-agency-gb-about-us/" />
+<link rel='shortlink' href='http://localhost:8000/?p=61' />
+<link rel="alternate" type="application/json+oembed" href="http://localhost:8000/index.php/wp-json/oembed/1.0/embed?url=http%3A%2F%2Flocalhost%3A8000%2Findex.php%2F15c42-web-agency-gb-about-us%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://localhost:8000/index.php/wp-json/oembed/1.0/embed?url=http%3A%2F%2Flocalhost%3A8000%2Findex.php%2F15c42-web-agency-gb-about-us%2F&#038;format=xml" />
 <style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><link rel="icon" href="http://localhost:8000/wp-content/uploads/2023/04/cropped-logo-32x32.png" sizes="32x32" />
 <link rel="icon" href="http://localhost:8000/wp-content/uploads/2023/04/cropped-logo-192x192.png" sizes="192x192" />
 <link rel="apple-touch-icon" href="http://localhost:8000/wp-content/uploads/2023/04/cropped-logo-180x180.png" />
@@ -91,7 +82,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 
 	</head>
 
-<body  class="post-template-default single single-post postid-1277 single-format-standard wp-custom-logo  nv-blog-grid nv-sidebar-right menu_sidebar_slide_left" id="neve_body"  >
+<body  class="page-template-default page page-id-61 wp-custom-logo  nv-blog-grid nv-sidebar-full-width nv-without-title menu_sidebar_slide_left" id="neve_body"  >
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-dark-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 0.49803921568627" /><feFuncG type="table" tableValues="0 0.49803921568627" /><feFuncB type="table" tableValues="0 0.49803921568627" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 1" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0 1" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-purple-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.54901960784314 0.98823529411765" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0.71764705882353 0.25490196078431" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-blue-red"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 1" /><feFuncG type="table" tableValues="0 0.27843137254902" /><feFuncB type="table" tableValues="0.5921568627451 0.27843137254902" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-midnight"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 0" /><feFuncG type="table" tableValues="0 0.64705882352941" /><feFuncB type="table" tableValues="0 1" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-magenta-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.78039215686275 1" /><feFuncG type="table" tableValues="0 0.94901960784314" /><feFuncB type="table" tableValues="0.35294117647059 0.47058823529412" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-purple-green"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.65098039215686 0.40392156862745" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0.44705882352941 0.4" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-blue-orange"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.098039215686275 1" /><feFuncG type="table" tableValues="0 0.66274509803922" /><feFuncB type="table" tableValues="0.84705882352941 0.41960784313725" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><div class="wrapper">
 	
 	<header class="header"  >
@@ -135,7 +126,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 	<li id="menu-item-1371" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1371"><a href="http://localhost:8000/index.php/819-2/">Digital Prescriptions App for Doctors</a></li>
 </ul>
 </li>
-<li id="menu-item-1299" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-1299"><a href="http://localhost:8000/index.php/15c42-web-agency-gb-news/">News</a></li>
+<li id="menu-item-1299" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1299"><a href="http://localhost:8000/index.php/15c42-web-agency-gb-news/">News</a></li>
 <li id="menu-item-1303" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1303"><a href="http://localhost:8000/index.php/15c42-web-agency-gb-contact-us/">Contact Us</a></li>
 </ul>	</div>
 </div>
@@ -225,7 +216,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1371"><a href="http://localhost:8000/index.php/819-2/">Digital Prescriptions App for Doctors</a></li>
 </ul>
 </li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-1299"><a href="http://localhost:8000/index.php/15c42-web-agency-gb-news/">News</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1299"><a href="http://localhost:8000/index.php/15c42-web-agency-gb-news/">News</a></li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1303"><a href="http://localhost:8000/index.php/15c42-web-agency-gb-contact-us/">Contact Us</a></li>
 </ul>	</div>
 </div>
@@ -239,248 +230,163 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 </div>
 	</header>
 
-	<style>.header-menu-sidebar .nav-ul li .wrap { position:relative; padding: 15px 0; display: flex; align-items: center; }.header-menu-sidebar .nav-ul li .wrap a { flex-grow: 1; }.header-menu-sidebar .nav-ul li .wrap a .dd-title { width: var(--wrapdropdownwidth); }.header-menu-sidebar .nav-ul li .wrap button { border: 0; z-index: 1; background: 0; }</style><div class="nv-post-cover" ><div class="nv-overlay"></div><div class="container"><div class="nv-title-meta-wrap "><h1 class="title entry-title">Complete Guide to SAAS Software Compliance</h1><ul class="nv-meta-list"><li  class="meta author vcard "><span class="author-name fn">by <a href="http://localhost:8000/index.php/author/rohitkumar1979/" title="Posts by rohitkumar1979" rel="author">rohitkumar1979</a></span></li></ul></div></div></div>
+	<style>.header-menu-sidebar .nav-ul li .wrap { position:relative; padding: 15px 0; display: flex; align-items: center; }.header-menu-sidebar .nav-ul li .wrap a { flex-grow: 1; }.header-menu-sidebar .nav-ul li .wrap a .dd-title { width: var(--wrapdropdownwidth); }.header-menu-sidebar .nav-ul li .wrap button { border: 0; z-index: 1; background: 0; }</style>
 
 	
 	<main id="content" class="neve-main">
 
-	<div class="container single-post-container">
-		<div class="row">
-						<article id="post-1277"
-					class="nv-single-post-wrap col post-1277 post type-post status-publish format-standard has-post-thumbnail hentry category-software-compliance category-uncategorized tag-gpdr tag-insurance-coverage tag-saas-compliance tag-soc-2 tag-sox">
-				<div class="nv-content-wrap entry-content">
-<h3 class="wp-block-heading">Part 1</h3>
-
-
-
-<p>A company I was advising had a bitter sweet situation. This is what he wrote</p>
-
-
-
-<blockquote class="wp-block-quote">
-<p>As the founder of a bootstrapped SAAS company that uses React, NodeJS, and runs on AWS, I recently received interest from a Fortune 500 company to buy a monthly subscription of my product. However, the CTO mentioned that my company would need to comply with various requirements, such as insurance, SOX compliance, GDPR, and more. I&#8217;m not sure why the CTO is asking for these compliance measures when other SAAS startups don&#8217;t seem to have to go through this process. I&#8217;m curious about the legal requirements that the CTO needs to meet, and I wonder if they ask for these same compliance measures from other SAAS companies like Office 365 or Oracle.</p>
-</blockquote>
-
-
-
-<h3 class="wp-block-heading">Software Compliance is a major pain</h3>
-
-
-
-<p>Software compliance can be a major pain point for bootstrapped founders of SAAS products. Compliance requirements can be complex, time-consuming, and costly, which can be particularly challenging for startups with limited resources. Failure to meet compliance standards can result in significant legal, financial, and reputational risks. Moreover, compliance requirements are constantly evolving, requiring ongoing efforts to stay up-to-date. As a result, compliance can be a major obstacle for bootstrapped SAAS companies seeking to grow their customer base and compete with larger, established players in the industry.</p>
-
-
-
-<h3 class="wp-block-heading">List of the most common compliance requirements</h3>
-
-
-
-<figure class="wp-block-table"><table><thead><tr><th>Compliance Requirement</th><th>Importance (Low/Medium/High)</th><th>Estimated Time to Achieve</th><th>Estimated Cost to Achieve</th></tr></thead><tbody><tr><td>Data Privacy and Security (e.g. GDPR)</td><td>High</td><td>2-4 weeks</td><td>$5,000-$10,000</td></tr><tr><td>PCI-DSS Compliance</td><td>Medium</td><td>4-6 weeks</td><td>$10,000-$15,000</td></tr><tr><td>SOC 2 Compliance</td><td>High</td><td>8-12 weeks</td><td>$25,000-$50,000</td></tr><tr><td>Business Continuity and Disaster Recovery (BCDR) Planning</td><td>Medium</td><td>2-4 weeks</td><td>$5,000-$10,000</td></tr><tr><td>Insurance Requirements</td><td>Medium</td><td>1-2 weeks</td><td>$2,000-$5,000</td></tr><tr><td>Audit Compliance (e.g. SOX)</td><td>High</td><td>4-6 weeks</td><td>$10,000-$20,000</td></tr></tbody></table></figure>
-
-
-
-<p>Note that these estimates are rough and can vary depending on the scope of the compliance requirement, the industry, and the specific needs of the company.</p>
-
-
-
-<h3 class="wp-block-heading">Compliance Requirements based on Location</h3>
-
-
-
-<p>If the SAAS company is located in the US but has a development center in India, there may be additional compliance requirements to consider. For example, the company may need to comply with data protection laws in both the US and India, such as the General Data Protection Regulation (GDPR) in the EU and the Indian Data Protection Bill. The company may also need to comply with export control laws, such as the US Export Administration Regulations (EAR) and the Indian Export-Import (EXIM) Policy.</p>
-
-
-
-<h3 class="wp-block-heading">Documents that you would have to provide the CTO or the legal department of the larger company</h3>
-
-
-
-<p>Some common documents that they may request include:</p>
-
-
-
-<ol>
-<li>Proof of insurance coverage, including general liability insurance, errors and omissions insurance, and cyber liability insurance.</li>
-
-
-
-<li>Completed security and compliance questionnaires or assessments, such as the Standardized Information Gathering (SIG) questionnaire or the Security, Trust, and Assurance Registry (STAR) assessment.</li>
-
-
-
-<li>Copies of compliance certifications, such as SOC 2 Type 2, ISO 27001, or PCI-DSS.</li>
-
-
-
-<li>Privacy policies and terms of service agreements that comply with relevant data protection laws, such as GDPR or the California Consumer Privacy Act (CCPA).</li>
-
-
-
-<li>Completed vendor risk assessments, which may include questions about the company&#8217;s financial stability, disaster recovery plans, and cybersecurity practices.</li>
-
-
-
-<li>Attestations of compliance with applicable laws and regulations, such as the Sarbanes-Oxley Act (SOX) or the Health Insurance Portability and Accountability Act (HIPAA).</li>
-
-
-
-<li>Evidence of adherence to specific technical standards, such as the Open Web Application Security Project (OWASP) or the National Institute of Standards and Technology (NIST) cybersecurity framework.</li>
-</ol>
-
-
-
-<p>Here&#8217;s a table that lists the Minimum Viable way to complete each compliance requirement, any software or open source tools that can help achieve it, and a brief outline of the inputs required to obtain certification:</p>
-
-
-
-<figure class="wp-block-table"><table><thead><tr><th>Compliance Requirement</th><th>Minimum Viable Way to Complete</th><th>Software/Open Source/Non-Profit to Help</th><th>Inputs Required for Certification</th></tr></thead><tbody><tr><td>Insurance Coverage</td><td>Contact an insurance broker to obtain a quote for General Liability and Errors &amp; Omissions (E&amp;O) insurance</td><td>None</td><td>Completed application for insurance coverage</td></tr><tr><td>SOC 2 Type 2</td><td>Implement security controls and processes that align with SOC 2 requirements, conduct a self-audit, and engage a third-party auditor to conduct a SOC 2 Type 2 audit</td><td>Cloud Security Alliance (CSA) STAR, NIST Cybersecurity Framework</td><td>Completed SOC 2 Type 2 audit report</td></tr><tr><td>GDPR</td><td>Conduct a data inventory, update privacy policies and notices, and establish data subject access request (DSAR) and data breach notification processes</td><td>TrustArc, OneTrust, openGDPR</td><td>Completed GDPR compliance assessment</td></tr><tr><td>Vendor Risk Assessment</td><td>Complete a vendor security questionnaire provided by the customer or a third-party vendor risk management platform</td><td>BitSight, SecurityScorecard, RiskRecon</td><td>Completed vendor security questionnaire</td></tr><tr><td>Sarbanes-Oxley (SOX)</td><td>Implement controls and processes to ensure the accuracy and integrity of financial reporting, and engage a third-party auditor to conduct a SOX audit</td><td>None</td><td>Completed SOX audit report</td></tr><tr><td>ISO 27001</td><td>Implement security controls and processes that align with ISO 27001 requirements, conduct a self-audit, and engage a third-party auditor to conduct an ISO 27001 certification audit</td><td>NIST Cybersecurity Framework, CIS Controls</td><td>Completed ISO 27001 certification audit report</td></tr><tr><td>Payment Card Industry Data Security Standard (PCI-DSS)</td><td>Implement security controls and processes that align with PCI-DSS requirements, conduct a self-assessment or engage a Qualified Security Assessor (QSA) to conduct a PCI-DSS assessment</td><td>PCI Security Standards Council, Trustwave, Coalfire</td><td>Completed PCI-DSS self-assessment or QSA report</td></tr></tbody></table></figure>
-
-
-
-<p>Note that the specific inputs required for certification may vary depending on the certification program or standard being followed, and it is important to consult the relevant certification body or auditor for specific guidance.</p>
-
-
-
-<h3 class="wp-block-heading">Insurance Coverage</h3>
-
-
-<p>Here is a sample completed application for insurance coverage:</p>
-<p>Company Information: Company Name: ABC SAAS Inc.</p>
-<p>Address: 123 Main Street, Suite 100, Anytown, USA Phone: 555-123-4567</p>
-<p>Website: <a href="http://www.abcsaas.com/">www.abcsaas.com</a></p>
-<p>Type of Business: Software as a Service (SAAS) provider</p>
-<p>Years in Business: 3 years Number of Employees: 10</p>
-<p>Risk Information:</p>
-<ul>
-<li>Type of Insurance Coverage Requested: Cyber Liability Insurance</li>
-<li>Requested Coverage Limit: $1,000,000</li>
-<li>Requested Deductible: $10,000</li>
-<li>Primary Business Activity: Developing and providing a SAAS platform for project management Revenue for the past 12 months: $500,000</li>
-</ul>
-<p>Estimated Revenue for the next 12 months: $750,000</p>
-<ul>
-<li>Has the company experienced any data breaches in the past 5 years? No</li>
-<li>Does the company have a formal security program in place? Yes</li>
-<li>Does the company encrypt sensitive data? Yes</li>
-</ul>
-<p>Contact Information: Primary Contact Name: John Doe Title: CEO Phone: 555-123-4567 Email: <a href="mailto:john@abcsaas.com">john@abcsaas.com</a></p>
-<p>After submitting this application, the insurance company will review the information provided and may request additional documentation or ask further questions before deciding whether to offer coverage and at what price.</p>
-<p>The additional documentation that an insurance company may ask for can vary depending on the type of coverage being requested and the specific underwriting requirements of the insurer. However, some examples of additional documentation that may be requested for cyber liability insurance include:</p>
-<ol>
-<li>
-<p>Risk Assessment: An insurance company may ask for a risk assessment or cybersecurity audit report to evaluate the effectiveness of the applicant&#8217;s security program and identify potential vulnerabilities.</p>
-</li>
-<li>
-<p>Incident Response Plan: An insurance company may ask for a copy of the applicant&#8217;s incident response plan to ensure that they have a plan in place to respond to a data breach or cyber attack.</p>
-</li>
-<li>
-<p>Privacy Policy: An insurance company may ask for a copy of the applicant&#8217;s privacy policy to evaluate how personal information is collected, stored, and used.</p>
-</li>
-<li>
-<p>Business Continuity Plan: An insurance company may ask for a copy of the applicant&#8217;s business continuity plan to ensure that they have a plan in place to continue operations in the event of a disruption or outage.</p>
-</li>
-<li>
-<p>Employee Training Materials: An insurance company may ask for copies of training materials or policies that demonstrate how employees are trained to protect sensitive data and prevent cyber attacks.</p>
-</li>
-<li>
-<p>IT Security Controls: An insurance company may ask for documentation or evidence that the applicant has implemented various IT security controls, such as firewalls, antivirus software, or intrusion detection systems.</p>
-</li>
-</ol>
-<p>Ultimately, the specific documentation requested will depend on the insurer&#8217;s underwriting guidelines and the unique characteristics of the applicant&#8217;s business.</p>
-
-<div class="kb-row-layout-wrap kb-row-layout-id_baa171-dd alignnone wp-block-kadence-rowlayout"><div class="kt-row-column-wrap kt-has-2-columns kt-row-layout-left-golden kt-tab-layout-inherit kt-mobile-layout-row kt-row-valign-top kb-theme-content-width">
-
-<div class="wp-block-kadence-column kadence-column_293802-e2 kadence-column_ebb7f6-1f"><div class="kt-inside-inner-col">
-<div style="max-width: 600px; margin: 0 auto; padding: 20px; background-color: #fff; border-radius: 5px; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);">
-    
-      <form action="https://formspree.io/f/xzbqkpwj" method="POST">
-        <div style="margin-bottom: 10px;">
-          <label for="email" style="display: block; margin-bottom: 5px; font-weight: bold;">Email:</label>
-          <input type="email" id="email" name="email" style="display: block; width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 16px;" required>
-        </div>
-        <div style="margin-bottom: 10px;">
-          <label for="message" style="display: block; margin-bottom: 5px; font-weight: bold;">Message:</label>
-          <textarea id="message" name="message" rows="4" style="display: block; width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 16px;" required></textarea>
-        </div>
-        <input type="submit" value="Download eBook" style="background-color: #4CAF50; color: #fff; border: none; padding: 10px 20px; border-radius: 5px; font-size: 16px; cursor: pointer;">
-      </form>
-    </div>
+<div class="container single-page-container">
+	<div class="row">
+				<div class="nv-single-page-wrap col">
+			<div class="nv-content-wrap entry-content">
+<div class="wp-block-cover alignfull" style="min-height:300px"><span aria-hidden="true" class="wp-block-cover__background has-nv-site-bg-background-color has-background-dim-100 has-background-dim"></span><div class="wp-block-cover__inner-container">
+<div class="wp-block-group is-layout-flow"><div class="wp-block-group__inner-container">
+<h1 class="wp-block-heading has-text-align-left has-neve-text-color-color has-text-color">About Us</h1>
+</div></div>
 </div></div>
 
 
 
-<div class="wp-block-kadence-column kadence-column_2e02cf-b0 inner-column-2"><div class="kt-inside-inner-col">
-<h2 class="kt-adv-heading_9836d8-a0 wp-block-kadence-advancedheading" data-kb-block="kb-adv-heading_9836d8-a0">Download the rest of the book</h2>
+<div class="wp-block-cover alignfull" style="min-height:600px"><span aria-hidden="true" class="wp-block-cover__background has-nv-light-bg-background-color has-background-dim-100 has-background-dim"></span><div class="wp-block-cover__inner-container">
+<div class="wp-block-group is-layout-flow"><div class="wp-block-group__inner-container">
+<div style="height:80px" aria-hidden="true" class="wp-block-spacer"></div>
 
 
 
-<p style="font-size:20px">Send us a message</p>
+<div class="wp-block-columns are-vertically-aligned-center has-neve-text-color-color has-text-color is-layout-flex wp-container-4">
+<div class="wp-block-column is-vertically-aligned-center is-layout-flow" style="flex-basis:50%">
+<figure class="wp-block-image size-large"><img decoding="async" width="600" height="600" src="http://localhost:8000/wp-content/uploads/2020/01/neve-web-design-bg-09.jpg" alt="" class="wp-image-36"/></figure>
+</div>
+
+
+
+<div class="wp-block-column is-vertically-aligned-center is-layout-flow" style="flex-basis:50%">
+<h2 class="wp-block-heading has-neve-text-color-color has-text-color">Our Story</h2>
+
+
+
+<p class="has-neve-text-color-color has-text-color">PlainSwipe is a leading technology company based in the United States, specializing in creating innovative and user-friendly software solutions. Our mission is to simplify complex software and make it accessible to everyone, regardless of their technical expertise.</p>
+
+
+
+<p class="has-neve-text-color-color has-text-color">PlainSwipe is a software as a service (SAAS) app store that focuses on cutting-edge technologies such as artificial intelligence, machine learning, augmented reality, and virtual reality. Our products are designed to be intuitive and easy to use, making them ideal for businesses and individuals alike.</p>
+</div>
+</div>
+
+
+
+<div style="height:40px" aria-hidden="true" class="wp-block-spacer"></div>
+</div></div>
 </div></div>
 
-</div></div></div><div class="nv-tags-list"><span>Tags:</span><a href=http://localhost:8000/index.php/tag/gpdr/ title="GPDR" class=gpdr rel="tag">GPDR</a><a href=http://localhost:8000/index.php/tag/insurance-coverage/ title="Insurance Coverage" class=insurance-coverage rel="tag">Insurance Coverage</a><a href=http://localhost:8000/index.php/tag/saas-compliance/ title="SAAS Compliance" class=saas-compliance rel="tag">SAAS Compliance</a><a href=http://localhost:8000/index.php/tag/soc-2/ title="SOC 2" class=soc-2 rel="tag">SOC 2</a><a href=http://localhost:8000/index.php/tag/sox/ title="SOX" class=sox rel="tag">SOX</a> </div> 
-<div id="comments" class="comments-area">
-		<div id="respond" class="comment-respond nv-is-boxed">
-		<h2 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/index.php/complete-guide-to-saas-software-compliance-part/#respond" style="display:none;">Cancel reply</a></small></h2><form action="http://localhost:8000/wp-comments-post.php" method="post" id="commentform" class="comment-form"><p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> <span class="required-field-message">Required fields are marked <span class="required">*</span></span></p><p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" autocomplete="name" required="required" /></p>
-<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="text" value="" size="30" maxlength="100" aria-describedby="email-notes" autocomplete="email" required="required" /></p>
-<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="text" value="" size="30" maxlength="200" autocomplete="url" /></p>
-<p class="comment-form-comment"><label for="comment">Comment <span class="required">*</span></label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required"></textarea></p><p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes" /> <label for="wp-comment-cookies-consent">Save my name, email, and website in this browser for the next time I comment.</label></p>
-<p class="form-submit"><input name="submit" type="submit" id="submit" class="button button-primary" value="Post Comment" /> <input type='hidden' name='comment_post_ID' value='1277' id='comment_post_ID' />
-<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
-</p></form>	</div><!-- #respond -->
-	</div>
-			</article>
-			<div class="nv-sidebar-wrap col-sm-12 nv-right blog-sidebar " >
-		<aside id="secondary" role="complementary">
-		
-		<style type="text/css">.widget_search .search-form .search-submit, .widget_search .search-form .search-field { height: auto; }</style><div id="search-1" class="widget widget_search">
-<form role="search"
-	method="get"
-	class="search-form"
-	action="http://localhost:8000/">
-	<label>
-		<span class="screen-reader-text">Search for...</span>
-	</label>
-	<input type="search"
-		class="search-field"
-		aria-label="Search"
-		placeholder="Search for..."
-		value=""
-		name="s"/>
-	<button type="submit"
-			class="search-submit nv-submit"
-			aria-label="Search">
-		<span class="nv-search-icon-wrap">
-			<span class="nv-icon nv-search" >
-				<svg width="15" height="15" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1216 832q0-185-131.5-316.5t-316.5-131.5-316.5 131.5-131.5 316.5 131.5 316.5 316.5 131.5 316.5-131.5 131.5-316.5zm512 832q0 52-38 90t-90 38q-54 0-90-38l-343-342q-179 124-399 124-143 0-273.5-55.5t-225-150-150-225-55.5-273.5 55.5-273.5 150-225 225-150 273.5-55.5 273.5 55.5 225 150 150 225 55.5 273.5q0 220-124 399l343 343q37 37 37 90z"/></svg>
-			</span></span>
-	</button>
-	</form>
-</div>
-		<div id="recent-posts-1" class="widget widget_recent_entries">
-		<p class="widget-title">Recent Posts</p>
-		<ul>
-											<li>
-					<a href="http://localhost:8000/index.php/cost-saving-strategies-for-training-large-language-models-like-chatgpt-gpt4/">Cost Saving Strategies for Training Large Language Models like ChatGPT / GPT4</a>
-									</li>
-											<li>
-					<a href="http://localhost:8000/index.php/complete-guide-to-saas-software-compliance-part/" aria-current="page">Complete Guide to SAAS Software Compliance</a>
-									</li>
-											<li>
-					<a href="http://localhost:8000/index.php/how-to-qualify-a-difficult-lead-prospect-in-a-cold-call/">How to qualify a difficult Lead / Prospect in a cold call</a>
-									</li>
-											<li>
-					<a href="http://localhost:8000/index.php/creating-an-iam-profile-made-simple-an-end-to-end-tutorial/">Creating an IAM profile made simple, an end to end tutorial</a>
-									</li>
-											<li>
-					<a href="http://localhost:8000/index.php/picking-a-testing-framework-for-your-react-node-js-web-application-ebook/">Picking a testing framework For your React, Node JS web application (eBook)</a>
-									</li>
-					</ul>
 
-		</div><div id="recent-comments-1" class="widget widget_recent_comments"><p class="widget-title">Recent Comments</p><ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link">Jose Manuel</span> on <a href="http://localhost:8000/index.php/rlhf-tutorial-using-trlx/#comment-3">RLHF (Reinforcement Learning with Human Feedback) Python tutorial using TRLX</a></li><li class="recentcomments"><span class="comment-author-link"><a href="https://plainswipe.com/how-to-use-rlhf-to-train-a-model-to-generate-code-that-compiles-tutorial" class="url" rel="ugc external nofollow">How to use RLHF to train a model to generate code that compiles (Tutorial) &#8211; PlainSwipe</a></span> on <a href="http://localhost:8000/index.php/rlhf-tutorial-using-trlx/#comment-2">RLHF (Reinforcement Learning with Human Feedback) Python tutorial using TRLX</a></li></ul></div>
-			</aside>
+
+<div class="wp-block-cover alignfull" style="min-height:600px"><span aria-hidden="true" class="wp-block-cover__background has-nv-dark-bg-background-color has-background-dim-100 has-background-dim"></span><div class="wp-block-cover__inner-container">
+<div class="wp-block-group is-layout-flow"><div class="wp-block-group__inner-container">
+<div style="height:80px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<div class="wp-block-columns are-vertically-aligned-center is-layout-flex wp-container-9">
+<div class="wp-block-column is-vertically-aligned-center is-layout-flow" style="flex-basis:50%">
+<h2 class="wp-block-heading has-nv-text-dark-bg-color has-text-color">We are driven by values</h2>
+
+
+
+<p class="has-nv-text-dark-bg-color has-text-color">At PlainSwipe, we believe in simplifying complex software, providing excellent customer service, and promoting innovation and progress. We value our customers and employees, and strive to create an inclusive and supportive work environment. Our core values are reliability, creativity, and commitment to excellence.</p>
+
+
+
+<div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<div class="wp-block-buttons is-layout-flex">
+<div class="wp-block-button is-style-primary"><a class="wp-block-button__link wp-element-button" href="http://localhost:8000/web-agency-gb-contact-us/">LET’S TALK</a></div>
 </div>
-		</div>
-	</div>
+
+
+
+<div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
+</div>
+
+
+
+<div class="wp-block-column is-vertically-aligned-center is-layout-flow" style="flex-basis:50%">
+<figure class="wp-block-image size-large"><img decoding="async" width="600" height="600" src="http://localhost:8000/wp-content/uploads/2020/01/neve-web-design-bg-12.jpg" alt="" class="wp-image-39"/></figure>
+</div>
+</div>
+
+
+
+<div style="height:40px" aria-hidden="true" class="wp-block-spacer"></div>
+</div></div>
+</div></div>
+
+
+
+<div style="height:80px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h2 class="wp-block-heading">Mission</h2>
+
+
+
+<p>At PlainSwipe, our mission is to bring cutting-edge technology to the masses and make it simple and accessible to everyone. We strive to empower individuals and organizations with innovative software that helps them achieve their goals.</p>
+
+
+
+<div style="height:80px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h2 class="wp-block-heading">Vision</h2>
+
+
+
+<p>Our vision is to be the go-to destination for businesses and individuals seeking cutting-edge software solutions that are easy to use and enhance their productivity. We want to help people harness the power of technology and transform their lives for the better.</p>
+
+
+
+<div style="height:80px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<div class="wp-block-cover alignfull" style="min-height:600px"><span aria-hidden="true" class="wp-block-cover__background has-nv-light-bg-background-color has-background-dim-100 has-background-dim"></span><div class="wp-block-cover__inner-container">
+<div class="wp-block-group is-layout-flow"><div class="wp-block-group__inner-container">
+<div style="height:80px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<div class="wp-block-media-text alignwide has-media-on-the-right is-stacked-on-mobile"><div class="wp-block-media-text__content">
+<h2 class="wp-block-heading">The Team</h2>
+
+
+
+<p class="has-nv-dark-bg-color has-text-color">The PlainSwipe team is made up of a diverse group of individuals who are passionate about technology and innovation. Led by seasoned executive Rohit, who previously held senior leadership positions at Walmart and founded LoreIO, the company is in excellent hands.</p>
+
+
+
+<p class="has-nv-dark-bg-color has-text-color">As the Founder and CEO, Rohit brings a wealth of experience and knowledge to the table, having been an investor in GitLab and a guest lecturer at Stanford. Under his leadership, PlainSwipe has become a leading player in the AI, ML, AR, and VR software space.</p>
+
+
+
+<p class="has-nv-dark-bg-color has-text-color">The company’s Director of Engineering is a tech lead at a successful blockchain-based startup, ItsCredible. This expertise, combined with the well-funded support of institutional investors such as United Drilling Tools Public LTD and the Rohit Kumar Investment Fund, ensures that the PlainSwipe team is equipped to bring innovative solutions to the market.</p>
+
+
+
+<p class="has-nv-dark-bg-color has-text-color">PlainSwipe’s products are already being used by some of the world’s leading companies, including American Greetings, Walmart, and Stryker. With this level of experience and success, the PlainSwipe team is poised to continue making waves in the technology industry.</p>
+</div><figure class="wp-block-media-text__media"><img decoding="async" width="1024" height="684" src="http://localhost:8000/wp-content/uploads/2023/04/image-5.png" alt="" class="wp-image-1334 size-full" srcset="http://localhost:8000/wp-content/uploads/2023/04/image-5.png 1024w, http://localhost:8000/wp-content/uploads/2023/04/image-5-300x200.png 300w, http://localhost:8000/wp-content/uploads/2023/04/image-5-768x513.png 768w, http://localhost:8000/wp-content/uploads/2023/04/image-5-930x620.png 930w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure></div>
+
+
+
+<div style="height:40px" aria-hidden="true" class="wp-block-spacer"></div>
+</div></div>
+</div></div>
+</div>		</div>
+			</div>
+</div>
 
 </main><!--/.neve-main-->
 
@@ -504,6 +410,9 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 </footer>
 
 </div><!--/.wrapper-->
+<style id='core-block-supports-inline-css' type='text/css'>
+.wp-container-4.wp-container-4,.wp-container-9.wp-container-9{flex-wrap:nowrap;}
+</style>
 <script type='text/javascript' id='neve-script-js-extra'>
 /* <![CDATA[ */
 var NeveProperties = {"ajaxurl":"http:\/\/localhost:8000\/wp-admin\/admin-ajax.php","nonce":"7f38412a9f","isRTL":"","isCustomize":""};
@@ -557,8 +466,6 @@ var NeveProperties = {"ajaxurl":"http:\/\/localhost:8000\/wp-admin\/admin-ajax.p
 		attributes: true
 	});
 </script>
-<script type='text/javascript' src='http://localhost:8000/wp-includes/js/comment-reply.min.js?ver=6.2' id='comment-reply-js'></script>
-<script type='text/javascript' src='http://localhost:8000/wp-content/plugins/kadence-blocks/includes/assets/js/kb-advanced-heading.min.js?ver=3.0.27' id='kadence-blocks-advancedheading-js'></script>
 </body>
 
 </html>
