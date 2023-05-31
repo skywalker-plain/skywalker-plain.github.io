@@ -4,11 +4,11 @@
 		<engineLink>https://wordpress.org/</engineLink>
 		<homePageLink>http://plainswipe.local</homePageLink>
 		<apis>
-			<api name="WordPress" blogID="1" preferred="true" apiLink="http://plainswipe.local/xmlrpc.php" />
-			<api name="Movable Type" blogID="1" preferred="false" apiLink="http://plainswipe.local/xmlrpc.php" />
-			<api name="MetaWeblog" blogID="1" preferred="false" apiLink="http://plainswipe.local/xmlrpc.php" />
-			<api name="Blogger" blogID="1" preferred="false" apiLink="http://plainswipe.local/xmlrpc.php" />
-				<api name="WP-API" blogID="1" preferred="false" apiLink="http://plainswipe.local/wp-json/" />
+			<api name="WordPress" blogID="1" preferred="true" apiLink="http://plainswipe.com/plainswipe.local/xmlrpc.php" />
+			<api name="Movable Type" blogID="1" preferred="false" apiLink="http://plainswipe.com/plainswipe.local/xmlrpc.php" />
+			<api name="MetaWeblog" blogID="1" preferred="false" apiLink="http://plainswipe.com/plainswipe.local/xmlrpc.php" />
+			<api name="Blogger" blogID="1" preferred="false" apiLink="http://plainswipe.com/plainswipe.local/xmlrpc.php" />
+				<api name="WP-API" blogID="1" preferred="false" apiLink="http://plainswipe.com/plainswipe.local/wp-json/" />
 			</apis>
 	</service>
 </rsd>

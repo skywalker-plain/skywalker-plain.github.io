@@ -16,41 +16,41 @@ note:	the hts-log.txt file, and hts-cache folder, may contain sensitive informat
 22:11:29	Warning: 	Retry after error -4 (No data (connection closed)) at link plainswipe.local/wp-content/themes/neve/assets/js/build/modern/frontend.js?ver=3.5.8 (from plainswipe.local/)
 22:11:29	Warning: 	Retry after error -4 (No data (connection closed)) at link plainswipe.local/wp-content/uploads/2023/05/cropped-cropped-logo-1.png (from plainswipe.local/)
 22:12:03	Warning: 	Moved Permanently for plainswipe.local/?p=75
-22:12:03	Warning: 	File has moved from plainswipe.local/?p=75 to http://plainswipe.local/15c42-web-agency-gb-contact-us/
+22:12:03	Warning: 	File has moved from plainswipe.local/?p=75 to http://plainswipe.com/plainswipe.local/15c42-web-agency-gb-contact-us/
 22:12:03	Warning: 	Retry after error -4 (No data (connection closed)) at link plainswipe.local/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fplainswipe.local%2F15c42-web-agency-gb-contact-us%2F&format=xml (from plainswipe.local/15c42-web-agency-gb-contact-us/)
 22:12:04	Error: 	"Method Not Allowed" (405) at link plainswipe.local/xmlrpc.php (from plainswipe.local/hello-world/)
 22:12:04	Warning: 	Retry after error -4 (No data (connection closed)) at link plainswipe.local/?p=1 (from plainswipe.local/hello-world/)
 22:12:10	Warning: 	Moved Permanently for plainswipe.local/?p=352
-22:12:10	Warning: 	File has moved from plainswipe.local/?p=352 to http://plainswipe.local/knowing-your-user-the-importance-of-user-research/
+22:12:10	Warning: 	File has moved from plainswipe.local/?p=352 to http://plainswipe.com/plainswipe.local/knowing-your-user-the-importance-of-user-research/
 22:12:10	Warning: 	Moved Permanently for plainswipe.local/?p=350
-22:12:10	Warning: 	File has moved from plainswipe.local/?p=350 to http://plainswipe.local/best-calligraphy-fonts-for-logos/
+22:12:10	Warning: 	File has moved from plainswipe.local/?p=350 to http://plainswipe.com/plainswipe.local/best-calligraphy-fonts-for-logos/
 22:12:10	Warning: 	Retry after error -4 (No data (connection closed)) at link plainswipe.local/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fplainswipe.local%2Fbest-calligraphy-fonts-for-logos%2F (from plainswipe.local/best-calligraphy-fonts-for-logos/)
 22:12:14	Warning: 	Retry after error -4 (No data (connection closed)) at link plainswipe.local/wp-json/wp/v2/posts/311 (from plainswipe.local/web-design-trends-for-2022/)
 22:12:14	Warning: 	Moved Permanently for plainswipe.local/?p=311
-22:12:14	Warning: 	File has moved from plainswipe.local/?p=311 to http://plainswipe.local/web-design-trends-for-2022/
+22:12:14	Warning: 	File has moved from plainswipe.local/?p=311 to http://plainswipe.com/plainswipe.local/web-design-trends-for-2022/
 22:12:14	Warning: 	Retry after error -4 (No data (connection closed)) at link plainswipe.local/hello-world-2/feed/ (from plainswipe.local/hello-world-2/)
 22:12:15	Warning: 	Retry after error -4 (No data (connection closed)) at link plainswipe.local/?p=306 (from plainswipe.local/hello-world-2/)
 22:12:16	Warning: 	Retry after error -4 (No data (connection closed)) at link plainswipe.local/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fplainswipe.local%2Fhello-world-2%2F (from plainswipe.local/hello-world-2/)
 22:12:16	Warning: 	Retry after error -4 (No data (connection closed)) at link plainswipe.local/wp-content/uploads/2020/01/neve-web-design-bg-12.jpg (from plainswipe.local/)
 22:12:19	Warning: 	Moved Permanently for plainswipe.local/?p=69
-22:12:19	Warning: 	File has moved from plainswipe.local/?p=69 to http://plainswipe.local/15c42-web-agency-gb-portfolio/
+22:12:19	Warning: 	File has moved from plainswipe.local/?p=69 to http://plainswipe.com/plainswipe.local/15c42-web-agency-gb-portfolio/
 22:12:43	Warning: 	Retry after error -4 (No data (connection closed)) at link plainswipe.local/wp-content/uploads/2023/05/optometrist-eye-specialist-prescription-pad-template-in-ms-word.jpeg (from plainswipe.local/15c42-web-agency-gb-portfolio/)
 22:12:43	Warning: 	Retry after error -4 (No data (connection closed)) at link plainswipe.local/meetingmagnet/ (from plainswipe.local/15c42-web-agency-gb-portfolio/)
 22:12:43	Warning: 	Moved Permanently for plainswipe.local/?p=1
-22:12:43	Warning: 	File has moved from plainswipe.local/?p=1 to http://plainswipe.local/hello-world/
+22:12:43	Warning: 	File has moved from plainswipe.local/?p=1 to http://plainswipe.com/plainswipe.local/hello-world/
 22:12:43	Warning: 	Moved Permanently for plainswipe.local/?p=353
-22:12:43	Warning: 	File has moved from plainswipe.local/?p=353 to http://plainswipe.local/what-is-the-progressive-web-app-pwa-and-how-it-works/
+22:12:43	Warning: 	File has moved from plainswipe.local/?p=353 to http://plainswipe.com/plainswipe.local/what-is-the-progressive-web-app-pwa-and-how-it-works/
 22:12:43	Warning: 	Retry after error -4 (No data (connection closed)) at link plainswipe.local/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fplainswipe.local%2Fwhat-is-the-progressive-web-app-pwa-and-how-it-works%2F&format=xml (from plainswipe.local/what-is-the-progressive-web-app-pwa-and-how-it-works/)
 22:12:43	Warning: 	Moved Permanently for plainswipe.local/?p=312
-22:12:43	Warning: 	File has moved from plainswipe.local/?p=312 to http://plainswipe.local/a-simple-guide-to-design-thinking/
+22:12:43	Warning: 	File has moved from plainswipe.local/?p=312 to http://plainswipe.com/plainswipe.local/a-simple-guide-to-design-thinking/
 22:12:43	Warning: 	Retry after error -4 (No data (connection closed)) at link plainswipe.local/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fplainswipe.local%2Fa-simple-guide-to-design-thinking%2F&format=xml (from plainswipe.local/a-simple-guide-to-design-thinking/)
 22:12:45	Warning: 	Retry after error -4 (No data (connection closed)) at link plainswipe.local/wp-json/wp/v2/posts/311 (from plainswipe.local/web-design-trends-for-2022/)
 22:12:46	Warning: 	Moved Permanently for plainswipe.local/?p=306
-22:12:46	Warning: 	File has moved from plainswipe.local/?p=306 to http://plainswipe.local/hello-world-2/
+22:12:46	Warning: 	File has moved from plainswipe.local/?p=306 to http://plainswipe.com/plainswipe.local/hello-world-2/
 22:12:46	Error: 	"Not Found" (404) at link plainswipe.local/POST (from plainswipe.local/wp-content/themes/neve/assets/js/build/modern/frontend.js?ver=3.5.8)
 22:13:36	Warning: 	Retry after error -4 (No data (connection closed)) at link plainswipe.local/wp-content/plugins/otter-blocks/build/blocks/advanced-columns/style.css?ver=e11eb731902c9f068861 (from plainswipe.local/meetingmagnet/)
 22:13:38	Warning: 	Moved Permanently for plainswipe.local/?p=433
-22:13:38	Warning: 	File has moved from plainswipe.local/?p=433 to http://plainswipe.local/meetingmagnet/
+22:13:38	Warning: 	File has moved from plainswipe.local/?p=433 to http://plainswipe.com/plainswipe.local/meetingmagnet/
 22:13:38	Warning: 	Retry after error -4 (No data (connection closed)) at link plainswipe.local/wp-content/uploads/2023/05/image-2-1024x334.png (from plainswipe.local/meetingmagnet/)
 22:13:39	Warning: 	Retry after error -4 (No data (connection closed)) at link plainswipe.local/wp-content/uploads/2023/05/image-1-150x150.png (from plainswipe.local/meetingmagnet/)
 22:13:57	Warning: 	Retry after error -4 (No data (connection closed)) at link plainswipe.local/wp-content/uploads/2023/05/image-2-1024x334.png (from plainswipe.local/meetingmagnet/)
