@@ -7,11 +7,11 @@
 	>
 <channel>
 	<title>
-	Comments on: A Simple Guide to Design Thinking	</title>
-	<atom:link href="http://plainswipe.local/a-simple-guide-to-design-thinking/feed/" rel="self" type="application/rss+xml" />
-	<link>http://plainswipe.local/a-simple-guide-to-design-thinking/</link>
+	Comments on: 5 UX Principles for Creating a Great Website	</title>
+	<atom:link href="./index.html" rel="self" type="application/rss+xml" />
+	<link>./../index.html</link>
 	<description></description>
-	<lastBuildDate>Mon, 13 Jan 2020 11:22:38 +0000</lastBuildDate>
+	<lastBuildDate>Mon, 13 Jan 2020 10:41:00 +0000</lastBuildDate>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
 	<sy:updateFrequency>

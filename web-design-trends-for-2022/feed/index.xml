@@ -8,8 +8,8 @@
 <channel>
 	<title>
 	Comments on: Web Design Trends for 2022	</title>
-	<atom:link href="http://plainswipe.local/web-design-trends-for-2022/feed/" rel="self" type="application/rss+xml" />
-	<link>http://plainswipe.local/web-design-trends-for-2022/</link>
+	<atom:link href="./index.html" rel="self" type="application/rss+xml" />
+	<link>./../index.html</link>
 	<description></description>
 	<lastBuildDate>Mon, 13 Jan 2020 11:22:22 +0000</lastBuildDate>
 	<sy:updatePeriod>

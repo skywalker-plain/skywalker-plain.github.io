@@ -7,11 +7,11 @@
 	>
 <channel>
 	<title>
-	Comments on: What is the Progressive Web App (PWA) and how it works?	</title>
-	<atom:link href="http://plainswipe.local/what-is-the-progressive-web-app-pwa-and-how-it-works/feed/" rel="self" type="application/rss+xml" />
-	<link>http://plainswipe.local/what-is-the-progressive-web-app-pwa-and-how-it-works/</link>
+	Comments on: Knowing Your User. The importance of User Research.	</title>
+	<atom:link href="./index.html" rel="self" type="application/rss+xml" />
+	<link>./../index.html</link>
 	<description></description>
-	<lastBuildDate>Tue, 02 Nov 2021 15:00:07 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 02 Nov 2021 14:58:19 +0000</lastBuildDate>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
 	<sy:updateFrequency>
