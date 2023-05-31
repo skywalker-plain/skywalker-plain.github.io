@@ -1,0 +1,34 @@
+HTTrack3.49-2 launched on Wed, 31 May 2023 21:57:14 at http://plainswipe.local
+(/opt/homebrew/bin/httrack http://plainswipe.local )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+21:57:37	Warning: 	Moved Permanently for plainswipe.local/?p=69
+21:57:37	Warning: 	File has moved from plainswipe.local/?p=69 to http://plainswipe.local/15c42-web-agency-gb-portfolio/
+21:57:39	Warning: 	Moved Permanently for plainswipe.local/?p=75
+21:57:39	Warning: 	File has moved from plainswipe.local/?p=75 to http://plainswipe.local/15c42-web-agency-gb-contact-us/
+21:57:40	Error: 	"Method Not Allowed" (405) at link plainswipe.local/xmlrpc.php (from plainswipe.local/hello-world/)
+21:57:41	Warning: 	Moved Permanently for plainswipe.local/?p=1
+21:57:41	Warning: 	File has moved from plainswipe.local/?p=1 to http://plainswipe.local/hello-world/
+21:57:44	Warning: 	Moved Permanently for plainswipe.local/?p=353
+21:57:44	Warning: 	File has moved from plainswipe.local/?p=353 to http://plainswipe.local/what-is-the-progressive-web-app-pwa-and-how-it-works/
+21:57:45	Warning: 	Retry after error -4 (No data (connection closed)) at link plainswipe.local/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fplainswipe.local%2Fwhat-is-the-progressive-web-app-pwa-and-how-it-works%2F&format=xml (from plainswipe.local/what-is-the-progressive-web-app-pwa-and-how-it-works/)
+21:57:46	Warning: 	Moved Permanently for plainswipe.local/?p=352
+21:57:46	Warning: 	File has moved from plainswipe.local/?p=352 to http://plainswipe.local/knowing-your-user-the-importance-of-user-research/
+21:57:47	Warning: 	Moved Permanently for plainswipe.local/?p=350
+21:57:47	Warning: 	File has moved from plainswipe.local/?p=350 to http://plainswipe.local/best-calligraphy-fonts-for-logos/
+21:57:48	Warning: 	Moved Permanently for plainswipe.local/?p=312
+21:57:48	Warning: 	File has moved from plainswipe.local/?p=312 to http://plainswipe.local/a-simple-guide-to-design-thinking/
+21:57:49	Warning: 	Moved Permanently for plainswipe.local/?p=311
+21:57:49	Warning: 	File has moved from plainswipe.local/?p=311 to http://plainswipe.local/web-design-trends-for-2022/
+21:57:50	Warning: 	Moved Permanently for plainswipe.local/?p=306
+21:57:50	Warning: 	File has moved from plainswipe.local/?p=306 to http://plainswipe.local/hello-world-2/
+21:57:51	Error: 	"Not Found" (404) at link plainswipe.local/POST (from plainswipe.local/wp-content/themes/neve/assets/js/build/modern/frontend.js?ver=3.5.8)
+21:57:53	Warning: 	Moved Permanently for plainswipe.local/?p=433
+21:57:53	Warning: 	File has moved from plainswipe.local/?p=433 to http://plainswipe.local/meetingmagnet/
+
+HTTrack Website Copier/3.49-2 mirror complete in 40 seconds : 105 links scanned, 91 files written (4302273 bytes overall), 56 files updated [335506 bytes received at 8387 bytes/sec], 1147670 bytes transferred using HTTP compression in 48 files, ratio 20%, 17.5 requests per connection
+(2 errors, 21 warnings, 0 messages)
