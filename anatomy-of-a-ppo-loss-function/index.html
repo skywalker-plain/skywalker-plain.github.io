@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+	
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+			<link rel="pingback" href="./../xmlrpc.php">
+		<title>Anatomy of a PPO loss function &#8211; PlainSwipe</title>
+<meta name="robots" content="max-image-preview:large">
+<link rel="alternate" type="application/rss+xml" title="PlainSwipe &raquo; Feed" href="./../feed/index.html">
+<link rel="alternate" type="application/rss+xml" title="PlainSwipe &raquo; Comments Feed" href="./../comments/feed/index.html">
+<link rel="alternate" type="application/rss+xml" title="PlainSwipe &raquo; Anatomy of a PPO loss function Comments Feed" href="./feed/index.html">
+<script type="text/javascript">
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":".\/\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.2.2"}};
+/*! This file is auto-generated */
+!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){p.clearRect(0,0,i.width,i.height),p.fillText(e,0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(t,0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(p&&p.fillText)switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s("🏳️‍⚧️","🏳️​⚧️")?!1:!s("🇺🇳","🇺​🇳")&&!s("🏴󠁧󠁢󠁥󠁮󠁧󠁿","🏴​󠁧​󠁢​󠁥​󠁮​󠁧​󠁿");case"emoji":return!s("🫱🏻‍🫲🏿","🫱🏻​🫲🏿")}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(e=t.source||{}).concatemoji?c(e.concatemoji):e.wpemoji&&e.twemoji&&(c(e.twemoji),c(e.wpemoji)))}(window,document,window._wpemojiSettings);
+</script>
+<style type="text/css">img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="./../wp-includes/css/dist/block-library/style.min.css?ver=6.2.2" type="text/css" media="all">
+<style id="aab-accordion-block-style-inline-css" type="text/css">.wp-block-aab-accordion-block{overflow:hidden}.wp-block-aab-accordion-block.aab__accordion_disabled{pointer-events:none!important}.wp-block-aab-accordion-block a.aab__accordion_link{display:block;text-decoration:none!important}.wp-block-aab-accordion-block .aab__accordion_head{align-items:center;cursor:pointer;display:flex}.wp-block-aab-accordion-block .aab__accordion_head .aab__accordion_icon{border-radius:50%;height:20px;width:20px}.wp-block-aab-accordion-block .aab__accordion_head.aab_right_icon{flex-direction:row}.wp-block-aab-accordion-block .aab__accordion_head.aab_left_icon{flex-direction:row-reverse}.wp-block-aab-accordion-block .aab__accordion_head .aab__accordion_heading.aab_right_icon{flex:1;margin-right:20px}.wp-block-aab-accordion-block .aab__accordion_head .aab__accordion_heading.aab_left_icon{flex:1;margin-left:20px}.wp-block-aab-accordion-block .collapse-icon span{display:block}.wp-block-aab-accordion-block .aab__accordion_body{display:none}.wp-block-aab-accordion-block .aab__accordion_body.aab__accordion_body--show{display:block}</style>
+<style id="aab-accordion-item-style-inline-css" type="text/css">.wp-block-aab-accordion-item{overflow:hidden}.wp-block-aab-accordion-item .aagb__accordion_head{align-items:center;cursor:pointer;display:flex;justify-content:space-between}.wp-block-aab-accordion-item .aagb__accordion_head .aagb__accordion_icon{border-radius:50%;height:20px;width:20px}.wp-block-aab-accordion-item .aagb__accordion_head.aagb_right_icon{flex-direction:row}.wp-block-aab-accordion-item .aagb__accordion_head.aagb_left_icon{flex-direction:row-reverse}.wp-block-aab-accordion-item .aagb__accordion_head .aagb__accordion_heading.aagb_right_icon{flex:1;margin-right:20px}.wp-block-aab-accordion-item .aagb__accordion_head .aagb__accordion_heading.aagb_left_icon{flex:1;margin-left:20px}.wp-block-aab-accordion-item .collapse-icon span{display:block}.wp-block-aab-accordion-item .aagb__accordion_body{display:none}</style>
+<style id="wpzoom-video-popup-block-block-style-inline-css" type="text/css">.mfp-bg{background:#0b0b0b;opacity:.8;overflow:hidden;z-index:1042}.mfp-bg,.mfp-wrap{height:100%;left:0;position:fixed;top:0;width:100%}.mfp-wrap{-webkit-backface-visibility:hidden;outline:none!important;z-index:1043}.mfp-container{box-sizing:border-box;height:100%;left:0;padding:0 8px;position:absolute;text-align:center;top:0;width:100%}.mfp-container:before{content:"";display:inline-block;height:100%;vertical-align:middle}.mfp-align-top .mfp-container:before{display:none}.mfp-content{display:inline-block;margin:0 auto;position:relative;text-align:left;vertical-align:middle;z-index:1045}.mfp-ajax-holder .mfp-content,.mfp-inline-holder .mfp-content{cursor:auto;width:100%}.mfp-ajax-cur{cursor:progress}.mfp-zoom-out-cur,.mfp-zoom-out-cur .mfp-image-holder .mfp-close{cursor:zoom-out}.mfp-zoom{cursor:pointer;cursor:zoom-in}.mfp-auto-cursor .mfp-content{cursor:auto}.mfp-arrow,.mfp-close,.mfp-counter,.mfp-preloader{-webkit-user-select:none;-moz-user-select:none;user-select:none}.mfp-loading.mfp-figure{display:none}.mfp-hide{display:none!important}.mfp-preloader{color:#ccc;left:8px;margin-top:-.8em;position:absolute;right:8px;text-align:center;top:50%;width:auto;z-index:1044}.mfp-preloader a{color:#ccc}.mfp-preloader a:hover{color:#fff}.mfp-s-error .mfp-content,.mfp-s-ready .mfp-preloader{display:none}button.mfp-arrow,button.mfp-close{-webkit-appearance:none;background:transparent;border:0;box-shadow:none;cursor:pointer;display:block;outline:none;overflow:visible;padding:0;touch-action:manipulation;z-index:1046}button::-moz-focus-inner{border:0;padding:0}.mfp-close{color:#fff;font-family:Arial,Baskerville,monospace;font-size:28px;font-style:normal;height:44px;line-height:44px;opacity:.65;padding:0 0 18px 10px;position:absolute;right:0;text-align:center;text-decoration:none;top:0;width:44px}.mfp-close:focus,.mfp-close:hover{opacity:1}.mfp-close:active{top:1px}.mfp-close-btn-in .mfp-close{color:#333}.mfp-iframe-holder .mfp-close,.mfp-image-holder .mfp-close{color:#fff;padding-right:6px;right:-6px;text-align:right;width:100%}.mfp-counter{color:#ccc;font-size:12px;line-height:18px;position:absolute;right:0;top:0;white-space:nowrap}.mfp-arrow{-webkit-tap-highlight-color:rgba(0,0,0,0);height:110px;margin:-55px 0 0;opacity:.65;padding:0;position:absolute;top:50%;width:90px}.mfp-arrow:active{margin-top:-54px}.mfp-arrow:focus,.mfp-arrow:hover{opacity:1}.mfp-arrow:after,.mfp-arrow:before{border:inset transparent;content:"";display:block;height:0;left:0;margin-left:35px;margin-top:35px;position:absolute;top:0;width:0}.mfp-arrow:after{border-bottom-width:13px;border-top-width:13px;top:8px}.mfp-arrow:before{border-bottom-width:21px;border-top-width:21px;opacity:.7}.mfp-arrow-left{left:0}.mfp-arrow-left:after{border-right:17px solid #fff;margin-left:31px}.mfp-arrow-left:before{border-right:27px solid #3f3f3f;margin-left:25px}.mfp-arrow-right{right:0}.mfp-arrow-right:after{border-left:17px solid #fff;margin-left:39px}.mfp-arrow-right:before{border-left:27px solid #3f3f3f}.mfp-iframe-holder{padding-bottom:40px;padding-top:40px}.mfp-iframe-holder .mfp-content{line-height:0;max-width:900px;width:100%}.mfp-iframe-holder .mfp-close{top:-40px}.mfp-iframe-scaler{height:0;overflow:hidden;padding-top:56.25%;width:100%}.mfp-iframe-scaler iframe{background:#000;box-shadow:0 0 8px rgba(0,0,0,.6);display:block;height:100%;left:0;position:absolute;top:0;width:100%}img.mfp-img{box-sizing:border-box;display:block;height:auto;margin:0 auto;max-width:100%;padding:40px 0;width:auto}.mfp-figure,img.mfp-img{line-height:0}.mfp-figure:after{background:#444;bottom:40px;box-shadow:0 0 8px rgba(0,0,0,.6);content:"";display:block;height:auto;left:0;position:absolute;right:0;top:40px;width:auto;z-index:-1}.mfp-figure small{color:#bdbdbd;display:block;font-size:12px;line-height:14px}.mfp-figure figure{margin:0}.mfp-bottom-bar{cursor:auto;left:0;margin-top:-36px;position:absolute;top:100%;width:100%}.mfp-title{word-wrap:break-word;color:#f3f3f3;line-height:18px;padding-right:36px;text-align:left}.mfp-image-holder .mfp-content{max-width:100%}.mfp-gallery .mfp-image-holder .mfp-figure{cursor:pointer}@media screen and (max-height:300px),screen and (max-width:800px)and (orientation:landscape){.mfp-img-mobile .mfp-image-holder{padding-left:0;padding-right:0}.mfp-img-mobile img.mfp-img{padding:0}.mfp-img-mobile .mfp-figure:after{bottom:0;top:0}.mfp-img-mobile .mfp-figure small{display:inline;margin-left:5px}.mfp-img-mobile .mfp-bottom-bar{background:rgba(0,0,0,.6);bottom:0;box-sizing:border-box;margin:0;padding:3px 5px;position:fixed;top:auto}.mfp-img-mobile .mfp-bottom-bar:empty{padding:0}.mfp-img-mobile .mfp-counter{right:5px;top:3px}.mfp-img-mobile .mfp-close{background:rgba(0,0,0,.6);height:35px;line-height:35px;padding:0;position:fixed;right:0;text-align:center;top:0;width:35px}}@media (max-width:900px){.mfp-arrow{transform:scale(.75)}.mfp-arrow-left{transform-origin:0}.mfp-arrow-right{transform-origin:100%}.mfp-container{padding-left:6px;padding-right:6px}}.editor-styles-wrapper a.wpzoom-video-popup-block,a.wpzoom-video-popup-block{align-items:center;background:inherit;box-sizing:border-box;color:inherit;cursor:pointer;display:flex;font-family:inherit;font-size:2rem;font-style:inherit;font-weight:inherit;gap:1rem;height:auto;justify-content:center;letter-spacing:inherit;line-height:inherit;min-height:100px;overflow:hidden;padding:0;position:relative;text-decoration:none;text-transform:inherit}.editor-styles-wrapper a.wpzoom-video-popup-block *,a.wpzoom-video-popup-block *{box-sizing:border-box}.editor-styles-wrapper a.wpzoom-video-popup-block .wpzoom-video-popup-block_icon,a.wpzoom-video-popup-block .wpzoom-video-popup-block_icon{color:inherit;cursor:pointer;display:block;font-size:inherit;font-style:inherit;font-weight:inherit;height:1.5em;letter-spacing:inherit;line-height:inherit;text-transform:inherit;width:1.5em}.editor-styles-wrapper a.wpzoom-video-popup-block .wpzoom-video-popup-block_icon svg,a.wpzoom-video-popup-block .wpzoom-video-popup-block_icon svg{color:inherit;cursor:pointer;display:block;height:100%;width:100%}</style>
+<link rel="stylesheet" id="dashicons-css" href="./../wp-includes/css/dashicons.min.css?ver=6.2.2" type="text/css" media="all">
+<link rel="stylesheet" id="classic-theme-styles-css" href="./../wp-includes/css/classic-themes.min.css?ver=6.2.2" type="text/css" media="all">
+<style id="global-styles-inline-css" type="text/css">body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--neve-link-color: var(--nv-primary-accent);--wp--preset--color--neve-link-hover-color: var(--nv-secondary-accent);--wp--preset--color--nv-site-bg: var(--nv-site-bg);--wp--preset--color--nv-light-bg: var(--nv-light-bg);--wp--preset--color--nv-dark-bg: var(--nv-dark-bg);--wp--preset--color--neve-text-color: var(--nv-text-color);--wp--preset--color--nv-text-dark-bg: var(--nv-text-dark-bg);--wp--preset--color--nv-c-1: var(--nv-c-1);--wp--preset--color--nv-c-2: var(--nv-c-2);--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}</style>
+<link rel="stylesheet" id="neve-style-css" href="./../wp-content/themes/neve/style-main-new.min.css?ver=3.6.1" type="text/css" media="all">
+<style id="neve-style-inline-css" type="text/css">.nv-meta-list li.meta:not(:last-child):after { content:"/" }.nv-meta-list .no-mobile{
+			display:none;
+		}.nv-meta-list li.last::after{
+			content: ""!important;
+		}@media (min-width: 769px) {
+			.nv-meta-list .no-mobile {
+				display: inline-block;
+			}
+			.nv-meta-list li.last:not(:last-child)::after {
+		 		content: "/" !important;
+			}
+		}
+ :root{ --container: 748px;--postwidth:100%; --primarybtnbg: var(--nv-primary-accent); --secondarybtnbg: rgba(0, 0, 0, 0); --primarybtnhoverbg: var(--nv-secondary-accent); --secondarybtnhoverbg: var(--nv-dark-bg); --primarybtncolor: #010101; --secondarybtncolor: var(--nv-dark-bg); --primarybtnhovercolor: #ffffff; --secondarybtnhovercolor: var(--nv-text-dark-bg);--primarybtnborderradius:0;--secondarybtnborderradius:0;--secondarybtnborderwidth:2px;--btnpadding:12px 24px;--primarybtnpadding:12px 24px;--secondarybtnpadding:calc(12px - 2px) calc(24px - 2px); --btnfs: 14px; --btnlineheight: 1.6em; --bodyfontfamily: Arial,Helvetica,sans-serif; --bodyfontsize: 16px; --bodylineheight: 1.7em; --bodyletterspacing: 0px; --bodyfontweight: 400; --bodytexttransform: none; --h1fontsize: 39px; --h1fontweight: 600; --h1lineheight: 1.2em; --h1letterspacing: 0px; --h1texttransform: none; --h2fontsize: 28px; --h2fontweight: 600; --h2lineheight: 1.3em; --h2letterspacing: 0px; --h2texttransform: none; --h3fontsize: 20px; --h3fontweight: 600; --h3lineheight: 1.3em; --h3letterspacing: 0px; --h3texttransform: none; --h4fontsize: 16px; --h4fontweight: 600; --h4lineheight: 1.3em; --h4letterspacing: 0px; --h4texttransform: none; --h5fontsize: 14px; --h5fontweight: 600; --h5lineheight: 1.3em; --h5letterspacing: 0px; --h5texttransform: none; --h6fontsize: 14px; --h6fontweight: 600; --h6lineheight: 1.3em; --h6letterspacing: 0px; --h6texttransform: none;--formfieldborderwidth:2px;--formfieldborderradius:0; --formfieldbgcolor: var(--nv-site-bg); --formfieldbordercolor: var(--nv-light-bg); --formfieldcolor: var(--nv-text-color);--formfieldpadding:10px 12px 10px 12px;; } .has-neve-button-color-color{ color: var(--nv-primary-accent)!important; } .has-neve-button-color-background-color{ background-color: var(--nv-primary-accent)!important; } .single-post-container .alignfull > [class*="__inner-container"], .single-post-container .alignwide > [class*="__inner-container"]{ max-width:718px } .nv-meta-list{ --avatarsize: 20px; } .single .nv-meta-list{ --avatarsize: 20px; } .blog .blog-entry-title, .archive .blog-entry-title{ --fontsize: 28px; } .single h1.entry-title{ --fontsize: 28px; } .neve-main{ --boxshadow:0 3px 6px -5px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.1); } .nv-post-cover{ --height: 250px;--padding:40px 15px;--justify: flex-start; --textalign: left; --valign: center; } .nv-post-cover .nv-title-meta-wrap, .nv-page-title-wrap, .entry-header{ --color: var(--nv-text-dark-bg); --textalign: left; } .nv-is-boxed.nv-title-meta-wrap{ --padding:40px 15px; --bgcolor: var(--nv-dark-bg); } .nv-overlay{ --bgcolor: var(--nv-dark-bg); --opacity: 50; --blendmode: normal; } .nv-is-boxed.nv-comments-wrap{ --padding:20px; } .nv-is-boxed.comment-respond{ --padding:20px; } .single:not(.single-product), .page{ --c-vspace:0 0 0 0;; } .global-styled{ --bgcolor: var(--nv-site-bg); } .header-top{ --rowbcolor: var(--nv-light-bg); --color: var(--nv-text-color); --bgcolor: #f0f0f0; } .header-main{ --rowbcolor: var(--nv-light-bg); --color: var(--nv-text-color); --bgcolor: var(--nv-site-bg); } .header-bottom{ --rowbcolor: var(--nv-light-bg); --color: var(--nv-text-color); --bgcolor: #ffffff; } .header-menu-sidebar-bg{ --justify: flex-start; --textalign: left;--flexg: 1;--wrapdropdownwidth: auto; --color: var(--nv-text-color); --bgcolor: var(--nv-site-bg); } .header-menu-sidebar{ width: 360px; } .builder-item--logo{ --maxwidth: 32px;--padding:10px 0;--margin:0; --textalign: left;--justify: flex-start; } .builder-item--nav-icon,.header-menu-sidebar .close-sidebar-panel .navbar-toggle{ --borderradius:0;--borderwidth:1px; } .builder-item--nav-icon{ --label-margin:0 5px 0 0;;--padding:10px 15px;--margin:0; } .builder-item--primary-menu{ --color: var(--nv-text-color); --hovercolor: var(--nv-secondary-accent); --hovertextcolor: var(--nv-text-color); --activecolor: var(--nv-text-color); --spacing: 20px; --height: 25px;--padding:0;--margin:0; --fontsize: 1em; --lineheight: 1.6; --letterspacing: 0px; --fontweight: 600; --texttransform: uppercase; --iconsize: 1em; } .hfg-is-group.has-primary-menu .inherit-ff{ --inheritedfw: 600; } .footer-top-inner .row{ grid-template-columns:1fr 1fr 1fr; --valign: flex-start; } .footer-top{ --rowbcolor: var(--nv-light-bg); --color: var(--nv-text-color); --bgcolor: #ffffff; } .footer-main-inner .row{ grid-template-columns:1fr 1fr 1fr; --valign: flex-start; } .footer-main{ --rowbcolor: var(--nv-light-bg); --color: var(--nv-text-color); --bgcolor: var(--nv-site-bg); } .footer-bottom-inner .row{ grid-template-columns:1fr 1fr 1fr; --valign: flex-start; } .footer-bottom{ --rowbcolor: var(--nv-light-bg); --color: var(--nv-text-dark-bg); --bgcolor: #000000; } @media(min-width: 576px){ :root{ --container: 992px;--postwidth:50%;--btnpadding:12px 24px;--primarybtnpadding:12px 24px;--secondarybtnpadding:calc(12px - 2px) calc(24px - 2px); --btnfs: 14px; --btnlineheight: 1.6em; --bodyfontsize: 16px; --bodylineheight: 1.7em; --bodyletterspacing: 0px; --h1fontsize: 55px; --h1lineheight: 1.3em; --h1letterspacing: 0px; --h2fontsize: 34px; --h2lineheight: 1.3em; --h2letterspacing: 0px; --h3fontsize: 20px; --h3lineheight: 1.3em; --h3letterspacing: 0px; --h4fontsize: 16px; --h4lineheight: 1.3em; --h4letterspacing: 0px; --h5fontsize: 14px; --h5lineheight: 1.3em; --h5letterspacing: 0px; --h6fontsize: 14px; --h6lineheight: 1.3em; --h6letterspacing: 0px; } .single-post-container .alignfull > [class*="__inner-container"], .single-post-container .alignwide > [class*="__inner-container"]{ max-width:962px } .nv-meta-list{ --avatarsize: 20px; } .single .nv-meta-list{ --avatarsize: 20px; } .blog .blog-entry-title, .archive .blog-entry-title{ --fontsize: 32px; } .single h1.entry-title{ --fontsize: 40px; } .nv-post-cover{ --height: 30vh;--padding:60px 30px;--justify: flex-start; --textalign: left; --valign: center; } .nv-post-cover .nv-title-meta-wrap, .nv-page-title-wrap, .entry-header{ --textalign: left; } .nv-is-boxed.nv-title-meta-wrap{ --padding:60px 30px; } .nv-is-boxed.nv-comments-wrap{ --padding:30px; } .nv-is-boxed.comment-respond{ --padding:30px; } .single:not(.single-product), .page{ --c-vspace:0 0 0 0;; } .header-menu-sidebar-bg{ --justify: flex-start; --textalign: left;--flexg: 1;--wrapdropdownwidth: auto; } .header-menu-sidebar{ width: 360px; } .builder-item--logo{ --maxwidth: 32px;--padding:10px 0;--margin:0; --textalign: left;--justify: flex-start; } .builder-item--nav-icon{ --label-margin:0 5px 0 0;;--padding:10px 15px;--margin:0; } .builder-item--primary-menu{ --spacing: 20px; --height: 25px;--padding:0;--margin:0; --fontsize: 1em; --lineheight: 1.6; --letterspacing: 0px; --iconsize: 1em; } }@media(min-width: 960px){ :root{ --container: 1170px;--postwidth:50%;--btnpadding:12px 24px;--primarybtnpadding:12px 24px;--secondarybtnpadding:calc(12px - 2px) calc(24px - 2px); --btnfs: 16px; --btnlineheight: 1.6em; --bodyfontsize: 17px; --bodylineheight: 1.7em; --bodyletterspacing: 0px; --h1fontsize: 70px; --h1lineheight: 1.3em; --h1letterspacing: 0px; --h2fontsize: 46px; --h2lineheight: 1.3em; --h2letterspacing: 0px; --h3fontsize: 24px; --h3lineheight: 1.3em; --h3letterspacing: 0px; --h4fontsize: 20px; --h4lineheight: 1.3em; --h4letterspacing: 0px; --h5fontsize: 16px; --h5lineheight: 1.3em; --h5letterspacing: 0px; --h6fontsize: 16px; --h6lineheight: 1.3em; --h6letterspacing: 0px; } body:not(.single):not(.archive):not(.blog):not(.search):not(.error404) .neve-main > .container .col, body.post-type-archive-course .neve-main > .container .col, body.post-type-archive-llms_membership .neve-main > .container .col{ max-width: 100%; } body:not(.single):not(.archive):not(.blog):not(.search):not(.error404) .nv-sidebar-wrap, body.post-type-archive-course .nv-sidebar-wrap, body.post-type-archive-llms_membership .nv-sidebar-wrap{ max-width: 0%; } .neve-main > .archive-container .nv-index-posts.col{ max-width: 100%; } .neve-main > .archive-container .nv-sidebar-wrap{ max-width: 0%; } .neve-main > .single-post-container .nv-single-post-wrap.col{ max-width: 70%; } .single-post-container .alignfull > [class*="__inner-container"], .single-post-container .alignwide > [class*="__inner-container"]{ max-width:789px } .container-fluid.single-post-container .alignfull > [class*="__inner-container"], .container-fluid.single-post-container .alignwide > [class*="__inner-container"]{ max-width:calc(70% + 15px) } .neve-main > .single-post-container .nv-sidebar-wrap{ max-width: 30%; } .nv-meta-list{ --avatarsize: 20px; } .single .nv-meta-list{ --avatarsize: 20px; } .blog .blog-entry-title, .archive .blog-entry-title{ --fontsize: 32px; } .single h1.entry-title{ --fontsize: 65px; } .nv-post-cover{ --height: 50vh;--padding:60px 40px 60px 40px;;--justify: flex-start; --textalign: left; --valign: flex-end; } .nv-post-cover .nv-title-meta-wrap, .nv-page-title-wrap, .entry-header{ --textalign: left; } .nv-is-boxed.nv-title-meta-wrap{ --padding:60px 40px 60px 40px;; } .nv-is-boxed.nv-comments-wrap{ --padding:40px; } .nv-is-boxed.comment-respond{ --padding:40px; } .single:not(.single-product), .page{ --c-vspace:0 0 0 0;; } .header-menu-sidebar-bg{ --justify: flex-start; --textalign: left;--flexg: 1;--wrapdropdownwidth: auto; } .header-menu-sidebar{ width: 360px; } .builder-item--logo{ --maxwidth: 32px;--padding:10px 0;--margin:0; --textalign: left;--justify: flex-start; } .builder-item--nav-icon{ --label-margin:0 5px 0 0;;--padding:10px 15px;--margin:0; } .builder-item--primary-menu{ --spacing: 20px; --height: 25px;--padding:0;--margin:0; --fontsize: 0.8em; --lineheight: 1.6; --letterspacing: 0px; --iconsize: 0.8em; } }:root{--nv-primary-accent:#fcaf3b;--nv-secondary-accent:#ab641d;--nv-site-bg:#ffffff;--nv-light-bg:#ededed;--nv-dark-bg:#14171c;--nv-text-color:#2b2b2b;--nv-text-dark-bg:#ffffff;--nv-c-1:#77b978;--nv-c-2:#f37262;--nv-fallback-ff:Arial, Helvetica, sans-serif;}</style>
+        <script>
+            /* <![CDATA[ */
+            var rcewpp = {
+                "ajax_url":"http://localhost/wp-admin/admin-ajax.php",
+                "nonce": "8f7663d3ba",
+                "home_url": "http://localhost/",
+                "settings_icon": 'http://localhost/wp-content/plugins/export-wp-page-to-static-html/admin/images/settings.png',
+                "settings_hover_icon": 'http://localhost/wp-content/plugins/export-wp-page-to-static-html/admin/images/settings_hover.png'
+            };
+            /* ]]\> */
+        </script>
+        <script type="text/javascript" src="./../wp-includes/js/jquery/jquery.min.js?ver=3.6.4" id="jquery-core-js"></script>
+<script type="text/javascript" src="./../wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.0" id="jquery-migrate-js"></script>
+<script type="text/javascript" src="./../wp-content/plugins/wpzoom-video-popup-block/dist/scripts/frontend.js?ver=994b280399ff38241b51" id="wpzoom-video-popup-block-block-script-js"></script>
+<link rel="https://api.w.org/" href="./../wp-json/index.html">
+<link rel="alternate" type="application/json" href="./../wp-json/wp/v2/posts/528/index.html">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="./../xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="./../wp-includes/wlwmanifest.xml">
+<meta name="generator" content="WordPress 6.2.2">
+<link rel="canonical" href="./index.html">
+<link rel="shortlink" href="./../index.html?p=528">
+<link rel="alternate" type="application/json+oembed" href="./../wp-json/oembed/1.0/embed/index.html?url=http%3A%2F%2F%2Fanatomy-of-a-ppo-loss-function%2F">
+<link rel="alternate" type="text/xml+oembed" href="./../wp-json/oembed/1.0/embed/index.html?url=http%3A%2F%2F%2Fanatomy-of-a-ppo-loss-function%2F#038;format=xml">
+<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+	</head>
+
+<body class="post-template-default single single-post postid-528 single-format-standard wp-custom-logo  nv-blog-grid nv-sidebar-right menu_sidebar_slide_left" id="neve_body">
+<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-dark-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 0.49803921568627"></fefuncr><fefuncg type="table" tablevalues="0 0.49803921568627"></fefuncg><fefuncb type="table" tablevalues="0 0.49803921568627"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 1"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0 1"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.54901960784314 0.98823529411765"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0.71764705882353 0.25490196078431"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-red"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 1"></fefuncr><fefuncg type="table" tablevalues="0 0.27843137254902"></fefuncg><fefuncb type="table" tablevalues="0.5921568627451 0.27843137254902"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-midnight"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 0"></fefuncr><fefuncg type="table" tablevalues="0 0.64705882352941"></fefuncg><fefuncb type="table" tablevalues="0 1"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-magenta-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.78039215686275 1"></fefuncr><fefuncg type="table" tablevalues="0 0.94901960784314"></fefuncg><fefuncb type="table" tablevalues="0.35294117647059 0.47058823529412"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-green"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.65098039215686 0.40392156862745"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0.44705882352941 0.4"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-orange"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.098039215686275 1"></fefuncr><fefuncg type="table" tablevalues="0 0.66274509803922"></fefuncg><fefuncb type="table" tablevalues="0.84705882352941 0.41960784313725"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><div class="wrapper">
+	
+	<header class="header">
+		<a class="neve-skip-link show-on-focus" href="#content">
+			Skip to content		</a>
+		<div id="header-grid" class="hfg_header site-header">
+	
+<nav class="header--row header-main hide-on-mobile hide-on-tablet layout-full-contained nv-navbar header--row" data-row-id="main" data-show-on="desktop">
+
+	<div class="header--row-inner header-main-inner">
+		<div class="container">
+			<div class="row row--wrapper" data-section="hfg_header_layout_main">
+				<div class="hfg-slot left"><div class="builder-item desktop-left">
+<div class="item--inner builder-item--logo" data-section="title_tagline" data-item-id="logo">
+	
+<div class="site-logo">
+	<a class="brand" href="./../index.html" title="← PlainSwipe" aria-label="PlainSwipe" rel="home"><div class="title-with-logo">
+<img width="200" height="209" src="./../wp-content/uploads/2023/05/cropped-cropped-logo-1.png" class="neve-site-logo skip-lazy" alt="" decoding="async" data-variant="logo"><div class="nv-title-tagline-wrap"><p class="site-title">PlainSwipe</p></div>
+</div></a>
+</div>
+	</div>
+
+</div></div>
+<div class="hfg-slot right"><div class="builder-item has-nav">
+<div class="item--inner builder-item--primary-menu has_menu" data-section="header_menu_primary" data-item-id="primary-menu">
+	<div class="nv-nav-wrap">
+	<div role="navigation" class="nav-menu-primary style-border-bottom m-style" aria-label="Primary Menu">
+
+		<ul id="nv-primary-navigation-main" class="primary-menu-ul nav-ul menu-desktop">
+<li id="menu-item-315" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-315"><div class="wrap"><a href="./../15c42-web-agency-gb-portfolio/index.html">Products</a></div></li>
+<li id="menu-item-316" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-316"><div class="wrap"><a href="./../15c42-web-agency-gb-contact-us/index.html">Contact Us</a></div></li>
+</ul>	</div>
+</div>
+
+	</div>
+
+</div></div>							</div>
+		</div>
+	</div>
+</nav>
+
+
+<nav class="header--row header-main hide-on-desktop layout-full-contained nv-navbar header--row" data-row-id="main" data-show-on="mobile">
+
+	<div class="header--row-inner header-main-inner">
+		<div class="container">
+			<div class="row row--wrapper" data-section="hfg_header_layout_main">
+				<div class="hfg-slot left"><div class="builder-item tablet-left mobile-left">
+<div class="item--inner builder-item--logo" data-section="title_tagline" data-item-id="logo">
+	
+<div class="site-logo">
+	<a class="brand" href="./../index.html" title="← PlainSwipe" aria-label="PlainSwipe" rel="home"><div class="title-with-logo">
+<img width="200" height="209" src="./../wp-content/uploads/2023/05/cropped-cropped-logo-1.png" class="neve-site-logo skip-lazy" alt="" decoding="async" data-variant="logo"><div class="nv-title-tagline-wrap"><p class="site-title">PlainSwipe</p></div>
+</div></a>
+</div>
+	</div>
+
+</div></div>
+<div class="hfg-slot right"><div class="builder-item tablet-left mobile-left">
+<div class="item--inner builder-item--nav-icon" data-section="header_menu_icon" data-item-id="nav-icon">
+	<div class="menu-mobile-toggle item-button navbar-toggle-wrapper">
+	<button type="button" class=" navbar-toggle" value="Navigation Menu" aria-label="Navigation Menu " aria-expanded="false" onclick="if('undefined' !== typeof toggleAriaClick ) { toggleAriaClick() }">
+					<span class="bars">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</span>
+					<span class="screen-reader-text">Navigation Menu</span>
+	</button>
+</div> <!--.navbar-toggle-wrapper-->
+
+
+	</div>
+
+</div></div>							</div>
+		</div>
+	</div>
+</nav>
+
+<div id="header-menu-sidebar" class="header-menu-sidebar tcb menu-sidebar-panel slide_left hfg-pe" data-row-id="sidebar">
+	<div id="header-menu-sidebar-bg" class="header-menu-sidebar-bg">
+				<div class="close-sidebar-panel navbar-toggle-wrapper">
+			<button type="button" class="hamburger is-active  navbar-toggle active" value="Navigation Menu" aria-label="Navigation Menu " aria-expanded="false" onclick="if('undefined' !== typeof toggleAriaClick ) { toggleAriaClick() }">
+								<span class="bars">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</span>
+								<span class="screen-reader-text">
+			Navigation Menu					</span>
+			</button>
+		</div>
+					<div id="header-menu-sidebar-inner" class="header-menu-sidebar-inner tcb ">
+						<div class="builder-item has-nav">
+<div class="item--inner builder-item--primary-menu has_menu" data-section="header_menu_primary" data-item-id="primary-menu">
+	<div class="nv-nav-wrap">
+	<div role="navigation" class="nav-menu-primary style-border-bottom m-style" aria-label="Primary Menu">
+
+		<ul id="nv-primary-navigation-sidebar" class="primary-menu-ul nav-ul menu-mobile">
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-315"><div class="wrap"><a href="./../15c42-web-agency-gb-portfolio/index.html">Products</a></div></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-316"><div class="wrap"><a href="./../15c42-web-agency-gb-contact-us/index.html">Contact Us</a></div></li>
+</ul>	</div>
+</div>
+
+	</div>
+
+</div>					</div>
+	</div>
+</div>
+<div class="header-menu-sidebar-overlay hfg-ov hfg-pe" onclick="if('undefined' !== typeof toggleAriaClick ) { toggleAriaClick() }"></div>
+</div>
+	</header>
+
+	<style>.is-menu-sidebar .header-menu-sidebar { visibility: visible; }.is-menu-sidebar.menu_sidebar_slide_left .header-menu-sidebar { transform: translate3d(0, 0, 0); left: 0; }.is-menu-sidebar.menu_sidebar_slide_right .header-menu-sidebar { transform: translate3d(0, 0, 0); right: 0; }.is-menu-sidebar.menu_sidebar_pull_right .header-menu-sidebar, .is-menu-sidebar.menu_sidebar_pull_left .header-menu-sidebar { transform: translateX(0); }.is-menu-sidebar.menu_sidebar_dropdown .header-menu-sidebar { height: auto; }.is-menu-sidebar.menu_sidebar_dropdown .header-menu-sidebar-inner { max-height: 400px; padding: 20px 0; }.is-menu-sidebar.menu_sidebar_full_canvas .header-menu-sidebar { opacity: 1; }.header-menu-sidebar .menu-item-nav-search { pointer-events: none; }.header-menu-sidebar .menu-item-nav-search .is-menu-sidebar & { pointer-events: unset; }.nav-ul li:focus-within .wrap.active + .sub-menu { opacity: 1; visibility: visible; }.nav-ul li.neve-mega-menu:focus-within .wrap.active + .sub-menu { display: grid; }.nav-ul li > .wrap { display: flex; align-items: center; position: relative; padding: 0 4px; }.nav-ul:not(.menu-mobile):not(.neve-mega-menu) > li > .wrap > a { padding-top: 1px }</style>
+<div class="nv-post-cover" style="background-image:url(./../wp-content/uploads/2023/05/lxdvqu1lno5xulbujb9l.jpeg);">
+<div class="nv-overlay"></div>
+<div class="container"><div class="nv-title-meta-wrap ">
+<h1 class="title entry-title">Anatomy of a PPO loss function</h1>
+<ul class="nv-meta-list"><li class="meta author vcard "><span class="author-name fn">by <a href="./../author/rohitkumar/index.html" title="Posts by rohitkumar" rel="author">rohitkumar</a></span></li></ul>
+</div></div>
+</div>
+
+	
+	<main id="content" class="neve-main">
+
+	<div class="container single-post-container">
+		<div class="row">
+						<article id="post-528" class="nv-single-post-wrap col post-528 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+				<div class="nv-content-wrap entry-content">
+<p>PPO loss function is mainly comprised of two losses</p>
+
+
+
+<ul>
+<li>Policy Loss</li>
+
+
+
+<li>Value Loss</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">Story of the two losses</h4>
+
+
+
+<p>What PPO does is make the language model generate responses that are highly rated (value loss), while forcing it not change the generated responses too much (policy loss)</p>
+
+
+
+<blockquote class="wp-block-quote">
+<p>So what PPO does is make the least amount of modifications to the generated response with a low rating, to a response that has a high rating.</p>
+</blockquote>
+
+
+
+<p>For e.g. If the non-PPO model generated the response to the query, “What is the capital of france?”, as “The capital of France is Paris” which has a high rating from a human then it will leave it as is, but it would not pick the response “The capital of Spain is Madrid”, even though it has a high human rating, because the two responses are very different, and we are forcing the model to stay close to its original response.</p>
+
+
+
+<h4 class="wp-block-heading">Policy Loss</h4>
+
+
+
+<p>Policy loss is comparing the probabilities from the old policy and the new policy. Policy loss would measure how well the current policy (i.e., the model’s strategy for choosing words in a review) aligns with the old policy. For example, if the old policy was to always use positive words (such as “amazing” and “excellent”) in the reviews, and the new policy is to sometimes use positive words and sometimes use neutral or negative words, the policy loss would be high because the two policies are not very similar.</p>
+
+
+
+<pre class="wp-block-code"><code>policy_loss = torch.exp(logprob - old_logprobs)</code></pre>
+
+
+
+<h4 class="wp-block-heading">Value Loss</h4>
+
+
+
+<p>It measures how well the model predicts the expected reward (i.e., the rating) of each response generated. For example, if the model predicts that a particular review will receive a high rating, but in reality it receives a low rating, the value loss would be high because the model’s prediction was incorrect.</p>
+
+
+
+<p><strong>Value loss</strong>&nbsp;is calculated as the squared difference between the predicted rewards and the actual rewards.</p>
+
+
+
+<p><strong>Actual reward</strong>&nbsp;are the scores coming directly from the training set. These are scores given to the query, response sample from the training set. Here is an example of a training sample.</p>
+
+
+
+<pre class="wp-block-code"><code>query: "What is the capital of France?"
+response: "The capital of France is Paris."
+score: 1.0</code></pre>
+
+
+
+<pre class="wp-block-preformatted">Note 1: The actual reward in this case would be 1.0, These scores can come from a variety of sources, such as a reward function, a value function, or a human evaluator. In practice a reward model is trained to generate the scores, given a query, response pair.<br><br>Note 2: A value is subtracted from the actual reward. This value is high if the tokens generated from the PPO trained model are very different from the original reference model, and low if they are the same. This is known as KL divergence.<br><br></pre>
+
+
+
+<p><strong>Predicted reward</strong>&nbsp;is simply the values coming from the value head added to the GPT-2 model being trained. This value head contain an estimation of the rewards that the model is predicting at this training step.</p>
+
+
+
+<p>The predicted reward is calculated as follows:</p>
+
+
+
+<p>Predicted reward = expected reward + advantage</p>
+
+
+
+<p>where:</p>
+
+
+
+<ul>
+<li>expected reward is the expected value of the reward that the agent will receive for a particular action, based on the current policy</li>
+
+
+
+<li>advantage is the difference between the expected reward for the action and the expected reward for the current policy</li>
+</ul>
+
+
+
+<p>In mathematical notation, the predicted reward can be written as:</p>
+
+
+
+<pre class="wp-block-code"><code>R̂(s, a) = ∑r p(r|s, a) + A(s, a)</code></pre>
+
+
+
+<p>where:</p>
+
+
+
+<pre class="wp-block-code"><code>R̂(s, a) is the predicted reward for action a in state s
+p(r|s, a) is the probability of receiving reward r for action a in state s
+A(s, a) is the advantage of action a in state s</code></pre>
+
+
+
+<h4 class="wp-block-heading">Advantages</h4>
+
+
+
+<p><strong>Advantages</strong>&nbsp;are a measure of how good an action is compared to the average action taken by the current policy. To understand the role of advantages in PPO, it is helpful to consider a simple example. Imagine that you are trying to decide which of two paths to take through a maze to reach a treasure chest. One path is longer and more winding, but has a higher probability of leading to the treasure. The other path is shorter and more direct, but has a lower probability of leading to the treasure.</p>
+
+
+
+<p>If you were using the PPO algorithm to make this decision, you would calculate the predicted reward for each path, which is the expected value of the treasure that you would find at the end of each path. You could then calculate the advantage of each path by subtracting the predicted reward for the other path from the predicted reward for the path you are considering. The other path over here is simply the average of all the paths that can be taken.</p>
+
+
+
+<p>The advantage function is calculated as follows:</p>
+
+
+
+<pre class="wp-block-code"><code>A(s, a) = Q(s, a) - V(s)</code></pre>
+
+
+
+<p>where:</p>
+
+
+
+<p>Q(s, a) is the action-value function, which estimates the expected reward for action a in state s</p>
+
+
+
+<pre class="wp-block-code"><code>Q(s, a) is the action-value function, which estimates the expected reward for action a in state s
+V(s) is the state-value function, which estimates the expected reward for being in state s</code></pre>
+
+
+
+<p><strong>State-value function</strong></p>
+
+
+
+<p>There are several ways to calculate the state-value function, depending on the specific problem and the available information. Some common approaches include:</p>
+
+
+
+<ol>
+<li>Monte Carlo evaluation: In this approach, the state-value function is calculated by averaging the rewards that are received over a number of episodes or interactions with the environment. For example, if the agent is in state s and takes a number of actions, the state-value function can be calculated as the average of the rewards that are received for those actions.</li>
+
+
+
+<li>Temporal Difference (TD) learning: In this approach, the state-value function is updated based on the difference between the expected reward and the actual reward that is received. For example, if the agent is in state s and takes an action that leads to a reward of r and a new state s’, the state-value function can be updated using the following equation:</li>
+</ol>
+
+
+
+<pre class="wp-block-code"><code>V(s) = V(s) + α(r + γV(s') - V(s)) 
+
+where α is the learning rate and γ is the discount factor.</code></pre>
+
+
+
+<ol start="3">
+<li>Neural networks: The state-value function can also be approximated using a neural network, which is trained to predict the expected reward for a given state. The neural network can be trained using supervised learning, by providing it with a dataset of states and corresponding rewards, or using reinforcement learning, by providing it with a reward signal as it interacts with the environment.</li>
+</ol>
+
+
+
+<p><strong>Action-value function</strong></p>
+
+
+
+<p>Because then we can subtract the old and new policy logits and then take the exponent to get back the raw unnormalised probabilities. Raw unnormalised probabilities can be large numbers, using log we scale them down so they can be subtracted, and using exp we get back to the raw unnormalized difference between the old and the new policy.</p>
+
+
+
+<p>What is a value head?</p>
+
+
+
+<p>the value head predicts the future rewards of a review based on the current sequence of words in the review. It is an additional output head.</p>
+
+
+
+<p>What is GPT2HeadWithValueModel?</p>
+
+
+
+<pre class="wp-block-code"><code>advantages = rewards&#91;:, t]
+returns = advantages + values # rewards from the training set 
+vf_losses1 = (vpred - returns)**2
+</code></pre>
+
+
+
+<h4 class="wp-block-heading"></h4>
+
+
+
+<h4 class="wp-block-heading"></h4>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity">
+
+
+
+<h4 class="wp-block-heading">KL Controllers</h4>
+
+
+
+<p>In the context of a Proximal Policy Optimization (PPO) algorithm, a KL controller is a mechanism for controlling the trade-off between exploration and exploitation in the algorithm. The KL controller determines the amount of change that is allowed in the policy between successive optimization steps.</p>
+
+
+
+<pre class="wp-block-code"><code>kl = logprob - ref_logprob
+non_score_reward = -self.kl_ctl.value * kl
+non_score_rewards.append(non_score_reward)
+reward = non_score_reward.clone()
+reward&#91;-1] += score
+rewards.append(reward)</code></pre>
+
+
+
+<p>An Adaptive KL Controller adjusts the amount of allowed change in the policy based on the performance of the algorithm. For example, if the algorithm is making good progress, the Adaptive KL Controller may allow more change in the policy in order to explore new areas of the solution space. If the algorithm is not making good progress, the Adaptive KL Controller may restrict the amount of change in the policy in order to focus on exploitation and make better use of the existing solution space.</p>
+
+
+
+<p>A Fixed KL Controller, on the other hand, uses a fixed amount of allowed change in the policy for every optimization step. This means that the algorithm will always explore or exploit the solution space in the same way, regardless of its performance. This can make the algorithm less efficient, because it may not be able to adapt to changing circumstances. However, it can also make the algorithm more stable, because the policy will not change too quickly and the algorithm will not overfit to a specific part of the solution space.</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity">
+
+
+
+<p>actual reward is simply the reward for the current training step (along with the bound that the PPO trained model is not very different from the original reference model).</p>
+
+
+
+<p>The actual reward is calculated by a function that takes three arguments:&nbsp;<code>scores</code>,&nbsp;<code>logprobs</code>, and&nbsp;<code>ref_logprobs</code>. These are likely the scores for each token (action), the log probabilities of the tokens given the current policy, and the log probabilities of the tokens given the reference policy, respectively. This is done to ensure that the model does not start generating responses that are very different from the responses it was generating earlier before training. Scores are updated in each training step. Scores come directly from the additional output head we added to GPT-2. This additional value head represents the reward for the corresponding tokens. So actual reward is simply the reward for the current training step (along with the bound that the PPO trained model is not very different from the original reference model).</p>
+
+
+
+<p>The function then iterates over each of these values and calculates the reward for each action. The reward is composed of two parts: the KL-penalty and the score. The KL-penalty is a measure of the difference between the current policy and the reference policy, and is calculated by subtracting the reference log probability from the current log probability. This difference is then multiplied by a factor&nbsp;<code>kl_ctl.value</code>&nbsp;to calculate the KL-penalty reward.</p>
+
+
+
+<p>The final reward for each action is the sum of the KL-penalty reward and the score. The function returns a list of rewards and a list of KL-penalty rewards.</p>
+
+
+
+<p>Policy loss is difference between words predicted by the current policy and the words predicted by the older policy. This loss exists because we don’t want the policy to change so drastically with each step.</p>
+
+
+
+<pre class="wp-block-code"><code>vf_losses1 = (vpred - returns)**2</code></pre>
+
+
+
+<p>How is the predicted value calculated?</p>
+
+
+
+<p><code>vpred</code>&nbsp;is the predicted value of the current state, which is the expected future reward if the agent were to act optimally from that state. model_input is combined query and response tokens. Logits is&nbsp;<strong>the unnormalized final scores of your model</strong>. You apply softmax to it to get a probability distribution over your classes.</p>
+
+
+
+<p>To calculate the value loss of a state in a language model trained with PPO, we would first need to calculate the returns of the state. The returns of the state are the actual value of the state, since they represent the expected future rewards of the state. Then, we would need to predict the value of the state using the model. The predicted value is the output of the model’s “value function”, which estimates the expected future rewards of the state. Finally, we would calculate the</p>
+
+
+
+<p>What is the value function?</p>
+
+
+
+<p>The value function of the agent would be a function that estimates the expected value of the rewards the agent will receive if it follows its current policy from a given state.</p>
+
+
+
+<p>What is meant by actual value of the state?</p>
+
+
+
+<p>“Actual value” of a state refers to the expected future rewards of the state. The actual value of a state is the “ground truth” value that the model is trying to predict. For instance, if the agent’s current policy is to always move the rook to the left, and this leads to a win with high probability, the actual value of the current state would be high. On the other hand, if the current policy leads to a loss with high probability, the actual value of the state would be low.</p>
+
+
+
+<pre class="wp-block-code"><code>   logits, _, vpred = self.model(model_input)</code></pre>
+
+
+
+<p>In the code above, vpred, is the rewards that the response got. vpred, stands for values predicted. Values stands for the lawyer before softmax is applied, so values are nothing but the predicted rewards</p>
+
+
+
+<pre class="wp-block-code"><code> vf_losses1 = (vpred - returns)**2</code></pre>
+
+
+
+<p>Value loss is the difference between the predicted rewards and the actual rewards. Returns is calculated as follows</p>
+
+
+
+<p>What is state?</p>
+
+
+
+<p>The state of the model at a given time would be the sequence of words that have been generated so far in the review. For instance, if the first few words of the review are “The movie was”, the state of the model at this point would be “The movie was”.</p>
+
+
+
+<p>What is expected rewards of a given state?</p>
+
+
+
+<p>The expected future rewards of a state would be the expected value of the ratings that the review will receive if the model follows its current policy (i.e., its strategy for choosing words) from that state. Expected future rewards is the expected value of the ratings (i.e., the rewards) that the review will receive from viewers. For instance, if the model’s current policy is to always use positive words (such as “amazing” and “excellent”) in the reviews, and this leads to high ratings with high probability, the expected future rewards of the current state would be high. On the other hand, if the current policy leads to low ratings with high probability, the expected future rewards would be low.</p>
+
+
+
+<p>In this line of code,&nbsp;<code>delta</code>&nbsp;is being calculated as the sum of the rewards at time&nbsp;<code>t</code>&nbsp;and the product of the&nbsp;<code>gamma</code>&nbsp;parameter and the&nbsp;<code>nextvalues</code>&nbsp;variable, minus the&nbsp;<code>values</code>&nbsp;at time&nbsp;<code>t</code>.</p>
+
+
+
+<p>The&nbsp;<code>gamma</code>&nbsp;parameter is a value that determines the importance of future rewards. It is typically a value between 0 and 1, where 0 indicates that future rewards are not important and 1 indicates that future rewards are equally as important as current rewards.</p>
+
+
+
+<pre class="wp-block-code"><code> delta = rewards&#91;:, t] + self.ppo_params&#91;'gamma'] * nextvalues - values&#91;:, t]</code></pre>
+
+
+
+<p>The&nbsp;<code>nextvalues</code>&nbsp;variable is likely a tensor of values that represent the predicted future rewards at each time step. The&nbsp;<code>rewards</code>&nbsp;and&nbsp;<code>values</code>&nbsp;tensors likely contain the observed rewards and predicted values at each time step, respectively.</p>
+
+
+
+<p>By subtracting the&nbsp;<code>values</code>&nbsp;at time&nbsp;<code>t</code>&nbsp;from the sum of the rewards at time&nbsp;<code>t</code>&nbsp;and the product of&nbsp;<code>gamma</code>&nbsp;and&nbsp;<code>nextvalues</code>, the&nbsp;<code>delta</code>&nbsp;variable calculates the difference between the predicted future rewards and the observed rewards at each time step. This difference, or error, is used in the calculation of the policy gradient loss.</p>
+
+
+
+<p>‘lam’ is a parameter in the PPO algorithm that stands for lambda. It is used to compute the ‘advantages’ of each action taken in the environment. The advantage of an action is a measure of how good the action is compared to the average action in the current state. The value of ‘lam’ determines how much the advantage of an action depends on the advantage of future actions. A high value of ‘lam’ means that the advantages of future actions will have a large impact on the current action’s advantage, while a low value of ‘lam’ means that the advantages of future actions will have a small impact on the current action’s advantage.</p>
+
+
+
+<p>In the context of training a language model using the Proximal Policy Optimization (PPO) algorithm, “future actions” refer to the words that the model predicts to follow the current query and response. “Current actions” refer to the words in the current query and response. “Future rewards” refer to the rewards that the model receives for correctly predicting the future actions. “Current rewards” refer to the rewards that the model receives for correctly predicting the current actions.</p>
+
+
+
+<p>For example, suppose we have the following query and response:</p>
+
+
+
+<p>Query: “How are you feeling today?”</p>
+
+
+
+<p>Response: “I’m feeling great!”</p>
+
+
+
+<p>If the model is trained to predict the next word in the response given the query and previous words in the response, then the “current actions” would be the words “I’m”, “feeling”, and “great!”, and the “future actions” would be the word “!”. The “current rewards” would be the rewards that the model receives for correctly predicting each of these words, and the “future rewards” would be the reward that the model receives for correctly predicting the word “!”.</p>
+
+
+
+<p>Policy loss is a measure of how good the model’s predictions are at maximizing the rewards. It is calculated by comparing the model’s predicted actions with the actual actions taken and adjusting the model’s parameters to better align the two.</p>
+
+
+
+<p>Value loss is a measure of how well the model predicts the future rewards for each action. It is calculated by comparing the model’s predicted values with the actual rewards received for each action and adjusting the model’s parameters to better align the two.</p>
+
+
+
+<p>For example, if we have a language model that is being trained using PPO to generate responses to a query, we can calculate the policy loss by comparing the model’s predicted response to the actual response given by a human. If the model’s predicted response is very different from the human’s response, then the policy loss will be high, indicating that the model’s predictions are not very good at maximizing the rewards.</p>
+
+
+
+<p>Similarly, we can calculate the value loss by comparing the model’s predicted rewards for each response with the actual rewards received. If the model’s predicted rewards are very different from the actual rewards, then the value loss will be high, indicating that the model is not very good at predicting the future rewards for each action.</p>
+
+
+
+<p>Policy loss is calculated by multiplying the advantages (which represent the expected rewards) by the ratio of the new and old probabilities of the actions taken by the model. This reflects how well the model’s actions match the actions that would maximize the expected rewards under the old policy.</p>
+
+
+
+<p>We iterate through each action (or word) in the generated response and calculate the advantage of adding that word. The advantage of adding that word is calculated by rewards observed and the rewards predicted. the rewards predicted is a difference between the predicted rewards by the adding the next word, and the predicted rewards by adding the current word.</p>
+
+
+
+<p>If we ignore for a moment the predicted rewards by adding the word after the current word, then we are iterating through each word in the generated response and calculating the advantage simply by subtracting the predicted rewards with the observed rewards.</p>
+
+
+
+<pre class="wp-block-code"><code> delta = rewards&#91;:, t] - values&#91;:, t]</code></pre>
+
+
+
+<p>So loss is lower if predicted rewards are close to observed rewards and vice-versa. We are adding to this loss the reward gained by adding the word after the current word. How much we add the loss of the this future word depends on the gamma variable.</p>
+
+
+
+<pre class="wp-block-code"><code>delta += self.ppo_params&#91;'gamma'] * values&#91;:, t + 1]</code></pre>
+
+
+
+<p>Ratio is the change between the new words and the old words. Higher the change bigger the ratio. Bigger the ratio than the loss is amplified. Advantage is the difference between human response and the predicted response.</p>
+
+
+
+<p>forward pass on query, responses – and in return get log probabilities, and scores. Scores are the values before softmax is applied and log probabilities are after softmax is applied.</p>
+</div>
+<div id="comments" class="comments-area">
+		<div id="respond" class="comment-respond nv-is-boxed">
+		<h2 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="./index.html#respond" style="display:none;">Cancel reply</a></small>
+</h2>
+<form action="http://localhost/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+<p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> <span class="required-field-message">Required fields are marked <span class="required">*</span></span></p>
+<p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" autocomplete="name" required="required"></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="text" value="" size="30" maxlength="100" aria-describedby="email-notes" autocomplete="email" required="required"></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="text" value="" size="30" maxlength="200" autocomplete="url"></p>
+<p class="comment-form-comment"><label for="comment">Comment <span class="required">*</span></label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required"></textarea></p>
+<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"> <label for="wp-comment-cookies-consent">Save my name, email, and website in this browser for the next time I comment.</label></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="button button-primary" value="Post Comment"> <input type="hidden" name="comment_post_ID" value="528" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p>
+</form>	</div>
+<!-- #respond -->
+	</div>
+			</article>
+			<div class="nv-sidebar-wrap col-sm-12 nv-right blog-sidebar ">
+		<aside id="secondary" role="complementary">
+		
+		<style type="text/css">.widget_search .search-form .search-submit, .widget_search .search-form .search-field { height: auto; }</style>
+<div id="search-1" class="widget widget_search">
+<form role="search" method="get" class="search-form" action="http://localhost/">
+	<label>
+		<span class="screen-reader-text">Search for...</span>
+	</label>
+	<input type="search" class="search-field" aria-label="Search" placeholder="Search for..." value="" name="s">
+	<button type="submit" class="search-submit nv-submit" aria-label="Search">
+					<span class="nv-search-icon-wrap">
+				<span class="nv-icon nv-search">
+				<svg width="15" height="15" viewbox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1216 832q0-185-131.5-316.5t-316.5-131.5-316.5 131.5-131.5 316.5 131.5 316.5 316.5 131.5 316.5-131.5 131.5-316.5zm512 832q0 52-38 90t-90 38q-54 0-90-38l-343-342q-179 124-399 124-143 0-273.5-55.5t-225-150-150-225-55.5-273.5 55.5-273.5 150-225 225-150 273.5-55.5 273.5 55.5 225 150 150 225 55.5 273.5q0 220-124 399l343 343q37 37 37 90z"></path></svg>
+			</span>			</span>
+			</button>
+	</form>
+</div>
+		<div id="recent-posts-1" class="widget widget_recent_entries">
+		<p class="widget-title">Recent Posts</p>
+		<ul>
+											<li>
+					<a href="./../how-to-come-with-a-startup-idea-if-you-are-bootstrapping-or-an-indie-hacker/index.html">How to come with a startup idea if you are bootstrapping or an indie hacker</a>
+									</li>
+											<li>
+					<a href="./../how-to-execute-on-a-startup-that-is-bootstrapped-and-on-a-tight-budget/index.html">How to execute on a startup that is bootstrapped and on a tight budget?</a>
+									</li>
+											<li>
+					<a href="./../best-online-consultation-app-for-doctors/index.html">Best online consultation app for doctors</a>
+									</li>
+											<li>
+					<a href="./../how-to-find-your-passion/index.html">How to find your passion?</a>
+									</li>
+											<li>
+					<a href="./../how-ai-will-re-invent-engineering-project-management-softwares-of-the-future/index.html">How AI will re-invent Engineering Project Management Softwares of the future.</a>
+									</li>
+					</ul>
+
+		</div>
+<div id="recent-comments-1" class="widget widget_recent_comments">
+<p class="widget-title">Recent Comments</p>
+<ul id="recentcomments"></ul>
+</div>
+			</aside>
+</div>
+		</div>
+	</div>
+
+</main><!--/.neve-main-->
+
+<footer class="site-footer" id="site-footer">
+	<div class="hfg_footer">
+		<div class="footer--row footer-bottom layout-full-contained" id="cb-row--footer-bottom" data-row-id="bottom" data-show-on="desktop">
+	<div class="footer--row-inner footer-bottom-inner footer-content-wrap">
+		<div class="container">
+			<div class="hfg-grid nv-footer-content hfg-grid-bottom row--wrapper row " data-section="hfg_footer_layout_bottom">
+				<div class="hfg-slot left"><div class="builder-item"><div class="item--inner"><div class="component-wrap"><div><p><a href="https://themeisle.com/themes/neve/" rel="nofollow">Neve</a> | Powered by <a href="http://wordpress.org/" rel="nofollow">WordPress</a></p></div></div></div></div></div>
+<div class="hfg-slot c-left"></div>
+<div class="hfg-slot center"></div>							</div>
+		</div>
+	</div>
+</div>
+
+	</div>
+</footer>
+
+</div>
+<!--/.wrapper-->
+<script type="text/javascript" src="./../wp-content/plugins/advanced-accordion-block/lib/js/separate-accordion.js?ver=4.5.0" id="aagb-separate-accordion-js"></script>
+<script type="text/javascript" src="./../wp-content/plugins/advanced-accordion-block/lib/js/group-accordion.js?ver=4.5.0" id="aagb-accordion-group-js"></script>
+<script type="text/javascript" id="neve-script-js-extra">
+/* <![CDATA[ */
+var NeveProperties = {"ajaxurl":".\/\/wp-admin\/admin-ajax.php","nonce":"ec10d7f6d7","isRTL":"","isCustomize":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./../wp-content/themes/neve/assets/js/build/modern/frontend.js?ver=3.6.1" id="neve-script-js" async></script>
+<script type="text/javascript" id="neve-script-js-after">
+	var html = document.documentElement;
+	var theme = html.getAttribute('data-neve-theme') || 'light';
+	var variants = {"logo":{"light":{"src":".\/\/wp-content\/uploads\/2023\/05\/cropped-cropped-logo-1.png","srcset":false,"sizes":"(max-width: 200px) 100vw, 200px"},"dark":{"src":".\/\/wp-content\/uploads\/2023\/05\/cropped-cropped-logo-1.png","srcset":false,"sizes":"(max-width: 200px) 100vw, 200px"},"same":true}};
+
+	function setCurrentTheme( theme ) {
+		var pictures = document.getElementsByClassName( 'neve-site-logo' );
+		for(var i = 0; i<pictures.length; i++) {
+			var picture = pictures.item(i);
+			if( ! picture ) {
+				continue;
+			};
+			var fileExt = picture.src.slice((Math.max(0, picture.src.lastIndexOf(".")) || Infinity) + 1);
+			if ( fileExt === 'svg' ) {
+				picture.removeAttribute('width');
+				picture.removeAttribute('height');
+				picture.style = 'width: var(--maxwidth)';
+			}
+			var compId = picture.getAttribute('data-variant');
+			if ( compId && variants[compId] ) {
+				var isConditional = variants[compId]['same'];
+				if ( theme === 'light' || isConditional || variants[compId]['dark']['src'] === false ) {
+					picture.src = variants[compId]['light']['src'];
+					picture.srcset = variants[compId]['light']['srcset'] || '';
+					picture.sizes = variants[compId]['light']['sizes'];
+					continue;
+				};
+				picture.src = variants[compId]['dark']['src'];
+				picture.srcset = variants[compId]['dark']['srcset'] || '';
+				picture.sizes = variants[compId]['dark']['sizes'];
+			};
+		};
+	};
+
+	var observer = new MutationObserver(function(mutations) {
+		mutations.forEach(function(mutation) {
+			if (mutation.type == 'attributes') {
+				theme = html.getAttribute('data-neve-theme');
+				setCurrentTheme(theme);
+			};
+		});
+	});
+
+	observer.observe(html, {
+		attributes: true
+	});
+function toggleAriaClick() { function toggleAriaExpanded(toggle = 'true') { document.querySelectorAll('button.navbar-toggle').forEach(function(el) { if ( el.classList.contains('caret-wrap') ) { return; } el.setAttribute('aria-expanded', 'true' === el.getAttribute('aria-expanded') ? 'false' : toggle); }); } toggleAriaExpanded(); if ( document.body.hasAttribute('data-ftrap-listener') ) { return; } document.body.setAttribute('data-ftrap-listener', 'true'); document.addEventListener('ftrap-end', function() { toggleAriaExpanded('false'); }); }
+</script>
+<script type="text/javascript" src="./../wp-includes/js/comment-reply.min.js?ver=6.2.2" id="comment-reply-js"></script>
+</body>
+
+</html>
