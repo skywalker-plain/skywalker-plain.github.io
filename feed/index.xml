@@ -12,7 +12,7 @@
 	<atom:link href="./index.html" rel="self" type="application/rss+xml" />
 	<link>./../index.html</link>
 	<description></description>
-	<lastBuildDate>Wed, 31 May 2023 20:27:34 +0000</lastBuildDate>
+	<lastBuildDate>Thu, 01 Jun 2023 16:48:32 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -1384,19 +1384,9 @@ def reward_fn(samples: List&#91;str]) -&gt; List&#91;float]:
 				<category><![CDATA[Uncategorized]]></category>
 		<guid isPermaLink="false">./../index.html?p=533</guid>
 
-					<description><![CDATA[Table of Contents Step 1: The Interpreter Find or write an interpreter for the code that you want your model to generate. This is not just limited to code. It can be any kind of an interpreter. There are many different kinds of interpreters, but some common examples include: Step 2: Reward Function Here is&#8230;&#160;<a href="./../how-to-use-rlhf-to-train-a-model-to-generate-code-that-compiles-tutorial/index.html" class="" rel="bookmark">Read More &#187;<span class="screen-reader-text">How to use RLHF to train a model to generate code that compiles (Tutorial)</span></a>]]></description>
+					<description><![CDATA[Step 1: The Interpreter Find or write an interpreter for the code that you want your model to generate. This is not just limited to code. It can be any kind of an interpreter. There are many different kinds of interpreters, but some common examples include: Step 2: Reward Function Here is an example :&#8230;&#160;<a href="./../how-to-use-rlhf-to-train-a-model-to-generate-code-that-compiles-tutorial/index.html" class="" rel="bookmark">Read More &#187;<span class="screen-reader-text">How to use RLHF to train a model to generate code that compiles (Tutorial)</span></a>]]></description>
 										<content:encoded><![CDATA[
-<p>Table of Contents</p>
-
-
-
-<ul>
-<li><a href="https://plainswipe.com/index.html%3Fp=939.html#step-1-the-interpreter">Step 1: The Interpreter</a></li>
-
-
-
-<li><a href="https://plainswipe.com/index.html%3Fp=939.html#step-2-reward-function">Step 2: Reward Function</a></li>
-</ul>
+<div class="wp-block-table-of-contents-block-table-of-contents-block"><div class="eb-parent-wrapper eb-parent-eb-toc-qh5kgkw "><div class="eb-toc-qh5kgkw eb-toc-container eb-toc-collapsible eb-toc-initially-not-collapsed eb-toc-is-not-sticky eb-toc-not-scrollToTop    " data-scroll-top="false" data-collapsible="true" data-hide-mobile="false" data-sticky="false" data-scroll-target="scroll_to_toc"><div class="eb-toc-header"><div class="eb-toc-title">Table of Contents</div></div><div class="eb-toc-wrapper   " data-headers="[{&quot;level&quot;:4,&quot;content&quot;:&quot;Step 1: The Interpreter&quot;,&quot;text&quot;:&quot;Step 1: The Interpreter&quot;,&quot;link&quot;:&quot;step-1-the-interpreter&quot;},{&quot;level&quot;:4,&quot;content&quot;:&quot;Step 2: Reward Function&quot;,&quot;text&quot;:&quot;Step 2: Reward Function&quot;,&quot;link&quot;:&quot;step-2-reward-function&quot;}]" data-visible="[true,true,true,true,true,true]" data-smooth="true" data-top-offset=""><div class="eb-toc__list-wrap"><ul class="eb-toc__list"><li style="padding-bottom:10px"><a href="#step-1-the-interpreter">Step 1: The Interpreter</a></li><li style="padding-top:10px;padding-bottom:10px"><a href="#step-2-reward-function">Step 2: Reward Function</a></li></ul></div></div></div></div></div>
 
 
 
@@ -1477,6 +1467,8 @@ def reward_fn(samples: List&#91;str]) -&gt; List&#91;float]:
 
 
 <p>Refer to my&nbsp;<a href="https://plainswipe.com/rlhf-tutorial-using-trlx">previous post</a>&nbsp;to learn the basics RLHF training.</p>
+
+
 ]]></content:encoded>
 					
 					<wfw:commentRss>./../how-to-use-rlhf-to-train-a-model-to-generate-code-that-compiles-tutorial/feed/index.html</wfw:commentRss>
@@ -1508,57 +1500,7 @@ def reward_fn(samples: List&#91;str]) -&gt; List&#91;float]:
 
 
 
-<p>Table of Contents</p>
-
-
-
-<ul>
-<li><a href="https://plainswipe.com/index.html%3Fp=942.html#what-is-policy-network-in-ppo">What is policy network in PPO?</a></li>
-
-
-
-<li><a href="https://plainswipe.com/index.html%3Fp=942.html#what-is-a-ppo-loss-function">What is a PPO loss function?</a></li>
-
-
-
-<li><a href="https://plainswipe.com/index.html%3Fp=942.html#a-complete-example-of-ppo-using-pytorch">A complete example of PPO using PyTorch</a></li>
-
-
-
-<li><a href="https://plainswipe.com/index.html%3Fp=942.html#an-example-of-how-the-calculateadvantages-function-might-be-implemented-in-pytorch">An example of how the calculate_advantages function might be implemented in PyTorch:</a></li>
-
-
-
-<li><a href="https://plainswipe.com/index.html%3Fp=942.html#an-example-of-how-the-getrewards-function-might-be-implemented-in-pytorch">An example of how the get_rewards function might be implemented in PyTorch:</a></li>
-
-
-
-<li><a href="https://plainswipe.com/index.html%3Fp=942.html#what-rewards-and-predictions-are-in-the-context-of-training-a-language-model-with-prompts-human-raters-using-ppo">What rewards and predictions are, in the context of training a language model with prompts, human raters, using PPO</a></li>
-
-
-
-<li><a href="https://plainswipe.com/index.html%3Fp=942.html#an-example-of-how-the-ppo-loss-can-be-low-for-a-highscoring-response-and-accurate-predictions-in-pytorch">An example of how the PPO loss can be low for a high-scoring response and accurate predictions in PyTorch:</a></li>
-
-
-
-<li><a href="https://plainswipe.com/index.html%3Fp=942.html#an-example-of-how-the-ppo-loss-can-be-high-for-a-lowscoring-response-and-inaccurate-predictions-in-pytorch">An example of how the PPO loss can be high for a low-scoring response and inaccurate predictions in PyTorch</a></li>
-
-
-
-<li><a href="https://plainswipe.com/index.html%3Fp=942.html#what-are-surrogate-and-clipping-loss-and-why-do-we-need-them">What are surrogate and clipping loss, and why do we need them?</a></li>
-
-
-
-<li><a href="https://plainswipe.com/index.html%3Fp=942.html#an-example-of-how-to-calculate-advantages-for-a-highscoring-response-and-accurate-predictions-in-pytorch">An example of how to calculate advantages for a high-scoring response and accurate predictions in PyTorch</a></li>
-
-
-
-<li><a href="https://plainswipe.com/index.html%3Fp=942.html#a-sample-dataset-for-language-model-training-using-ppo">A sample dataset for language model training using PPO</a></li>
-
-
-
-<li><a href="https://plainswipe.com/index.html%3Fp=942.html#conclusion">Conclusion</a></li>
-</ul>
+<div class="wp-block-table-of-contents-block-table-of-contents-block"><div class="eb-parent-wrapper eb-parent-eb-toc-j70ag4r "><div class="eb-toc-j70ag4r eb-toc-container eb-toc-not-collapsible eb-toc-initially-not-collapsed eb-toc-is-not-sticky eb-toc-not-scrollToTop    " data-scroll-top="false" data-collapsible="false" data-hide-mobile="false" data-sticky="false" data-scroll-target="scroll_to_toc"><div class="eb-toc-header"><div class="eb-toc-title">Table of Contents</div></div><div class="eb-toc-wrapper   " data-headers="[{&quot;level&quot;:4,&quot;content&quot;:&quot;What is policy network in PPO?&quot;,&quot;text&quot;:&quot;What is policy network in PPO?&quot;,&quot;link&quot;:&quot;what-is-policy-network-in-ppo&quot;},{&quot;level&quot;:4,&quot;content&quot;:&quot;What is a PPO loss function?&quot;,&quot;text&quot;:&quot;What is a PPO loss function?&quot;,&quot;link&quot;:&quot;what-is-a-ppo-loss-function&quot;},{&quot;level&quot;:4,&quot;content&quot;:&quot;A complete example of PPO using PyTorch&quot;,&quot;text&quot;:&quot;A complete example of PPO using PyTorch&quot;,&quot;link&quot;:&quot;a-complete-example-of-ppo-using-pytorch&quot;},{&quot;level&quot;:4,&quot;content&quot;:&quot;An example of how the&nbsp;<code&gt;calculate_advantages</code&gt;&nbsp;function might be implemented in PyTorch:&quot;,&quot;text&quot;:&quot;An example of how the&nbsp;calculate_advantages&nbsp;function might be implemented in PyTorch:&quot;,&quot;link&quot;:&quot;an-example-of-how-the-calculate_advantages-function-might-be-implemented-in-pytorch&quot;},{&quot;level&quot;:4,&quot;content&quot;:&quot;An example of how the&nbsp;<code&gt;get_rewards</code&gt;&nbsp;function might be implemented in PyTorch:&quot;,&quot;text&quot;:&quot;An example of how the&nbsp;get_rewards&nbsp;function might be implemented in PyTorch:&quot;,&quot;link&quot;:&quot;an-example-of-how-the-get_rewards-function-might-be-implemented-in-pytorch&quot;},{&quot;level&quot;:4,&quot;content&quot;:&quot;What rewards and predictions are, in the context of training a language model with prompts, human raters, using PPO&quot;,&quot;text&quot;:&quot;What rewards and predictions are, in the context of training a language model with prompts, human raters, using PPO&quot;,&quot;link&quot;:&quot;what-rewards-and-predictions-are-in-the-context-of-training-a-language-model-with-prompts-human-raters-using-ppo&quot;},{&quot;level&quot;:4,&quot;content&quot;:&quot;An example of how the PPO loss can be low for a high-scoring response and accurate predictions in PyTorch:&quot;,&quot;text&quot;:&quot;An example of how the PPO loss can be low for a high-scoring response and accurate predictions in PyTorch:&quot;,&quot;link&quot;:&quot;an-example-of-how-the-ppo-loss-can-be-low-for-a-high-scoring-response-and-accurate-predictions-in-pytorch&quot;},{&quot;level&quot;:4,&quot;content&quot;:&quot;An example of how the PPO loss can be high for a low-scoring response and inaccurate predictions in PyTorch&quot;,&quot;text&quot;:&quot;An example of how the PPO loss can be high for a low-scoring response and inaccurate predictions in PyTorch&quot;,&quot;link&quot;:&quot;an-example-of-how-the-ppo-loss-can-be-high-for-a-low-scoring-response-and-inaccurate-predictions-in-pytorch&quot;},{&quot;level&quot;:4,&quot;content&quot;:&quot;What are surrogate and clipping loss, and why do we need them?&quot;,&quot;text&quot;:&quot;What are surrogate and clipping loss, and why do we need them?&quot;,&quot;link&quot;:&quot;what-are-surrogate-and-clipping-loss-and-why-do-we-need-them&quot;},{&quot;level&quot;:4,&quot;content&quot;:&quot;An example of how to calculate advantages for a high-scoring response and accurate predictions in PyTorch&quot;,&quot;text&quot;:&quot;An example of how to calculate advantages for a high-scoring response and accurate predictions in PyTorch&quot;,&quot;link&quot;:&quot;an-example-of-how-to-calculate-advantages-for-a-high-scoring-response-and-accurate-predictions-in-pytorch&quot;},{&quot;level&quot;:4,&quot;content&quot;:&quot;A sample dataset for language model training using PPO&quot;,&quot;text&quot;:&quot;A sample dataset for language model training using PPO&quot;,&quot;link&quot;:&quot;a-sample-dataset-for-language-model-training-using-ppo&quot;},{&quot;level&quot;:4,&quot;content&quot;:&quot;Conclusion&quot;,&quot;text&quot;:&quot;Conclusion&quot;,&quot;link&quot;:&quot;conclusion&quot;}]" data-visible="[true,true,true,true,true,true]" data-smooth="true" data-top-offset=""><div class="eb-toc__list-wrap"><ul class="eb-toc__list"><li style="padding-bottom:10px"><a href="#what-is-policy-network-in-ppo">What is policy network in PPO?</a></li><li style="padding-top:10px;padding-bottom:10px"><a href="#what-is-a-ppo-loss-function">What is a PPO loss function?</a></li><li style="padding-top:10px;padding-bottom:10px"><a href="#a-complete-example-of-ppo-using-pytorch">A complete example of PPO using PyTorch</a></li><li style="padding-top:10px;padding-bottom:10px"><a href="#an-example-of-how-the-calculate_advantages-function-might-be-implemented-in-pytorch">An example of how the&nbsp;calculate_advantages&nbsp;function might be implemented in PyTorch:</a></li><li style="padding-top:10px;padding-bottom:10px"><a href="#an-example-of-how-the-get_rewards-function-might-be-implemented-in-pytorch">An example of how the&nbsp;get_rewards&nbsp;function might be implemented in PyTorch:</a></li><li style="padding-top:10px;padding-bottom:10px"><a href="#what-rewards-and-predictions-are-in-the-context-of-training-a-language-model-with-prompts-human-raters-using-ppo">What rewards and predictions are, in the context of training a language model with prompts, human raters, using PPO</a></li><li style="padding-top:10px;padding-bottom:10px"><a href="#an-example-of-how-the-ppo-loss-can-be-low-for-a-high-scoring-response-and-accurate-predictions-in-pytorch">An example of how the PPO loss can be low for a high-scoring response and accurate predictions in PyTorch:</a></li><li style="padding-top:10px;padding-bottom:10px"><a href="#an-example-of-how-the-ppo-loss-can-be-high-for-a-low-scoring-response-and-inaccurate-predictions-in-pytorch">An example of how the PPO loss can be high for a low-scoring response and inaccurate predictions in PyTorch</a></li><li style="padding-top:10px;padding-bottom:10px"><a href="#what-are-surrogate-and-clipping-loss-and-why-do-we-need-them">What are surrogate and clipping loss, and why do we need them?</a></li><li style="padding-top:10px;padding-bottom:10px"><a href="#an-example-of-how-to-calculate-advantages-for-a-high-scoring-response-and-accurate-predictions-in-pytorch">An example of how to calculate advantages for a high-scoring response and accurate predictions in PyTorch</a></li><li style="padding-top:10px;padding-bottom:10px"><a href="#a-sample-dataset-for-language-model-training-using-ppo">A sample dataset for language model training using PPO</a></li><li style="padding-top:10px;padding-bottom:10px"><a href="#conclusion">Conclusion</a></li></ul></div></div></div></div></div>
 
 
 
