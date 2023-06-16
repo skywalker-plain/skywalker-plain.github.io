@@ -2,7 +2,7 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
 		<loc>./index.html</loc>
-		<lastmod>2023-06-12T15:09:19+00:00</lastmod>
+		<lastmod>2023-06-16T08:24:38+00:00</lastmod>
 	</url>
 	<url>
 		<loc>./the-one-thing-all-successful-startups-do-and-its-not-what-you-think/index.html</loc>
@@ -286,6 +286,13 @@
 		<lastmod>2023-06-12T15:09:19+00:00</lastmod>
 		<image:image>
 			<image:loc>./wp-content/uploads/2023/06/brandBuilding.png</image:loc>
+		</image:image>
+	</url>
+	<url>
+		<loc>./leading-with-purpose-find-your-ideal-company-type-for-impactful-leadership/index.html</loc>
+		<lastmod>2023-06-16T08:24:38+00:00</lastmod>
+		<image:image>
+			<image:loc>./wp-content/uploads/2023/06/pexels-miguel-a-padrinan-194094-scaled.jpg</image:loc>
 		</image:image>
 	</url>
 </urlset>
