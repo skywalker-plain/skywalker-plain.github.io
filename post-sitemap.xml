@@ -2,7 +2,7 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
 		<loc>./index.html</loc>
-		<lastmod>2023-07-07T09:25:24+00:00</lastmod>
+		<lastmod>2023-07-12T17:53:57+00:00</lastmod>
 	</url>
 	<url>
 		<loc>./the-one-thing-all-successful-startups-do-and-its-not-what-you-think/index.html</loc>
@@ -307,6 +307,27 @@
 		<lastmod>2023-07-07T09:25:24+00:00</lastmod>
 		<image:image>
 			<image:loc>./wp-content/uploads/2023/06/image-18.png</image:loc>
+		</image:image>
+	</url>
+	<url>
+		<loc>./gpt-4-details-leaked/index.html</loc>
+		<lastmod>2023-07-12T16:49:45+00:00</lastmod>
+		<image:image>
+			<image:loc>./wp-content/uploads/2023/07/pexels-meo-724994-scaled.jpg</image:loc>
+		</image:image>
+	</url>
+	<url>
+		<loc>./gpt-4-secret-sauce/index.html</loc>
+		<lastmod>2023-07-12T17:07:37+00:00</lastmod>
+		<image:image>
+			<image:loc>./wp-content/uploads/2023/07/Fig-1-3-scaled-1.jpg</image:loc>
+		</image:image>
+	</url>
+	<url>
+		<loc>./managing-model-training-costs/index.html</loc>
+		<lastmod>2023-07-12T17:53:57+00:00</lastmod>
+		<image:image>
+			<image:loc>./wp-content/uploads/2023/07/pexels-karolina-grabowska-7680366-scaled.jpg</image:loc>
 		</image:image>
 	</url>
 </urlset>

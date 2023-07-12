@@ -12,7 +12,7 @@
 	<atom:link href="./index.html" rel="self" type="application/rss+xml" />
 	<link>./../../../index.html</link>
 	<description></description>
-	<lastBuildDate>Fri, 07 Jul 2023 09:25:24 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 12 Jul 2023 17:53:57 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,6 +20,443 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.2.2</generator>
 	<item>
+		<title>Managing Model Training Costs</title>
+		<link>./../../../managing-model-training-costs/index.html</link>
+					<comments>./../../../managing-model-training-costs/index.html#respond</comments>
+		
+		<dc:creator><![CDATA[rohitkumar]]></dc:creator>
+		<pubDate>Wed, 12 Jul 2023 17:49:54 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<guid isPermaLink="false">./../../../index.html?p=818</guid>
+
+					<description><![CDATA[<p>The research arm of SemiAnalysis has done surveys of many startups and enterprises and arrived at ~$1.5 per SXM A100 GPU per hour as a baseline cost for large clusters of 256 GPUs with NVLink and 1.6T networking. Some companies have better deals with AWS, Azure, Oracle Cloud, CoreWeave, etc., but this is a baseline.&#8230;&#160;<a href="./../../../managing-model-training-costs/index.html" class="" rel="bookmark">Read More &#187;<span class="screen-reader-text">Managing Model Training Costs</span></a></p>
+<p>The post <a rel="nofollow" href="./../../../managing-model-training-costs/index.html">Managing Model Training Costs</a> appeared first on <a rel="nofollow" href="./../../../index.html">PlainSwipe</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[
+<p>The <a href="https://www.semianalysis.com/p/the-ai-brick-wall-a-practical-limit">research arm of SemiAnalysis</a> has done surveys of many startups and enterprises and arrived at ~$1.5 per SXM A100 GPU per hour as a baseline cost for large clusters of 256 GPUs with NVLink and 1.6T networking. Some companies have better deals with AWS, Azure, Oracle Cloud, <a href="https://www.coreweave.com/">CoreWeave</a>, etc., but this is a baseline. For example, the list price at Azure is only $1.36 per hour, but signing up for the 2020 released A100 for three years is not something most want to do. On-premises will also be cheaper over multiple years if utilization rates are high, but that is very difficult for most enterprises and startups to commit to/achieve.</p>
+
+
+
+<h3 class="wp-block-heading">Affordable AI Training: MosaicML Claims GPT-3 Level Models at a Fraction of the Cost</h3>
+
+
+
+<p><a href="https://www.mosaicml.com/">MosaicML</a>, a company in the AI field, claims they can train models that are as good as GPT-3 (which is a super impressive model) for less than $500,000! They can even train smaller models for about $2,500,000. That sounds like a lot, but in the AI world, it&#8217;s actually quite affordable.</p>
+
+
+
+<p>According to some research, the baseline cost for a big cluster of 256 GPUs (that&#8217;s a lot!) with all the fancy networking stuff is around $1.5 per GPU per hour.</p>
+
+
+
+<p>You know, training AI models is not just about having a powerful machine and pressing a button. There are many other things to consider that can be quite costly &#8211; the people involved, <a href="https://www.datacamp.com/blog/top-mlops-tools">ML Ops tools</a> (which help manage the whole process), gathering and preparing the data, dealing with failures and restoring the process, and even handling situations where we want the model to learn from just a few examples. All of these components can add up to be quite expensive.</p>
+
+
+
+<h3 class="wp-block-heading">The Power of Smaller Models: Chinchilla Scaling Observations Redefine Cost-Effective AI Training</h3>
+
+
+
+<p>Nowadays, many people are following something called the <a href="https://www.superdatascience.com/podcast/the-chinchilla-scaling-laws">Chinchilla scaling observations</a>. These observations tell us that it&#8217;s more cost-effective to train smaller models with more data rather than training the biggest and most advanced models. While there are some criticisms of these observations, the overall idea is that we can get good results without spending too much money by focusing on smaller models with lots of data.</p>
+
+
+
+<p>Imagine we have a really big model with lots and lots of parameters. These parameters help the model learn and make smart decisions. Right now, we can train a model with about 1 trillion parameters, and it would cost around $300 million to do so. That&#8217;s a huge amount of money!</p>
+
+
+
+<p>To train such a big model, we would need a lot of powerful machines called A100s. If we had 100,000 of these machines working together, it would take about three months to finish training the model. This is something that big tech companies like Meta, Microsoft, Amazon, and others can afford because they have lots of money to spend on these machines.</p>
+
+
+
+<h3 class="wp-block-heading">Scaling Limits: The Challenges of Training Mega-Models with Trillions of Parameters</h3>
+
+
+
+<p>But what if we wanted to go even bigger? Let&#8217;s say we wanted to train a model with 10 trillion parameters. <a href="https://mpost.io/ai-model-training-costs-are-expected-to-rise-from-100-million-to-500-million-by-2030/">The training costs would go up to around $30 billion</a>! That&#8217;s an enormous amount of money, even for the big tech companies. We would need one million of those A100 machines working together, and it would take more than two years to complete the training. It&#8217;s a really long time!</p>
+
+
+
+<p>What&#8217;s more, the amount of power needed for all those machines and the networking required would be like having a nuclear reactor generating electricity. It&#8217;s not something we can easily handle with our current technology.</p>
+
+
+
+<p>So, training models with trillions and trillions of parameters is not practical right now. It would cost too much money and take too long. Plus, there are limitations in terms of how accurate these models can be and how well they can be compressed.</p>
+
+
+
+<h3 class="wp-block-heading">Affordable Alternatives: Training AI Models on a Budget</h3>
+
+
+
+<p>For organizations that don&#8217;t have the financial resources to train large-scale AI models with billions or trillions of parameters, there are still options available. Here are a few recommendations:</p>
+
+
+
+<ol>
+<li>Start small: Instead of aiming for the largest and most complex models, begin with smaller models that have fewer parameters. While they may not have the same level of performance as the massive models, they can still provide useful insights and results.</li>
+
+
+
+<li>Use pre-trained models: Many pre-trained models are available that have been trained by big tech companies or research institutions. These models have already undergone extensive training and can be fine-tuned or adapted to suit specific tasks or domains. By using pre-trained models, organizations can save on the cost of training from scratch.</li>
+
+
+
+<li>Focus on data quality and preprocessing: Data plays a crucial role in training AI models. Ensuring high-quality data and investing in data preprocessing techniques can have a significant impact on model performance. By optimizing data collection, cleaning, and labeling processes, organizations can improve their models&#8217; accuracy and effectiveness.</li>
+</ol>
+
+
+
+<h3 class="wp-block-heading">Optimizing Large Language Models: Unleashing Task-Specific Efficiency with Parameter Selection and Pruning</h3>
+
+
+
+<p>To determine which parameters of a large language model are most suitable for your specific task, you can follow a process called &#8220;parameter selection&#8221; or &#8220;parameter pruning.&#8221; Here&#8217;s a step-by-step guide on how to do it:</p>
+
+
+
+<ul>
+<li><a href="https://medium.com/@shaistha24/how-to-choose-a-pre-trained-model-afd3dbd75b45">Pretrained Model Selection</a>: Start by selecting a large pretrained language model that aligns with your task. Models like GPT-3 or BERT are commonly used as a starting point due to their extensive pretraining on diverse datasets.</li>
+
+
+
+<li>Task-Specific Dataset: Gather a dataset that is relevant to your specific task. This dataset should consist of labeled examples that represent the input-output pairs you want the model to learn.</li>
+
+
+
+<li>Parameter Importance Calculation: Apply a method to calculate the importance or relevance of each parameter based on the extracted activations. One popular technique is &#8220;<a href="https://pml4dc.github.io/iclr2020/pdf/PML4DC2020_17.pdf">magnitude-based pruning</a>&#8221; which ranks parameters based on their absolute values.</li>
+
+
+
+<li>Parameter Pruning: Set a threshold value to determine which parameters to keep and which ones to discard. Parameters with values below the threshold are considered less important and can be pruned (removed) from the model.</li>
+
+
+
+<li>Fine-tuning: Once you have pruned the unnecessary parameters, you can fine-tune the remaining parameters using your task-specific dataset. During fine-tuning, only the remaining parameters are updated, while the pruned parameters stay fixed.</li>
+
+
+
+<li>Evaluation and Iteration: Evaluate the performance of the fine-tuned model on your task-specific validation or test dataset. If the results are satisfactory, you can proceed with deploying the model. Otherwise, you may need to iterate the process by adjusting the pruning threshold or exploring different model architectures or hyperparameters.</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">Conclusion</h3>
+
+
+
+<p>By starting with smaller models, leveraging pre-trained models, and focusing on data quality and preprocessing, organizations can make significant progress. In the end, it&#8217;s not always about having the biggest and most complex model, but rather finding the right balance between model size, data quality, and computational resources.</p>
+<p>The post <a rel="nofollow" href="./../../../managing-model-training-costs/index.html">Managing Model Training Costs</a> appeared first on <a rel="nofollow" href="./../../../index.html">PlainSwipe</a>.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>./../../../managing-model-training-costs/feed/index.html</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>GPT-4 Secret Sauce</title>
+		<link>./../../../gpt-4-secret-sauce/index.html</link>
+					<comments>./../../../gpt-4-secret-sauce/index.html#respond</comments>
+		
+		<dc:creator><![CDATA[rohitkumar]]></dc:creator>
+		<pubDate>Wed, 12 Jul 2023 17:07:37 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<guid isPermaLink="false">./../../../index.html?p=815</guid>
+
+					<description><![CDATA[<p>Unveiling the Secret Sauce: How Sparse Model Architecture is Revolutionizing AI Inference! The Scaling Challenge: Why Size Isn&#8217;t Everything Have you heard about these dense transformer model architectures that companies like OpenAI, Google, Meta, TII, MosaicML, and a bunch of others are using? They&#8217;re all the rage in the AI world. But let me tell&#8230;&#160;<a href="./../../../gpt-4-secret-sauce/index.html" class="" rel="bookmark">Read More &#187;<span class="screen-reader-text">GPT-4 Secret Sauce</span></a></p>
+<p>The post <a rel="nofollow" href="./../../../gpt-4-secret-sauce/index.html">GPT-4 Secret Sauce</a> appeared first on <a rel="nofollow" href="./../../../index.html">PlainSwipe</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[
+<h3 class="wp-block-heading">Unveiling the Secret Sauce: How Sparse Model Architecture is Revolutionizing AI Inference!</h3>
+
+
+
+<p>The Scaling Challenge: Why Size Isn&#8217;t Everything</p>
+
+
+
+<p>Have you heard about these dense transformer model architectures that companies like OpenAI, Google, Meta, TII, MosaicML, and a bunch of others are using? They&#8217;re all the rage in the AI world. But let me tell ya, they&#8217;re not perfect when it comes to scaling this stuff up.</p>
+
+
+
+<h3 class="wp-block-heading">Inference: The Real Battle in AI Scaling</h3>
+
+
+
+<p>Here&#8217;s the deal: the real challenge with scaling AI isn&#8217;t just about making these models bigger and beefier. Nah, the real brick wall hits when it comes to inference. That&#8217;s the process of generating predictions or outputs from these massive models. And let me tell ya, it&#8217;s a computational nightmare.</p>
+
+
+
+<p>Think about it like this: as these models get larger, the amount of computing power needed for each inference task skyrockets. It&#8217;s like trying to power a rocket ship with a lawnmower engine. Just ain&#8217;t gonna cut it, my friends.</p>
+
+
+
+<p>So, what&#8217;s the solution? Well, the key is to decouple the training compute from the inference compute. We wanna separate the resources used for training these models from the ones needed to generate predictions. That way, we can use our computational firepower more efficiently. It&#8217;s all about optimizing the process, baby!</p>
+
+
+
+<p>Have you ever wondered how computers can think and make smart decisions, like answering questions or recognizing pictures? Well, one way they do it is by using big models with lots of special parts called parameters.</p>
+
+
+
+<p>Now, when these models get really big, they can become a bit too slow and need a lot of power to work properly. It&#8217;s like trying to run a marathon with a heavy backpack on. Not very efficient, right?</p>
+
+
+
+<p>So, to make things faster and more efficient, scientists came up with something called &#8220;sparse models.&#8221; These models are like superheroes that know how to save energy and work smartly.</p>
+
+
+
+<h3 class="wp-block-heading">Here&#8217;s how it works</h3>
+
+
+
+<p>Imagine you have a big group of superheroes, but not all of them need to do something for every task. Some superheroes are really good at solving math problems, while others are great at recognizing animals. So, instead of using all the superheroes all the time, we only use the ones that are the best fit for the job.</p>
+
+
+
+<p>In the same way, sparse models only activate or use the special parts (parameters) that are needed for a specific task. They don&#8217;t waste energy or time on things that aren&#8217;t necessary. It&#8217;s like having a special toolbox with just the right tools for the job, instead of carrying around a heavy toolbox with all the tools in the world.</p>
+
+
+
+<p>By using sparse models, computers can work faster, use less power, and still do a great job at thinking and making smart decisions. It&#8217;s like having a super-smart robot assistant that knows exactly what it needs to do without wasting any energy.</p>
+
+
+
+<p>And that&#8217;s where the concept of sparse model architecture comes into play. In a sparse model, not every parameter is activated during inference. We don&#8217;t need &#8217;em all firing at once. Instead, we only activate the specific parameters that are relevant to the task at hand. It&#8217;s like tuning your engine to run on exactly the right fuel for the job. Efficiency, my friends!</p>
+
+
+
+<p>So, next time you hear about sparse models, remember that they&#8217;re like superheroes that make computers faster and more efficient. Pretty cool, huh?</p>
+
+
+
+<p>Now, I gotta say, sparse model architecture ain&#8217;t a one-size-fits-all kinda deal. It&#8217;s all about finding that sweet spot between inference efficiency and model performance. It&#8217;s a delicate balancing act, like walking a tightrope over a pool of hungry sharks. Okay, maybe not that dramatic, but you get my point.</p>
+
+
+
+<p>Figuring out which parts of the sparse model to use for each task is like having a clever system that knows how to choose the right tool for the job.</p>
+
+
+
+<p>You see, scientists and engineers train these models with lots and lots of examples. It&#8217;s like teaching the model to learn and get really good at different tasks. During this training process, the model learns which parts are good at what. It&#8217;s kind of like training a dog to fetch a ball or sit on command. The model learns which parts are best suited for different tasks, just like the dog learns different tricks.</p>
+
+
+
+<p>Once the model has learned from all those examples, it becomes really smart at recognizing patterns. So, when it&#8217;s time to use the model for a specific task, it knows which parts to activate. It&#8217;s like the model&#8217;s brain says, &#8220;Hey, I&#8217;ve seen this kind of task before, and I know which parts are best for it!&#8221;</p>
+
+
+
+<p>Think of it like a superhero team. Each superhero has their own special power, right? When a problem comes up, they know which superhero&#8217;s power is the most useful for solving it. It&#8217;s the same idea with the sparse model. It has different parts (like superheroes) that know which ones to use for different tasks.</p>
+
+
+
+<p>By using all the knowledge it gained during training, the model can quickly figure out which parts to activate for each task it faces. It&#8217;s a bit like having a super-smart assistant who knows exactly which tools to use for different jobs.</p>
+
+
+
+<p>So, the model becomes really good at choosing the right parts to use based on what it needs to do. It&#8217;s like having a brain that knows which buttons to press to make everything work just right.</p>
+
+
+
+<p>By embracing sparse model architectures, these companies can overcome the challenges of scaling AI models for inference. They can separate the heavy training stuff from the nimble inference stuff, making their AI systems faster, more efficient, and ready to tackle real-world problems.</p>
+
+
+
+<p>So, next time you hear about these dense transformer models, remember the real battle is in the realm of inference. And sparse model architecture is the secret weapon to make it all work. It&#8217;s like giving your AI system a turbo boost while sipping on a smooth whiskey.</p>
+<p>The post <a rel="nofollow" href="./../../../gpt-4-secret-sauce/index.html">GPT-4 Secret Sauce</a> appeared first on <a rel="nofollow" href="./../../../index.html">PlainSwipe</a>.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>./../../../gpt-4-secret-sauce/feed/index.html</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>GPT-4: Details Leaked</title>
+		<link>./../../../gpt-4-details-leaked/index.html</link>
+					<comments>./../../../gpt-4-details-leaked/index.html#respond</comments>
+		
+		<dc:creator><![CDATA[rohitkumar]]></dc:creator>
+		<pubDate>Wed, 12 Jul 2023 16:49:45 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<guid isPermaLink="false">./../../../index.html?p=812</guid>
+
+					<description><![CDATA[<p>GPT-4: A Closer Look at Parameters, Training, and Inference https://news.ycombinator.com/item?id=36674905 OpenAI&#8217;s latest language model, GPT-4, has been making waves in the AI community with its impressive size and capabilities. In this article, we will delve into the details of GPT-4&#8217;s parameters, training process, and inference architecture, shedding light on the advancements made by OpenAI. Parameter&#8230;&#160;<a href="./../../../gpt-4-details-leaked/index.html" class="" rel="bookmark">Read More &#187;<span class="screen-reader-text">GPT-4: Details Leaked</span></a></p>
+<p>The post <a rel="nofollow" href="./../../../gpt-4-details-leaked/index.html">GPT-4: Details Leaked</a> appeared first on <a rel="nofollow" href="./../../../index.html">PlainSwipe</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[
+<p>GPT-4: A Closer Look at Parameters, Training, and Inference</p>
+
+
+
+<p><a href="https://news.ycombinator.com/item?id=36674905">https://news.ycombinator.com/item?id=36674905</a></p>
+
+
+
+<p>OpenAI&#8217;s latest language model, GPT-4, has been making waves in the AI community with its impressive size and capabilities. In this article, we will delve into the details of GPT-4&#8217;s parameters, training process, and inference architecture, shedding light on the advancements made by OpenAI.</p>
+
+
+
+<div class="wp-block-ideabox-toc ib-block-toc" data-anchors='h2,h3,h4,h5,h6' data-collapsable='true' ><div class="ib-toc-container ib-toc-list-style-numbers ib-toc-hierarchical ib-toc-expanded"><div class="ib-toc-header"><div class="ib-toc-header-title">Table of Contents</div><div class="ib-toc-header-right"><span class="ib-toc-icon-collapse"><span class="dashicon dashicons dashicons-minus"></span></span><span class="ib-toc-icon-expand"><span class="dashicon dashicons dashicons-plus"></span></span></div></div><div class="ib-toc-separator" style="height:2px"></div><div class="ib-toc-body"><ol class="ib-toc-anchors"></ol></div></div></div>
+
+
+
+<h3 class="wp-block-heading">Parameter Count: Scaling Up Significantly</h3>
+
+
+
+<p>GPT-4 boasts a remarkable size, with more than 10 times the number of parameters compared to its predecessor, GPT-3. It is estimated to have approximately 1.8 trillion parameters across 120 layers. This increase in parameter count signifies a substantial leap forward in model size and complexity.</p>
+
+
+
+<h3 class="wp-block-heading">Mixture of Experts (MoE): Cost-Effective Solution</h3>
+
+
+
+<p>To manage the costs associated with such a massive model, OpenAI implemented a mixture of experts (MoE) model in GPT-4. This approach utilizes 16 experts, each consisting of around 111 billion parameters for the MLP (Multi-Layer Perceptron). During each forward pass, two experts are routed, simplifying the routing process compared to more advanced algorithms discussed in the literature.</p>
+
+
+
+<h3 class="wp-block-heading">MoE Routing: A Simpler Approach</h3>
+
+
+
+<p>OpenAI&#8217;s routing algorithm for GPT-4 is reportedly straightforward compared to more intricate methods proposed in the research literature. The model employs approximately 55 billion shared parameters for attention, streamlining the routing process.</p>
+
+
+
+<h3 class="wp-block-heading">Inference Efficiency: Optimized Parameter Usage</h3>
+
+
+
+<p>One notable aspect of GPT-4 is its impressive inference efficiency. Each forward pass for generating a single token utilizes only around 280 billion parameters and approximately 560 TFLOPs (tera floating-point operations per second). This stands in stark contrast to the 1.8 trillion parameters and roughly 3,700 TFLOPs required for a purely dense model per forward pass. The optimized parameter usage contributes to improved performance and reduced computational requirements.</p>
+
+
+
+<h3 class="wp-block-heading">Dataset: Extensive Training Corpus</h3>
+
+
+
+<p>GPT-4 is trained on a vast dataset comprising around 13 trillion tokens. It&#8217;s important to note that these tokens include both unique tokens and those generated during multiple epochs. The training process involves two epochs for text-based data and four epochs for code-based data. Additionally, OpenAI incorporated millions of rows of fine-tuning data from ScaleAI and internal sources to enhance the model&#8217;s performance.</p>
+
+
+
+<h3 class="wp-block-heading">GPT-4 32K: Fine-Tuning the Context Length</h3>
+
+
+
+<p>During the pre-training phase, GPT-4 uses an 8k context length (seqlen). However, the 32k seqlen version of GPT-4 is achieved through fine-tuning the 8k after the initial pre-training. This approach allows the model to handle longer sequences and capture more extensive context.</p>
+
+
+
+<h3 class="wp-block-heading">Batch Size: Striking a Balance</h3>
+
+
+
+<p>OpenAI gradually ramped up the batch size over several days on the cluster, eventually reaching a batch size of 60 million. However, not every expert sees all tokens, resulting in an effective batch size of 7.5 million tokens per expert. The decision to limit the batch size ensures efficient processing and resource utilization.</p>
+
+
+
+<h3 class="wp-block-heading">Parallelism Strategies: Maximizing GPU Utilization</h3>
+
+
+
+<p>To parallelize computations across multiple A100 GPUs, OpenAI implemented 8-way tensor parallelism, as this is the maximum supported by NVLink. Furthermore, they adopted 15-way pipeline parallelism to further optimize GPU utilization. It is speculated that OpenAI employed ZeRo Stage 1 and potentially utilized block-level FSDP (Fully Sharded Data Parallelism) for certain aspects of the training process.</p>
+
+
+
+<h3 class="wp-block-heading">Training Cost: An Expensive Endeavor</h3>
+
+
+
+<p>The training of GPT-4 came with substantial costs. OpenAI&#8217;s training FLOPS (floating-point operations per second) for GPT-4 amounted to approximately 2.15e25, utilizing around 25,000 A100 GPUs for 90 to 100 days at a utilization rate of 32% to 36% MFU (Memory Frequency Utilization). Due to numerous failures requiring restarts from checkpoints, the utilization rate remained low. Based on an estimated cloud cost of $1 per A100 hour, the training costs for this run alone would reach approximately $63 million. It is worth noting that pre-training with ~8,192 H100 GPUs could have been done in around 55 days for $21.5 million at a rate of $2 per H100 hour.</p>
+
+
+
+<h3 class="wp-block-heading">Mixture of Expert Tradeoffs: Finding the Right Balance</h3>
+
+
+
+<p>OpenAI made specific tradeoffs in implementing the mixture of experts model. While research has shown that using 64 to 128 experts achieves better loss compared to 16 experts, OpenAI chose a more conservative approach. The decision to stick with 16 experts was driven by the challenges associated with generalization across multiple tasks and the difficulty in achieving convergence with a larger number of experts.</p>
+
+
+
+<h3 class="wp-block-heading">GPT-4 Inference Cost: Scaling with Complexity</h3>
+
+
+
+<p>The cost of GPT-4&#8217;s inference is approximately three times higher than that of the 175B parameter GPT-3 model (Davinci). This increased cost primarily stems from the larger clusters required for GPT-4 and the lower utilization achieved during inference. An estimated cost of $0.0049 cents per 1,000 tokens is anticipated for using 128 A100 GPUs to infer GPT-4 with an 8k seqlen. In comparison, the cost reduces to $0.0021 cents per 1,000 tokens when employing 128 H100 GPUs for the same inference task. It should be noted that these estimates assume high utilization and significant batch sizes.</p>
+
+
+
+<h3 class="wp-block-heading">Multi-Query Attention (MQA): Streamlining Processing</h3>
+
+
+
+<p>Like many other models, GPT-4 utilizes Multi-Query Attention (MQA). The introduction of MQA reduces the number of attention heads required, leading to a significant reduction in memory capacity for the Key-Value (KV) cache. However, due to the model&#8217;s size, the 32k seqlen GPT-4 cannot run on 40GB A100 GPUs, and the 8k seqlen version has limitations on maximum batch size.</p>
+
+
+
+<h3 class="wp-block-heading">Continuous Batching: Balancing Latency and Inference Costs</h3>
+
+
+
+<p>OpenAI has implemented variable batch sizes and continuous batching in GPT-4&#8217;s inference process. This allows for some level of maximum latency while optimizing the overall inference costs. The combination of variable batch sizes and continuous batching ensures efficient resource utilization while maintaining a balance between response times and computational expenses.</p>
+
+
+
+<h3 class="wp-block-heading">Vision Multi-Modal: Enhancing Capabilities</h3>
+
+
+
+<p>GPT-4 incorporates a separate vision encoder alongside the text encoder, featuring cross-attention. The architecture is similar to Flamingo, adding additional parameters on top of the 1.8 trillion present in GPT-4. The vision model undergoes fine-tuning with an additional ~2 trillion tokens after the initial text-only pre-training. The primary purpose of this vision capability is to enable autonomous agents to read web pages, transcribe content from images and videos, and interact with multi-modal inputs.</p>
+
+
+
+<h3 class="wp-block-heading">Speculative Decoding: Enhancing Inference Efficiency</h3>
+
+
+
+<p>There are indications that OpenAI may be employing speculative decoding during GPT-4&#8217;s inference process, although this is not confirmed. Speculative decoding involves using a smaller, faster model to generate several tokens in advance. These tokens are then fed into a larger oracle model as a single batch. If the small model&#8217;s predictions align with the larger model&#8217;s output, several tokens can be decoded in a batch. However, if the larger model rejects the tokens predicted by the smaller model, the rest of the batch is discarded, and the inference continues with the larger model. This approach can optimize efficiency but may impact the quality of generated sequences.</p>
+
+
+
+<h3 class="wp-block-heading">Inference Architecture: Distributed Computing Power</h3>
+
+
+
+<p>GPT-4&#8217;s inference is carried out on a cluster comprising 128 GPUs. Multiple clusters are distributed across various data centers in different locations. The model utilizes 8-way tensor parallelism and 16-way pipeline parallelism to effectively leverage the available computational resources. Each node of 8 GPUs handles approximately 130 billion parameters, accommodating the model&#8217;s overall size. The design of the architecture allows for efficient parallel processing and scalability.</p>
+
+
+
+<h3 class="wp-block-heading">Dataset Mixture: A Diverse Training Corpus</h3>
+
+
+
+<p>The training process for GPT-4 incorporates a mixture of datasets. The model is trained on approximately 13 trillion tokens, with CommonCrawl and RefinedWeb datasets contributing 5 trillion tokens each. Deduplicating tokens from multiple epochs yields a more reasonable estimate of the &#8220;unaccounted for&#8221; tokens, often referred to as the &#8220;secret&#8221; data. Speculations suggest that parts of this data come from sources such as Twitter, Reddit, YouTube, and platforms like LibGen, Sci-Hub, and GitHub.</p>
+
+
+
+<h3 class="wp-block-heading">GPT-4&#8217;s Training and Knowledge: A Reflective Illusion</h3>
+
+
+
+<p>GPT-4&#8217;s training on an extensive collection of college textbooks, coupled with its ability to answer questions from various domains, creates the illusion of intelligence. This illusion can make it appear knowledgeable in disciplines ranging from computer science to philosophy. Researchers have even attempted to extract memorized parts of books from GPT-4 to better understand its training data. Rumors suggest that the model possesses exceptional familiarity with unique IDs of Project Euler exercises.</p>
+
+
+
+<p>In conclusion, GPT-4 represents a significant leap forward in terms of scale, capabilities, and training techniques. Its massive parameter count, mixture of experts model, and efficient inference architecture contribute to its enhanced performance. While the model&#8217;s training process involves a substantial investment, the use of diverse datasets and fine-tuning across multiple domains equips GPT-4 with a broad knowledge base. OpenAI&#8217;s approach to scaling language models demonstrates their commitment to pushing the boundaries of AI research and development.</p>
+<p>The post <a rel="nofollow" href="./../../../gpt-4-details-leaked/index.html">GPT-4: Details Leaked</a> appeared first on <a rel="nofollow" href="./../../../index.html">PlainSwipe</a>.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>./../../../gpt-4-details-leaked/feed/index.html</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
 		<title>Happy Day Framework</title>
 		<link>./../../../happy-day-framework/index.html</link>
 					<comments>./../../../happy-day-framework/index.html#respond</comments>
@@ -878,573 +1315,6 @@
 ]]></content:encoded>
 					
 					<wfw:commentRss>./../../../best-online-consultation-app-for-doctors/feed/index.html</wfw:commentRss>
-			<slash:comments>0</slash:comments>
-		
-		
-			</item>
-		<item>
-		<title>How to find your passion?</title>
-		<link>./../../../how-to-find-your-passion/index.html</link>
-					<comments>./../../../how-to-find-your-passion/index.html#respond</comments>
-		
-		<dc:creator><![CDATA[rohitkumar]]></dc:creator>
-		<pubDate>Wed, 31 May 2023 20:12:59 +0000</pubDate>
-				<category><![CDATA[Uncategorized]]></category>
-		<guid isPermaLink="false">./../../../index.html?p=548</guid>
-
-					<description><![CDATA[<p>This is a common problem that people face in finding their passion or purpose. I am going to talk about an easy two-step process to find your passion. Step 1: identify what you are naturally good at. Steve Jobs was naturally good at making things simple. Elon Musk is naturally good at being an engineer.&#8230;&#160;<a href="./../../../how-to-find-your-passion/index.html" class="" rel="bookmark">Read More &#187;<span class="screen-reader-text">How to find your passion?</span></a></p>
-<p>The post <a rel="nofollow" href="./../../../how-to-find-your-passion/index.html">How to find your passion?</a> appeared first on <a rel="nofollow" href="./../../../index.html">PlainSwipe</a>.</p>
-]]></description>
-										<content:encoded><![CDATA[
-<p>This is a common problem that people face in finding their passion or purpose. I am going to talk about an easy two-step process to find your passion.</p>
-
-
-
-<h2 class="wp-block-heading">Step 1: identify what you are naturally good at.</h2>
-
-
-
-<figure class="wp-block-image size-full"><img decoding="async" width="720" height="432" src="./../../../wp-content/uploads/2023/05/illustration-muscle-work-leader.jpeg" alt="" class="wp-image-549" srcset="./../../../wp-content/uploads/2023/05/illustration-muscle-work-leader.jpeg 720w, ./../../../wp-content/uploads/2023/05/illustration-muscle-work-leader-300x180.jpeg 300w" sizes="(max-width: 720px) 100vw, 720px" /></figure>
-
-
-
-<p>Steve Jobs was naturally good at making things simple. Elon Musk is naturally good at being an engineer.</p>
-
-
-
-<p>Please note that while answering this question for yourself the answer can’t be that “I am naturally good at baseball, basketball, etc”. If that is where your answer is going then look deeper.</p>
-
-
-
-<blockquote class="wp-block-quote">
-<p>But how do you find what you are naturally good at?</p>
-</blockquote>
-
-
-
-<h4 class="wp-block-heading">Step 1.1: Simply observe what you spend time doing.</h4>
-
-
-
-<p>Write daily in detail about things that you are spending time on. For instance, I wrote yesterday “spent time comparing stocks and their PE ratio”</p>
-
-
-
-<figure class="wp-block-image size-large"><img decoding="async" width="1024" height="814" src="./../../../wp-content/uploads/2023/05/CoverImage-1024x814.webp" alt="" class="wp-image-550" srcset="./../../../wp-content/uploads/2023/05/CoverImage-1024x814.webp 1024w, ./../../../wp-content/uploads/2023/05/CoverImage-300x238.webp 300w, ./../../../wp-content/uploads/2023/05/CoverImage-768x610.webp 768w, ./../../../wp-content/uploads/2023/05/CoverImage.webp 1096w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
-
-
-
-<p>Then over say a month, when you analyze you will see both what you are naturally good at and the challenges in those areas.</p>
-
-
-
-<p>For me the analysis was I spend time meditating, writing blog posts, sculpting my body, web product development, etc.</p>
-
-
-
-<h4 class="wp-block-heading">Step 1.2: Look deeper</h4>
-
-
-
-<figure class="wp-block-image size-full"><img decoding="async" width="600" height="727" src="./../../../wp-content/uploads/2023/05/main-1.png" alt="" class="wp-image-551" srcset="./../../../wp-content/uploads/2023/05/main-1.png 600w, ./../../../wp-content/uploads/2023/05/main-1-248x300.png 248w" sizes="(max-width: 600px) 100vw, 600px" /></figure>
-
-
-
-<p>Pick each area and note the why?</p>
-
-
-
-<p>For example, say you are naturally good at cooking but the underlying skill will be that you are naturally good at figuring out how things are going to combine and what results they create.</p>
-
-
-
-<p>For me. The why for Mediation was? I am inclined towards the search for a calmer mind. Why Web product development? means that I like making complex things simple and the nature of products I build are complex and difficult so I need engineering challenges as well.</p>
-
-
-
-<p><strong>Note</strong>: not all areas you spend time on are your passions if they won’t have a good “Why”. People are forced into some jobs and activities but you can look at what aspect of that work you excel at.</p>
-
-
-
-<p>Often your friends and colleagues are a good source to ask what they think makes you unique.</p>
-
-
-
-<p>By now you should have found what you are naturally good at and also what your passions are.</p>
-
-
-
-<h2 class="wp-block-heading">Step 2: Find areas that need your natural skill, and passion.</h2>
-
-
-
-<figure class="wp-block-image size-full"><img decoding="async" width="1600" height="1187" src="./../../../wp-content/uploads/2023/05/61851be2b82096ac2d73b883_5f7efa69627027085425deae_Goal-Orientation-bubble2-1-1.svg" alt="" class="wp-image-552"/></figure>
-
-
-
-<p>Phones, laptops, and music players are complex, so Steve Jobs chose that market to apply his natural skill of making things simple.</p>
-
-
-
-<p>Electric cars, solar panels, and rockets require a lot of engineering so Elon Musk chose that market to apply his natural skills and love of engineering.</p>
-
-
-
-<p>In my case, I am naturally good at making complex things simple. Stock research and analyzing a company is very complex, I plan to apply my skills to make this complex process simpler.</p>
-
-
-
-<p>At this point your detailed observations will tell you the unsolved problems in the area you picked. For me, it was no easy way to compare stocks, and too much information, and opinions.</p>
-
-
-
-<p>To conclude, to find your passion, discover what you are naturally good at by observing what you do each day. Then try to find which market needs your skills the most. And then just commit yourself to solving problems in that market by doing what you are naturally good at.</p>
-
-
-
-<blockquote class="wp-block-quote">
-<p>By the way, this is called finding product founder market fit.</p>
-</blockquote>
-
-
-
-<p>In my next post, I am going to give practical advice on how to innovate in the area you committed to devote your next 10 years to, stay tuned …</p>
-<p>The post <a rel="nofollow" href="./../../../how-to-find-your-passion/index.html">How to find your passion?</a> appeared first on <a rel="nofollow" href="./../../../index.html">PlainSwipe</a>.</p>
-]]></content:encoded>
-					
-					<wfw:commentRss>./../../../how-to-find-your-passion/feed/index.html</wfw:commentRss>
-			<slash:comments>0</slash:comments>
-		
-		
-			</item>
-		<item>
-		<title>How AI will re-invent Engineering Project Management Softwares of the future.</title>
-		<link>./../../../how-ai-will-re-invent-engineering-project-management-softwares-of-the-future/index.html</link>
-					<comments>./../../../how-ai-will-re-invent-engineering-project-management-softwares-of-the-future/index.html#respond</comments>
-		
-		<dc:creator><![CDATA[rohitkumar]]></dc:creator>
-		<pubDate>Wed, 31 May 2023 20:06:54 +0000</pubDate>
-				<category><![CDATA[Uncategorized]]></category>
-		<guid isPermaLink="false">./../../../index.html?p=545</guid>
-
-					<description><![CDATA[<p>Most project management software focus more on providing task boards, ability to add tasks from chat applications like slack. However, the burden to send reminders if a task’s status was not updated, escalating a task if it was running behind, translating meeting notes into tasks, etc. A common task that executive struggles with is constantly&#8230;&#160;<a href="./../../../how-ai-will-re-invent-engineering-project-management-softwares-of-the-future/index.html" class="" rel="bookmark">Read More &#187;<span class="screen-reader-text">How AI will re-invent Engineering Project Management Softwares of the future.</span></a></p>
-<p>The post <a rel="nofollow" href="./../../../how-ai-will-re-invent-engineering-project-management-softwares-of-the-future/index.html">How AI will re-invent Engineering Project Management Softwares of the future.</a> appeared first on <a rel="nofollow" href="./../../../index.html">PlainSwipe</a>.</p>
-]]></description>
-										<content:encoded><![CDATA[
-<p>Most project management software focus more on providing task boards, ability to add tasks from chat applications like slack. However, the burden to send reminders if a task’s status was not updated, escalating a task if it was running behind, translating meeting notes into tasks, etc.</p>
-
-
-
-<p>A common task that executive struggles with is constantly checking if people have updated the status, and then messaging the relevant team members if they have not.</p>
-
-
-
-<p>Imagine an AI Status both that could be communicate to a spreadsheet, or to an application like Trello or JIRA.</p>
-
-
-
-<p>A status checker and reminder bot will have to do two things :</p>
-
-
-
-<ul>
-<li>Access a spreadsheet, check if an entry has been made, and if not then send a message to the person.</li>
-
-
-
-<li>It should send a reminder if a task is exceeding a certain time limit or overdue</li>
-
-
-
-<li>Should create a new spreadsheet copying the tasks from the previous day, and then asking the user to update the status on those tasks</li>
-
-
-
-<li>It should have a way to talk to it by telling it assign this task to person A, B, C and then those entries can be added in the spreadsheet</li>
-
-
-
-<li>For each task that is assigned it should make sure that there is a person who is supposed to be doing the task and then there is a person that is supposed to review that tasks, and escalation list if the task is running late</li>
-
-
-
-<li>It co-ordinates between the three, it reminds the task owner reminders to update the status of the task, when the task is complete, it sends a message to the reviewer, and escalates a task if it is running late.</li>
-</ul>
-
-
-
-<p>Along with a status checker bot you also need an AI bot which can listen into a meeting, take notes, and then convert the notes into action items, and then guess who the action item belongs to, and if it can’t figure it out, then messages the meeting owner to clarify the tasks.</p>
-
-
-
-<ul>
-<li>Being able to import the audio, and the associated transcript</li>
-
-
-
-<li>Being able to convert the transcript, into a list of action items with the owner of the task</li>
-
-
-
-<li>Confirming the task list with the meeting owner</li>
-
-
-
-<li>Sending the confirmed task list to the status checker bot</li>
-</ul>
-
-
-
-<p>If done well, an AI system here, could simply make an office extremely productive. The next step in this AI vision is a focus bot. The job of the focus bot will be able to ensure that people are only working on one thing at a time, and the thing that they are working on has the highest impact on the KPIs. The bot will, again check the status sheet and ensure that one person is not having multiple tasks assigned to them and if one person has been assigned multiple things then it would escalate the list of multiple tasks and will ask the task assigner to prioritise.</p>
-
-
-
-<p>The roadmap bot will take the unassigned tasks and suggestions into a backlog list. The roadmap bot will categorize the tasks based on various teams (e.g. marketing, QA, design, development, dev operations, etc.), it would have the ability to merge different tasks together, identify duplicate tasks, and combine tasks to create a more comprehensive tasks</p>
-
-
-
-<ul>
-<li>Make sure the roadmap tasks are prioritised and mapped to the OKRs</li>
-
-
-
-<li>Ensure that tasks are not duplicate, and provide a way to merge two overlapping tasks</li>
-
-
-
-<li>Classify a task to the right team</li>
-</ul>
-<p>The post <a rel="nofollow" href="./../../../how-ai-will-re-invent-engineering-project-management-softwares-of-the-future/index.html">How AI will re-invent Engineering Project Management Softwares of the future.</a> appeared first on <a rel="nofollow" href="./../../../index.html">PlainSwipe</a>.</p>
-]]></content:encoded>
-					
-					<wfw:commentRss>./../../../how-ai-will-re-invent-engineering-project-management-softwares-of-the-future/feed/index.html</wfw:commentRss>
-			<slash:comments>0</slash:comments>
-		
-		
-			</item>
-		<item>
-		<title>Practical guide for training or fine tuning large language models</title>
-		<link>./../../../practical-guide-for-training-or-fine-tuning-large-language-models/index.html</link>
-					<comments>./../../../practical-guide-for-training-or-fine-tuning-large-language-models/index.html#respond</comments>
-		
-		<dc:creator><![CDATA[rohitkumar]]></dc:creator>
-		<pubDate>Wed, 31 May 2023 20:05:38 +0000</pubDate>
-				<category><![CDATA[Uncategorized]]></category>
-		<guid isPermaLink="false">./../../../index.html?p=542</guid>
-
-					<description><![CDATA[<p>Imagine if you can connect to a friends computer and use that to speed up training of your model. Training ML models is very expensive, and ML techniques require many iterations hence they require speed. The Solution: Distributed Computing Distributed training is a technique that allows you to train machine learning models using multiple computers.&#8230;&#160;<a href="./../../../practical-guide-for-training-or-fine-tuning-large-language-models/index.html" class="" rel="bookmark">Read More &#187;<span class="screen-reader-text">Practical guide for training or fine tuning large language models</span></a></p>
-<p>The post <a rel="nofollow" href="./../../../practical-guide-for-training-or-fine-tuning-large-language-models/index.html">Practical guide for training or fine tuning large language models</a> appeared first on <a rel="nofollow" href="./../../../index.html">PlainSwipe</a>.</p>
-]]></description>
-										<content:encoded><![CDATA[
-<p>Imagine if you can connect to a friends computer and use that to speed up training of your model.</p>
-
-
-
-<p>Training ML models is very expensive, and ML techniques require many iterations hence they require speed.</p>
-
-
-
-<h4 class="wp-block-heading">The Solution: Distributed Computing</h4>
-
-
-
-<p>Distributed training is a technique that allows you to train machine learning models using multiple computers. This can be useful when you have large datasets or models that are too computationally intensive to train on a single computer.</p>
-
-
-
-<p>Changing is setting up the infrastructure to enable multiple computers to work together. One way to do this is to use a Common Internet File System (CIFS) to share data and resources between the computers.</p>
-
-
-
-<p>To set up a CIFS, you can use a single script that is capable of running on multiple operating systems (OS). This script can be used to install the necessary software and configure the CIFS on each computer. For example, on a Linux computer, the script can install the CIFS utilities and configure the Samba server, while on a MacOS or Windows computer, the script can install the SMBFS or SAMBA command-line utilities and mount the shared directory.</p>
-
-
-
-<p>Once the CIFS is set up, you can start the model training process on each computer. By starting the same training process on different computers, you can connect the various training processes and allow them to communicate with each other.</p>
-
-
-
-<p>The various training processes communicate with each other using a process called message passing. This involves sending messages between the computers to exchange information about the model training, such as the gradients of the model parameters. The computers also discover each other using a process called process discovery. This involves identifying the other computers that are part of the distributed training process and determining how to communicate with them.</p>
-
-
-
-<p>In summary, distributed training allows you to train machine learning models using multiple computers. By setting up a CIFS and starting the same training process on different computers, you can connect the various training processes and enable them to communicate and discover each other. This can be useful when you have large datasets or models that are too computationally intensive to train on a single computer.</p>
-
-
-
-<h4 class="wp-block-heading">How to start, stop training on the various computers?</h4>
-
-
-
-<p>To start and stop model training on the computers connected to a Common Internet File System (CIFS) using PyTorch, you can use the following techniques:</p>
-
-
-
-<ol>
-<li>Start training on all computers simultaneously: You can start training on all computers simultaneously by running the training script on each computer at the same time. This can be done manually by starting the script on each computer, or automatically using a tool like&nbsp;<code>fabric</code>&nbsp;or&nbsp;<code>ansible</code>.</li>
-
-
-
-<li>Start training on one computer and then add more computers: You can start training on one computer and then add more computers to the training process as needed. To do this, you can use the&nbsp;<code>torch.nn.DataParallel</code>&nbsp;wrapper to parallelize the model training across the computers. You can then add more computers to the training process by adding them to the&nbsp;<code>DataParallel</code>&nbsp;wrapper. For example:</li>
-</ol>
-
-
-
-<pre class="wp-block-preformatted">import torch<br><br># Set the data directory to the mount point<br>data_dir = "/path/to/mount/point"<br><br># Load the dataset<br>dataset = torch.utils.data.DatasetFolder(data_dir, ...)<br><br># Set up the model and DataParallel wrapper with one computer<br>model = MyModel()<br>model = torch.nn.DataParallel(model, device_ids=[0])<br><br># Use DataParallel to parallelize the model training<br>for input, target in dataset:<br>    output = model(input)<br>    loss = loss_fn(output, target)<br>    loss.backward()<br>    optimizer.step()<br><br># Add more computers to the DataParallel wrapper<br>model = torch.nn.DataParallel(model, device_ids=[0, 1, 2])</pre>
-
-
-
-<p>This will allow you to start training on one computer and then add more computers to the training process as needed.</p>
-
-
-
-<ol start="3">
-<li>Stop training on one or more computers: To stop training on one or more computers, you can simply stop the training script on those computers.</li>
-</ol>
-
-
-
-<h2 class="wp-block-heading">Code that demonstrates and tests the CLIFS set up</h2>
-
-
-
-<p>To demonstrate and test the Common Internet File System (CIFS) set up, you can write a Python script that performs the following tasks:</p>
-
-
-
-<ol>
-<li>Create a test file on one of the computers.</li>
-
-
-
-<li>Check if the test file is accessible from the other computers.</li>
-
-
-
-<li>Modify the test file on one of the computers.</li>
-
-
-
-<li>Check if the modifications are reflected on the other computers.</li>
-</ol>
-
-
-
-<p>Here is an example of a Python script that demonstrates and tests the CIFS set up:</p>
-
-
-
-<pre class="wp-block-preformatted">import os<br><br># Create a test file on one of the computers<br>with open("Z:/test.txt", "w") as f:<br>    f.write("This is a test file.")<br><br># Check if the test file is accessible from the other computers<br>if os.path.exists("/path/to/mount/point/test.txt"):<br>    print("Test file is accessible from the other computers.")<br>else:<br>    print("Test file is not accessible from the other computers.")<br><br># Modify the test file on one of the computers<br>with open("Z:/test.txt", "a") as f:<br>    f.write("\nThis line was added later.")<br><br># Check if the modifications are reflected on the other computers<br>with open("/path/to/mount/point/test.txt", "r") as f:<br>    content = f.read()<br>    if "This line was added later." in content:<br>        print("Modifications are reflected on the other computers.")<br>    else:<br>        print("Modifications are not reflected on the other computers</pre>
-
-
-
-<h4 class="wp-block-heading">Setting up CIFS</h4>
-
-
-
-<p>Here is a Python script that you can use to detect the operating system, IP address, and set up a Common Internet File System (CIFS) on each computer:</p>
-
-
-
-<pre class="wp-block-preformatted">import platform<br>import os<br><br># Detect the operating system<br>os_name = platform.system()<br><br># Get the IP address<br>ip_address = os.popen('hostname -I').read()<br>ip_address = ip_address.strip()<br><br># Set up the CIFS file system<br>if os_name == "Linux":<br>    # Install the CIFS utilities<br>    os.system("sudo apt-get install cifs-utils")<br><br>    # Create a shared directory<br>    os.system("mkdir /path/to/shared/directory")<br><br>    # Edit the Samba configuration file<br>    with open("/etc/samba/smb.conf", "a") as f:<br>        f.write("\n[shared]\n")<br>        f.write("path = /path/to/shared/directory\n")<br>        f.write("writable = yes\n")<br>        f.write("guest ok = yes\n")<br><br>    # Restart the Samba server<br>    os.system("sudo systemctl restart smbd")<br><br>elif os_name == "Darwin":<br>    # Install the SMBFS or SAMBA command-line utilities<br>    os.system("brew install smbfs")<br>    # or<br>    os.system("brew install samba")<br><br>    # Create a mount point<br>    os.system("mkdir /path/to/mount/point")<br><br>    # Mount the shared directory<br>    os.system("sudo mount_smbfs //guest@{}/shared /path/to/mount/point".format(ip_address))<br><br>elif os_name == "Windows":<br>    # Mount the shared directory using the "net use" command<br>    os.system("net use Z: \\\\{}\\shared".format(ip_address))<br><br>else:<br>    print("Unsupported operating system.")<br><br>print("CIFS file system set up complete.")</pre>
-
-
-
-<h2 class="wp-block-heading">Tying it up all together</h2>
-
-
-
-<p>To set up a distributed training environment on multiple computers using a main computer and the username and password provided by the computer owners, you can use a tool that automates the installation and configuration of software on remote servers. One such tool is&nbsp;<code>ansible</code>, which is a configuration management tool that allows you to define the desired state of your infrastructure and then automatically enforce that state.</p>
-
-
-
-<p>Here is an example of how you can use&nbsp;<code>ansible</code>&nbsp;to set up a distributed training environment on multiple computers, including the Common Internet File System (CIFS), PyTorch, training script, dataset, etc., and then execute the training:</p>
-
-
-
-<ol>
-<li>Write an&nbsp;<code>ansible</code>&nbsp;playbook that specifies the required steps to set up the training environment. For example:</li>
-</ol>
-
-
-
-<pre class="wp-block-preformatted">---<br>- name: Set up distributed training environment<br>  hosts: all<br>  tasks:<br>    - name: Install Python<br>      package:<br>        name: python3<br>      become: yes<br><br>    - name: Install PyTorch<br>      pip:<br>        name: torch<br>      become: yes<br><br>    - name: Install CIFS utilities<br>      package:<br>        name: cifs-utils<br>      become: yes<br><br>    - name: Mount shared directory<br>      mount:<br>        path: /path/to/mount/point<br>        src: //10.0.0.1/shared<br>        fstype: cifs<br>        opts: username=guest,password=password<br>      become: yes<br><br>    - name: Install training code<br>      copy:<br>        src: training.py<br>        dest: /opt/training/training.py<br>      become: yes<br><br>    - name: Install dataset<br>      copy:<br>        src: dataset.zip<br>        dest: /opt/training/dataset.zip<br>      become: yes<br>      unarchive:<br>        src: /opt/training/dataset.zip<br>        dest: /opt/training/<br>        remote_src: true<br><br>    - name: Execute training<br>      command: python3 /opt/training/training.py<br>      become:<br>---<br>- name: Set up distributed training environment<br>  hosts: all<br>  tasks:<br>    - name: Install Python<br>      package:<br>        name: python3<br>      become: yes<br><br>    - name: Install PyTorch<br>      pip:<br>        name: torch<br>      become: yes<br><br>    - name: Install CIFS utilities<br>      package:<br>        name: cifs-utils<br>      become: yes<br><br>    - name: Mount shared directory<br>      mount:<br>        path: /path/to/mount/point<br>        src: //10.0.0.1/shared<br>        fstype: cifs<br>        opts: username=guest,password=password<br>      become: yes<br><br>    - name: Install training code<br>      copy:<br>        src: training.py<br>        dest: /opt/training/training.py<br>      become: yes<br><br>    - name: Install dataset<br>      copy:<br>        src: dataset.zip<br>        dest: /opt/training/dataset.zip<br>      become: yes<br>      unarchive:<br>        src: /opt/training/dataset.zip<br>        dest: /opt/training/<br>        remote_src: true<br><br>    - name: Execute training<br>      command: python3 /opt/training/training.py<br>      become: yes</pre>
-
-
-
-<p>Create an&nbsp;<code>ansible</code>&nbsp;inventory file that specifies the connection information for the computers. For example:</p>
-
-
-
-<pre class="wp-block-preformatted">[windows]<br>windows_computer ansible_user=username ansible_password=password<br><br>[linux]<br>linux_computer ansible_user=username ansible_password=password<br><br>[mac]<br>mac_computer ansible_user=username ansible_ssh_private_key_file=/path/to/keyfile</pre>
-
-
-
-<p>Use&nbsp;<code>ansible</code>&nbsp;to apply the playbook to the computers. For example:</p>
-
-
-
-<pre class="wp-block-preformatted">ansible-playbook -i inventory.ini playbook.yml</pre>
-
-
-
-<p>To allow a non-technical person to provide the information that&nbsp;<code>ansible</code>&nbsp;requires to connect to their computer, you can follow these steps:</p>
-
-
-
-<ol>
-<li>Explain to the person what&nbsp;<code>ansible</code>&nbsp;is and why you need access to their computer.</li>
-
-
-
-<li>Provide the person with the&nbsp;<code>ansible</code>&nbsp;inventory file template that you will use to connect to their computer. This should include the hostname or IP address, username, and password or private key for the computer.</li>
-
-
-
-<li>Ask the person to fill in the&nbsp;<code>ansible</code>&nbsp;inventory file template with the appropriate information for their computer.</li>
-
-
-
-<li>To find the hostname or IP address of the computer, the person can do the following:</li>
-</ol>
-
-
-
-<ul>
-<li>On Windows:
-<ol>
-<li>Press the&nbsp;<code>Windows</code>&nbsp;+&nbsp;<code>R</code>&nbsp;keys to open the&nbsp;<code>Run</code>&nbsp;dialog.</li>
-
-
-
-<li>Type&nbsp;<code>cmd</code>&nbsp;and press&nbsp;<code>Enter</code>&nbsp;to open the command prompt.</li>
-
-
-
-<li>Type&nbsp;<code>ipconfig</code>&nbsp;and press&nbsp;<code>Enter</code>.</li>
-
-
-
-<li>Look for the&nbsp;<code>IPv4 Address</code>&nbsp;field. This is the IP address of the computer.</li>
-</ol>
-</li>
-
-
-
-<li>On MacOS:
-<ol>
-<li>Click the&nbsp;<code>Apple</code>&nbsp;menu and select&nbsp;<code>System Preferences</code>.</li>
-
-
-
-<li>Click the&nbsp;<code>Network</code>&nbsp;icon.</li>
-
-
-
-<li>Select the active network connection (e.g., Wi-Fi) from the list on the left.</li>
-
-
-
-<li>Click the&nbsp;<code>Advanced</code>&nbsp;button.</li>
-
-
-
-<li>Click the&nbsp;<code>TCP/IP</code>&nbsp;tab.</li>
-
-
-
-<li>The&nbsp;<code>IP address</code>&nbsp;field displays the IP address of the computer.</li>
-</ol>
-</li>
-
-
-
-<li>On Linux:
-<ol>
-<li>Open a terminal.</li>
-
-
-
-<li>Type&nbsp;<code>ifconfig</code>&nbsp;and press&nbsp;<code>Enter</code>.</li>
-
-
-
-<li>Look for the&nbsp;<code>inet</code>&nbsp;field. This is the IP address of the computer.</li>
-</ol>
-</li>
-</ul>
-
-
-
-<ol start="5">
-<li>To find the username and password of the computer, the person can do the following:</li>
-</ol>
-
-
-
-<ul>
-<li>On Windows:
-<ol>
-<li>Press the&nbsp;<code>Windows</code>&nbsp;+&nbsp;<code>R</code>&nbsp;keys to open the&nbsp;<code>Run</code>&nbsp;dialog.</li>
-
-
-
-<li>Type&nbsp;<code>control userpasswords2</code>&nbsp;and press&nbsp;<code>Enter</code>&nbsp;to open the&nbsp;<code>User Accounts</code>&nbsp;dialog.</li>
-
-
-
-<li>Click the&nbsp;<code>Manage another account</code>&nbsp;link.</li>
-
-
-
-<li>Click the account that you want to use to connect to the computer.</li>
-
-
-
-<li>Click the&nbsp;<code>Change the account name</code>&nbsp;or&nbsp;<code>Change the password</code>&nbsp;button to view or change the username or password for the account.</li>
-</ol>
-</li>
-
-
-
-<li>On MacOS:
-<ol>
-<li>Click the&nbsp;<code>Apple</code>&nbsp;menu and select&nbsp;<code>System Preferences</code>.</li>
-
-
-
-<li>Click the&nbsp;<code>Users &amp; Groups</code>&nbsp;icon.</li>
-
-
-
-<li>Click the&nbsp;<code>Lock</code>&nbsp;icon and enter the administrator password to make changes.</li>
-
-
-
-<li>Click the user account that you want to use to connect to the computer.</li>
-
-
-
-<li>Click the&nbsp;<code>Change Password</code>&nbsp;button to view or change the password for the account.</li>
-</ol>
-</li>
-
-
-
-<li>On Linux:
-<ol>
-<li>Open a terminal.</li>
-
-
-
-<li>Type&nbsp;<code>id</code>&nbsp;and press&nbsp;<code>Enter</code>&nbsp;to view the current user and</li>
-</ol>
-</li>
-</ul>
-<p>The post <a rel="nofollow" href="./../../../practical-guide-for-training-or-fine-tuning-large-language-models/index.html">Practical guide for training or fine tuning large language models</a> appeared first on <a rel="nofollow" href="./../../../index.html">PlainSwipe</a>.</p>
-]]></content:encoded>
-					
-					<wfw:commentRss>./../../../practical-guide-for-training-or-fine-tuning-large-language-models/feed/index.html</wfw:commentRss>
 			<slash:comments>0</slash:comments>
 		
 		
