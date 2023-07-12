@@ -12,7 +12,7 @@
 	<atom:link href="./index.html" rel="self" type="application/rss+xml" />
 	<link>./../index.html</link>
 	<description></description>
-	<lastBuildDate>Wed, 12 Jul 2023 17:53:57 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 12 Jul 2023 18:17:15 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -176,7 +176,7 @@
 
 
 
-<p>Have you heard about these dense transformer model architectures that companies like OpenAI, Google, Meta, TII, MosaicML, and a bunch of others are using? They&#8217;re all the rage in the AI world. But let me tell ya, they&#8217;re not perfect when it comes to scaling this stuff up.</p>
+<p>Have you heard about these dense transformer model architectures that companies like OpenAI, Google, Meta, TII, <a href="https://www.research-live.com/article/news/databricks-to-acquire-mosaicml/id/5113812">MosaicML</a>, and a bunch of others are using? They&#8217;re all the rage in the AI world. But let me tell ya, they&#8217;re not perfect when it comes to scaling this stuff up.</p>
 
 
 
@@ -184,7 +184,7 @@
 
 
 
-<p>Here&#8217;s the deal: the real challenge with scaling AI isn&#8217;t just about making these models bigger and beefier. Nah, the real brick wall hits when it comes to inference. That&#8217;s the process of generating predictions or outputs from these massive models. And let me tell ya, it&#8217;s a computational nightmare.</p>
+<p>Here&#8217;s the deal: the <a href="https://news.ycombinator.com/item?id=35288063">real challenge</a> with scaling AI isn&#8217;t just about making these models bigger and beefier. Nah, the real brick wall hits when it comes to inference. That&#8217;s the process of generating predictions or outputs from these massive models. And let me tell ya, it&#8217;s a computational nightmare.</p>
 
 
 
@@ -192,7 +192,7 @@
 
 
 
-<p>So, what&#8217;s the solution? Well, the key is to decouple the training compute from the inference compute. We wanna separate the resources used for training these models from the ones needed to generate predictions. That way, we can use our computational firepower more efficiently. It&#8217;s all about optimizing the process, baby!</p>
+<p>So, what&#8217;s the solution? Well, the key is to<a href="https://omdia.tech.informa.com/OM020291/Decoupling-AI-training-and-inference-will-change-the-future-of-AI-silicon"> decouple the training compute from the inference compute</a>. We wanna separate the resources used for training these models from the ones needed to generate predictions. That way, we can use our computational firepower more efficiently. It&#8217;s all about optimizing the process, baby!</p>
 
 
 
@@ -204,7 +204,7 @@
 
 
 
-<p>So, to make things faster and more efficient, scientists came up with something called &#8220;sparse models.&#8221; These models are like superheroes that know how to save energy and work smartly.</p>
+<p>So, to make things faster and more efficient, scientists came up with something called &#8220;<a href="https://goodboychan.github.io/machine_learning/2020/09/07/01-Overview-of-Sparse-Modeling.html#:~:text=The%20definition%20of%20sparse%20is,of%20non%2Dzero%20valued%20elements.">sparse models.</a>&#8221; These models are like superheroes that know how to save energy and work smartly.</p>
 
 
 
@@ -212,7 +212,15 @@
 
 
 
-<p>Imagine you have a big group of superheroes, but not all of them need to do something for every task. Some superheroes are really good at solving math problems, while others are great at recognizing animals. So, instead of using all the superheroes all the time, we only use the ones that are the best fit for the job.</p>
+<p>Imagine you have a big group of superheroes, </p>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" width="1024" height="576" src="./../wp-content/uploads/2023/07/image-1024x576.png" alt="" class="wp-image-824" srcset="./../wp-content/uploads/2023/07/image-1024x576.png 1024w, ./../wp-content/uploads/2023/07/image-300x169.png 300w, ./../wp-content/uploads/2023/07/image-768x432.png 768w, ./../wp-content/uploads/2023/07/image-1536x864.png 1536w, ./../wp-content/uploads/2023/07/image.png 1920w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<p>but not all of them need to do something for every task. Some superheroes are really good at solving math problems, while others are great at recognizing animals. So, instead of using all the superheroes all the time, we only use the ones that are the best fit for the job.</p>
 
 
 
@@ -224,7 +232,7 @@
 
 
 
-<p>And that&#8217;s where the concept of sparse model architecture comes into play. In a sparse model, not every parameter is activated during inference. We don&#8217;t need &#8217;em all firing at once. Instead, we only activate the specific parameters that are relevant to the task at hand. It&#8217;s like tuning your engine to run on exactly the right fuel for the job. Efficiency, my friends!</p>
+<p>And that&#8217;s where the concept of sparse model architecture comes into play. In a sparse model, <a href="https://towardsdatascience.com/neural-networks-parameters-hyperparameters-and-optimization-strategies-3f0842fac0a5">not every parameter is activated during inference.</a> We don&#8217;t need &#8217;em all firing at once. Instead, we only activate the specific parameters that are relevant to the task at hand. It&#8217;s like tuning your engine to run on exactly the right fuel for the job. Efficiency, my friends!</p>
 
 
 
@@ -248,7 +256,15 @@
 
 
 
-<p>Think of it like a superhero team. Each superhero has their own special power, right? When a problem comes up, they know which superhero&#8217;s power is the most useful for solving it. It&#8217;s the same idea with the sparse model. It has different parts (like superheroes) that know which ones to use for different tasks.</p>
+<p>Think of it like a superhero team. Each superhero has their own special power, right? </p>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" width="1024" height="683" src="./../wp-content/uploads/2023/07/pexels-erik-mclean-7809123-1024x683.jpg" alt="" class="wp-image-825" srcset="./../wp-content/uploads/2023/07/pexels-erik-mclean-7809123-1024x683.jpg 1024w, ./../wp-content/uploads/2023/07/pexels-erik-mclean-7809123-300x200.jpg 300w, ./../wp-content/uploads/2023/07/pexels-erik-mclean-7809123-768x512.jpg 768w, ./../wp-content/uploads/2023/07/pexels-erik-mclean-7809123-1536x1024.jpg 1536w, ./../wp-content/uploads/2023/07/pexels-erik-mclean-7809123-2048x1365.jpg 2048w, ./../wp-content/uploads/2023/07/pexels-erik-mclean-7809123-930x620.jpg 930w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<p>When a problem comes up, they know which superhero&#8217;s power is the most useful for solving it. It&#8217;s the same idea with the sparse model. It has different parts (like superheroes) that know which ones to use for different tasks.</p>
 
 
 
@@ -315,7 +331,7 @@
 
 
 
-<p>To manage the costs associated with such a massive model, OpenAI implemented a mixture of experts (MoE) model in GPT-4. This approach utilizes 16 experts, each consisting of around 111 billion parameters for the MLP (Multi-Layer Perceptron). During each forward pass, two experts are routed, simplifying the routing process compared to more advanced algorithms discussed in the literature.</p>
+<p>To manage the costs associated with such a massive model, OpenAI implemented a mixture of experts (MoE) model in GPT-4. This approach utilizes 16 experts, each consisting of around 111 billion parameters for the <a href="https://towardsdatascience.com/multilayer-perceptron-explained-with-a-real-life-example-and-python-code-sentiment-analysis-cb408ee93141">MLP (Multi-Layer Perceptron)</a>. During each forward pass, two experts are routed, simplifying the routing process compared to more advanced algorithms discussed in the literature.</p>
 
 
 
@@ -331,7 +347,7 @@
 
 
 
-<p>One notable aspect of GPT-4 is its impressive inference efficiency. Each forward pass for generating a single token utilizes only around 280 billion parameters and approximately 560 TFLOPs (tera floating-point operations per second). This stands in stark contrast to the 1.8 trillion parameters and roughly 3,700 TFLOPs required for a purely dense model per forward pass. The optimized parameter usage contributes to improved performance and reduced computational requirements.</p>
+<p>One notable aspect of GPT-4 is its impressive inference efficiency. Each forward pass for generating a single token utilizes only around 280 billion parameters and approximately 560 <a href="https://kb.iu.edu/d/apeq#:~:text=for%2031.69%20years.-,TeraFLOPS,every%20second%20for%2031%2C688.77%20years">TFLOPs (tera floating-point operations per second)</a>. This stands in stark contrast to the 1.8 trillion parameters and roughly 3,700 TFLOPs required for a purely dense model per forward pass. The optimized parameter usage contributes to improved performance and reduced computational requirements.</p>
 
 
 
@@ -347,7 +363,7 @@
 
 
 
-<p>During the pre-training phase, GPT-4 uses an 8k context length (seqlen). However, the 32k seqlen version of GPT-4 is achieved through fine-tuning the 8k after the initial pre-training. This approach allows the model to handle longer sequences and capture more extensive context.</p>
+<p>During the pre-training phase, GPT-4 uses an <a href="https://www.linkedin.com/pulse/understanding-context-length-hitch-gpt-models-arun-kesavan">8k context length (seqlen)</a>. However, the 32k seqlen version of GPT-4 is achieved through fine-tuning the 8k after the initial pre-training. This approach allows the model to handle longer sequences and capture more extensive context.</p>
 
 
 
@@ -363,7 +379,7 @@
 
 
 
-<p>To parallelize computations across multiple A100 GPUs, OpenAI implemented 8-way tensor parallelism, as this is the maximum supported by NVLink. Furthermore, they adopted 15-way pipeline parallelism to further optimize GPU utilization. It is speculated that OpenAI employed ZeRo Stage 1 and potentially utilized block-level FSDP (Fully Sharded Data Parallelism) for certain aspects of the training process.</p>
+<p>To parallelize computations across multiple A100 GPUs, OpenAI implemented 8-way tensor parallelism, as this is the maximum supported by <a href="https://www.nvidia.com/en-in/data-center/nvlink/">NVLink</a>. Furthermore, they adopted 15-way pipeline parallelism to further optimize GPU utilization. It is speculated that OpenAI employed ZeRo Stage 1 and potentially utilized block-level <a href="https://engineering.fb.com/2021/07/15/open-source/fsdp/">FSDP (Fully Sharded Data Parallelism) </a>for certain aspects of the training process.</p>
 
 
 
@@ -371,7 +387,7 @@
 
 
 
-<p>The training of GPT-4 came with substantial costs. OpenAI&#8217;s training FLOPS (floating-point operations per second) for GPT-4 amounted to approximately 2.15e25, utilizing around 25,000 A100 GPUs for 90 to 100 days at a utilization rate of 32% to 36% MFU (Memory Frequency Utilization). Due to numerous failures requiring restarts from checkpoints, the utilization rate remained low. Based on an estimated cloud cost of $1 per A100 hour, the training costs for this run alone would reach approximately $63 million. It is worth noting that pre-training with ~8,192 H100 GPUs could have been done in around 55 days for $21.5 million at a rate of $2 per H100 hour.</p>
+<p>The training of GPT-4 came with substantial costs. OpenAI&#8217;s training FLOPS (floating-point operations per second) for GPT-4 amounted to approximately 2.15e25, utilizing around 25,000 A100 GPUs for 90 to 100 days at a utilization rate of 32% to 36% <a href="https://www.researchgate.net/figure/The-MFU-Cache-Architecture_fig2_2396616">MFU (Memory Frequency Utilization)</a>. Due to numerous failures requiring restarts from checkpoints, the utilization rate remained low. Based on an estimated cloud cost of $1 per A100 hour, the training costs for this run alone would reach approximately $63 million. It is worth noting that pre-training with ~8,192 H100 GPUs could have been done in around 55 days for $21.5 million at a rate of $2 per H100 hour.</p>
 
 
 
@@ -395,7 +411,7 @@
 
 
 
-<p>Like many other models, GPT-4 utilizes Multi-Query Attention (MQA). The introduction of MQA reduces the number of attention heads required, leading to a significant reduction in memory capacity for the Key-Value (KV) cache. However, due to the model&#8217;s size, the 32k seqlen GPT-4 cannot run on 40GB A100 GPUs, and the 8k seqlen version has limitations on maximum batch size.</p>
+<p>Like many other models, GPT-4 utilizes <a href="https://arxiv.org/abs/2305.13245">Multi-Query Attention (MQA)</a>. The introduction of MQA reduces the number of attention heads required, leading to a significant reduction in memory capacity for the Key-Value (KV) cache. However, due to the model&#8217;s size, the 32k seqlen GPT-4 cannot run on 40GB A100 GPUs, and the 8k seqlen version has limitations on maximum batch size.</p>
 
 
 
@@ -411,7 +427,7 @@
 
 
 
-<p>GPT-4 incorporates a separate vision encoder alongside the text encoder, featuring cross-attention. The architecture is similar to Flamingo, adding additional parameters on top of the 1.8 trillion present in GPT-4. The vision model undergoes fine-tuning with an additional ~2 trillion tokens after the initial text-only pre-training. The primary purpose of this vision capability is to enable autonomous agents to read web pages, transcribe content from images and videos, and interact with multi-modal inputs.</p>
+<p>GPT-4 incorporates a separate vision encoder alongside the text encoder, featuring <a href="https://paperswithcode.com/method/cross-attention-module#:~:text=The%20Cross%2DAttention%20module%20is,are%20projections%20to%20align%20dimensions.">cross-attention</a>. The architecture is similar to Flamingo, adding additional parameters on top of the 1.8 trillion present in GPT-4. The vision model undergoes fine-tuning with an additional ~2 trillion tokens after the initial text-only pre-training. The primary purpose of this vision capability is to enable autonomous agents to read web pages, transcribe content from images and videos, and interact with multi-modal inputs.</p>
 
 
 

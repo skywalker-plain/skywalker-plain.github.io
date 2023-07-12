@@ -20,6 +20,7 @@
 	<meta property="og:site_name" content="PlainSwipe">
 	<meta property="article:publisher" content="https://www.facebook.com/profile.php?id=100087904298161&amp;mibextid=LQQJ4d">
 	<meta property="article:published_time" content="2023-07-12T17:07:37+00:00">
+	<meta property="article:modified_time" content="2023-07-12T18:07:31+00:00">
 	<meta property="og:image" content="./../wp-content/uploads/2023/07/Fig-1-3-scaled-1.jpg">
 	<meta property="og:image:width" content="2560">
 	<meta property="og:image:height" content="774">
@@ -47,7 +48,7 @@
 	            },
 	            "headline": "GPT-4 Secret Sauce",
 	            "datePublished": "2023-07-12T17:07:37+00:00",
-	            "dateModified": "2023-07-12T17:07:37+00:00",
+	            "dateModified": "2023-07-12T18:07:31+00:00",
 	            "mainEntityOfPage": {
 	                "@id": ".//gpt-4-secret-sauce/"
 	            },
@@ -87,7 +88,7 @@
 	            },
 	            "thumbnailUrl": ".//wp-content/uploads/2023/07/Fig-1-3-scaled-1.jpg",
 	            "datePublished": "2023-07-12T17:07:37+00:00",
-	            "dateModified": "2023-07-12T17:07:37+00:00",
+	            "dateModified": "2023-07-12T18:07:31+00:00",
 	            "breadcrumb": {
 	                "@id": ".//gpt-4-secret-sauce/#breadcrumb"
 	            },
@@ -404,7 +405,7 @@ img.emoji {
 
 
 
-<p>Have you heard about these dense transformer model architectures that companies like OpenAI, Google, Meta, TII, MosaicML, and a bunch of others are using? They&#8217;re all the rage in the AI world. But let me tell ya, they&#8217;re not perfect when it comes to scaling this stuff up.</p>
+<p>Have you heard about these dense transformer model architectures that companies like OpenAI, Google, Meta, TII, <a href="https://www.research-live.com/article/news/databricks-to-acquire-mosaicml/id/5113812">MosaicML</a>, and a bunch of others are using? They&#8217;re all the rage in the AI world. But let me tell ya, they&#8217;re not perfect when it comes to scaling this stuff up.</p>
 
 
 
@@ -412,7 +413,7 @@ img.emoji {
 
 
 
-<p>Here&#8217;s the deal: the real challenge with scaling AI isn&#8217;t just about making these models bigger and beefier. Nah, the real brick wall hits when it comes to inference. That&#8217;s the process of generating predictions or outputs from these massive models. And let me tell ya, it&#8217;s a computational nightmare.</p>
+<p>Here&#8217;s the deal: the <a href="https://news.ycombinator.com/item?id=35288063">real challenge</a> with scaling AI isn&#8217;t just about making these models bigger and beefier. Nah, the real brick wall hits when it comes to inference. That&#8217;s the process of generating predictions or outputs from these massive models. And let me tell ya, it&#8217;s a computational nightmare.</p>
 
 
 
@@ -420,7 +421,7 @@ img.emoji {
 
 
 
-<p>So, what&#8217;s the solution? Well, the key is to decouple the training compute from the inference compute. We wanna separate the resources used for training these models from the ones needed to generate predictions. That way, we can use our computational firepower more efficiently. It&#8217;s all about optimizing the process, baby!</p>
+<p>So, what&#8217;s the solution? Well, the key is to<a href="https://omdia.tech.informa.com/OM020291/Decoupling-AI-training-and-inference-will-change-the-future-of-AI-silicon"> decouple the training compute from the inference compute</a>. We wanna separate the resources used for training these models from the ones needed to generate predictions. That way, we can use our computational firepower more efficiently. It&#8217;s all about optimizing the process, baby!</p>
 
 
 
@@ -432,7 +433,7 @@ img.emoji {
 
 
 
-<p>So, to make things faster and more efficient, scientists came up with something called &#8220;sparse models.&#8221; These models are like superheroes that know how to save energy and work smartly.</p>
+<p>So, to make things faster and more efficient, scientists came up with something called &#8220;<a href="https://goodboychan.github.io/machine_learning/2020/09/07/01-Overview-of-Sparse-Modeling.html#:~:text=The%20definition%20of%20sparse%20is,of%20non%2Dzero%20valued%20elements.">sparse models.</a>&#8221; These models are like superheroes that know how to save energy and work smartly.</p>
 
 
 
@@ -440,7 +441,15 @@ img.emoji {
 
 
 
-<p>Imagine you have a big group of superheroes, but not all of them need to do something for every task. Some superheroes are really good at solving math problems, while others are great at recognizing animals. So, instead of using all the superheroes all the time, we only use the ones that are the best fit for the job.</p>
+<p>Imagine you have a big group of superheroes, </p>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" width="1024" height="576" src="./../wp-content/uploads/2023/07/image-1024x576.png" alt="" class="wp-image-824" srcset="./../wp-content/uploads/2023/07/image-1024x576.png 1024w, ./../wp-content/uploads/2023/07/image-300x169.png 300w, ./../wp-content/uploads/2023/07/image-768x432.png 768w, ./../wp-content/uploads/2023/07/image-1536x864.png 1536w, ./../wp-content/uploads/2023/07/image.png 1920w" sizes="(max-width: 1024px) 100vw, 1024px"></figure>
+
+
+
+<p>but not all of them need to do something for every task. Some superheroes are really good at solving math problems, while others are great at recognizing animals. So, instead of using all the superheroes all the time, we only use the ones that are the best fit for the job.</p>
 
 
 
@@ -452,7 +461,7 @@ img.emoji {
 
 
 
-<p>And that&#8217;s where the concept of sparse model architecture comes into play. In a sparse model, not every parameter is activated during inference. We don&#8217;t need &#8217;em all firing at once. Instead, we only activate the specific parameters that are relevant to the task at hand. It&#8217;s like tuning your engine to run on exactly the right fuel for the job. Efficiency, my friends!</p>
+<p>And that&#8217;s where the concept of sparse model architecture comes into play. In a sparse model, <a href="https://towardsdatascience.com/neural-networks-parameters-hyperparameters-and-optimization-strategies-3f0842fac0a5">not every parameter is activated during inference.</a> We don&#8217;t need &#8217;em all firing at once. Instead, we only activate the specific parameters that are relevant to the task at hand. It&#8217;s like tuning your engine to run on exactly the right fuel for the job. Efficiency, my friends!</p>
 
 
 
@@ -476,7 +485,15 @@ img.emoji {
 
 
 
-<p>Think of it like a superhero team. Each superhero has their own special power, right? When a problem comes up, they know which superhero&#8217;s power is the most useful for solving it. It&#8217;s the same idea with the sparse model. It has different parts (like superheroes) that know which ones to use for different tasks.</p>
+<p>Think of it like a superhero team. Each superhero has their own special power, right? </p>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" width="1024" height="683" src="./../wp-content/uploads/2023/07/pexels-erik-mclean-7809123-1024x683.jpg" alt="" class="wp-image-825" srcset="./../wp-content/uploads/2023/07/pexels-erik-mclean-7809123-1024x683.jpg 1024w, ./../wp-content/uploads/2023/07/pexels-erik-mclean-7809123-300x200.jpg 300w, ./../wp-content/uploads/2023/07/pexels-erik-mclean-7809123-768x512.jpg 768w, ./../wp-content/uploads/2023/07/pexels-erik-mclean-7809123-1536x1024.jpg 1536w, ./../wp-content/uploads/2023/07/pexels-erik-mclean-7809123-2048x1365.jpg 2048w, ./../wp-content/uploads/2023/07/pexels-erik-mclean-7809123-930x620.jpg 930w" sizes="(max-width: 1024px) 100vw, 1024px"></figure>
+
+
+
+<p>When a problem comes up, they know which superhero&#8217;s power is the most useful for solving it. It&#8217;s the same idea with the sparse model. It has different parts (like superheroes) that know which ones to use for different tasks.</p>
 
 
 
