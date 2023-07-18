@@ -250,19 +250,6 @@
 		</image:image>
 	</url>
 	<url>
-		<loc>./15c42-web-agency-gb-contact-us/index.html</loc>
-		<lastmod>2023-06-02T07:33:21+00:00</lastmod>
-		<image:image>
-			<image:loc>./wp-content/uploads/2021/06/phone-sm.png</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>./wp-content/uploads/2021/06/location-sm.png</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>./wp-content/uploads/2023/06/image-24.png</image:loc>
-		</image:image>
-	</url>
-	<url>
 		<loc>./15c42-web-agency-gb-portfolio/index.html</loc>
 		<lastmod>2023-07-17T15:12:05+00:00</lastmod>
 		<image:image>
@@ -285,8 +272,21 @@
 		</image:image>
 	</url>
 	<url>
+		<loc>./15c42-web-agency-gb-contact-us/index.html</loc>
+		<lastmod>2023-07-18T08:04:30+00:00</lastmod>
+		<image:image>
+			<image:loc>./wp-content/uploads/2021/06/phone-sm.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>./wp-content/uploads/2021/06/location-sm.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>./wp-content/uploads/2023/06/image-24.png</image:loc>
+		</image:image>
+	</url>
+	<url>
 		<loc>./836-2/index.html</loc>
-		<lastmod>2023-07-18T06:58:21+00:00</lastmod>
+		<lastmod>2023-07-18T09:16:16+00:00</lastmod>
 		<image:image>
 			<image:loc>./wp-content/uploads/2023/07/pexels-andrea-piacquadio-3791664-scaled.jpeg</image:loc>
 		</image:image>
