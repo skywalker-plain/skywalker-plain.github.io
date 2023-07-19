@@ -12,7 +12,7 @@
 	<atom:link href="./index.html" rel="self" type="application/rss+xml" />
 	<link>./../../../index.html</link>
 	<description></description>
-	<lastBuildDate>Sat, 15 Jul 2023 16:47:13 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 19 Jul 2023 09:00:21 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,6 +20,137 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.2.2</generator>
 	<item>
+		<title>This is huge! Llama-v2 is open source</title>
+		<link>./../../../this-is-huge-llama-v2-is-open-source/index.html</link>
+					<comments>./../../../this-is-huge-llama-v2-is-open-source/index.html#respond</comments>
+		
+		<dc:creator><![CDATA[rohitkumar]]></dc:creator>
+		<pubDate>Wed, 19 Jul 2023 09:00:20 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<guid isPermaLink="false">./../../../index.html?p=943</guid>
+
+					<description><![CDATA[<p>With a license that authorizes commercial use! BUT &#8230;. Its better than falcon 7b on most benchmarks, and its 2x better than falcon on QuAC (Question Answering in Context), and MMLU (Massive Multitask Language Understanding). Way to go Yann LeCun, can&#8217;t wait to instruct fine tune this with QLORA. But there is a lot of concerns about the&#8230;&#160;<a href="./../../../this-is-huge-llama-v2-is-open-source/index.html" class="" rel="bookmark">Read More &#187;<span class="screen-reader-text">This is huge! Llama-v2 is open source</span></a></p>
+<p>The post <a rel="nofollow" href="./../../../this-is-huge-llama-v2-is-open-source/index.html">This is huge! Llama-v2 is open source</a> appeared first on <a rel="nofollow" href="./../../../index.html">PlainSwipe</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[
+<h4 class="wp-block-heading">With a license that authorizes commercial use! BUT &#8230;.</h4>
+
+
+
+<p>Its better than falcon 7b on most benchmarks, and its 2x better than falcon on QuAC (Question Answering in Context), and MMLU (Massive Multitask Language Understanding). Way to go <a href="https://www.linkedin.com/in/ACoAAAADFk0BbiOeu2Wrer11SaPH_5m1GM8pG6Q">Yann LeCun</a>, can&#8217;t wait to instruct fine tune this with QLORA. But there is a lot of concerns about the licenses, is it really open for commercial use?</p>
+
+
+
+<p>So I analyzed  <a href="https://github.com/facebookresearch/llama/blob/main/LICENSE">Llama 2&#8217;s Community License Agreement</a>, and here are the results:</p>
+
+
+
+<h3 class="wp-block-heading">Fine tuning:</h3>
+
+
+
+<p>The Llama 2 Community License Agreement does not explicitly mention fine-tuning. <a href="https://github.com/ZrrSkywalker/LLaMA-Adapter">Fine-tuning</a> is a common practice in the field of natural language processing (NLP) where a pre-trained language model, like Llama 2, is further trained on a specific dataset or task to make it more specialized and accurate for that particular use case.</p>
+
+
+
+<p>Since the agreement grants a license to use, reproduce, distribute, and create derivative works of the Llama Materials, it is reasonable to assume that fine-tuning is allowed as long as it falls within the scope of the granted license. In other words, if you fine-tune Llama 2 and create a derivative model for a specific task or dataset, you can use and distribute that fine-tuned model under the terms of the Llama 2 Community License Agreement.</p>
+
+
+
+<h3 class="wp-block-heading">Attribution Notice:</h3>
+
+
+
+<p>When distributing the Llama Materials or derivative works, you must include an attribution notice stating that Llama 2 is licensed under the LLAMA 2 Community License by Meta Platforms, Inc. </p>
+
+
+
+<p>Example: Company G uses Llama 2 to develop an AI-powered chat application. When releasing the application, they include the required <a href="https://www.lawinsider.com/dictionary/attribution-notices">attribution notice</a> within the application&#8217;s documentation.</p>
+
+
+
+<h3 class="wp-block-heading">Ownership of Derivative Works</h3>
+
+
+
+<p>If you create derivative works and modifications of the Llama Materials, you will be the owner of those works.</p>
+
+
+
+<p>Example: Individual F develops a new AI algorithm using Llama 2 as a foundation and can claim ownership of their new algorithm.</p>
+
+
+
+<h3 class="wp-block-heading">License to Use and Modify</h3>
+
+
+
+<p>The Agreement grants you a non-exclusive, worldwide, non-transferable, and royalty-free limited license to use, reproduce, distribute, copy, create derivative works of, and modify the Llama Materials. </p>
+
+
+
+<p>Example: Company E can create an AI-powered language translation service using Llama 2 and offer it to their customers.</p>
+
+
+
+<h3 class="wp-block-heading">Compliance with Laws and Regulations</h3>
+
+
+
+<p>Your use of Llama Materials must adhere to all applicable laws and regulations, including trade compliance laws and regulations.</p>
+
+
+
+<p>Example: Company D, based in the United States, must ensure that their use of Llama 2 complies with export control laws and regulations when providing their AI services to clients in other countries.</p>
+
+
+
+<h3 class="wp-block-heading">Prohibited Improving Other Models</h3>
+
+
+
+<p>You are not allowed to use the Llama Materials or any results obtained from them to improve any other large language model that is not Llama 2 or its derivatives. </p>
+
+
+
+<p>Example: Company C cannot use the knowledge gained from Llama 2 to enhance the capabilities of their own proprietary language model or any other language model they use in their products.</p>
+
+
+
+<h3 class="wp-block-heading">Monthly Active Users Limit: </h3>
+
+
+
+<p>If your product or service, along with its affiliates, reaches over 700 million monthly active users, you must request a separate license from Meta, and until you receive such license, you cannot exercise the rights granted under the Agreement. </p>
+
+
+
+<p>Example: Social media platform X uses Llama 2 for their AI-powered content moderation system. Once the number of their monthly active users crosses 700 million, <a href="https://en-gb.facebook.com/business/help/4740325989340856">they must seek a separate license from Meta</a> to continue using Llama 2 in their system. This one I find less of a restriction for startup companies and most medium size use cases.</p>
+
+
+
+<h3 class="wp-block-heading">Redistribution to Third Parties: </h3>
+
+
+
+<p>If you distribute or make the Llama Materials or any derivative works thereof available to a third party, you must provide a copy of the License Agreement to them. This means you cannot simply give the Llama Materials to others without informing them of the terms and conditions. </p>
+
+
+
+<p>Example: Company A creates an AI-powered chatbot using Llama 2 and wants to sell it to Company B for use on their website. Before doing so, Company A must provide a copy of the License Agreement to Company B</p>
+
+
+
+<p>Overall, its good news for startups. Of course <a href="./../../../managing-model-training-costs/index.html">fine tuning</a> this beast is another challenge. </p>
+<p>The post <a rel="nofollow" href="./../../../this-is-huge-llama-v2-is-open-source/index.html">This is huge! Llama-v2 is open source</a> appeared first on <a rel="nofollow" href="./../../../index.html">PlainSwipe</a>.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>./../../../this-is-huge-llama-v2-is-open-source/feed/index.html</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
 		<title>Empowering Doctors</title>
 		<link>./../../../empowering-doctors/index.html</link>
 					<comments>./../../../empowering-doctors/index.html#respond</comments>
@@ -1146,97 +1277,6 @@
 ]]></content:encoded>
 					
 					<wfw:commentRss>./../../../how-to-come-with-a-startup-idea-if-you-are-bootstrapping-or-an-indie-hacker/feed/index.html</wfw:commentRss>
-			<slash:comments>0</slash:comments>
-		
-		
-			</item>
-		<item>
-		<title>How to execute on a startup that is bootstrapped and on a tight budget?</title>
-		<link>./../../../how-to-execute-on-a-startup-that-is-bootstrapped-and-on-a-tight-budget/index.html</link>
-					<comments>./../../../how-to-execute-on-a-startup-that-is-bootstrapped-and-on-a-tight-budget/index.html#respond</comments>
-		
-		<dc:creator><![CDATA[rohitkumar]]></dc:creator>
-		<pubDate>Wed, 31 May 2023 20:24:07 +0000</pubDate>
-				<category><![CDATA[Uncategorized]]></category>
-		<guid isPermaLink="false">./../../../index.html?p=564</guid>
-
-					<description><![CDATA[<p>Running a startup on a bootstrap budget is about focus, because you do not have resources to dedicate on things that are not important. But, how can startups achieve focus? One critical way to achieve focus is measurement. I think it’s important if you’re running a small company that you establish what you are trying&#8230;&#160;<a href="./../../../how-to-execute-on-a-startup-that-is-bootstrapped-and-on-a-tight-budget/index.html" class="" rel="bookmark">Read More &#187;<span class="screen-reader-text">How to execute on a startup that is bootstrapped and on a tight budget?</span></a></p>
-<p>The post <a rel="nofollow" href="./../../../how-to-execute-on-a-startup-that-is-bootstrapped-and-on-a-tight-budget/index.html">How to execute on a startup that is bootstrapped and on a tight budget?</a> appeared first on <a rel="nofollow" href="./../../../index.html">PlainSwipe</a>.</p>
-]]></description>
-										<content:encoded><![CDATA[
-<p>Running a startup on a bootstrap budget is about focus, because you do not have resources to dedicate on things that are not important.</p>
-
-
-
-<figure class="wp-block-image size-full is-resized"><img decoding="async" src="./../../../wp-content/uploads/2023/05/960x0.webp" alt="" class="wp-image-567" width="819" height="546" srcset="./../../../wp-content/uploads/2023/05/960x0.webp 958w, ./../../../wp-content/uploads/2023/05/960x0-300x200.webp 300w, ./../../../wp-content/uploads/2023/05/960x0-768x512.webp 768w, ./../../../wp-content/uploads/2023/05/960x0-930x620.webp 930w" sizes="(max-width: 819px) 100vw, 819px" /></figure>
-
-
-
-<h2 class="wp-block-heading">But, how can startups achieve focus?</h2>
-
-
-
-<p>One critical way to achieve focus is measurement. I think it’s important if you’re running a small company that you establish what you are trying to accomplish, what’s your intended outcome?</p>
-
-
-
-<p>For example, say that startup is about, issuing documents. Documents that would ultimately be shared by the recipient. For example, let’s say your company is a platform that issues digital credentials (like certificates, and badges), and ultimately received by people and they share them on their social media handles like WhatsApp, Facebook, LinkedIn, etc.</p>
-
-
-
-<p>So, for a company like this, first ask yourself a question like</p>
-
-
-
-<blockquote class="wp-block-quote">
-<p>What is my intended outcome? What do I want to achieve?</p>
-</blockquote>
-
-
-
-<figure class="wp-block-image size-full is-resized"><img decoding="async" src="./../../../wp-content/uploads/2023/05/download-6.jpeg" alt="" class="wp-image-566" width="819" height="327" srcset="./../../../wp-content/uploads/2023/05/download-6.jpeg 356w, ./../../../wp-content/uploads/2023/05/download-6-300x120.jpeg 300w" sizes="(max-width: 819px) 100vw, 819px" /></figure>
-
-
-
-<p>The answer here is that I want to increase the number of shares, documents that are shared and I want to increase the number of use of those documents. Now next question, you ask is</p>
-
-
-
-<blockquote class="wp-block-quote">
-<p>What are the various steps in the process when it comes to achieving the intended outcome?</p>
-</blockquote>
-
-
-
-<p>The steps in the process are, for example going to number of documents that are actually issued using your platform, the number of documents that are received, sent, the number of documents that are opened, and then the number of documents that are shared.</p>
-
-
-
-<p>So the idea here is that measure each step in the in the process of achieving the outcome that you are trying to achieve and try to ensure that people are held accountable.</p>
-
-
-
-<figure class="wp-block-image size-large"><img decoding="async" width="1024" height="640" src="./../../../wp-content/uploads/2023/05/What-is-a-KPI-1024x640.png" alt="" class="wp-image-565" srcset="./../../../wp-content/uploads/2023/05/What-is-a-KPI-1024x640.png 1024w, ./../../../wp-content/uploads/2023/05/What-is-a-KPI-300x188.png 300w, ./../../../wp-content/uploads/2023/05/What-is-a-KPI-768x480.png 768w, ./../../../wp-content/uploads/2023/05/What-is-a-KPI.png 1440w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
-
-
-
-<p>So identify individuals in your organization who are held accountable for each of those metrics. In the start of a company a bootstrapped one, with very few people, it might be that you are responsible for multiple metrics down the funnel.</p>
-
-
-
-<p>But in a slightly bigger organization, you will have individuals accountable for these steps, for example, marketing would be responsible for increasing the number of documents issued and customer support might be, responsible for getting a document opened.</p>
-
-
-
-<h2 class="wp-block-heading">Conclusion</h2>
-
-
-
-<p>On a daily basis, you should review what your performance goal is and keep on every day, stare at the value creation objective for your end users. In my next post I will be discussing how a bootstrapped startup can do marketing on a tight budget, so stay tuned or subscribe.</p>
-<p>The post <a rel="nofollow" href="./../../../how-to-execute-on-a-startup-that-is-bootstrapped-and-on-a-tight-budget/index.html">How to execute on a startup that is bootstrapped and on a tight budget?</a> appeared first on <a rel="nofollow" href="./../../../index.html">PlainSwipe</a>.</p>
-]]></content:encoded>
-					
-					<wfw:commentRss>./../../../how-to-execute-on-a-startup-that-is-bootstrapped-and-on-a-tight-budget/feed/index.html</wfw:commentRss>
 			<slash:comments>0</slash:comments>
 		
 		
