@@ -250,28 +250,6 @@
 		</image:image>
 	</url>
 	<url>
-		<loc>./15c42-web-agency-gb-portfolio/index.html</loc>
-		<lastmod>2023-07-17T15:12:05+00:00</lastmod>
-		<image:image>
-			<image:loc>./wp-content/uploads/2023/05/kblocks_prebuilt_40_support_1-min-1024x730-1.png</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>./wp-content/uploads/2023/05/TrainingMarketplace.png</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>./wp-content/uploads/2023/05/optometrist-eye-specialist-prescription-pad-template-in-ms-word.jpeg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>./wp-content/uploads/2023/05/SSImageSearch.png</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>./wp-content/uploads/2023/05/image.png</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>./wp-content/uploads/2020/12/neve-web-design-studio-03.1.jpg</image:loc>
-		</image:image>
-	</url>
-	<url>
 		<loc>./15c42-web-agency-gb-contact-us/index.html</loc>
 		<lastmod>2023-07-18T08:04:30+00:00</lastmod>
 		<image:image>
@@ -285,8 +263,8 @@
 		</image:image>
 	</url>
 	<url>
-		<loc>./836-2/index.html</loc>
-		<lastmod>2023-07-18T09:16:16+00:00</lastmod>
+		<loc>./carebot/index.html</loc>
+		<lastmod>2023-07-20T05:37:29+00:00</lastmod>
 		<image:image>
 			<image:loc>./wp-content/uploads/2023/07/pexels-andrea-piacquadio-3791664-scaled.jpeg</image:loc>
 		</image:image>
@@ -352,6 +330,28 @@
 		</image:image>
 		<image:image>
 			<image:loc>./wp-content/uploads/2023/07/Reminder3.jpg</image:loc>
+		</image:image>
+	</url>
+	<url>
+		<loc>./15c42-web-agency-gb-portfolio/index.html</loc>
+		<lastmod>2023-07-20T05:38:06+00:00</lastmod>
+		<image:image>
+			<image:loc>./wp-content/uploads/2023/05/kblocks_prebuilt_40_support_1-min-1024x730-1.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>./wp-content/uploads/2023/05/TrainingMarketplace.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>./wp-content/uploads/2023/05/optometrist-eye-specialist-prescription-pad-template-in-ms-word.jpeg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>./wp-content/uploads/2023/05/SSImageSearch.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>./wp-content/uploads/2023/05/image.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>./wp-content/uploads/2020/12/neve-web-design-studio-03.1.jpg</image:loc>
 		</image:image>
 	</url>
 </urlset>
