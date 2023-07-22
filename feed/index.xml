@@ -12,7 +12,7 @@
 	<atom:link href="./index.html" rel="self" type="application/rss+xml" />
 	<link>./../index.html</link>
 	<description></description>
-	<lastBuildDate>Wed, 19 Jul 2023 09:00:21 +0000</lastBuildDate>
+	<lastBuildDate>Sat, 22 Jul 2023 14:06:57 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,6 +20,185 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.2.2</generator>
 	<item>
+		<title>How Generative AI can help improve demand forecasting for logistics</title>
+		<link>./../how-generative-ai-can-help-improve-demand-forecasting-for-logistics/index.html</link>
+					<comments>./../how-generative-ai-can-help-improve-demand-forecasting-for-logistics/index.html#respond</comments>
+		
+		<dc:creator><![CDATA[rohitkumar]]></dc:creator>
+		<pubDate>Sat, 22 Jul 2023 14:05:41 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<guid isPermaLink="false">./../index.html?p=947</guid>
+
+					<description><![CDATA[<p>AI-powered demand forecasting for accurate inventory planning and proactive decision-making inlogistics. Consider this: it takes an average of 6 months to manufacture a tire (tire design, raw material sourcing, mixing and extrusion, tire building, curing, quality assurance, and packaging) and during this time, the market can undergo significant changes. Without precise forecasting, businesses risk being&#8230;&#160;<a href="./../how-generative-ai-can-help-improve-demand-forecasting-for-logistics/index.html" class="" rel="bookmark">Read More &#187;<span class="screen-reader-text">How Generative AI can help improve demand forecasting for logistics</span></a></p>
+<p>The post <a rel="nofollow" href="./../how-generative-ai-can-help-improve-demand-forecasting-for-logistics/index.html">How Generative AI can help improve demand forecasting for logistics</a> appeared first on <a rel="nofollow" href="./../index.html">PlainSwipe</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[
+<h3 class="wp-block-heading">AI-powered demand forecasting for accurate inventory planning and proactive decision-making in<br>logistics.</h3>
+
+
+
+<p>Consider this: it takes an average of 6 months to manufacture a tire (tire design, raw material sourcing, mixing and extrusion, tire building, curing, quality assurance, and packaging) and during this time, the market can undergo significant changes. Without precise forecasting, businesses risk being unprepared for fluctuations in demand, leading to excess inventory or stock-outs.</p>
+
+
+
+<p>I recently attended an event <a href="https://in.linkedin.com/company/cii-il">CII IL &#8216;Solution de Technology, Automation &amp; Robotics</a>&#8216; on 21 July 2023, Hotel The Lalit, New Delhi. Session Chairman <a href="https://in.linkedin.com/in/rishidiwan103">Mr Rishi Diwan</a> did a great job of picking great panelists. In a thought-provoking panel discussion, top industry leaders from the logistics sector gathered to shed light on the game-changing impact of automation. The distinguished panelists included <a href="https://in.linkedin.com/in/anil-syal-2b410b90">Mr. Anil Syal</a>, President of Safexpress Private Limited; <a href="https://in.linkedin.com/in/devang-mankodi-76bb979">Mr. Devang Mankodi</a>, Vice President &#8211; Shared Service at DP World; <a href="https://in.linkedin.com/in/manish-gupta-543a1212">Mr. Manish Kumar Gupta</a>, Head &#8211; Spare Parts Logistics, Honda Cars India Ltd; <a href="https://in.linkedin.com/in/rajeshgupta21">Mr. Rajesh Gupta</a>, Head-Supply Chain Management, JK Tyre &amp; Industries Limited; and <a href="https://in.linkedin.com/in/vikas-kalra-50509144">Mr. Vikas Kalra, </a>Head-Supply Chain Management, Hindware Home Innovation Limited.</p>
+
+
+
+<p>The logistics industry is undergoing a profound transformation with the advent of automation. This revolutionary technology is redefining operations, fostering efficiency, and propelling growth. Embracing automation empowers logistics providers to streamline processes, boost productivity, and expand their business horizons. By harnessing the full potential of automation, these companies can attain operational excellence, unearth inventive solutions, and maintain a competitive edge in a constantly evolving market.</p>
+
+
+
+<div class="wp-block-ideabox-toc ib-block-toc" data-anchors='h2,h3,h4,h5,h6' data-collapsable='true' ><div class="ib-toc-container ib-toc-list-style-numbers ib-toc-hierarchical ib-toc-expanded"><div class="ib-toc-header"><div class="ib-toc-header-title">Table of Contents</div><div class="ib-toc-header-right"><span class="ib-toc-icon-collapse"><span class="dashicon dashicons dashicons-minus"></span></span><span class="ib-toc-icon-expand"><span class="dashicon dashicons dashicons-plus"></span></span></div></div><div class="ib-toc-separator" style="height:2px"></div><div class="ib-toc-body"><ol class="ib-toc-anchors"></ol></div></div></div>
+
+
+
+<h4 class="wp-block-heading">Demand planning and forecasting is the weakest link in the chain</h4>
+
+
+
+<p><a href="https://en.wikipedia.org/wiki/Beer_distribution_game">The bear game</a> is a popular logistics training exercise where participants simulate managing the movement of goods in a supply chain. It demonstrates the importance of demand forecasting in logistics by highlighting how accurate predictions help participants anticipate and respond to fluctuations in demand, allowing them to optimize inventory levels and ensure efficient supply chain management in a dynamic environment.Each participant takes on the role of a different supply chain stakeholder, such as a manufacturer, distributor, or retailer. As the game progresses, participants face challenges like transportation delays, stockouts, or sudden changes in demand.</p>
+
+
+
+<h4 class="wp-block-heading">Traditional forecasting vs AI-powered forecasting</h4>
+
+
+
+<p>While traditional statistical demand forecasting relies on historical data spanning 24 to 26 months, its limited scope and inability to capture real-time factors hinder its accuracy (60/75%). In contrast, AI-powered demand forecasting, leveraging real-time data and machine learning algorithms, can surpass traditional methods. By incorporating variables like GDP growth, market dynamics, weather conditions, and more, AI-driven models can achieve 95 to 98% accuracy, empowering businesses to make data-driven decisions and stay agile in the face of market changes.</p>
+
+
+
+<p>Similar to how Google Maps dynamically updates its estimated arrival time based on real-time traffic conditions, AI-powered demand forecasting should continuously adapt to changing market dynamics.</p>
+
+
+
+<h4 class="wp-block-heading">How generative AI can make forecasting for logistics more accurate</h4>
+
+
+
+<p>Generative AI, specifically Language Models like Large Language Models (LLMs), holds great promise in revolutionizing demand forecasting. LLMs can analyze vast amounts of textual data from diverse sources, such as customer reviews, social media, news articles, and industry reports. By comprehensively understanding customer sentiments, market trends, and emerging events, LLMs provide valuable insights for demand forecasting models. </p>
+
+
+
+<h4 class="wp-block-heading">Scenario Analysis made possible by generative AI</h4>
+
+
+
+<p>LLMs can generate hypothetical scenarios based on given conditions, helping businesses anticipate various demand outcomes. This <a href="https://www.planettogether.com/blog/the-importance-of-what-if-scenarios-in-production-planning">scenario analysis allows demand planners to explore &#8220;what-if&#8221; situations </a>and strategize effectively for different scenarios.</p>
+
+
+
+<p>This is how it could work:</p>
+
+
+
+<p class="has-neve-link-hover-color-color has-text-color">AI Assistant: (Responding) Sure, let&#8217;s get started. Please upload the historical sales data and any other relevant market information.</p>
+
+
+
+<p>User: (Uploads data) Here is the data for the past 24 months, including sales figures, customer feedback, and economic indicators.</p>
+
+
+
+<p class="has-neve-link-hover-color-color has-text-color">AI Assistant: (After analysis) Customer sentiment has been positive over the past few months, with a notable increase in interest for our new product line.</p>
+
+
+
+<p>User: That&#8217;s promising! What about upcoming market trends?</p>
+
+
+
+<p class="has-neve-link-hover-color-color has-text-color">AI Assistant: Predicts a potential surge in demand for our products due to a major industry event scheduled next month. Additionally, the analysis indicates a potential slowdown in customer interest during the following quarter.</p>
+
+
+
+<p>User: Interesting! Based on these insights, what&#8217;s the forecast for the next quarter?</p>
+
+
+
+<p class="has-neve-link-hover-color-color has-text-color">AI Assistant: With the current positive trends and the anticipated industry event, the LLM forecasts a 15% increase in demand for the next quarter. However, it also suggests being cautious about the following quarter due to the potential slowdown.</p>
+
+
+
+<h4 class="wp-block-heading">LLMs being used to intelligently collect insights for accurate forecasting</h4>
+
+
+
+<p>LLM can engage with customer service representatives, product managers, and sales teams to extract valuable insights from their interactions with customers.</p>
+
+
+
+<p>Customer Service Representative: Hi! Sure, I can help. We&#8217;ve been receiving a lot of inquiries about the new clothing line, especially about the availability of certain sizes and colors.</p>
+
+
+
+<p class="has-neve-link-hover-color-color has-text-color">AI Assistant (LLM): Thank you for sharing that. Are there any recurring patterns in customer inquiries that you&#8217;ve noticed?</p>
+
+
+
+<p>Customer Service Representative: Yes, customers have been asking about the fabric composition and the environmental certifications of our eco-friendly products.</p>
+
+
+
+<p class="has-neve-link-hover-color-color has-text-color">AI Assistant (LLM): That&#8217;s insightful. Do customers frequently provide feedback about the shopping experience related to our sustainable fashion line?</p>
+
+
+
+<p>Customer Service Representative: Yes, we often receive positive feedback about the quality and comfort of our eco-friendly clothing, and customers appreciate our efforts to promote sustainable fashion.</p>
+
+
+
+<p class="has-neve-link-hover-color-color has-text-color">AI Assistant (LLM): (Initiating chat with Sales Representative at GreenEco) Hello! I&#8217;m the LLM-powered demand forecasting assistant. I&#8217;m interested in learning more about sales trends and customer preferences related to our new eco-friendly clothing line.</p>
+
+
+
+<p>Sales Representative: Hi! I&#8217;d be happy to help. The sales for our eco-friendly clothing line have been steadily increasing, especially for our organic cotton t-shirts and recycled polyester jackets.</p>
+
+
+
+<p class="has-neve-link-hover-color-color has-text-color">AI Assistant (LLM): That&#8217;s insightful. Can you identify any specific factors contributing to the increased demand for these products?</p>
+
+
+
+<p>Sales Representative: Yes, customers are increasingly conscious of sustainable fashion choices, and they appreciate the versatility and style of our eco-friendly clothing.</p>
+
+
+
+<p class="has-neve-link-hover-color-color has-text-color">AI Assistant (LLM): Thank you for sharing that. Have there been any notable changes in customer preferences or market trends that you&#8217;ve observed?</p>
+
+
+
+<p>Sales Representative: We&#8217;ve noticed a growing interest in earth-toned colors and minimalist designs, aligning with the current sustainable fashion trends.</p>
+
+
+
+<p class="has-neve-link-hover-color-color has-text-color">AI Assistant (LLM): Valuable information! Now, let&#8217;s integrate these insights into our demand forecasting process for the new eco-friendly clothing line.</p>
+
+
+
+<p class="has-neve-link-hover-color-color has-text-color">AI Assistant (LLM): (Analyzing customer service and sales data) Based on the chat with customer service, there&#8217;s a growing interest in our new eco-friendly clothing line, particularly regarding size availability, fabric composition, and environmental certifications.</p>
+
+
+
+<h4 class="wp-block-heading">Conclusion</h4>
+
+
+
+<p>From the conversation with the sales team, we can observe an increasing demand for our organic cotton t-shirts and recycled polyester jackets. Customers&#8217; conscious choices towards sustainable fashion, along with the appeal of earth-toned colors and minimalist designs, are driving this trend.</p>
+
+
+
+<p>By integrating these insights into our demand forecasting model, we can anticipate continued growth in demand for our eco-friendly clothing line. We can focus on optimizing inventory for popular products like organic cotton t-shirts and recycled polyester jackets while considering customers&#8217; preferences for fabric composition and environmental sustainability.</p>
+<p>The post <a rel="nofollow" href="./../how-generative-ai-can-help-improve-demand-forecasting-for-logistics/index.html">How Generative AI can help improve demand forecasting for logistics</a> appeared first on <a rel="nofollow" href="./../index.html">PlainSwipe</a>.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>./../how-generative-ai-can-help-improve-demand-forecasting-for-logistics/feed/index.html</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
 		<title>This is huge! Llama-v2 is open source</title>
 		<link>./../this-is-huge-llama-v2-is-open-source/index.html</link>
 					<comments>./../this-is-huge-llama-v2-is-open-source/index.html#respond</comments>
@@ -1194,89 +1373,6 @@
 ]]></content:encoded>
 					
 					<wfw:commentRss>./../brand-building-on-a-budget-how-startups-beat-the-big-guns/feed/index.html</wfw:commentRss>
-			<slash:comments>0</slash:comments>
-		
-		
-			</item>
-		<item>
-		<title>How to come with a startup idea if you are bootstrapping or an indie hacker</title>
-		<link>./../how-to-come-with-a-startup-idea-if-you-are-bootstrapping-or-an-indie-hacker/index.html</link>
-					<comments>./../how-to-come-with-a-startup-idea-if-you-are-bootstrapping-or-an-indie-hacker/index.html#respond</comments>
-		
-		<dc:creator><![CDATA[rohitkumar]]></dc:creator>
-		<pubDate>Wed, 31 May 2023 20:27:21 +0000</pubDate>
-				<category><![CDATA[Uncategorized]]></category>
-		<guid isPermaLink="false">./../index.html?p=569</guid>
-
-					<description><![CDATA[<p>There are a few different ways to come up with startup ideas: 1. Look at what’s already out there and find a way to improve it 2. Solve a problem that you or someone you know is experiencing This is the common advice. The problem I find is that this approach gives you too many&#8230;&#160;<a href="./../how-to-come-with-a-startup-idea-if-you-are-bootstrapping-or-an-indie-hacker/index.html" class="" rel="bookmark">Read More &#187;<span class="screen-reader-text">How to come with a startup idea if you are bootstrapping or an indie hacker</span></a></p>
-<p>The post <a rel="nofollow" href="./../how-to-come-with-a-startup-idea-if-you-are-bootstrapping-or-an-indie-hacker/index.html">How to come with a startup idea if you are bootstrapping or an indie hacker</a> appeared first on <a rel="nofollow" href="./../index.html">PlainSwipe</a>.</p>
-]]></description>
-										<content:encoded><![CDATA[
-<p>There are a few different ways to come up with startup ideas:</p>
-
-
-
-<figure class="wp-block-image size-full is-resized"><img decoding="async" src="./../wp-content/uploads/2023/05/how_to_turn_your_start_up_ideas_into_a_business.jpg" alt="" class="wp-image-570" width="817" height="457" srcset="./../wp-content/uploads/2023/05/how_to_turn_your_start_up_ideas_into_a_business.jpg 408w, ./../wp-content/uploads/2023/05/how_to_turn_your_start_up_ideas_into_a_business-300x168.jpg 300w" sizes="(max-width: 817px) 100vw, 817px" /></figure>
-
-
-
-<p>1. Look at what’s already out there and find a way to improve it</p>
-
-
-
-<p>2. Solve a problem that you or someone you know is experiencing</p>
-
-
-
-<p>This is the common advice. The problem I find is that this approach gives you too many ideas.</p>
-
-
-
-<h2 class="wp-block-heading">So how can you find ideas that you have passion for?</h2>
-
-
-
-<p>So one secret to finding ideas that you have a passion for is to focus on things that you do daily.</p>
-
-
-
-<p>For example, If you spend a lot of time say in investment just observe, what are the things that you feel like doing and you’re not able to do? What do you spend more time doing?</p>
-
-
-
-<figure class="wp-block-image size-large"><img decoding="async" width="1024" height="768" src="./../wp-content/uploads/2023/05/aid1557372-v4-1200px-Sharpen-Your-Powers-of-Observation-Step-13-1024x768.jpg" alt="" class="wp-image-571" srcset="./../wp-content/uploads/2023/05/aid1557372-v4-1200px-Sharpen-Your-Powers-of-Observation-Step-13-1024x768.jpg 1024w, ./../wp-content/uploads/2023/05/aid1557372-v4-1200px-Sharpen-Your-Powers-of-Observation-Step-13-300x225.jpg 300w, ./../wp-content/uploads/2023/05/aid1557372-v4-1200px-Sharpen-Your-Powers-of-Observation-Step-13-768x576.jpg 768w, ./../wp-content/uploads/2023/05/aid1557372-v4-1200px-Sharpen-Your-Powers-of-Observation-Step-13.jpg 1200w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
-
-
-
-<p>Let’s say, for example, you’re spending a lot of time or effort in figuring out comparing a stock or reading the transcript report, just observe, figure out what while reading the transcript, what are you trying to get out of it and see if you can fundamentally come up or use a disruptive technology to to eliminate that.</p>
-
-
-
-<p>See, there is always a market so you want to look at current market for a product like this would be that somebody would pay for. In this case, let’s say a financial analyst is going through these talks and identifying what exactly is the transcript earning calls transcript is saying, What if you could develop technology that could do the same? What if it is not just technology, what if you could, connect people to other people who can potentially help you accomplish this and make them do things for each other so that it’s gets the same job done.</p>
-
-
-
-<h2 class="wp-block-heading">Summary</h2>
-
-
-
-<p>To conclude, a quick tip, when the day ends, or maybe the start of the day, just simply write all your observations.</p>
-
-
-
-<figure class="wp-block-image size-full"><img decoding="async" width="780" height="439" src="./../wp-content/uploads/2023/05/stephanie-rimando-metro-vancouver-journal-writer.webp" alt="" class="wp-image-572" srcset="./../wp-content/uploads/2023/05/stephanie-rimando-metro-vancouver-journal-writer.webp 780w, ./../wp-content/uploads/2023/05/stephanie-rimando-metro-vancouver-journal-writer-300x169.webp 300w, ./../wp-content/uploads/2023/05/stephanie-rimando-metro-vancouver-journal-writer-768x432.webp 768w" sizes="(max-width: 780px) 100vw, 780px" /></figure>
-
-
-
-<p>Write what you saw, what you spent more time on, resist the temptation to get ideas or judge your observations. Resist the temptation to come up the solution to the problem, Just take note of the emotion. Notice what is happening. Soon you will discover a theme emerging, an opportunity will emerge.</p>
-
-
-
-<p>Good news is that this opportunity will be something you have passion towards. In my next blog I will cover what other things to ensure when you are evaluating this opportunity, so stay tuned.</p>
-<p>The post <a rel="nofollow" href="./../how-to-come-with-a-startup-idea-if-you-are-bootstrapping-or-an-indie-hacker/index.html">How to come with a startup idea if you are bootstrapping or an indie hacker</a> appeared first on <a rel="nofollow" href="./../index.html">PlainSwipe</a>.</p>
-]]></content:encoded>
-					
-					<wfw:commentRss>./../how-to-come-with-a-startup-idea-if-you-are-bootstrapping-or-an-indie-hacker/feed/index.html</wfw:commentRss>
 			<slash:comments>0</slash:comments>
 		
 		

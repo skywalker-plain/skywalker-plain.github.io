@@ -2,7 +2,7 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
 		<loc>./index.html</loc>
-		<lastmod>2023-07-19T09:00:21+00:00</lastmod>
+		<lastmod>2023-07-22T14:06:57+00:00</lastmod>
 	</url>
 	<url>
 		<loc>./the-one-thing-all-successful-startups-do-and-its-not-what-you-think/index.html</loc>
@@ -348,6 +348,13 @@
 		<lastmod>2023-07-19T09:00:21+00:00</lastmod>
 		<image:image>
 			<image:loc>./wp-content/uploads/2023/07/pexels-magda-ehlers-1300358-scaled.jpg</image:loc>
+		</image:image>
+	</url>
+	<url>
+		<loc>./how-generative-ai-can-help-improve-demand-forecasting-for-logistics/index.html</loc>
+		<lastmod>2023-07-22T14:06:57+00:00</lastmod>
+		<image:image>
+			<image:loc>./wp-content/uploads/2023/07/pexels-tiger-lily-4484155-scaled.jpg</image:loc>
 		</image:image>
 	</url>
 </urlset>
