@@ -109,12 +109,30 @@
 		<image:image>
 			<image:loc>./wp-content/uploads/2023/05/8631388149_ea9dc40785_b.jpg</image:loc>
 		</image:image>
+		<image:image>
+			<image:loc>./wp-content/uploads/2023/08/image-16.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>./wp-content/uploads/2023/08/image-17.png</image:loc>
+		</image:image>
 	</url>
 	<url>
 		<loc>./an-xr-intro-for-ai-ml-data-scientists-and-react-developers/index.html</loc>
 		<lastmod>2023-05-31T19:48:31+00:00</lastmod>
 		<image:image>
 			<image:loc>./wp-content/uploads/2023/05/life-12-01430-g001.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>./wp-content/uploads/2023/08/image-12.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>./wp-content/uploads/2023/08/image-11.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>./wp-content/uploads/2023/08/image-9.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>./wp-content/uploads/2023/08/image-10.png</image:loc>
 		</image:image>
 	</url>
 	<url>
