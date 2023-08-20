@@ -8,17 +8,25 @@
 	>
 
 <channel>
-	<title>PlainSwipe -</title>
+	<title>PlainSwipe</title>
 	<atom:link href="./index.html" rel="self" type="application/rss+xml" />
 	<link>./../index.html</link>
-	<description></description>
+	<description>AI Made Simple</description>
 	<lastBuildDate>Fri, 11 Aug 2023 15:48:08 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
 	<sy:updateFrequency>
 	1	</sy:updateFrequency>
-	<generator>https://wordpress.org/?v=6.2.2</generator>
+	<generator>https://wordpress.org/?v=6.3</generator>
+
+<image>
+	<url>./../wp-content/uploads/2023/08/cropped-cropped-3-1-32x32.png</url>
+	<title>PlainSwipe</title>
+	<link>./../index.html</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
 	<item>
 		<title>How to Handle Out-of-Memory Errors when training LLMs</title>
 		<link>./../how-to-handle-out-of-memory-errors-when-training-llms/index.html</link>
@@ -164,7 +172,7 @@
 
 
 <div class="wp-block-image is-style-rounded">
-<figure class="aligncenter size-full"><img decoding="async" width="318" height="318" src="./../wp-content/uploads/2023/07/image-3.png" alt="" class="wp-image-954" srcset="./../wp-content/uploads/2023/07/image-3.png 318w, ./../wp-content/uploads/2023/07/image-3-300x300.png 300w, ./../wp-content/uploads/2023/07/image-3-150x150.png 150w" sizes="(max-width: 318px) 100vw, 318px" /></figure></div>
+<figure class="aligncenter size-full"><img decoding="async" fetchpriority="high" width="318" height="318" src="./../wp-content/uploads/2023/07/image-3.png" alt="" class="wp-image-954" srcset="./../wp-content/uploads/2023/07/image-3.png 318w, ./../wp-content/uploads/2023/07/image-3-300x300.png 300w, ./../wp-content/uploads/2023/07/image-3-150x150.png 150w" sizes="(max-width: 318px) 100vw, 318px" /></figure></div>
 
 
 <p>a renowned expert in the field of diabetes research, recently delivered an insightful talk at a conference, shedding light on the latest advancements in <a href="https://www.mayoclinic.org/diseases-conditions/type-2-diabetes/diagnosis-treatment/drc-20351199#:~:text=Treatment%20also%20includes%20diet%20and,height%20to%20estimate%20body%20fat.">Type 2 Diabetes (T2D) management.</a> The conference covered various aspects, including nutritional therapy, long-term weight maintenance, <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3712370/">GLP-1 analogues</a>, and combination therapy. This article aims to distill the key takeaways from his talk, focusing on essential topics such as personalized treatment approaches, the role of GLP-1 receptor agonists, <a href="https://www.kidney.org/atoz/content/sglt2-inhibitors#:~:text=SGLT2%20inhibitors%2C%20which%20are%20also,leaves%20through%20in%20your%20urine.">SGLT2 inhibitors</a>, and the Defranzo algorithm for optimal glycemic control.I will share some key takeaways from the conference that can help individuals better understand and manage T2D effectively.</p>
