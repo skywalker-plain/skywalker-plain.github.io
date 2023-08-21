@@ -2,7 +2,7 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
 		<loc>./index.html</loc>
-		<lastmod>2023-08-20T14:03:37+00:00</lastmod>
+		<lastmod>2023-08-21T18:55:07+00:00</lastmod>
 		<image:image>
 			<image:loc>./wp-content/uploads/2023/08/image-6.png</image:loc>
 		</image:image>
@@ -269,19 +269,6 @@
 		</image:image>
 	</url>
 	<url>
-		<loc>./15c42-web-agency-gb-contact-us/index.html</loc>
-		<lastmod>2023-07-18T08:04:30+00:00</lastmod>
-		<image:image>
-			<image:loc>./wp-content/uploads/2021/06/phone-sm.png</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>./wp-content/uploads/2021/06/location-sm.png</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>./wp-content/uploads/2023/06/image-24.png</image:loc>
-		</image:image>
-	</url>
-	<url>
 		<loc>./carebot/index.html</loc>
 		<lastmod>2023-07-20T05:37:29+00:00</lastmod>
 		<image:image>
@@ -414,7 +401,52 @@
 	</url>
 	<url>
 		<loc>./15c42-web-agency-gb-portfolio/index.html</loc>
-		<lastmod>2023-08-20T15:16:00+00:00</lastmod>
+		<lastmod>2023-08-21T18:24:48+00:00</lastmod>
+		<image:image>
+			<image:loc>./wp-content/uploads/2023/08/image-6.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>./wp-content/uploads/2023/08/image-5.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>./wp-content/uploads/2023/06/two.svg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>./wp-content/uploads/2023/05/A-Complete-Guide-on-SaaS-User-Permission-Management-Featured-Image.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>./wp-content/uploads/2023/08/image-4.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>./wp-content/uploads/2023/08/c84ccd7888494c02b0db00edd8934e6a.webp</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>./wp-content/uploads/2023/07/image-3.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>./wp-content/uploads/2023/08/Screenshot-2023-06-01-at-12.22.50-PM.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>./wp-content/uploads/2023/07/pexels-andrea-piacquadio-3791664-scaled.jpeg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>./wp-content/uploads/2023/07/Reminder3.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>./wp-content/uploads/2023/08/image-8.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>./wp-content/uploads/2023/08/image-7.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>./wp-content/uploads/2023/08/iStock-950680410_augypw.webp</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>./wp-content/uploads/2023/06/download-7.jpeg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>./wp-content/uploads/2023/05/9-psychology-tricks-you-can-use-to-improve-cold-calling-and-winning-more-leads-Illustration-by-MyOperator.png</image:loc>
+		</image:image>
 		<image:image>
 			<image:loc>./wp-content/uploads/2023/05/kblocks_prebuilt_40_support_1-min-1024x730-1.png</image:loc>
 		</image:image>
@@ -432,6 +464,19 @@
 		</image:image>
 		<image:image>
 			<image:loc>./wp-content/uploads/2020/12/neve-web-design-studio-03.1.jpg</image:loc>
+		</image:image>
+	</url>
+	<url>
+		<loc>./15c42-web-agency-gb-contact-us/index.html</loc>
+		<lastmod>2023-08-21T18:38:00+00:00</lastmod>
+		<image:image>
+			<image:loc>./wp-content/uploads/2021/06/phone-sm.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>./wp-content/uploads/2021/06/location-sm.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>./wp-content/uploads/2023/06/image-24.png</image:loc>
 		</image:image>
 	</url>
 </urlset>
