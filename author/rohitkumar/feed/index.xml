@@ -12,13 +12,13 @@
 	<atom:link href="./index.html" rel="self" type="application/rss+xml" />
 	<link>./../index.html</link>
 	<description>AI Made Simple</description>
-	<lastBuildDate>Wed, 23 Aug 2023 16:10:43 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 30 Aug 2023 11:22:52 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
 	<sy:updateFrequency>
 	1	</sy:updateFrequency>
-	<generator>https://wordpress.org/?v=6.3</generator>
+	<generator>https://wordpress.org/?v=6.3.1</generator>
 
 <image>
 	<url>./../../../wp-content/uploads/2023/08/cropped-cropped-3-1-32x32.png</url>
@@ -28,6 +28,459 @@
 	<height>32</height>
 </image> 
 	<item>
+		<title>What Startups Can Learn from ChatGPT&#8217;s Enterprise Move</title>
+		<link>./../../../what-startups-can-learn-from-chatgpts-enterprise-move/index.html</link>
+					<comments>./../../../what-startups-can-learn-from-chatgpts-enterprise-move/index.html#respond</comments>
+		
+		<dc:creator><![CDATA[rohitkumar]]></dc:creator>
+		<pubDate>Wed, 30 Aug 2023 11:20:56 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<guid isPermaLink="false">./../../../index.html?p=1258</guid>
+
+					<description><![CDATA[<p>ChatGPT has just rolled out their exciting new enterprise offering, and it got me thinking about the valuable lessons SaaS entrepreneurs can glean from this development. Here are the main features that they introduced which you might want to consider for your offering: Having started a few companies, I have often stumbled upon the case&#8230;&#160;<a href="./../../../what-startups-can-learn-from-chatgpts-enterprise-move/index.html" class="" rel="bookmark">Read More &#187;<span class="screen-reader-text">What Startups Can Learn from ChatGPT&#8217;s Enterprise Move</span></a></p>
+<p>The post <a rel="nofollow" href="./../../../what-startups-can-learn-from-chatgpts-enterprise-move/index.html">What Startups Can Learn from ChatGPT&#8217;s Enterprise Move</a> appeared first on <a rel="nofollow" href="./../../../index.html">PlainSwipe</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[
+<p>ChatGPT has just rolled out their exciting new enterprise offering, and it got me thinking about the valuable lessons SaaS entrepreneurs can glean from this development.</p>
+
+
+
+<p>Here are the main features that they introduced which you might want to consider for your offering:</p>
+
+
+
+<ul>
+<li>Enterprise-grade security and privacy </li>
+
+
+
+<li>Customer prompts and company data are not used for training OpenAI models. </li>
+
+
+
+<li>Data encryption at rest (AES 256) and in transit (TLS 1.2+) </li>
+
+
+
+<li>Certified SOC 2 compliant Features for large-scale deployments </li>
+
+
+
+<li>Admin console with bulk member management</li>
+
+
+
+<li>SSO </li>
+
+
+
+<li>Domain verification</li>
+
+
+
+<li>Analytics dashboard for usage insights</li>
+</ul>
+
+
+
+<p>Having started a few companies, I have often stumbled upon the case when a big company finds your product perfect but just because you are a startup you loose the deal to an established player. Here are some few things you can do from the start and bake in enterprise grade into your DNA:</p>
+
+
+
+<ol>
+<li><strong>Data Usage Policy:</strong>
+<ul>
+<li>Draft a clear and concise privacy policy that explicitly states that customer prompts and company data will not be used for training OpenAI models.</li>
+
+
+
+<li>Display this policy prominently on your app&#8217;s website or within the app itself during user onboarding.</li>
+</ul>
+</li>
+
+
+
+<li><strong>Data Encryption:</strong>
+<ul>
+<li>Install the <code>cryptography</code> library using pip: <code>pip install cryptography</code>.</li>
+
+
+
+<li>Encrypt sensitive data before storing it in the database. For example, encrypt user passwords before saving them.</li>
+
+
+
+<li>Use Flask&#8217;s built-in <code>app.config['SECRET_KEY']</code> for encrypting session data.</li>
+
+
+
+<li>Enable HTTPS for your Flask app by configuring a TLS certificate on your web server (e.g., Nginx or Apache) and using the <code>flask-talisman</code> extension to enforce secure headers.</li>
+</ul>
+</li>
+
+
+
+<li><strong>SOC 2 Compliance:</strong>
+<ul>
+<li>Study the SOC 2 framework and identify the applicable Trust Services Criteria (TSC).</li>
+
+
+
+<li>Implement security controls and policies that align with the selected TSC.</li>
+
+
+
+<li>Document your processes, procedures, and security measures.</li>
+
+
+
+<li>Consider hiring a third-party auditor to assess your app&#8217;s compliance.</li>
+</ul>
+</li>
+
+
+
+<li><strong>Large-Scale Deployments:</strong>
+<ul>
+<li>Design your app using a microservices architecture to allow independent scaling of components.</li>
+
+
+
+<li>Utilize containerization tools like Docker to package your app and its dependencies.</li>
+
+
+
+<li>Set up a load balancer (e.g., Nginx or HAProxy) to distribute incoming traffic among multiple instances of your app.</li>
+</ul>
+</li>
+
+
+
+<li><strong>Admin Console:</strong>
+<ul>
+<li>Create a new set of routes or endpoints for the admin console.</li>
+
+
+
+<li>Implement an authentication mechanism for admin users. You can use Flask-Login or Flask-Security for this purpose.</li>
+
+
+
+<li>Develop forms or API endpoints for bulk member management operations, such as adding or removing members.</li>
+</ul>
+</li>
+
+
+
+<li><strong>SSO (Single Sign-On):</strong>
+<ul>
+<li>Choose an SSO protocol like OAuth 2.0 or OpenID Connect.</li>
+
+
+
+<li>Integrate an SSO provider (e.g., Google, Microsoft Azure AD) by registering your app and obtaining client credentials.</li>
+
+
+
+<li>Implement the necessary routes and callback endpoints to handle the authentication flow.</li>
+
+
+
+<li>Store the user&#8217;s SSO information in your database after successful authentication.</li>
+</ul>
+</li>
+
+
+
+<li><strong>Domain Verification:</strong>
+<ul>
+<li>Choose a verification method (e.g., DNS records, token-based) that suits your needs.</li>
+
+
+
+<li>Develop a verification page or mechanism within your app where users can input verification tokens or configure DNS records.</li>
+
+
+
+<li>Verify the entered tokens or DNS records to confirm domain ownership.</li>
+</ul>
+</li>
+
+
+
+<li><strong>Analytics Dashboard:</strong>
+<ul>
+<li>Choose a visualization library like Plotly or Chart.js.</li>
+
+
+
+<li>Design the dashboard layout and the types of usage insights you want to display.</li>
+
+
+
+<li>Collect relevant usage data (e.g., API calls, user interactions) and store it in a database.</li>
+
+
+
+<li>Use the chosen library to create interactive graphs and charts based on the collected data.</li>
+</ul>
+</li>
+</ol>
+
+
+
+<p>For the sake of this article I will assume that you are building a flask app. To offer enterprise-grade security and privacy features through your Flask Python app, you&#8217;ll need to implement various components and integrations. </p>
+
+
+
+<p>The Trust Services Criteria (TSC) are a set of principles used to evaluate the controls in place for ensuring the security, availability, processing integrity, confidentiality, and privacy of systems. These criteria are a part of the SOC 2 framework.</p>
+
+
+
+<p>Let&#8217;s take a practical example of an online file storage and sharing platform built using Flask. After understanding the app&#8217;s scope, let&#8217;s identify which Trust Services Criteria (TSC) categories would likely be applicable and provide code-level examples for each.</p>
+
+
+
+<p><strong>Example: Online File Storage and Sharing Platform</strong></p>
+
+
+
+<p><strong>App&#8217;s Scope:</strong></p>
+
+
+
+<ul>
+<li>Services: User registration, file upload/download, sharing files with others, account management.</li>
+
+
+
+<li>Systems: Web server, file storage server, user authentication system.</li>
+
+
+
+<li>Data Flow: User uploads files, files are stored, user shares links with others for downloading.</li>
+
+
+
+<li>Interfaces: Web interface for users, APIs for uploading and downloading files.</li>
+</ul>
+
+
+
+<p><strong>Applicable TSC Categories and Examples:</strong></p>
+
+
+
+<p><strong>Security:</strong></p>
+
+
+
+<ul>
+<li><strong>Criteria Example:</strong> Implement secure authentication and authorization mechanisms to protect user accounts and data from unauthorized access.</li>
+</ul>
+
+
+
+<p><strong>Processing Integrity:</strong></p>
+
+
+
+<ul>
+<li><strong>Criteria Example:</strong> Ensure data accuracy and prevent unauthorized modifications.</li>
+
+
+
+<li><strong>Code-Level Example:</strong> Implement checksums for uploaded files and validate them during download.</li>
+</ul>
+
+
+
+<p><strong>Confidentiality:</strong></p>
+
+
+
+<ul>
+<li><strong>Criteria Example:</strong> Protect sensitive user data, like passwords and personal information.</li>
+
+
+
+<li><strong>Code-Level Example:</strong> Hash user passwords before storing them in the database.</li>
+</ul>
+
+
+
+<p><strong>Privacy:</strong></p>
+
+
+
+<ul>
+<li><strong>Criteria Example:</strong> Implement measures to protect user data privacy, such as data minimization and user consent.</li>
+
+
+
+<li><strong>Code-Level Example:</strong> Provide users with options to manage their data sharing settings.</li>
+</ul>
+
+
+
+<p><strong>Availability:</strong></p>
+
+
+
+<ul>
+<li><strong>Criteria Example:</strong> Ensure the app is available and functional for authorized users.</li>
+
+
+
+<li><strong>Code-Level Example:</strong> Implement health checks to monitor server availability.</li>
+</ul>
+
+
+
+<p><strong>Processing Accuracy:</strong></p>
+
+
+
+<ul>
+<li><strong>Criteria Example:</strong> Ensure accurate processing of user actions and data.</li>
+
+
+
+<li><strong>Code-Level Example:</strong> Implement input validation to prevent malicious or incorrect data from affecting the system.</li>
+</ul>
+
+
+
+<p><strong>Data Retention:</strong></p>
+
+
+
+<ul>
+<li><strong>Criteria Example:</strong> Define data retention policies and implement mechanisms to manage data lifecycle.</li>
+
+
+
+<li><strong>Code-Level Example:</strong> Implement a background task to regularly clean up expired files.</li>
+</ul>
+
+
+
+<p><strong>Change Management:</strong></p>
+
+
+
+<ul>
+<li><strong>Criteria Example:</strong> Implement a process to manage and track changes to the application.</li>
+
+
+
+<li><strong>Code-Level Example:</strong> Use version control (e.g., Git) to track changes to your codebase and maintain a changelog.</li>
+</ul>
+
+
+
+<p><strong>Audit and Monitoring:</strong></p>
+
+
+
+<ul>
+<li><strong>Criteria Example:</strong> Implement monitoring and audit mechanisms to track user actions and system activities.</li>
+
+
+
+<li><strong>Code-Level Example:</strong> Integrate a logging framework to record critical events.</li>
+</ul>
+
+
+
+<p><strong>Incident Response:</strong></p>
+
+
+
+<ul>
+<li><strong>Criteria Example:</strong> Develop a plan to respond to security incidents and data breaches.</li>
+
+
+
+<li><strong>Code-Level Example:</strong> Implement email notifications to administrators for suspicious account activity.</li>
+</ul>
+
+
+
+<p><strong>Data Backup and Recovery:</strong></p>
+
+
+
+<ul>
+<li><strong>Criteria Example:</strong> Implement backup and recovery processes to ensure data availability.</li>
+
+
+
+<li><strong>Code-Level Example:</strong> Use a cloud storage service for backup and implement a scheduled backup task.</li>
+</ul>
+
+
+
+<p><strong>Supplier Management:</strong></p>
+
+
+
+<ul>
+<li><strong>Criteria Example:</strong> Evaluate and manage security risks posed by third-party services or components.</li>
+
+
+
+<li><strong>Code-Level Example:</strong> Regularly review and update third-party libraries used in your app to ensure they are up-to-date and free from vulnerabilities.</li>
+</ul>
+
+
+
+<p><strong>Training and Awareness:</strong></p>
+
+
+
+<ul>
+<li><strong>Criteria Example:</strong> Provide training to staff about security and privacy practices.</li>
+
+
+
+<li><strong>Code-Level Example:</strong> Create an internal documentation or training resource accessible to your development team.</li>
+</ul>
+
+
+
+<p><strong>Physical Security:</strong></p>
+
+
+
+<ul>
+<li><strong>Criteria Example:</strong> Implement physical security measures to protect hardware and data centers.</li>
+
+
+
+<li><strong>Code-Level Example:</strong> Ensure servers and hardware are stored in a controlled environment with restricted access.</li>
+</ul>
+
+
+
+<p>Here&#8217;s a table summarizing various Trust Services Criteria (TSC) categories, along with a checklist that can help app developers understand whether their application needs to abide by each criterion:</p>
+
+
+
+<figure class="wp-block-table"><table><thead><tr><th>Trust Services Criteria (TSC)</th><th>Description</th><th>Checklist for App Developers</th></tr></thead><tbody><tr><td><strong>Security</strong></td><td>Protecting against unauthorized access, data breaches, and threats.</td><td>&#8211; Does your app handle sensitive user data?<br>&#8211; Do you have authentication and authorization mechanisms in place?<br>&#8211; Have you implemented secure communication (HTTPS)?</td></tr><tr><td><strong>Availability</strong></td><td>Ensuring your app is available and operational for authorized users.</td><td>&#8211; Does your app provide redundancy or failover mechanisms?<br>&#8211; Have you implemented rate limiting to prevent abuse?<br>&#8211; Is there a process for monitoring and addressing downtime?</td></tr><tr><td><strong>Processing Integrity</strong></td><td>Ensuring data is accurate and processing is reliable.</td><td>&#8211; Do you validate user inputs to prevent malicious data?<br>&#8211; Have you implemented mechanisms to prevent unauthorized data modification?<br>&#8211; Is there a system to validate data integrity during transmission?</td></tr><tr><td><strong>Confidentiality</strong></td><td>Protecting sensitive information from unauthorized access.</td><td>&#8211; Does your app encrypt sensitive data at rest and in transit?<br>&#8211; Are strong password hashing algorithms used? &#8211; Is there a policy to handle access to sensitive data?</td></tr><tr><td><strong>Privacy</strong></td><td>Safeguarding user data privacy and handling personal information.</td><td>&#8211; Do you provide options for users to control data sharing?<br>&#8211; Is there a clear privacy policy communicated to users?<br>&#8211; Are user consents obtained when necessary?</td></tr><tr><td><strong>Processing Accuracy</strong></td><td>Ensuring accurate processing of user actions and data.</td><td>&#8211; Do you validate form data and user inputs before processing?<br>&#8211; Are data calculations accurate and reliable?<br>&#8211; Is there error handling for potential issues?</td></tr><tr><td><strong>Data Retention</strong></td><td>Implementing data lifecycle management and retention policies.</td><td>&#8211; Do you have a process for deleting expired or unnecessary data?<br>&#8211; Is data retained according to legal and regulatory requirements? <br>&#8211; Are user preferences for data retention respected?</td></tr><tr><td><strong>Change Management</strong></td><td>Managing and tracking changes to the application.</td><td>&#8211; Is there version control for your codebase?<br>&#8211; Do you maintain a changelog for releases?<br>&#8211; Is there a process for reviewing and approving code changes?</td></tr><tr><td><strong>Audit and Monitoring</strong></td><td>Monitoring system activities and tracking user actions.</td><td>&#8211; Do you maintain logs of critical system events?<br>&#8211; Is there a mechanism to detect and alert for suspicious activities?<br>&#8211; Do you have a process for regular security audits?</td></tr><tr><td><strong>Incident Response</strong></td><td>Having a plan to respond to security incidents and data breaches.</td><td>&#8211; Is there a documented incident response plan? <br>&#8211; Do you have a process to assess, contain, and mitigate incidents?<br>&#8211; Are there communication channels for notifying stakeholders?</td></tr><tr><td><strong>Data Backup and Recovery</strong></td><td>Implementing backup and recovery processes for data availability.</td><td>&#8211; Do you have a regular backup schedule for critical data? <br>&#8211; Have you tested data recovery procedures?<br>&#8211; Is there a process for data restoration in case of failures?</td></tr><tr><td><strong>Supplier Management</strong></td><td>Evaluating and managing security risks posed by third-party services.</td><td>&#8211; Do you assess the security practices of third-party services you integrate?<br>&#8211; Have you identified critical dependencies on external providers?<br>&#8211; Is there a process for addressing vulnerabilities in external libraries?</td></tr><tr><td><strong>Training and Awareness</strong></td><td>Providing training to staff about security and privacy practices.</td><td>&#8211; Are team members educated about best security practices?<br>&#8211; Do developers know how to handle sensitive data? &#8211; Is there a resource for learning about security guidelines?</td></tr><tr><td><strong>Physical Security</strong></td><td>Implementing physical security measures to protect hardware.</td><td>&#8211; Is physical access to hardware restricted and monitored?<br>&#8211; Do you have safeguards in place to prevent hardware theft or tampering?<br>&#8211; Are data centers secured and monitored for unauthorized access?</td></tr></tbody></table></figure>
+
+
+
+<p>This checklist can serve as a starting point for app developers to assess their application against various Trust Services Criteria. Achieving SOC2 compliance and ISO 27001 is a big boring scary topic and many founders don&#8217;t want to go there. Facing this right in the face early on can help you build a more robust foundation for your startup that will pay off in the years to come.</p>
+<p>The post <a rel="nofollow" href="./../../../what-startups-can-learn-from-chatgpts-enterprise-move/index.html">What Startups Can Learn from ChatGPT&#8217;s Enterprise Move</a> appeared first on <a rel="nofollow" href="./../../../index.html">PlainSwipe</a>.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>./../../../what-startups-can-learn-from-chatgpts-enterprise-move/feed/index.html</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
 		<title>How AI Played a Critical Role in the Chandrayaan-3 Lunar Mission</title>
 		<link>./../../../how-ai-played-a-critical-role-in-the-chandrayaan-3-lunar-mission/index.html</link>
 					<comments>./../../../how-ai-played-a-critical-role-in-the-chandrayaan-3-lunar-mission/index.html#respond</comments>
@@ -1203,77 +1656,6 @@
 ]]></content:encoded>
 					
 					<wfw:commentRss>./../../../gpt-4-details-leaked/feed/index.html</wfw:commentRss>
-			<slash:comments>0</slash:comments>
-		
-		
-			</item>
-		<item>
-		<title>Happy Day Framework</title>
-		<link>./../../../happy-day-framework/index.html</link>
-					<comments>./../../../happy-day-framework/index.html#respond</comments>
-		
-		<dc:creator><![CDATA[rohitkumar]]></dc:creator>
-		<pubDate>Fri, 07 Jul 2023 09:25:24 +0000</pubDate>
-				<category><![CDATA[Uncategorized]]></category>
-		<guid isPermaLink="false">./../../../index.html?p=809</guid>
-
-					<description><![CDATA[<p>Mastering the HappyDay Framework: Unlocking Productivity and Happiness in Entrepreneurship Hey there, fellow entrepreneurs, hustlers, and go-getters! You know that feeling when you wake up in the morning, ready to take on the world, but then find yourself lost in a sea of tasks, decisions, and endless to-dos? Or that moment when you take a&#8230;&#160;<a href="./../../../happy-day-framework/index.html" class="" rel="bookmark">Read More &#187;<span class="screen-reader-text">Happy Day Framework</span></a></p>
-<p>The post <a rel="nofollow" href="./../../../happy-day-framework/index.html">Happy Day Framework</a> appeared first on <a rel="nofollow" href="./../../../index.html">PlainSwipe</a>.</p>
-]]></description>
-										<content:encoded><![CDATA[
-<h6 class="wp-block-heading">Mastering the HappyDay Framework: Unlocking Productivity and Happiness in Entrepreneurship</h6>
-
-
-
-<p>Hey there, fellow entrepreneurs, hustlers, and go-getters! You know that feeling when you wake up in the morning, ready to take on the world, but then find yourself lost in a sea of tasks, decisions, and endless to-dos? Or that moment when you take a step back, analyze your day, and realize that you&#8217;ve been busy doing a million things, but somehow it feels like you&#8217;ve been running in circles. It&#8217;s a gut-wrenching feeling, isn&#8217;t it? </p>
-
-
-
-<p>We pour our hearts and souls into our ventures, hustling day in and day out, only to discover that we might have been focusing on the wrong stuff. It&#8217;s frustrating, disheartening even. But here&#8217;s the truth: it happens to the best of us. We get caught up in the whirlwind of tasks and responsibilities, and lose sight of the bigger picture.</p>
-
-
-
-<p>So how do we start our day without the chaos and decision fatigue and end our day feeling Happy?</p>
-
-
-
-<p>I want to introduce you to the &#8220;HappyDay Framework&#8221; something i try to follow and has worked for me the days I am able to follow it.</p>
-
-
-
-<p>HappyDay framework presents a comprehensive set of metrics that captures the key activities and outcomes necessary for success. By monitoring these metrics, startup founders can prioritize their daily tasks and evaluate their productivity. Let&#8217;s delve into the components of the HappyDay framework and understand how they help founders gauge their progress:</p>
-
-
-
-<figure class="wp-block-table"><table><thead><tr><th>Metrics</th><th>Points</th></tr></thead><tbody><tr><td>Prospects added to list</td><td>1 point per 10 contacts added</td></tr><tr><td>Conversations with correct contacts</td><td>1 point per conversation</td></tr><tr><td>Value-based emails to Manager+ contacts</td><td>1 point per 5 emails sent</td></tr><tr><td>Initial meetings set</td><td>1 point per meeting</td></tr><tr><td>Opportunities created</td><td>1 point per opportunity</td></tr><tr><td>Personal development</td><td>1 point per hour of development</td></tr></tbody></table></figure>
-
-
-
-<h3 class="wp-block-heading">The Quest for Eight Points: Defining a Productive Day </h3>
-
-
-
-<p>The HappyDay framework sets a target of eight points per day, representing a balanced approach that founders can adopt to ensure a productive day focused on sales activities. By aiming for eight points, founders allocate their time effectively across key areas, driving progress and nurturing customer relationships.</p>
-
-
-
-<h3 class="wp-block-heading">A daily checklist</h3>
-
-
-
-<figure class="wp-block-table"><table><thead><tr><th>Main Activities</th><th>Second Level</th><th>Third Level</th></tr></thead><tbody><tr><td>Prospecting</td><td>Identify target market segments</td><td>&#8211; Analyze market research reports, industry trends, and customer surveys to identify potential segments.<br>&#8211; Evaluate the size, growth potential, and competitive landscape of each segment.</td></tr><tr><td></td><td>Utilize advanced search filters or tools on online platforms</td><td>&#8211; Utilize Boolean operators or advanced search options to refine search results.<br>&#8211; Leverage filters such as location, job titles, company size, or industry to target specific leads.</td></tr><tr><td></td><td>Analyze competitors&#8217; customer base</td><td>&#8211; Research competitors&#8217; websites, social media profiles, or case studies to identify their clients.<br>&#8211; Identify overlaps between competitor clients and your target market to find potential leads.</td></tr><tr><td></td><td>Keep track of prospecting activities using a CRM system</td><td>&#8211; Use a CRM tool to store and organize prospect information.<br>&#8211; Record interactions, notes, and follow-up tasks within the CRM for easy reference.</td></tr><tr><td></td><td>Regularly update and maintain the prospecting list</td><td>&#8211; Review and cleanse the prospecting list regularly to remove contacts that are no longer relevant.<br>&#8211; Follow up with unresponsive contacts or update their information if it has changed.</td></tr><tr><td>Conversations</td><td>Prepare a script or talking points</td><td>&#8211; Develop a framework that outlines key talking points, questions, and responses.<br>&#8211; Customize the script for different types of prospects or scenarios.</td></tr><tr><td></td><td>Practice active listening</td><td>&#8211; Engage in focused listening without interrupting or assuming.<br>&#8211; Ask clarifying questions to ensure a thorough understanding of the prospect&#8217;s challenges.</td></tr><tr><td></td><td>Take notes during conversations</td><td>&#8211; Use a note-taking tool or CRM system to document key points from each conversation.<br>&#8211; Capture actionable next steps, deadlines, or commitments made during the conversation.</td></tr><tr><td></td><td>Offer insights, case studies, or success stories</td><td>&#8211; Prepare a repository of relevant industry insights, case studies, or success stories.<br>&#8211; Tailor the examples or stories to resonate with the prospect&#8217;s specific pain points.</td></tr><tr><td></td><td>Build rapport and establish a relationship</td><td>&#8211; Find common interests or connections to establish a personal connection.<br>&#8211; Remember and reference previous conversations or details to show genuine interest.</td></tr><tr><td>Value-based emails to Manager+ contacts</td><td>Conduct thorough research on each Manager+ contact</td><td>&#8211; Review their LinkedIn profiles, company websites, or press releases for relevant information.<br>&#8211; Seek out news articles, interviews, or blog posts that provide insights into their challenges.</td></tr><tr><td></td><td>Customize each email</td><td>&#8211; Start with a personalized greeting that acknowledges their position or recent achievements.<br>&#8211; Reference their pain points or specific objectives to demonstrate understanding.</td></tr><tr><td></td><td>Incorporate relevant data, statistics, or industry trends</td><td>&#8211; Collect and compile data or statistics that highlight industry trends or challenges.<br>&#8211; Use credible sources and provide references or links to support the claims.</td></tr><tr><td></td><td>Craft compelling subject lines</td><td>&#8211; Use concise, attention-grabbing subject lines that convey value or urgency.<br>&#8211; A/B test subject lines to identify the most effective ones for different target audiences.</td></tr><tr><td></td><td>Follow up if there is no response</td><td>&#8211; Set up automated email sequences to follow up at strategic intervals.<br>&#8211; Consider alternative communication channels such as phone calls or LinkedIn messages for follow-ups.</td></tr></tbody></table></figure>
-
-
-
-<h3 class="wp-block-heading">Conclusion</h3>
-
-
-
-<p>Startup journey is rewarding and extremely exhausting. It is a marathon and not a sprint. It is about consistency and patience, and doing things even when you don&#8217;t want to. The HappyDay framework I use is to bring structure to this chaos, reduce emotion from the game, and allow one to follow the startup life just like it is tasks that need to get done.</p>
-<p>The post <a rel="nofollow" href="./../../../happy-day-framework/index.html">Happy Day Framework</a> appeared first on <a rel="nofollow" href="./../../../index.html">PlainSwipe</a>.</p>
-]]></content:encoded>
-					
-					<wfw:commentRss>./../../../happy-day-framework/feed/index.html</wfw:commentRss>
 			<slash:comments>0</slash:comments>
 		
 		

@@ -2,7 +2,7 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
 		<loc>./15c42-web-agency-gb-news/index.html</loc>
-		<lastmod>2023-08-23T16:10:43+00:00</lastmod>
+		<lastmod>2023-08-30T11:22:52+00:00</lastmod>
 	</url>
 	<url>
 		<loc>./the-one-thing-all-successful-startups-do-and-its-not-what-you-think/index.html</loc>
@@ -415,6 +415,13 @@
 		</image:image>
 		<image:image>
 			<image:loc>./wp-content/uploads/2023/08/image-33.png</image:loc>
+		</image:image>
+	</url>
+	<url>
+		<loc>./what-startups-can-learn-from-chatgpts-enterprise-move/index.html</loc>
+		<lastmod>2023-08-30T11:22:52+00:00</lastmod>
+		<image:image>
+			<image:loc>./wp-content/uploads/2023/08/image-34.png</image:loc>
 		</image:image>
 	</url>
 </urlset>
